@@ -32,34 +32,46 @@
         margin 0px 28px 3px 0px
         float left
         text-decoration none
+        color $dark50
+        text-decoration none
+        &:nth-of-type(4)
+            margin-left 17px
         .header-login__nav
             position relative
             left 543px
             top 13px
-.nav
-    margin 0px 25px 3px 0px
-    a
-        position relative
-        margin 0px 28px 3px 0px
-        float left
-        color $dark50
-        text-decoration none
-        &nth-of-type(4)
-            margin-left 17px
 .header-login__Button-empty
     cont 18px, 1100px
-// .Button-empty_login
-//     @extend .Button-empty
-//     width 79px
-//     height 34px
-//     active-2
-// .Button-empty__back_login
-//     @extend .Button-empty__back
-//     width 75px
-//     height 30px
-// .Button-empty__text_login
-//     @extend .Button-empty__text
-//     top 9px
+.Button-empty_login
+    border-radius 22px
+    background linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%)
+    border none
+    color $purple
+    z-index 1
+    width 79px
+    height 34px
+    active-2()
+.Button-empty__back_login
+    position absolute
+    left 2px
+    top 2px
+    background-color white
+    border-radius 22px
+    z-index 2
+    width 75px
+    height 30px
+.Button-empty__text_login
+    position absolute
+    left 20px
+    top 9px
+    font-family Montserrat
+    font-style normal
+    font-weight bold
+    font-size 12px
+    line-height 15px
+    text-transform uppercase
+    color $purple
+    z-index 3
 .register
     position absolute
     width 101px
@@ -69,10 +81,10 @@
     background linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%)
     border-radius 22px
     border none
-    &active
+    &:active
         background linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%)
         opacity 0.5
-    &focus
+    &:focus
         outline none
     div
         position absolute
@@ -97,7 +109,7 @@
     background #ffffff
     box-shadow 0px 10px 20px rgba(31, 32, 65, 0.05)
 .header-2__nav
-    cont -2px, 53px 
+    wrap 13px 543px
 .Cosmin
     position absolute
     left 1186px
@@ -120,7 +132,7 @@
 .header-login__expand-more
     cont 0px, 228px 
 .header-2__nav__expand-more 
-    cont 25px, 770px 
+    @extend .expand-more
 .footer-2
     position absolute
     width 1440px
@@ -153,10 +165,6 @@
     font-weight normal
     font-size 14px
     line-height 17px
-.nav_2
-    @extend .nav
-    left 595px
-    width 800px
 .copyright
     position absolute
     width 342px

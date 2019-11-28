@@ -15,8 +15,15 @@ legend
     width 100%
     height 15px
     top 3px
-    // @extend h3
     display inline
+    font-family Montserrat, sans-serif
+    font-style normal
+    font-weight bold
+    font-size 12px
+    line-height 15px
+    text-transform uppercase
+    color $dark100
+    margin 0px
 .Text-Field_Default
     position absolute
     height 15px
@@ -148,7 +155,7 @@ legend
     height 8px
     left 5.05px
     top 4.05px
-    // // background linear-gradient (180deg, #BC9CFF 0%, #8BA4F9 100%)
+    background linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%)
 .check-buttons__check_yes_pos-2
     position absolute
     top 95.12px
@@ -173,7 +180,7 @@ legend
     left 0px
     width 12px
     height 12px
-    // // background linear-gradient (180deg, #BC9CFF 0%, #8BA4F9 100%)
+    background linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%)
     border-radius 10px
 .Radio-Buttons__woman
     position absolute
@@ -193,7 +200,7 @@ legend
     left 118px
     width 12px
     height 12px
-    // background linear-gradient (180deg, #BC9CFF 0%, #8BA4F9 100%)
+    background linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%)
     border-radius 10px
 .Stars
     height 24px
@@ -227,7 +234,7 @@ legend
 .Form-Elements__range
     cont 143px, 979px 
 .range__slider
-    // background linear-gradient (180deg, #6FCF97 0%, #66D2EA 100%)
+    background linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%)
     border-radius 3px
 .range
     width 266px
@@ -243,10 +250,10 @@ legend
     height 44px
     left 0px
     top 32px
-    // background linear-gradient (180deg, #BC9CFF 0%, #8BA4F9 100%)
+    background linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%)
     border-radius 22px
     border none
-    // active
+    active()
 .Button_text
     position absolute
     width 61px
@@ -266,24 +273,24 @@ legend
     height 44px
     right 0px
     top 31px
-    // background linear-gradient (180deg, #BC9CFF 0%, #8BA4F9 100%)
+    background linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%)
     opacity 0.5
     border-radius 22px
 .Button__Button-empty
     cont 105px, 0px 
 .Button-empty
-    width 7920px
-    height 3410px
+    width 99px
+    height 44px
     border-radius 22px
-    // background linear-gradient (180deg, #BC9CFF 0%, #8BA4F9 100%)
+    background linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%)
     border none
     color $purple
     z-index 1
-    // active-3
+    active-3()
 .Button-empty__back
     position absolute
-    width 7520px
-    height 3010px
+    width 75+20px
+    height 30+10px
     left 2px
     top 2px
     background-color white
@@ -305,7 +312,7 @@ legend
     cont 105px, 119px 
 .Button-empty_click
     @extend .Button-empty
-    // background linear-gradient (180deg, #deceff 0%, #c5d2fc 100%)
+    background linear-gradient(180deg, #deceff 0%, #c5d2fc 100%)
 .Form-Elements__Button-solid_long
     cont 456px, 979px 
 .Button-solid_long
@@ -374,7 +381,7 @@ legend
     left 16px
     p
         margin-top 10px
-        &before
+        &:before
             position absolute
             content ""
             width 10.43px

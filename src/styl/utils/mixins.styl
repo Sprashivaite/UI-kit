@@ -8,13 +8,13 @@ wrap($top, $left)
 	top $top
 	left $left
 	display flex   
-active
+active()
 	&:active
 		background linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%)
 		opacity 0.5
 	&:focus
 		outline none
-active-2
+active-2()
 	&:active
 		width 79px
 		height 34px
@@ -24,7 +24,7 @@ active-2
 		z-index 1
 	&:focus
 		outline none
-active-3
+active-3()
 	&:active
 		width 79+20px
 		height 34+10px
