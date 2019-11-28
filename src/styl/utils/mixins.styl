@@ -1,0 +1,36 @@
+cont($top, $left)
+	position absolute
+	top $top
+	left $left
+	display flex
+wrap($top, $left)
+	position absolute
+	top $top
+	left $left
+	display flex   
+active
+	&:active
+		background linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%)
+		opacity 0.5
+	&:focus
+		outline none
+active-2
+	&:active
+		width 79px
+		height 34px
+		border-radius 22px
+		background linear-gradient(180deg, #deceff 0%, #c5d2fc 100%)
+		border none
+		z-index 1
+	&:focus
+		outline none
+active-3
+	&:active
+		width 79+20px
+		height 34+10px
+		border-radius 22px
+		background linear-gradient(180deg, #deceff 0%, #c5d2fc 100%)
+		border none
+		z-index 1
+	&:focus
+		outline none
