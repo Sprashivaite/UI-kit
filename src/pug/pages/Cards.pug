@@ -1,0 +1,127 @@
+.Cards
+    .Default__logo
+        include ..\includes\Colors Type\logo\logo
+    .search-rooms
+        .container__title Найдём номера под ваши&nbsp;пожелания
+        .search-rooms__com-data
+            .Data-Dropdown
+                legend Прибытие
+                .Data-Dropdown_Date-Picker
+                    input(type="date" class="Data-Dropdown_email")
+        .search-rooms__exit-data
+            .Data-Dropdown
+                legend выезд
+                .Data-Dropdown_Date-Picker
+                    input(type="date" class="Data-Dropdown_email")
+        .search-rooms__guests
+            legend Гости
+            .Text-Field_Default Default
+            .Text-Field_Date-Picker
+                select.Text-Field_dropdown(type='text' value='Сколько гостей')
+                        option Сколько гостей
+                        option 1
+                        option 2
+        button.Button-solid_long.search-rooms__Button-solid_long
+            .Button_text_long подобрать номер
+    .registration
+        .container__title Регистрация аккаунта
+        .Text-Field_Date-Picker.logIn__Text-Field_Date-Picker
+            input.Text-Field_email(type='email' placeholder='Имя')
+        .Text-Field_Date-Picker.logIn__Text-Field_Date-Picker_pass
+            input.Text-Field_email(type='email' placeholder='Фамилия')
+        .registration__data
+            legend дата рождения
+                .Text-Field_Date-Picker
+                    input(type="date" class="Text-Field_email")
+        .registration__logIn
+            legend данные для входа в сервис
+                .Text-Field_Date-Picker
+                    input.Text-Field_email(type='email' placeholder='Email')
+                .Text-Field_Date-Picker.legend__logIn
+                    input.Text-Field_email(type='password' placeholder='Пароль')
+        button.Button-solid_long.registration__Button-solid_long
+            .Button_text_long перейти к оплате
+        .registration__text Уже есть аккаунт на Toxin
+        button.Button-empty.registration__Button-empty
+            .Button-empty__back 
+            .Button-empty__text   Войти
+    .reservation
+        .reservation__com-data
+            .Data-Dropdown
+                legend Прибытие
+                .Data-Dropdown_Date-Picker
+                    input(type="date" class="Data-Dropdown_email")
+        .reservation__exit-data
+            .Data-Dropdown
+                legend выезд
+                .Data-Dropdown_Date-Picker
+                    input(type="date" class="Data-Dropdown_email")
+        .reservation__guests
+            legend Гости
+            .Text-Field_Default Default
+            .Text-Field_Date-Picker
+                select.Text-Field_dropdown(type='text' value='Сколько гостей')
+                    option Сколько гостей
+                        option 1
+                        option 2
+        .reservation__description
+            .description__num №888
+            .description__lux люкс
+            .description__cost 9990₽ в сутки
+        .Final.reservation__Final Итого
+            .Final__Sum 38 081₽
+            .Final__border
+        .Count.reservation_Count
+            .Count__text
+                div 9 990₽ х 4 суток
+                div Сбор за услуги: скидка 2 179₽
+                div Сбор за дополнительные услуги
+            .Count__Cost
+                div 39 960₽
+                div 0₽
+                div 300₽
+            .inf.reservation__inf
+                .i i
+            .inf.reservation__inf_2
+                .i i
+        button.Button-solid_long.reservation__Button-solid_long
+            .Button_text_long забронировать
+    .logIn
+        .container__title Войти
+        .Text-Field_Date-Picker.logIn__Text-Field_Date-Picker
+            input.Text-Field_email(type='email' placeholder='Email')
+        .Text-Field_Date-Picker.logIn__Text-Field_Date-Picker_pass
+            input.Text-Field_email(type='password' placeholder='Пароль')
+        button.Button-solid_long.logIn__Button-solid_long
+            .Button_text_long войти
+        .logIn__text Нет аккаунта на Toxin?
+        button.Button-empty.logIn__Button-empty
+            .Button-empty__back 
+            .Button-empty__text Создать
+    .calendar
+    .lux-photo
+        img(src='/assets/img/№888.png')
+        .description
+            .description__num №888
+            .description__lux люкс
+            .description__cost 9990₽ в сутки
+            .description__rating
+                    img(src='/assets/img/star.svg')
+                    img(src='/assets/img/star.svg')
+                    img(src='/assets/img/star.svg')
+                    img(src='/assets/img/star.svg')
+                    img(src='/assets/img/star.svg')
+            .description__reviews 145 Отзывов
+    .lux-photo-2
+        img(src='/assets/img/840.jpg')
+        .description
+            .description__num №840
+            .description__lux 
+            .description__cost 9990₽ в сутки
+            .description__rating
+                    img(src='/assets/img/star.svg')
+                    img(src='/assets/img/star.svg')
+                    img(src='/assets/img/star.svg')
+                    img(src='/assets/img/star.svg')
+                    img(src='/assets/img/star_border.svg')
+            .description__reviews 65 Отзывов
