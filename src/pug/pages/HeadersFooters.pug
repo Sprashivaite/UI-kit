@@ -1,7 +1,11 @@
 .HeadersFooters
     include ..\includes\Colors Type\logo\logo
-    .HeadersFooters__Header_Login
-        include ..\includes\Headers Footers\Header_Login\Header_Login
+    .HeadersFooters__Header
+        include ..\includes\Headers Footers\Header\Header
+        .Header__Button-empty
+            include ..\includes\Form Elements/Button-empty_login/Button-empty_login
+        .Header__Button_register
+            include ..\includes\Form Elements/Button_register/Button_register
     .header_2
         .header__logo_color
             include ..\includes\Colors Type\logo_color\logo_color
@@ -45,7 +49,7 @@
             div Subscribe to our newsletter
             p Receive our latest news and promotions in your inbox!
         .email.email__footer-1
-            input(type='text' placeholder='Your email address')
+            input(type='email' placeholder='Your email address')
             button(type='submit')
                 img(src='/assets/img/arrow_forward.svg')
     footer.footer-2

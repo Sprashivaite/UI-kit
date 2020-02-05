@@ -40,7 +40,7 @@
     .Form-Elements_email
         legend subscription text field 
         .email
-            input(type='text' placeholder='Your email address')
+            input(type='email' placeholder='Your email address')
             button(type='submit')
                 img(src='/assets/img/arrow_forward.svg')
     .check-buttons.Form-Elements__check-buttons
@@ -83,7 +83,7 @@
     .range.Form-Elements__range
         legen Range Slider
         .Text-Field_Default 5 000₽ - 10 000₽
-        input(type=`range` class="range__slider")
+        input(type=`range` class="range__slider" min='0' max='20000' value = min + (max - min) / 2 step = "1000")
     .Buttons.Form-Elements__Buttons
         legend buttons
         button.Button-solid
