@@ -108,16 +108,10 @@
                     option Спальни
                     option Кровати
                     option Ванные комнаты
-    .Text-Field.Form-Elements__Dropdown-2
-        legend Dropdown
-        .Text-Field_Default Default
-        .Text-Field_Date-Picker
-            select.Text-Field_dropdown(type='text' value='Сколько гостей')
-                    option Сколько гостей
-                    option 1
-                    option 2
+    .Form-Elements__Dropdown-2
+        include .\..\includes\Form Elements\Dropdown_guests\Dropdown__guests_expanded\Dropdown__guests_expanded
     .Text-Field.Form-Elements__Dropdown-3
-        legend Dropdown
+        legend Dropdown 
         .Text-Field_Default Default
         .Text-Field_Date-Picker
             select.Text-Field_dropdown(type='text' value='Сколько гостей')
