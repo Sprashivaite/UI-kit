@@ -1,10 +1,13 @@
+include ..\includes\coubs\coubs
+include ..\includes\logo\logo
+include ..\includes\coubs-explanation\explanation
+include ..\includes\texts\texts
+
 .ColorsType
-    include ..\includes\Colors Type\logo\logo
+    +logo
     .ColorsType__coub
-        include ..\includes\Colors Type\coubs\coubs
-        //- include /test
-        //- +coubs
+        +coubs
     .ColorsType__explanation
-        include ..\includes\Colors Type\explanation\explanation
+        +coubs-explanation
     .ColorsType__text
-        include ..\includes\Colors Type\texts\texts
+        +texts
