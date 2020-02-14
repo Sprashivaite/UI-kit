@@ -1,11 +1,12 @@
-.Footer-elem
-        .Footer-elem__cont
-            .Footer-elem__Logo
-                include ..\logo_color\logo_color
-            .Footer-elem__text
-                | Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam
-                | pellentesque aliquam curabitur cociis.
-            .Footer-elem__cc
-                img(src='/assets/img/1.jpg')
-                img(src='/assets/img/2.jpg')
-                img(src='/assets/img/3.jpg')
+mixin footer-elem
+    .footer-elem
+            .footer-elem__cont
+                .footer-elem__Logo
+                    +logo-color
+                .footer-elem__text
+                    | Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam
+                    | pellentesque aliquam curabitur cociis.
+                .footer-elem__cc
+                    img(src='/assets/img/1.jpg')
+                    img(src='/assets/img/2.jpg')
+                    img(src='/assets/img/3.jpg')

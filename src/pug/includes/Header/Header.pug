@@ -1,10 +1,28 @@
-include ..\logo_color\logo_color
+include ..\logo-color\logo-color
+mixin nav(name)
+    ul
+        a(href="/")= name
 
-.header
-    .header__logo_color
-        +logo-color
-
-//- mixin header(unlogged, logged)
-//-     .header
-//-         .header__logo_color
-//-             +logo-color
+mixin header(options)
+    .header
+        .header__logo_color
+            +logo-color
+        
+        div(class = (options.login ? 'header__nav_logged' : 'header__nav') )
+            b
+                +nav('Home')
+            +nav('About Us')
+            +nav('Services')
+            +nav('Careers')
+            +nav('News')
+            +nav('Documentation')
+            .header__expand-more
+                img(src='/assets/img/expand_more.svg')
+        if options.login == true
+            .login-name Cosmin Negoita
+                .login-name__border
+        else if options.login == false
+            .header__button-empty
+                include ..\Button-empty_login/Button-empty_login
+            .header__button_register
+                include ..\Button_register/Button_register
