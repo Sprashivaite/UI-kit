@@ -1,17 +1,22 @@
+include ..\includes\logo\logo
+
 .HeadersFooters
-    include ..\includes\logo\logo
-    .HeadersFooters__Header
-        include ..\includes\Header\Header
-            include ..\includes\Header__nav\Header__nav
-        .Header__Button-empty
+    +logo
+    .HeadersFooters__header
+        include ..\includes\header\header
+            include ..\includes\header\header__nav
+        .header__Button-empty
             include ..\includes\Button-empty_login/Button-empty_login
         .Header__Button_register
             include ..\includes\Button_register/Button_register
     .HeadersFooters__Header_reg
-        include ..\includes\Header\Header
-            include ..\includes\Header__nav_pos-2\Header__nav_pos-2
+        include ..\includes\header\header
+            //- include ..\includes\header\header__nav_pos-2
         .login-name Cosmin Negoita
             .login-name__border
     footer.HeadersFooters_Footer
         include ..\includes\Footer\Footer
     include ..\includes\footer-elem\footer-elem
+
+
+    

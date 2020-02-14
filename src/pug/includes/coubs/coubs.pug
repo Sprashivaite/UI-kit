@@ -1,13 +1,9 @@
-mixin coubs
+mixin coub(options)
+    if !options
+        - options = {};
     .coubs
-        .coubs__coub.coubs__coub_dark-100
-        .coubs__coub.coubs__coub_dark-75
-        .coubs__coub.coubs__coub_dark-50
-        .coubs__coub.coubs__coub_dark-25
-        .coubs__coub.coubs__coub_dark-5
-        .coubs__coub.coubs__coub_purple
-        .coubs__coub.coubs__coub_green
-
-mixin coub(color, explanation)
-    .coub
-        
+        .coubs__coub(class= 'coubs__coub_' + options.color)
+        .coubs__description
+            h2= options.name
+            h2= options.code
+            

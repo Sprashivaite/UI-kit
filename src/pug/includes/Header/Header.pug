@@ -1,3 +1,10 @@
-.Header
-    .Header__logo_color
-        include ..\logo_color\logo_color
+include ..\logo_color\logo_color
+
+.header
+    .header__logo_color
+        +logo-color
+
+//- mixin header(unlogged, logged)
+//-     .header
+//-         .header__logo_color
+//-             +logo-color

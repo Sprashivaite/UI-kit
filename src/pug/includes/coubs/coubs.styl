@@ -1,13 +1,19 @@
 .coubs
-    height: 610px
-    width: 70px;
-    display: flex
-    flex-direction: column;
-    justify-content: space-between;
+    width 270px
+    height 70px
+    position relative
+    &__description
+        position absolute
+        top: 7px
+        left 110px
+        :last-child
+            font-weight normal
+            padding-top 6px
     &__coub
         width: 70px
         height: 70px
         border-radius: 6px
+        background-color: $dark100
         &_dark-100
             background-color: $dark100
         &_dark-75
@@ -22,3 +28,4 @@
             background-color: $purple
         &_green
             background-color: $green
+    
