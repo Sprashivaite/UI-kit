@@ -1,11 +1,10 @@
 include ..\includes\coubs\coubs
 include ..\includes\logo\logo
-include ..\includes\coubs-explanation\explanation
-include ..\includes\texts\texts
+include ..\includes\fonts\fonts
 
-.ColorsType
+.colors-type
     +logo
-    .ColorsType__coub
+    .colors-type__coub
         +coub({color: 'dark-100', name: 'Dark Shade 100%', code: '#1F2041'})
         +coub({color: 'dark-75', name: 'Dark Shade 75%', code: '#1F2041'})
         +coub({color: 'dark-50', name: 'Dark Shade 50%', code: '#1F2041'})
@@ -13,7 +12,5 @@ include ..\includes\texts\texts
         +coub({color: 'dark-5', name: 'Dark Shade 5%', code: '#1F2041'})
         +coub({color: 'purple', name: 'Purple', code: '#BC9CFF'})
         +coub({color: 'green', name: 'Green', code: '#6FCF97'})
-    .ColorsType__explanation
-        //- +coubs-explanation
-    .ColorsType__text
-        +texts
+    .colors-type__fonts
+        +fonts
