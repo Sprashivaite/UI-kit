@@ -4,80 +4,22 @@
     width 1440px
     height 1853px
     background #FFFFFF
-    margin-top 20px
-.Form-Elements__Text-Field_pos-1
-    cont 140px, 141px 
-.Text-Field
-    width 320px
-    height 67px
-legend
-    position absolute
-    width 100%
-    height 15px
-    top 3px
-    display inline
-    font-family Montserrat, sans-serif
-    font-style normal
-    font-weight bold
-    font-size 12px
-    line-height 15px
-    text-transform uppercase
-    color $dark100
-    margin 0px
-.Text-Field_Default
-    position absolute
-    height 15px
-    width 117px
-    top 2px
-    left 203px
-    font-family Montserrat
-    font-style normal
-    font-weight normal
-    font-size 12px
-    line-height 15px
-    text-align right
-    text-transform uppercase
-    color rgba(31, 32, 65, 0.5)
-    &:hover
-        border 1px solid rgba(31, 32, 65, 0.5)
-        color rgba(31, 32, 65, 0.5)
-    &:active
-        border 1px solid rgba(31, 32, 65, 0.5)
-        color rgba(31, 32, 65, 0.5)
-.Text-Field_Date-Picker
-    position absolute
-    width 320px
-    height 44px
-    top 23px
-    background #FFFFFF
-    border 1px solid rgba(31, 32, 65, 0.25)
-    box-sizing border-box
-    border-radius 4px
-    &:hover
-        border 1px solid rgba(31, 32, 65, 0.5)
-        color rgba(31, 32, 65, 0.5)
-    &:focus
-        border 1px solid rgba(31, 32, 65, 0.5)
-        color rgba(31, 32, 65, 0.5)
-.Text-Field_email
-    position absolute
-    width 300px
-    height 24px
-    left 14px
-    top 7px
-    line-height 18px
-    color rgba(31, 32, 65, 0.25)
-    border none
-    &:hover
-        color rgba(31, 32, 65, 0.5)
-    &:focus
-        border 1px solid rgba(31, 32, 65, 0.5)
-        color rgba(31, 32, 65, 0.5)
+    // margin-top 20px
+    &__text-field
+        cont 140px, 141px 
+    &__text-field_hover
+        cont 224px, 141px
+    &__text-field_dropdown
+        wrap 308px, 141px
+    &__text-field_masced
+        wrap 395px,141px 
+
+
+
 .Text-Field_dropdown
-    @extend .Text-Field_email
+    // // @extend .Text-Field_email
     color rgba(31, 32, 65, 0.5)
-.Form-Elements__Text-Field_pos-2
-    cont 224px, 141px 
+ 
 .Text-Field_pretty
     position absolute
     width 300px
@@ -87,12 +29,9 @@ legend
     line-height 18px
     color rgba(31, 32, 65, 0.50)
     border none
-.Form-Elements__Text-Field_pos-3
-    position relative
-    left 141px
-    top 308px
-.Form-Elements__Text-Field_pos-4
-    cont 395px,141px 
+
+
+
 .Form-Elements__Text-Field_pos-5
     cont 502px, 141px 
 .Form-Elements__Text-Field_pos-6
@@ -221,10 +160,10 @@ legend
 .Data-Dropdown
 .Data-Dropdown_email
     width 150px
-    @extend .Text-Field_email
+    // @extend .Text-Field_email
     width 130px
 .Data-Dropdown_Date-Picker
-    @extend .Text-Field_Date-Picker
+    // @extend .Text-Field_Date-Picker
     width 150px
 .Filter-Data-Dropdown
     width 150px
@@ -311,22 +250,22 @@ legend
 .Button__Button-empty_click
     cont 105px, 119px 
 .Button-empty_click
-    @extend .Button-empty
+    // @extend .Button-empty
     background linear-gradient(180deg, #deceff 0%, #c5d2fc 100%)
 .Form-Elements__Button-solid_long
     cont 456px, 979px 
 .Button-solid_long
-    @extend .Button-solid
+    // @extend .Button-solid
     width 320px
 .Button_text_long
-    @extend .Button_text
+    // @extend .Button_text
     width 280px
 .Buttons__Button-empty_pos-2
     cont 180px, 1px 
 .Buttons__Button-empty_pos-3
     cont 180px, 82px 
 .Button-empty__text_black
-    @extend .Button-empty__text
+    // @extend .Button-empty__text
     color rgba(31, 32, 65, 0.5)
 .Expandable-Checkbox
     width 266px

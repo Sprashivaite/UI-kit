@@ -1,29 +1,20 @@
+include ..\includes\logo\logo
+include ..\includes\text-field\text-field
+
 .Form-Elements
-    .Default__logo
-        include ..\includes\logo\logo
-    .Text-Field.Form-Elements__Text-Field_pos-1
-        legend Text Field
-        .Text-Field_Default Default
-        .Text-Field_Date-Picker
-            input.Text-Field_email(type='email' placeholder='Email')
-    .Text-Field.Form-Elements__Text-Field_pos-2
-        legend Text&nbsp;Field
-        .Text-Field_Default Hover / Focus
-        .Text-Field_Date-Picker
-            input.Text-Field_pretty(type='text' placeholder='This is pretty awesome')
-    .Text-Field.Form-Elements__Text-Field_pos-3
-        legend Dropdown
-        .Text-Field_Default Default
-        .Text-Field_Date-Picker
-            select.Text-Field_dropdown(type='text' value='Сколько гостей')
-                    option Сколько гостей
-                    option 1
-                    option 2
-    .Text-Field.Form-Elements__Text-Field_pos-4
-        legend masked&nbsp;text&nbsp;field
-        .Text-Field_Default Default
-        .Text-Field_Date-Picker
-            input(type="date" class="Text-Field_email")
+    +logo
+    
+        
+    .Form-Elements__text-field
+        +text-field({legend: 'text field', description: 'default', text: 'Email'})
+    .Form-Elements__text-field_hover
+        +text-field({legend: 'text field', description: 'Hover / Focus', hover: true, text: 'This is pretty awesome'})
+    .Form-Elements__text-field_dropdown
+        +text-field({legend: 'dropdown', description: 'default', text: 'Сколько гостей'})
+    .Form-Elements__text-field_masced
+        +text-field({legend: 'masked text field', description: 'default', text: 'ДД.ММ.ГГГГ'})
+
+
     .Data-Dropdown.Form-Elements__Text-Field_pos-5
         legend date Dropdown
         .Data-Dropdown_Date-Picker

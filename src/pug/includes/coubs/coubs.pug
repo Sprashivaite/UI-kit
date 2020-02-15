@@ -1,6 +1,4 @@
-mixin coub(options)
-    if !options
-        - options = {};
+mixin coub(options = {})
     .coubs
         .coubs__coub(class= 'coubs__coub_' + options.color)
         .coubs__description

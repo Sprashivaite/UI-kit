@@ -1,0 +1,61 @@
+.text-field
+    width 320px
+    height 67px
+    &__description
+        position absolute
+        top 0px
+        right 0px
+        font-weight normal
+        color $dark50
+    &__border
+        position absolute
+        width 320px
+        height 44px
+        top 23px
+        background #FFFFFF
+        border 1px solid rgba(31, 32, 65, 0.25)
+        border-radius 4px
+        &:hover
+            border 1px solid rgba(31, 32, 65, 0.5)
+            color rgba(31, 32, 65, 0.5)
+        &:focus
+            border 1px solid rgba(31, 32, 65, 0.5)
+            color rgba(31, 32, 65, 0.5)
+        &_hover
+            position absolute
+            width 320px
+            height 44px
+            top 23px
+            background #FFFFFF
+            border 1px solid rgba(31, 32, 65, 0.5)
+            border-radius 4px
+        &_short
+            // @extend .text-field__border
+            width 150px
+    &__text
+        position absolute
+        outline-color: none
+        width 300px
+        height 24px
+        left 14px
+        top 7px
+        line-height 18px
+        color rgba(31, 32, 65, 0.25)
+        border none
+        &:hover
+            color rgba(31, 32, 65, 0.75)
+        &:focus
+            color rgba(31, 32, 65, 0.75)
+            outline: none
+        &_hover
+            position absolute
+            outline-color: none
+            width 300px
+            height 24px
+            left 14px
+            top 7px
+            line-height 18px
+            color rgba(31, 32, 65, 0.75)
+            border none
+            &:focus
+                outline: none
