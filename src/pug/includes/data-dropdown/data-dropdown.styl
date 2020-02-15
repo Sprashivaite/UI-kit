@@ -1,16 +1,9 @@
-.text-field
-    position relative
+.data-dropdown
     width 320px
     height 67px
-    &__description
-        position absolute
-        top 0px
-        right 0px
-        font-weight normal
-        color $dark50
     &__border
         position absolute
-        width 320px
+        width 150px
         height 44px
         top 23px
         background #FFFFFF
@@ -22,26 +15,22 @@
         &:focus
             border 1px solid rgba(31, 32, 65, 0.5)
             color rgba(31, 32, 65, 0.5)
-        &_hover
-            @extend .text-field__border
-            border 1px solid rgba(31, 32, 65, 0.5)
-        &_short
-            // @extend .text-field__border
-            width 150px
     &__text
         position absolute
         outline-color: none
-        width 300px
+        width 120px
         height 24px
         left 14px
         top 7px
         color rgba(31, 32, 65, 0.25)
         border none
+        font-size: 14px;
+        line-height: 18px;
         &:hover
             color rgba(31, 32, 65, 0.75)
         &:focus
             color rgba(31, 32, 65, 0.75)
             outline: none
-        &_hover
-            @extend .text-field__text
-            color rgba(31, 32, 65, 0.75)
+        [type='data']
+            font-size: 14px;
+            line-height: 18px;

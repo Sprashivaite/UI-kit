@@ -1,0 +1,8 @@
+mixin button(options = {})
+    if options.isEmpty
+        button.button-empty
+            .button-empty__back
+                .button-empty__text= options.name 
+    else
+        button(class= options.size ? options.size : 'button' )
+            .button__text= options.name

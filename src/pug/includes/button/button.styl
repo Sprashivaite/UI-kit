@@ -1,0 +1,68 @@
+.button
+    width 99px
+    height 44px
+    background linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%)
+    border-radius 22px
+    border none
+    display flex
+    flex-direction: column
+    align-items center
+    &:active
+        background linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%)
+        opacity 0.5
+    &:focus
+        outline none
+    &__text
+        padding-top 14px
+        font-weight bold
+        font-size 12px
+        text-transform uppercase
+        color #FFFFFF
+        &_long
+            @extend .button__text
+    &_long
+        @extend .button
+        width: 320px
+
+.button-empty
+    width 99px
+    height 44px
+    border-radius 22px
+    background linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%)
+    border none
+    color $purple
+    z-index 1
+    display flex
+    flex-direction: column
+    align-items center
+    &:active
+        width 99px
+        height 44px
+        border-radius 22px
+        background linear-gradient(180deg, #deceff 0%, #c5d2fc 100%)
+        border none
+        z-index 1
+    &:focus
+        outline none
+    &__back
+        position absolute
+        width 75+20px
+        height 30+10px
+        left 2px
+        top 2px
+        background-color white
+        border-radius 22px
+        z-index 2
+    &__text
+        width 95px
+        height 40px
+        padding-top 12px
+        font-style normal
+        font-weight bold
+        font-size 12px
+        line-height 15px
+        text-transform uppercase
+        color $purple
+        z-index 3
+        &:active
+            color $dark50

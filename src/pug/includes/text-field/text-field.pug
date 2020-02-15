@@ -1,10 +1,12 @@
+//- optoins.legend - название формы
+//- optoins.description - описание формы
+//- optoins.text - текст внутри формы
+//- optoins.hover == true - застывший ховер эффект
+
+
 mixin text-field(optoins = {})
     .text-field
         legend= optoins.legend
         legend.text-field__description= optoins.description
-        if optoins.hover == true
-            .text-field__border_hover
-                input.text-field__text_hover(type='text' placeholder= optoins.text)
-        else 
-            .text-field__border
-                input.text-field__text(type='text' placeholder= optoins.text)
+        div(class = ( optoins.hover ? 'text-field__border_hover' : 'text-field__border') )
+            input(class = ( optoins.hover ? 'text-field__text_hover' : 'text-field__text') )(type='text' value= optoins.text)
