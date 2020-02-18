@@ -7,17 +7,54 @@
     // margin-top 20px
     &__text-field
         cont 140px, 141px 
-    &__text-field_hover
-        cont 224px, 141px
-    &__text-field_dropdown
-        wrap 308px, 141px
-    &__text-field_masced
-        wrap 395px,141px 
-    &__data-dropdown_1
-        cont 502px, 141px 
-    &__data-dropdown_2
-        cont 502px, 311px 
-
+        height 322px
+        width 320px
+        display flex
+        flex-direction: column
+        justify-content: space-between
+    &__date-dropdown
+        wrap 502px, 141px
+        display flex
+        justify-content space-between
+        width 321px
+        height 150px
+    &__solid-button
+        wrap 231px, 979px 
+        width: 218px;
+        height: 80px;
+        // display flex
+        // justify-content space-between
+        // flex-wrap: wrap
+        :nth-child(2)
+            margin-top 13px
+        :nth-child(3)
+            margin-top: -44px
+            margin-left: 120px;
+    &__empty-button
+        wrap 336px, 979px
+        display flex
+        justify-content space-between
+        width: 218px;
+        height 44px
+    &__button-name
+        wrap 402px, 979px
+        display flex
+        justify-content space-between
+        width: 163px;
+    &__long-button
+        position: absolute;
+        width: 320px;
+        height: 44px;
+        left: 979px;
+        top: 456px
+    &__bullet-list
+        position: absolute;
+        width: 254px;
+        height: 147px;
+        left: 979px;
+        top: 1196px;
+        :nth-child(1)
+            margin-bottom: 10px
 
 .Text-Field_dropdown
     // // @extend .Text-Field_email
@@ -173,8 +210,7 @@
 .Buttons
     width 218px
     height 195px
-.Form-Elements__Buttons
-    wrap 263px, 979px 
+
 
 .Button-solid_click
     position absolute
@@ -253,23 +289,7 @@
     height 147px
 .Form-Elements__Bullet-List
     cont 1196px, 979px 
-.Bullet-List__text
-    position absolute
-    width 271.14px
-    height 116px
-    top 20px
-    left 16px
-    p
-        margin-top 10px
-        &:before
-            position absolute
-            content ""
-            width 10.43px
-            height 10px
-            background-color rgba(31, 32, 65, 0.25)
-            left -15.43px
-            margin-top 5px
-            border-radius 15px
+
 .Rich-Checkbox
     width 266px
     height 145px

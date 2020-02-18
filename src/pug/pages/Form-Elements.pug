@@ -2,20 +2,21 @@ include ..\includes\logo\logo
 include ..\includes\text-field\text-field
 include ..\includes\data-dropdown\data-dropdown
 include ..\includes\button\button
+include ..\includes\bullet-list\bullet-list
 .Form-Elements
     +logo
     .Form-Elements__text-field
         +text-field({legend: 'text field', description: 'default', text: 'Email'})
-    .Form-Elements__text-field_hover
         +text-field({legend: 'text field', description: 'Hover / Focus', hover: true, text: 'This is pretty awesome'})
-    .Form-Elements__text-field_dropdown
         +text-field({legend: 'dropdown', description: 'default', text: 'Сколько гостей'})
-    .Form-Elements__text-field_masced
         +text-field({legend: 'masked text field', description: 'default', text: 'ДД.ММ.ГГГГ'})
-    .Form-Elements__data-dropdown_1
+    .Form-Elements__date-dropdown
         +data-dropdown
-    .Form-Elements__data-dropdown_2
         +data-dropdown
+    include ..\includes\range-slider\range-slider
+
+
+
 
     //- .Filter-Data-Dropdown.Form-Elements__Data-Dropdown
     //-     legend filter date dropdown
@@ -69,10 +70,32 @@ include ..\includes\button\button
     //-     legen Range Slider
     //-     .Text-Field_Default 5 000₽ - 10 000₽
     //-     input(type=`range` class="range__slider" min='0' max='20000' value = min + (max - min) / 2 step = "1000")
-    .Form-Elements__Buttons
-        +button({isEmpty: true, name: 'click me'})
-        +button({size: 'button_long', name: 'click me'})
+    .Form-Elements__solid-button
+        legend buttons
         +button({name: 'click me'})
+        +button({name: 'click me'})
+    .Form-Elements__empty-button
+        +button({isEmpty: true, name: 'click me'})
+        +button({isEmpty: true, name: 'click me'})
+    .Form-Elements__button-name
+        .button-empty__text click me
+        .button-empty__text click me
+    .Form-Elements__long-button
+        +button({size: 'button_long', name: 'click me'})
+    .Form-Elements__bullet-list
+        legend Bullet list
+        +bullet-list('Нельзя с питомцами')
+        +bullet-list('Без вечеринок и мероприятий')
+        +bullet-list('Время прибытия — после 13:00, а выезд до 12:00')
+
+    //-         p Без вечеринок и мероприятий
+    //-         p Время прибытия — после 13:00, а выезд до 12:00
+
+
+        //- +button({name: 'click me'})
+        //- +button({name: 'click me'})
+        
+        //- +button({size: 'button_long', name: 'click me'})
     //-     button.Button-empty_click.Button__Button-empty_click
     //-         .Button-empty__back 
     //-         .Button-empty__text Click me
