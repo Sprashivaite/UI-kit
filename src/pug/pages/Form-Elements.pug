@@ -3,6 +3,7 @@ include ..\includes\text-field\text-field
 include ..\includes\data-dropdown\data-dropdown
 include ..\includes\button\button
 include ..\includes\bullet-list\bullet-list
+include ..\includes\checkbox\checkbox
 .Form-Elements
     +logo
     .Form-Elements__text-field
@@ -15,6 +16,11 @@ include ..\includes\bullet-list\bullet-list
         +data-dropdown
     .Form-Elements__slider
         include ..\includes\range-slider\range-slider
+    .Form-Elements__checkbox
+        legend Checkbox Buttons
+        +checkbox({ name: 'Можно курить'})
+        +checkbox({ name: 'Можно с питомцами'})
+        +checkbox({ name: 'Можно пригласить гостей (до 10 человек)'})
 
 
 
