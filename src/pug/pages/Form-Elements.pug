@@ -16,11 +16,13 @@ include ..\includes\checkbox\checkbox
         +data-dropdown
     .Form-Elements__slider
         include ..\includes\range-slider\range-slider
-    .Form-Elements__checkbox
+    .Form-Elements__checkbox-buttons
         legend Checkbox Buttons
         +checkbox({ name: 'Можно курить'})
         +checkbox({ name: 'Можно с питомцами'})
         +checkbox({ name: 'Можно пригласить гостей (до 10 человек)'})
+    .Form-Elements__expandable-checkbox-list
+        include ..\includes\expandable-checkbox-list\expandable-checkbox-list
 
 
 
