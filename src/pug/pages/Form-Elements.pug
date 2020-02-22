@@ -4,17 +4,19 @@ include ..\includes\data-dropdown\data-dropdown
 include ..\includes\button\button
 include ..\includes\bullet-list\bullet-list
 include ..\includes\checkbox\checkbox
+include ..\includes\comfort\comfort
 .Form-Elements
     +logo
     .Form-Elements__text-field
         +text-field({legend: 'text field', description: 'default', text: 'Email'})
-        +text-field({legend: 'text field', description: 'Hover / Focus', hover: true, text: 'This is pretty awesome'})
+        +text-field({legend: 'text field', description: 'Hover / Focus', text: 'This is pretty awesome'})
         +text-field({legend: 'dropdown', description: 'default', text: 'Сколько гостей'})
         +text-field({legend: 'masked text field', description: 'default', text: 'ДД.ММ.ГГГГ'})
     .Form-Elements__date-dropdown
         +data-dropdown
         +data-dropdown
     .Form-Elements__slider
+        legend Range Slider
         include ..\includes\range-slider\range-slider
     .Form-Elements__checkbox-buttons
         legend Checkbox Buttons
@@ -25,6 +27,13 @@ include ..\includes\checkbox\checkbox
         include ..\includes\expandable-checkbox-list\expandable-checkbox-list
     .Form-Elements__radio-button
         include ..\includes\radio-button\radio-button
+    .Form-Elements__toggle
+        legend toogle
+        br
+        include ..\includes\toggle\toggle
+        | Получать спецпредложения
+        include ..\includes\toggle\toggle
+        | Получать спецпредложения
 
 
 
@@ -40,27 +49,9 @@ include ..\includes\checkbox\checkbox
     //-         input(type='email' placeholder='Your email address')
     //-         button(type='submit')
     //-             img(src='/assets/img/arrow_forward.svg')
-    //- .check-buttons.Form-Elements__check-buttons
-    //-     legend Checkbox Buttons
-    //-         .check-buttons__container
-    //-             .check-buttons__text 
-    //-                 p Можно курить
-    //-                 p Можно с питомцами
-    //-                 p Можно пригласить гостей (до 10 человек)
     //-     input(class=`check_no` type=`checkbox`).check-buttons__check_no
         
-    //-     .check-buttons__check_yes 
-    //-         input(class=`check_yes` type=`checkbox` checked)
-    //-         .check-yes__mark
-    //-     .check_yes.check-buttons__check_yes_pos-2
-    //-         input(class=`check_yes` type=`checkbox` checked)
-    //-         .check-yes__mark
-    //- .Radio-Buttons.Form-Elements__Radio-Buttons
-    //-     legend Radio&nbsp;Buttons
-    //-     .Radio-Buttons__man мужчина
-    //-     .Radio-Buttons__woman женщина
-    //-     input(class=`Radio-Buttons__button-1` type='radio' value=`1` name=`radiobutton` )
-    //-     input(class=`Radio-Buttons__button-2` type='radio' value=`2` name=`radiobutton` )
+
     //- .Stars.Form-Elements__Stars
     //-     legend rate button
     //-     .Stars_1
@@ -77,10 +68,6 @@ include ..\includes\checkbox\checkbox
     //-         img(src='/assets/img/star.svg')
 
             
-    //- .range.Form-Elements__range
-    //-     legen Range Slider
-    //-     .Text-Field_Default 5 000₽ - 10 000₽
-    //-     input(type=`range` class="range__slider" min='0' max='20000' value = min + (max - min) / 2 step = "1000")
     .Form-Elements__solid-button
         legend buttons
         +button({name: 'click me'})
@@ -99,21 +86,14 @@ include ..\includes\checkbox\checkbox
         +bullet-list('Без вечеринок и мероприятий')
         +bullet-list('Время прибытия — после 13:00, а выезд до 12:00')
 
-    //-         p Без вечеринок и мероприятий
-    //-         p Время прибытия — после 13:00, а выезд до 12:00
+    .Form-Elements__comment
+        include ..\includes\comment\comment
+    .Form-Elements__comfort
+        +comfort({img: '/assets/img/insert_emoticon.svg', title: 'Комфорт', description: 'Шумопоглощающие стены'})
+    .Form-Elements__comfort_2
+        +comfort({img: '/assets/img/location_city.svg', title: 'Удобство', description: 'Окно в каждой из спален'})
 
 
-        //- +button({name: 'click me'})
-        //- +button({name: 'click me'})
-        
-        //- +button({size: 'button_long', name: 'click me'})
-    //-     button.Button-empty_click.Button__Button-empty_click
-    //-         .Button-empty__back 
-    //-         .Button-empty__text Click me
-    //-     .Button-empty__text.Buttons__Button-empty_pos-2 Click me
-    //-     .Button-empty__text_black.Buttons__Button-empty_pos-3 Click me
-    //- button.Button-solid_long.Form-Elements__Button-solid_long
-    //-         .Button_text_long перейти к оплате
     //- .Text-Field.Form-Elements__Dropdown-1
     //-     legend Dropdown
     //-     .Text-Field_Default Default
@@ -132,25 +112,8 @@ include ..\includes\checkbox\checkbox
     //-                 option Сколько гостей
     //-                 option 1
     //-                 option 2
-    //- .Expandable-Checkbox.Form-Elements__Expandable-Checkbox
-    //-     legend expandable checkbox list
-    //-     .Expandable-Checkbox__list
-    //-         input(class=`check_no` type="checkbox") 
-    //-         div Завтрак
-    //-         input(class=`check_no` type="checkbox") 
-    //-         div Письменный стол
-    //-         input(class=`check_no` type="checkbox") 
-    //-         div Стул для кормления
-    //-         input(class=`check_no` type="checkbox") 
-    //-         div Кроватка
-    //-         input(class=`check_no` type="checkbox") 
-    //-         div Телевизор
-    //-         input(class=`check_no` type="checkbox") 
-    //-         div Шампунь
-    //-         input(class=`check_no` type="checkbox") 
-    //-         div Телевизор
-    //-         input(class=`check_no` type="checkbox") 
-    //-         div Шампунь
+
+
     //- .Rich-Checkbox.Form-Elements__Rich-Checkbox
     //-     legend Rich Checkbox Buttons
     //-     .Rich-Checkbox-Button
@@ -161,25 +124,5 @@ include ..\includes\checkbox\checkbox
     //-         input(class=`check_no` type="checkbox")
     //-         b Помощник для инвалидов
     //-         span На 1 этаже вас встретит специалист и проводит до номера.
-    //- .Bullet-List.Form-Elements__Bullet-List
-    //-     legend bullet lest
-    //-     .Bullet-List__text
-    //-         p Нельзя с питомцами
-    //-         p Без вечеринок и мероприятий
-    //-         p Время прибытия — после 13:00, а выезд до 12:00
-    //- .Advantages.Form-Elements__Advantages
-    //-     img(src='/assets/img/insert_emoticon.svg')
-    //-     .Advantages__text 
-    //-         b Комфорт
-    //-         span Шумопоглощающие стены
-    //- .Advantages.Form-Elements__Advantages_2
-    //-     img(src='/assets/img/location_city.svg')
-    //-     .Advantages__text 
-    //-         b Удобство
-    //-         span Окно в каждой из спален
-    //- .Comment.Form-Elements__Comment
-    //-     .user
-    //-         img(src='/assets/img/murad.png')
-    //-         b Мурад Сарафанов  
-    //-         p 5 дней назад
-    //-     .Comment__text Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.
+
+

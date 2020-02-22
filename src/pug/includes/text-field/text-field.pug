@@ -8,5 +8,5 @@ mixin text-field(optoins = {})
     .text-field
         legend= optoins.legend
         legend.text-field__description= optoins.description
-        div(class = ( optoins.hover ? 'text-field__border_hover' : 'text-field__border') )
-            input(class = ( optoins.hover ? 'text-field__text_hover' : 'text-field__text') )(type='text' value= optoins.text)
+        .text-field__border
+            input(class = ('text-field__text') )(type='text' value= optoins.text)
