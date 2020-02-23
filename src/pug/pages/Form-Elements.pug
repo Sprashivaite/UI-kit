@@ -38,7 +38,9 @@ include ..\includes\rate-button\rate-button
         | Получать спецпредложения
         include ..\includes\toggle\toggle
         | Получать спецпредложения
-
+    .Form-Elements__like-button
+        legend like-button
+        include ..\includes\like-button\like-button
 
 
 
@@ -55,18 +57,6 @@ include ..\includes\rate-button\rate-button
         legend rate button
         +rate-button({id: '1'})
         +rate-button({id: '2'})
-    //-     .Stars_1
-    //-         img(src='/assets/img/star.svg')
-    //-         img(src='/assets/img/star.svg')
-    //-         img(src='/assets/img/star.svg')
-    //-         img(src='/assets/img/star.svg')
-    //-         img(src='/assets/img/star_border.svg')
-    //-     .Stars_2
-    //-         img(src='/assets/img/star.svg')
-    //-         img(src='/assets/img/star.svg')
-    //-         img(src='/assets/img/star.svg')
-    //-         img(src='/assets/img/star.svg')
-    //-         img(src='/assets/img/star.svg')
 
             
     .Form-Elements__solid-button
