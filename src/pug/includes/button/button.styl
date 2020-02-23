@@ -19,33 +19,36 @@
         font-size 12px
         text-transform uppercase
         color #FFFFFF
-        &_long
+        &_empty
             @extend .button__text
+            color $purple
+            z-index 3
+            &:active
+                color $dark50
     &_long
         @extend .button
         width: 320px
         &::after
             content: ''
-            background-image url('..\img\arrow_forward.jpg')
-            background-size: 44px 44px
-            // width 44px
-            // height 44px
-            margin-left 200px
-            // position absolute
+            background-image url('\assets\img\arrow_forward_white.svg')
+            width 20px
+            height 20px
+            margin-left 138px
+            position absolute
             
 
-.button-empty
-    position relative
-    width 99px
-    height 44px
-    border-radius 22px
-    background linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%)
-    border none
-    color $purple
-    z-index 1
-    display flex
-    flex-direction: column
-    align-items center
+.button_empty
+    @extend .button
+    &::after
+        content: ''
+        position absolute
+        width 75+20px
+        height 30+10px
+        left 2px
+        top 2px
+        background-color white
+        border-radius 22px
+        z-index 2
     &:active
         width 99px
         height 44px
@@ -55,25 +58,3 @@
         z-index 1
     &:focus
         outline none
-    &__back
-        position absolute
-        width 75+20px
-        height 30+10px
-        left 2px
-        top 2px
-        background-color white
-        border-radius 22px
-        z-index 2
-    &__text
-        width 95px
-        height 40px
-        padding-top 12px
-        font-style normal
-        font-weight bold
-        font-size 12px
-        line-height 15px
-        text-transform uppercase
-        color $purple
-        z-index 3
-        &:active
-            color $dark50
