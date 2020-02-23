@@ -1,12 +1,11 @@
-//- optoins.legend - название формы
-//- optoins.description - описание формы
-//- optoins.text - текст внутри формы
-//- optoins.hover == true - застывший ховер эффект
+//- options.legend - название формы
+//- options.description - описание формы
+//- options.text - текст внутри формы
 
 
-mixin text-field(optoins = {})
+mixin text-field(options = {})
     .text-field
-        legend= optoins.legend
-        legend.text-field__description= optoins.description
-        .text-field__border
-            input(class = ('text-field__text') )(type='text' value= optoins.text)
+        legend= options.legend
+        legend.text-field__description= options.description
+        .text-field__border(class = (options.type === 'email' ? ' text-field__border_arrow': ''))
+            input.text-field__text(class = (options.type === 'email' ? ' text-field__text_arrow': ''))(type= options.type ? options.type : 'text' value= options.text)

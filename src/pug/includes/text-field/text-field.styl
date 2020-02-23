@@ -22,6 +22,19 @@
         &:focus
             border 1px solid rgba(31, 32, 65, 0.5)
             color rgba(31, 32, 65, 0.5)
+        &_arrow
+            @extends .text-field__border
+            width 267px
+            &::after
+                content ''
+                position absolute
+                background-image url('/assets/img/arrow_forward.svg')
+                background-repeat: no-repeat
+                width 20px
+                height 20px
+                right: 8px;
+                top: 13px
+                z-index 2
         &_hover
             @extend .text-field__border
             border 1px solid rgba(31, 32, 65, 0.5)
@@ -42,6 +55,12 @@
         &:focus
             color rgba(31, 32, 65, 0.75)
             outline: none
+        &_arrow
+            @extends .text-field__text
+            width 220px
         &_hover
             @extend .text-field__text
             color rgba(31, 32, 65, 0.75)
+
+
+    
