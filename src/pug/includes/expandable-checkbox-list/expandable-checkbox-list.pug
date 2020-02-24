@@ -1,15 +1,16 @@
 include ..\checkbox\checkbox
 
-.expandable-checkbox-list
+label.expandable-checkbox-list(for='list')
     legend.expandable-checkbox-list__text expandable checkbox list
+    input.expandable-checkbox-list__button(type='checkbox' id='list')
     .expandable-checkbox-list__expand-more
         img(src = '/assets/img/expand_more.svg')
-.expandable-checkbox-list__list
-    +checkbox({ name: 'Завтрак'})
-    +checkbox({ name: 'Письменный стол'})
-    +checkbox({ name: 'Стул для кормления'})
-    +checkbox({ name: 'Кроватка'})
-    +checkbox({ name: 'Телевизор'})
-    +checkbox({ name: 'Шампунь'})
-    +checkbox({ name: 'Телевизор'})
-    +checkbox({ name: 'Шампунь'})
+    .expandable-checkbox-list__list
+        +checkbox({ name: 'Завтрак'})
+        +checkbox({ name: 'Письменный стол'})
+        +checkbox({ name: 'Стул для кормления'})
+        +checkbox({ name: 'Кроватка'})
+        +checkbox({ name: 'Телевизор'})
+        +checkbox({ name: 'Шампунь'})
+        +checkbox({ name: 'Телевизор'})
+        +checkbox({ name: 'Шампунь'})

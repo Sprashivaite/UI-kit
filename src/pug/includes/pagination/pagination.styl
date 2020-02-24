@@ -1,0 +1,103 @@
+/**
+* CSS themes for simplePagination.js
+* Author: Flavius Matis - http://flaviusmatis.github.com/
+* URL: https://github.com/flaviusmatis/simplePagination.js
+*/
+
+ul.simple-pagination {
+	list-style: none;
+}
+
+.simple-pagination {
+	display: block;
+	overflow: hidden;
+	padding: 0 5px 5px 0;
+	margin: 0;
+}
+
+.simple-pagination ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.simple-pagination li {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	float: left;
+}
+span.ellipse.clickable {
+	cursor: pointer;
+}
+
+.ellipse input {
+	width: 3em;
+}
+
+/*------------------------------------*\
+	Light Theme Styles
+\*------------------------------------*/
+.light-theme span {
+	cursor:pointer;
+}
+
+.light-theme a, .light-theme span {
+    float: left;
+    color: #666;
+    font-size: 12px;
+    line-height: 42px;
+    font-weight: 400;
+    text-align: center;
+    min-width: 14px;
+    margin: 0 1px 0 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 22px;
+    text-decoration: none
+}
+
+.light-theme a:hover, .light-theme li:not(.disabled):not(.active) span:hover {
+	text-decoration: none;
+	background: #FCFCFC;
+}
+
+.light-theme .current {
+	background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+	color: #FFF;
+	border-color: #444;
+	box-shadow: 0 1px 0 rgba(255,255,255,1), 0 0 2px rgba(0, 0, 0, 0.3) inset;
+	cursor: default;
+}
+
+.light-theme .ellipse {
+	background: none;
+	border: none;
+	border-radius: 0;
+	box-shadow: none;
+	font-weight: bold;
+	cursor: default;
+}
+.next::after {
+    content: '';
+    position absolute;
+    background-image url('\assets\img\Rectangle 2.svg');
+    background-size: cover
+    width: 40px;
+    height: 40px;
+    right: 10px;
+    }
+.next::before{
+    content: '';
+    position absolute;
+    background-image url('\assets\img\arrow_forward_white.svg');
+    background-size: cover
+    width: 18px;
+    height: 18px;
+    z-index: 2;
+    margin-top: 11px;
+    margin-right: 11px;
+    }
+.current.next{
+    display: none;
+}
