@@ -2,7 +2,8 @@ import './styl/main.styl'
 
 
 import ionRangeSlider from 'ion-rangeslider'
-
+import 'item-quantity-dropdown/lib/item-quantity-dropdown.min.js'
+import 'item-quantity-dropdown/lib/item-quantity-dropdown.min.css'
 import './pug/includes/range-slider/range-slider.js'
 import "./pug/includes/expandable-checkbox-list/expandable-checkbox-list.js"
 import "./pug/includes/radio-button/radio-button.js"
