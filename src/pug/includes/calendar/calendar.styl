@@ -64,8 +64,8 @@
   .-range-from-::after{
       content: '';
       background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-      left: 21px
-      width: 19px
+      left: 20.5px
+      width: 18px
       height 40px
       position absolute
       opacity: 0.25;
@@ -428,22 +428,26 @@
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  justify-content: space-between
   padding: 4px;
   border-top: 1px solid #efefef; }
-
+[data-action='apply'] {
+    color: #BC9CFF !important; 
+    }
 .datepicker--button {
   font-family: Montserrat;
   font-style: normal;
   font-weight: bold;
   font-size: 12px;
   line-height: 15px;
+  margin-right: 18px;
   text-transform: uppercase;
   color: rgba(31, 32, 65, 0.5);
   cursor: pointer;
   border-radius: 4px;
-  -webkit-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+//   -webkit-flex: 1;
+//       -ms-flex: 1;
+//           flex: 1;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
