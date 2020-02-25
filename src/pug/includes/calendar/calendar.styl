@@ -49,14 +49,43 @@
   .datepicker--cell.-focus- {
     background: #f0f0f0; }
   .datepicker--cell.-current- {
-    color: #4EB5E6; }
+    background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+    border-radius: 22px;
+    color: #FFFFFF;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px; }
     .datepicker--cell.-current-.-focus- {
       color: #4a4a4a; }
     .datepicker--cell.-current-.-in-range- {
       color: #4EB5E6; }
+  .-range-from-::after{
+      content: '';
+      background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+      left: 21px
+      width: 19px
+      height 40px
+      position absolute
+      opacity: 0.25;
+      z-index 0
+      }
+  .-range-to-::after{
+      content: '';
+      background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+      right: 22px
+      width: 18px
+      height 40px
+      position absolute
+      opacity: 0.25;
+      z-index 0
+      }
   .datepicker--cell.-in-range- {
-    background: rgba(92, 196, 239, 0.1);
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    opacity: 0.25;
     color: #4a4a4a;
+    z-index 2
     border-radius: 0; }
     .datepicker--cell.-in-range-.-focus- {
       background-color: rgba(92, 196, 239, 0.2); }
@@ -71,23 +100,23 @@
       color: #aeaeae; }
   .datepicker--cell.-range-from- {
     border: 1px solid rgba(92, 196, 239, 0.5);
-    background-color: rgba(92, 196, 239, 0.1);
-    border-radius: 4px 0 0 4px; }
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    border-radius: 22px; }
   .datepicker--cell.-range-to- {
     border: 1px solid rgba(92, 196, 239, 0.5);
-    background-color: rgba(92, 196, 239, 0.1);
-    border-radius: 0 4px 4px 0; }
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    border-radius: 22px; }
   .datepicker--cell.-range-from-.-range-to- {
     border-radius: 4px; }
   .datepicker--cell.-selected- {
     color: #fff;
     border: none;
-    background: #5cc4ef; }
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%); }
     .datepicker--cell.-selected-.-current- {
       color: #fff;
       background: #5cc4ef; }
     .datepicker--cell.-selected-.-focus- {
-      background: #45bced; }
+      background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%); }
   .datepicker--cell:empty {
     cursor: default; }
 
@@ -324,7 +353,11 @@
           justify-content: center; }
 
 .datepicker--nav-action {
-  width: 32px;
+  width: 40px;
+  margin-right 10px;
+  margin-left 10px;
+  height 40px
+  margin-top 8px;
   border-radius: 4px;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -335,8 +368,29 @@
   .datepicker--nav-action.-disabled- {
     visibility: hidden; }
   .datepicker--nav-action svg {
+    display none
     width: 32px;
     height: 32px; }
+    [data-action=next]::after{
+        content: ''
+        background-image url('\assets\img\arrow_forward.svg')
+        background-size: cover;
+        width: 18px;
+        height: 18px;
+        right: 25px;
+        position: absolute;
+        top: 23px;
+        }
+    [data-action=prev]::after{
+        content: ''
+        background-image url('\assets\img\arrow_back.svg')
+        background-size: cover;
+        width: 18px;
+        height: 18px;
+        left: 25px;
+        position: absolute;
+        top: 23px;
+        }
   .datepicker--nav-action path {
     fill: none;
     stroke: #9c9c9c;
@@ -378,7 +432,13 @@
   border-top: 1px solid #efefef; }
 
 .datepicker--button {
-  color: #4EB5E6;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  color: rgba(31, 32, 65, 0.5);
   cursor: pointer;
   border-radius: 4px;
   -webkit-flex: 1;
@@ -387,9 +447,7 @@
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  margin-left 15px
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
