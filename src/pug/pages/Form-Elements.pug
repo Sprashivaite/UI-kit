@@ -89,24 +89,12 @@ include ..\includes\rate-button\rate-button
         +comfort({img: '/assets/img/location_city.svg', title: 'Удобство', description: 'Окно в каждой из спален'})
 
 
-    //- .Text-Field.Form-Elements__Dropdown-1
-    //-     legend Dropdown
-    //-     .Text-Field_Default Default
-    //-     .Text-Field_Date-Picker
-    //-         select.Text-Field_dropdown(type='text' value='Спальни кровати')
-    //-                 option Спальни
-    //-                 option Кровати
-    //-                 option Ванные комнаты
+    .Text-Field.Form-Elements__Dropdown-1
+        include .\..\includes\dropdown-guests\dropdown-guests
     .Form-Elements__Dropdown-2
         include .\..\includes\dropdown-guests\dropdown-guests
-    //- .Text-Field.Form-Elements__Dropdown-3
-    //-     legend Dropdown 
-    //-     .Text-Field_Default Default
-    //-     .Text-Field_Date-Picker
-    //-         select.Text-Field_dropdown(type='text' value='Сколько гостей')
-    //-                 option Сколько гостей
-    //-                 option 1
-    //-                 option 2
+    .Text-Field.Form-Elements__Dropdown-3
+        include .\..\includes\dropdown-guests\dropdown-guests
 
 
     .Form-Elements__rich-checkbox

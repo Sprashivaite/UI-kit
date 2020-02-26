@@ -1,7 +1,8 @@
 include ..\logo-color\logo-color
+include ..\button\button
+
 mixin nav(name)
-    ul
-        a(href="/")= name
+    a(href="/")= name
 
 mixin header(options)
     .header
@@ -12,15 +13,16 @@ mixin header(options)
             b
                 +nav('Home')
             +nav('About Us')
-            +nav('Services')
+            +nav('Services')            
+            a.header__expand-more
             +nav('Careers')
             +nav('News')
             +nav('Documentation')
-            .header__expand-more
-                img(src='/assets/img/expand_more.svg')
+
         if options.login == true
-            .login-name Cosmin Negoita
-                .login-name__border
+            .header__name Cosmin Negoita
         else if options.login == false
-            .header__button-empty
+            .header__button_empty
+                +button({name: "login", type:"button_empty"})
             .header__button_register
+                +button({name: "register"})

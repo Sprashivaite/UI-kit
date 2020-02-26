@@ -1,4 +1,4 @@
-
+import './styl/main.styl'
 
 
 import ionRangeSlider from 'ion-rangeslider'
@@ -13,4 +13,3 @@ import "./pug/includes/calendar/calendar.js"
 import "./pug/includes/dropdown-guests/dropdown-guests.js"
 
 
-import './styl/main.styl'

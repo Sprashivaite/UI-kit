@@ -1,3 +1,5 @@
+include ..\text-field\text-field
+
 mixin footer
     footer.footer
         .footer__toxin
@@ -26,9 +28,7 @@ mixin footer
             h3 SUBSCRIBE TO OUR NEWSLETTER
             p Receive our latest news and promotions in your inbox!
         .footer__email
-            input(type='email' placeholder='Your email address')
-            button(type='submit')
-                img(src='/assets/img/arrow_forward.svg')
+            +text-field({type: "email", text:"Your email address"})
     .footer__bot
         span.footer__copyright Copyright &copy; 2018 Toxin UI Kit. All rights reserved.
         section.footer__cc
