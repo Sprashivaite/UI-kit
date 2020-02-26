@@ -1,0 +1,56 @@
+.iqdropdown {
+    width: 320px 
+    height: 44px 
+    margin-top 5px 
+}
+.iqdropdown .iqdropdown-selection {
+    font-family: Montserrat 
+    font-style: normal 
+    font-weight: normal 
+    font-size: 14px 
+    line-height: 18px 
+    color: rgba(31, 32, 65, 0.75) 
+    }
+.iqdropdown-selection:after {
+    content ''
+    background-image url('/assets/img/expand_more.svg') !important
+    background-size: contain !important
+    width: 12px !important
+    height: 8px !important
+    }
+.iqdropdown.menu-open .iqdropdown-selection:after {
+    content ''
+    background-image url('/assets/img/expand_more.svg') !important
+    background-size: contain !important
+    display flex
+    justify-content center
+    align-items center
+    width: 44px 
+    height: 44px 
+    transition: 0.3s
+    transform: rotate(180deg)
+    }
+.iqdropdown .icon-decrement {
+
+    color: rgba(31, 32, 65, 0.5) !important
+    }
+
+.iqdropdown-item 
+    font-family: Montserrat !important
+    font-size: 12px !important
+    line-height: 15px !important
+    text-transform: uppercase !important
+    color: #1F2041 !important
+    font-style: normal !important
+    font-weight: bold !important
+    width: 83px 
+    height: 15px 
+.iqdropdown .iqdropdown-menu-option
+    height: 30px  !important
+    margin: 7px 0 !important
+.iqdropdown .iqdropdown-menu
+    border: 1px solid rgba(31, 32, 65, 0.5) 
+    top: 45px 
+    border-radius: 2px 
+    box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05) 
+    height: 159px 
