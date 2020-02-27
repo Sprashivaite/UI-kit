@@ -1,53 +1,13 @@
-.Cards
+include ..\includes\search-rooms\search-rooms
+include ..\includes\registration\registration
+
+.cards
     .Default__logo
         include ..\includes\logo\logo
-    .search-rooms
-        .container__title Найдём номера под ваши&nbsp;пожелания
-        form(action="")
-            .search-rooms__com-data
-                .Data-Dropdown
-                    legend Прибытие
-                    .Data-Dropdown_Date-Picker
-                        input(type="date" class="Data-Dropdown_email")
-            .search-rooms__exit-data
-                .Data-Dropdown
-                    legend выезд
-                    .Data-Dropdown_Date-Picker
-                        input(type="date" class="Data-Dropdown_email")
-            .search-rooms__guests
-                legend Гости
-                .Text-Field_Default Default
-                .Text-Field_Date-Picker
-                    select.Text-Field_dropdown(type='text' value='Сколько гостей')
-                            option Сколько гостей
-                            option 1
-                            option 2
-            button.Button-solid_long.search-rooms__Button-solid_long
-                .Button_text_long подобрать номер
-    .registration
-        .container__title Регистрация аккаунта
-        form(action="" method = "post")
-            .Text-Field_Date-Picker.logIn__Text-Field_Date-Picker
-                input.Text-Field_email(type='email' placeholder='Имя')
-            .Text-Field_Date-Picker.logIn__Text-Field_Date-Picker_pass
-                input.Text-Field_email(type='email' placeholder='Фамилия')
-            .registration__data
-                legend дата рождения
-                    .Text-Field_Date-Picker
-                        input(type="date" class="Text-Field_email")
-            .registration__logIn
-                legend данные для входа в сервис
-                    .Text-Field_Date-Picker
-                        input.Text-Field_email(type='email' placeholder='Email')
-                    .Text-Field_Date-Picker.legend__logIn
-                        input.Text-Field_email(type='password' placeholder='Пароль')
-            //- input(type="submit")
-            button.Button-solid_long.registration__Button-solid_long
-                .Button_text_long перейти к оплате
-            .registration__text Уже есть аккаунт на Toxin
-            button.Button-empty.registration__Button-empty
-                .Button-empty__back 
-                .Button-empty__text   Войти
+    .cards__search-rooms
+        +search-rooms
+    .cards__registration
+        +registration
     .reservation
         form(action="" method = "get")
             .reservation__com-data

@@ -1,21 +1,6 @@
-legend radio buttons
-//- label.radio-button(for ='мужчина')
-//-     .radio-button__input
-//-     input(type="radio" name ='gender' id='мужчина' checked)
-//-     | Мужчина 
-    
-//- label.radio-button(for ='женщина')
-//-     .radio-button__input
-//-     input(type="radio" name ='gender' id='женщина')
-//-     | Женщин
-
-
-
-.radio-btn
-    input(type="radio" value="value-1" id="rc1" name="rc1" checked="checked")
-    label(for='rc1' onclick)
-        | Мужчина
-.radio-btn
-    input(type="radio" value="value-2" id="rc2" name="rc1")
-    label(for='rc2' onclick)
-        | Женщина
+.radio-button
+    input.radio-button__input(type="radio" id="fe__radio-m" name="fe__radio" value='m' checked="checked")
+    label.radio-button__label(for='fe__radio-m') Мужчина
+.radio-button
+    input.radio-button__input(type="radio" id="fe__radio-w" name="fe__radio" value='w')
+    label.radio-button__label(for='fe__radio-w') Женщина

@@ -9,10 +9,14 @@ include ..\includes\rate-button\rate-button
 
 .Form-Elements
     +logo
-    .Form-Elements__text-field
+    .Form-Elements__text-field_1
         +text-field({legend: 'text field', description: 'default', text: 'Email'})
+    .Form-Elements__text-field_2
         +text-field({legend: 'text field', description: 'Hover / Focus', text: 'This is pretty awesome'})
-        +text-field({legend: 'dropdown', description: 'default', text: 'Сколько гостей'})
+    .Form-Elements__dropdown_1
+        legend dropdown
+        include .\..\includes\dropdown-guests\dropdown-guests
+    .Form-Elements__masked
         +text-field({legend: 'masked text field', description: 'default', text: 'ДД.ММ.ГГГГ'})
     .Form-Elements__date-dropdown
         +data-dropdown
@@ -31,6 +35,7 @@ include ..\includes\rate-button\rate-button
     .Form-Elements__expandable-checkbox-list
         include ..\includes\expandable-checkbox-list\expandable-checkbox-list
     .Form-Elements__radio-button
+        legend radio-buttons
         include ..\includes\radio-button\radio-button
     .Form-Elements__toggle
         legend toogle
@@ -48,11 +53,8 @@ include ..\includes\rate-button\rate-button
 
 
 
-    //- .Filter-Data-Dropdown.Form-Elements__Data-Dropdown
-    //-     legend filter date dropdown
-    //-     .Text-Field_Default Default
-    //-     .Text-Field_Date-Picker
-    //-         input(type="date" class="Text-Field_email")
+    .Form-Elements__Data-Dropdown
+        legend filter date dropdown
     .Form-Elements__email
         +text-field({legend: 'subscription text field', text: 'Email', type: 'email'})
         
@@ -65,16 +67,16 @@ include ..\includes\rate-button\rate-button
             
     .Form-Elements__solid-button
         legend buttons
-        +button({name: 'click me'})
-        +button({name: 'click me'})
+        +button({text: 'click me'})
+        +button({text: 'click me'})
     .Form-Elements__empty-button
-        +button({type: 'button_empty', name: 'click me'})
-        +button({type: 'button_empty', name: 'click me'})
+        +button({type: '_empty', text: 'click me'})
+        +button({type: '_empty', text: 'click me'})
     .Form-Elements__button-name
         .button__text_empty click me
         .button__text_empty click me
     .Form-Elements__long-button
-        +button({type: 'button_long', name: 'перейти к оплате'})
+        +button({type: '_long', text: 'перейти к оплате'})
     .Form-Elements__bullet-list
         legend Bullet list
         +bullet-list('Нельзя с питомцами')
@@ -90,10 +92,13 @@ include ..\includes\rate-button\rate-button
 
 
     .Text-Field.Form-Elements__Dropdown-1
+        legend dropdown
         include .\..\includes\dropdown-guests\dropdown-guests
     .Form-Elements__Dropdown-2
+        legend dropdown
         include .\..\includes\dropdown-guests\dropdown-guests
     .Text-Field.Form-Elements__Dropdown-3
+        legend dropdown
         include .\..\includes\dropdown-guests\dropdown-guests
 
 

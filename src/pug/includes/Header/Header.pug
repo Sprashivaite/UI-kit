@@ -23,6 +23,6 @@ mixin header(options)
             .header__name Cosmin Negoita
         else if options.login == false
             .header__button_empty
-                +button({name: "login", type:"button_empty"})
+                +button-header({text: "login", type:'_empty'})
             .header__button_register
-                +button({name: "register"})
+                +button-header({text: "register"})

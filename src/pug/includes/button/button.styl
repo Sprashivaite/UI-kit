@@ -35,26 +35,54 @@
             height 18px
             margin-left 138px
             position absolute
-            
+    &_empty
+        @extend .button
+        &::after
+            content: ''
+            position absolute
+            width 75+20px
+            height 30+10px
+            left 2px
+            top 2px
+            background-color white
+            border-radius 22px
+            z-index 2
+        &:active
+            width 99px
+            height 44px
+            border-radius 22px
+            background linear-gradient(180deg, #deceff 0%, #c5d2fc 100%)
+            border none
+            z-index 1
+        &:focus
+            outline none
 
-.button_empty
+
+
+
+
+.button-header
     @extend .button
-    &::after
-        content: ''
-        position absolute
-        width 75+20px
-        height 30+10px
-        left 2px
-        top 2px
-        background-color white
-        border-radius 22px
-        z-index 2
-    &:active
-        width 99px
-        height 44px
-        border-radius 22px
-        background linear-gradient(180deg, #deceff 0%, #c5d2fc 100%)
-        border none
-        z-index 1
-    &:focus
-        outline none
+    height auto 
+    width auto 
+    &__text
+        @extend .button__text
+        padding 9px 15px 10px 12px
+        &_empty
+            @extend .button__text_empty
+            padding 8px 17px
+            background-color #FFFFFF
+            border-radius 22px
+    &_empty
+        @extend .button_empty
+        height auto 
+        width auto
+        padding 2px
+        &::after
+            height auto 
+            width auto
+        &:active
+            height auto 
+            width auto
+
+

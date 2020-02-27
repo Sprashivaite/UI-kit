@@ -1,0 +1,30 @@
+include ../text-field/text-field
+include ../radio-button/radio-button
+
+mixin registration
+    .registration
+        .registration__title Регистрация аккаунта
+        form(action="" method = "post")
+            .registration__name
+                +text-field({text: "Имя"})
+            .registration__surname
+                +text-field({text: "Фамилия"})
+            .registration__radio
+                include ../radio-button/radio-button
+            //- .registration__data
+            //-     legend дата рождения
+            //-         .Text-Field_Date-Picker
+            //-             input(type="date" class="Text-Field_email")
+            //- .registration__logIn
+            //-     legend данные для входа в сервис
+            //-         .Text-Field_Date-Picker
+            //-             input.Text-Field_email(type='email' placeholder='Email')
+            //-         .Text-Field_Date-Picker.legend__logIn
+            //-             input.Text-Field_email(type='password' placeholder='Пароль')
+            //- //- input(type="submit")
+            //- button.Button-solid_long.registration__Button-solid_long
+            //-     .Button_text_long перейти к оплате
+            //- .registration__text Уже есть аккаунт на Toxin
+            //- button.Button-empty.registration__Button-empty
+            //-     .Button-empty__back 
+            //-     .Button-empty__text   Войти

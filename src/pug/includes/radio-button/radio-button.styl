@@ -1,139 +1,46 @@
-// .radio-button
-//     height 20px
-//     width 102px
-//     margin-top 16px
-//     margin-right 20px
-//     cursor: pointer
-//     float left
-//     display inline-block
-//     input 
-//         // display none
-// .radio-button__input
-//     background: #FFFFFF;
-//     border: 1px solid rgba(31, 32, 65, 0.25);
-//     box-sizing: border-box;
-//     border-radius: 10px;
-//     width: 20px;
-//     height: 20px;
-//     float left
-//     &_checked
-//         background: #FFFFFF;
-//         border: 1px solid #BC9CFF;
-//         box-sizing: border-box;
-//         border-radius: 10px;
-//         width: 20px;
-//         height: 20px;
-//         float left
-
-
-
-.checkbox-btn,
-.radio-btn {
-    position: relative;
-    padding-left: 20px;
-    padding-top 15px
+.radio-button
+    position relative
+    height 20px
+    width 110px
     display inline-block
-    input[type="checkbox"],
-    input[type="radio"] {
-        position: absolute;
-        z-index: 1;
-        opacity: 0; /* IE<9 graceful degradation */
-    }
-
-    label {
-        position: relative;
-        display: inline-block;
+    margin-right 8px
+    &__label
+        width: 68px;
+        height: 24px;
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 24px;
         color: rgba(31, 32, 65, 0.5);
-        padding-left: 10px
-        padding-right 20px
-        line-height: 24px; /* ::after height+borders */
-        vertical-align: middle;
-        cursor: pointer;
-        user-select: none; /* iOS =< 6 bug fix*/
-
-        &::after {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 19px;
-            height: 19px;
-            margin-left: -20px;
-            cursor: pointer;
-            background-color: #fff;
-            border: 1px solid rgba(31, 32, 65, 0.25);
-            border-radius: 10px;
-            content: "";
-        }
-
-        &::before {
-            position: absolute;
-            top: 6px;
-            left: 6px;
-            z-index: 1;
-            width: 10px;
-            height: 5px;
-            margin-left: -19.5px;
-            background: transparent;
-            background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-            border-top: none;
-            border-right: none;
-            content: "";
-            opacity: 0;
-            transform: rotate(-45deg);
-            transition: all .15s ease-in-out;
-        }
-
-        &:active {
-            &::before {
-                opacity: .3;
-            }
-        }
-    }
-
-    input[type="checkbox"]:checked + label,
-    input[type="radio"]:checked + label {
-        color: rgba(31, 32, 65, 0.75);
-
-        &::after {
+        margin-left 11px
+    &__input
+        appearance none
+        background: #FFFFFF;
+        border: 1px solid rgba(31, 32, 65, 0.25);
+        box-sizing: border-box;
+        border-radius: 10px;
+        width: 20px;
+        height: 20px;
+        float left
+        &:checked
+            background: #FFFFFF;
             border: 1px solid #BC9CFF;
-        }
-
-        &::before {
-            opacity: 1;
-        }
-    }
-
-    input[type="checkbox"]:disabled + label,
-    input[type="radio"]:disabled + label {
-        color: #787878;
-        cursor: default;
-
-        &::after {
-            background-color: #fff;
-            border: 3px solid #787878;
-        }
-
-        &::before {
-            display: none;
-        }
-    }
-}
-
-.radio-btn {
-    label {
-        &::after {
-            border-radius: 50%;
-        }
-
-        &::before {
-            top: 4.4px;
-            left: 4px;
-            width: 12.5px;
-            height: 12.5px;
-            background-color: #000;
-            border: 0;
-            border-radius: 50%;
-            transform: rotate(0deg);
-        }
-    }
+            box-sizing: border-box;
+            border-radius: 10px;
+            width: 20px;
+            height: 20px;
+            float left
+            outline: none
+            &:before
+                content ''
+                position absolute
+                width: 12px;
+                height: 12px;
+                left: 4px;
+                top: 4px
+                background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+                border-radius: 10px;
+.radio-button__input:checked ~ .radio-button__label {
+    color: rgba(31, 32, 65, 0.75);
 }

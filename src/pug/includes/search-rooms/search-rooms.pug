@@ -1,0 +1,17 @@
+include ..\button\button
+
+mixin search-rooms
+    .search-rooms
+        .search-rooms__title Найдём номера под ваши&nbsp;пожелания
+        form(action="")
+            .search-rooms__com-data
+                .Data-Dropdown
+                    legend Прибытие
+            .search-rooms__exit-data
+                .Data-Dropdown
+                    legend выезд
+            .search-rooms__guests
+                legend Гости
+                include ..\dropdown-guests\dropdown-guests
+            .search-rooms__button
+                +button({type:"_long", text:"подобрать номер"})
