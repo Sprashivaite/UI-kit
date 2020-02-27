@@ -1,20 +1,14 @@
-<div class="iqdropdown">
-  <p class="iqdropdown-selection" value="сколько гостей">  </p>
-  <div class="iqdropdown-menu">
-    <div class="iqdropdown-menu-option" data-id="item1">
-      <div>
-        <p class="iqdropdown-item">Взрослые</p>
-      </div>
-    </div>
-    <div class="iqdropdown-menu-option" data-id="item2">
-      <div>
-        <p class="iqdropdown-item">Дети</p>
-      </div>
-    </div>
-    <div class="iqdropdown-menu-option" data-id="item3">
-      <div>
-        <p class="iqdropdown-item">младенцы</p>
-      </div>
-    </div>
-  </div>
-</div>
+.iqdropdown
+  <p class="iqdropdown-selection"> "сколько гостей" </p>
+  .iqdropdown-menu
+    .iqdropdown-menu-option(data-id="item1")
+        p.iqdropdown-item Взрослые
+    .iqdropdown-menu-option(data-id="item2")
+        p.iqdropdown-item Дети
+    .iqdropdown-menu-option(data-id="item3")
+        p.iqdropdown-item младенцы
+    .iqdropdown__clear
+        .button__text_empty очистить
+    .iqdropdown__apply
+        .button__text_empty применить
+

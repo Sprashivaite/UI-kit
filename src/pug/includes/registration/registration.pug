@@ -1,6 +1,7 @@
 include ../text-field/text-field
 include ../radio-button/radio-button
 include ../toggle/toggle
+include ../button/button
 mixin registration
     .registration
         .registration__title Регистрация аккаунта
@@ -13,19 +14,15 @@ mixin registration
                 +radio-button
             .registration__data
                 legend дата рождения
-            //-         .Text-Field_Date-Picker
-            //-             input(type="date" class="Text-Field_email")
             .registration__log-in
                 legend данные для входа в сервис
                 +text-field({text: "Email"})
                 br
                 +text-field({text: "Пароль"})
-                br
-                //- +toggle({text:"Получать спецпредложения"})
-            //- //- input(type="submit")
-            //- button.Button-solid_long.registration__Button-solid_long
-            //-     .Button_text_long перейти к оплате
-            //- .registration__text Уже есть аккаунт на Toxin
-            //- button.Button-empty.registration__Button-empty
-            //-     .Button-empty__back 
-            //-     .Button-empty__text   Войти
+            .registration__toggle
+                +toggle
+            .registration__button-solid
+                +button({type:"_long", text:"перейти к оплате"})
+            .registration__text Уже есть аккаунт на Toxin
+        .registration__button-empty
+            +button({type:"_empty", text:"войти"})

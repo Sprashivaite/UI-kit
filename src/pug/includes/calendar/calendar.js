@@ -2242,12 +2242,8 @@
  })(window, jQuery);
 
 
-//  $(function() {
-//     $('#my-datepicker').datepicker({
-//         navTitles: {
-//             days: 'MM, <i>yyyy</i>',
-//             months: 'yyyy',
-//             years: 'yyyy1 - yyyy2'
-//         }
-//     })
-// });
+ $(function() {
+    $('#my-datepicker').datepicker({
+        multipleDatesSeparator: "-"
+    })
+});

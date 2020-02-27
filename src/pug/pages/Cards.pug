@@ -1,9 +1,11 @@
 include ..\includes\search-rooms\search-rooms
 include ..\includes\registration\registration
+include ..\includes\logo\logo
+include ..\includes\rate-button\rate-button
+include ..\includes\calendar\calendar 
 
 .cards
-    .Default__logo
-        include ..\includes\logo\logo
+    +logo
     .cards__search-rooms
         +search-rooms
     .cards__registration
@@ -52,22 +54,10 @@ include ..\includes\registration\registration
             button.Button-solid_long.reservation__Button-solid_long
                 //- input(type="submit")
                 .Button_text_long забронировать
-    .logIn
-        form(action="" method = "post")
-            .container__title Войти
-            .Text-Field_Date-Picker.logIn__Text-Field_Date-Picker
-                input.Text-Field_email(type='email' placeholder='Email')
-            .Text-Field_Date-Picker.logIn__Text-Field_Date-Picker_pass
-                input.Text-Field_email(type='password' placeholder='Пароль')
-            button.Button-solid_long.logIn__Button-solid_long
-                //- input(type="submit")
-                .Button_text_long войти
-            .logIn__text Нет аккаунта на Toxin?
-            button.Button-empty.logIn__Button-empty
-                .Button-empty__back 
-                .Button-empty__text Создать
+    .cards__log-in
+        include ..\includes\log-in\log-in 
     .calendar
-        include ..\includes\calendar\calendar 
+        +calendar
     .lux-photo
         img(src='/assets/img/№888.png')
         .description
@@ -75,11 +65,7 @@ include ..\includes\registration\registration
             .description__lux люкс
             .description__cost 9990₽ в сутки
             .description__rating
-                    img(src='/assets/img/star.svg')
-                    img(src='/assets/img/star.svg')
-                    img(src='/assets/img/star.svg')
-                    img(src='/assets/img/star.svg')
-                    img(src='/assets/img/star.svg')
+                +rate-button
             .description__reviews 145 Отзывов
     .lux-photo-2
         img(src='/assets/img/840.jpg')
@@ -88,9 +74,5 @@ include ..\includes\registration\registration
             .description__lux 
             .description__cost 9990₽ в сутки
             .description__rating
-                    img(src='/assets/img/star.svg')
-                    img(src='/assets/img/star.svg')
-                    img(src='/assets/img/star.svg')
-                    img(src='/assets/img/star.svg')
-                    img(src='/assets/img/star_border.svg')
+                +rate-button
             .description__reviews 65 Отзывов

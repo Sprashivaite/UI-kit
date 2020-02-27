@@ -1,0 +1,15 @@
+include ../text-field/text-field
+include ../button/button
+
+.log-in
+    form(action="" method = "post")
+        .log-in__title Войти
+        .log-in__name
+            +text-field({text:"Email"})
+        .log-in__pass
+            +text-field({text:"Пароль"})
+        .log-in__button-solid
+            +button({type:"_long", text:"войти"})
+        .log-in__text Нет аккаунта на Toxin?
+    .log-in__button-empty
+        +button({type:"_empty", text:"создать"})

@@ -8,7 +8,7 @@ include ..\includes\comfort\comfort
 include ..\includes\rate-button\rate-button
 include ..\includes\radio-button\radio-button
 include ..\includes\toggle\toggle
-
+include ..\includes\calendar\calendar
 .Form-Elements
     +logo
     .Form-Elements__text-field_1
@@ -55,6 +55,7 @@ include ..\includes\toggle\toggle
 
     .Form-Elements__Data-Dropdown
         legend filter date dropdown
+        +data-filter
     .Form-Elements__email
         +text-field({legend: 'subscription text field', text: 'Email', type: 'email'})
         
