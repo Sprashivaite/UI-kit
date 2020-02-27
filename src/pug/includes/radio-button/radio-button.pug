@@ -1,6 +1,7 @@
-.radio-button
-    input.radio-button__input(type="radio" id="fe__radio-m" name="fe__radio" value='m' checked="checked")
-    label.radio-button__label(for='fe__radio-m') Мужчина
-.radio-button
-    input.radio-button__input(type="radio" id="fe__radio-w" name="fe__radio" value='w')
-    label.radio-button__label(for='fe__radio-w') Женщина
+mixin radio-button(options = {})
+    .radio-button
+        input.radio-button__input(type="radio" id="fe__radio-m" name="fe__radio" value='m' checked="checked")
+        label.radio-button__label(for='fe__radio-m') Мужчина
+    .radio-button
+        input.radio-button__input(type="radio" id="fe__radio-w" name="fe__radio" value='w')
+        label.radio-button__label(for='fe__radio-w') Женщина

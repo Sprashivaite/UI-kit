@@ -1,6 +1,6 @@
 include ../text-field/text-field
 include ../radio-button/radio-button
-
+include ../toggle/toggle
 mixin registration
     .registration
         .registration__title Регистрация аккаунта
@@ -10,17 +10,18 @@ mixin registration
             .registration__surname
                 +text-field({text: "Фамилия"})
             .registration__radio
-                include ../radio-button/radio-button
-            //- .registration__data
-            //-     legend дата рождения
+                +radio-button
+            .registration__data
+                legend дата рождения
             //-         .Text-Field_Date-Picker
             //-             input(type="date" class="Text-Field_email")
-            //- .registration__logIn
-            //-     legend данные для входа в сервис
-            //-         .Text-Field_Date-Picker
-            //-             input.Text-Field_email(type='email' placeholder='Email')
-            //-         .Text-Field_Date-Picker.legend__logIn
-            //-             input.Text-Field_email(type='password' placeholder='Пароль')
+            .registration__log-in
+                legend данные для входа в сервис
+                +text-field({text: "Email"})
+                br
+                +text-field({text: "Пароль"})
+                br
+                //- +toggle({text:"Получать спецпредложения"})
             //- //- input(type="submit")
             //- button.Button-solid_long.registration__Button-solid_long
             //-     .Button_text_long перейти к оплате

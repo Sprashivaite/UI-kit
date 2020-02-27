@@ -1,4 +1,4 @@
-
-label.switch
-    input(type="checkbox" checked)
-    span
+mixin toggle(options = {})
+    .toggle
+        input.toggle__input(type='checkbox' id=(options.id ? options.id: 'toggle') checked=(options.checked ? true: false) ) 
+        label.toggle__label(for="toggle_id") Получать спецпредложения

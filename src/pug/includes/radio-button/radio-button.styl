@@ -4,16 +4,20 @@
     width 110px
     display inline-block
     margin-right 8px
+    cursor pointer
     &__label
+        display inline-block
+        position absolute
         width: 68px;
-        height: 24px;
+        height: 12px;
         font-family: Montserrat;
         font-style: normal;
         font-weight: normal;
         font-size: 14px;
-        line-height: 24px;
         color: rgba(31, 32, 65, 0.5);
-        margin-left 11px
+        margin-top -3px
+        margin-left 10px
+        cursor pointer
     &__input
         appearance none
         background: #FFFFFF;
@@ -23,6 +27,9 @@
         width: 20px;
         height: 20px;
         float left
+        cursor pointer
+        &:focus
+            outline: none
         &:checked
             background: #FFFFFF;
             border: 1px solid #BC9CFF;

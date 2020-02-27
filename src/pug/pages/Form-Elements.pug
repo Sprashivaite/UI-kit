@@ -6,6 +6,8 @@ include ..\includes\bullet-list\bullet-list
 include ..\includes\checkbox\checkbox
 include ..\includes\comfort\comfort
 include ..\includes\rate-button\rate-button
+include ..\includes\radio-button\radio-button
+include ..\includes\toggle\toggle
 
 .Form-Elements
     +logo
@@ -36,14 +38,12 @@ include ..\includes\rate-button\rate-button
         include ..\includes\expandable-checkbox-list\expandable-checkbox-list
     .Form-Elements__radio-button
         legend radio-buttons
-        include ..\includes\radio-button\radio-button
+        +radio-button
+        
     .Form-Elements__toggle
         legend toogle
-        br
-        include ..\includes\toggle\toggle
-        | Получать спецпредложения
-        include ..\includes\toggle\toggle
-        | Получать спецпредложения
+        +toggle({checked:true})
+        +toggle
     .Form-Elements__like-button
         legend like-button
         include ..\includes\like-button\like-button
