@@ -1,5 +1,12 @@
-mixin data-dropdown
+mixin data-dropdown(options = {})
     .data-dropdown
-        legend date Dropdown
+        legend= options.firstLegend
         .data-dropdown__border
-            input.data-dropdown__text(type="date" class ='')
+            input.data-dropdown__text(class='datepicker-here' placeholder="ДД.ММ.ГГГГ" type="text" data-clear-button="true" data-range="true"  data-multiple-dates-separator=" - " id="data-dropdown-1")
+
+
+    label.data-dropdown(for='data-dropdown-1')
+        legend= options.secondLegend
+        .data-dropdown__border
+            input.data-dropdown__text(placeholder="ДД.ММ.ГГГГ" type="text" id="data-dropdown-2")
+

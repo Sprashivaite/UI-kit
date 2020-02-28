@@ -3,20 +3,34 @@
     display inline-block
     width 150px
     height 67px
+    margin-right 20px
     &__border
         position absolute
-        width 150px
+        width 148px
         height 44px
         top 23px
         background #FFFFFF
         border 1px solid rgba(31, 32, 65, 0.25)
         border-radius 4px
+        margin-top 3px
+        
         &:hover
             border 1px solid rgba(31, 32, 65, 0.5)
             color rgba(31, 32, 65, 0.5)
         &:focus
             border 1px solid rgba(31, 32, 65, 0.5)
             color rgba(31, 32, 65, 0.5)
+        &:after
+            content: "";
+            position absolute
+            background-image: url(/assets/img/expand_more.svg)
+            background-size: contain
+            width: 12px
+            height: 8px
+            top: 19px;
+            right: 16px;
+            transform: rotate(180deg);
+            cursor pointer
     &__text
         position absolute
         outline-color: none
@@ -28,11 +42,9 @@
         border none
         font-size: 14px;
         line-height: 18px;
+        cursor pointer
         &:hover
             color rgba(31, 32, 65, 0.75)
         &:focus
             color rgba(31, 32, 65, 0.75)
             outline: none
-        [type='data']
-            font-size: 14px;
-            line-height: 18px;

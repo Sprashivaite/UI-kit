@@ -4,7 +4,7 @@
     width 1440px
     height 1853px
     background #FFFFFF
-    margin-top 20px
+    // margin-top 20px
     &__text-field_1
         wrap 136px, 141px 
         width: 320px;
@@ -15,20 +15,33 @@
         height: 64.44px;
         left: 141px;
         top: 220px;
-    &__dropdown_1
+    &__dropdown_field
         position: absolute;
         width: 320px;
         height: 64.44px;
         left: 141px;
         top: 303px;
     &__masked
-        wrap 395px, 141px 
+        wrap 392px, 141px 
+        width: 320px;
+        height: 64.44px;
     &__date-dropdown
-        wrap 502px, 141px
-        display flex
-        justify-content space-between
-        width 321px
-        height 150px
+        wrap 495px, 141px
+        width 362px
+        height 155px
+    &__filter-dropdown
+        wrap 600px, 141px 
+    &__email
+        wrap 705px, 141px
+    &__dropdown-expanded
+        position: absolute;
+        width: 266px;
+        height: 181.56px;
+        left: 140px;
+        top: 960px;
+
+
+
     &__solid-button
         wrap 231px, 979px 
         width: 221px
@@ -79,20 +92,7 @@
         wrap 1182px, 141px
     &__expandable-checkbox-list_2
         wrap 1246px, 141px
-    &__radio-button
-        position: absolute;
-        width: 290.74px;
-        height: 55px;
-        left: 586px;
-        top: 306px;
-        legend
-            margin-bottom: 10px
-    &__toggle
-        position: absolute;
-        width: 355px;
-        height: 89px;
-        left: 586px;
-        top: 397px;
+
     &__comment
         wrap 1573px, 587px
     &__comfort
@@ -103,9 +103,8 @@
         wrap 1196px, 587px     
         width 266px
         height 145px
-    &__email
-        wrap 712px, 141px
-    &__stars
+
+    &__rate-button
         wrap 626px, 587px
         width 281px
         height 60px
@@ -115,114 +114,45 @@
         height: 51px;
         left: 587px;
         top: 534px;
+    &__toggle
+        position: absolute;
+        width: 355px;
+        height: 89px;
+        left: 586px;
+        top: 397px;
+    &__radio-button
+        position: absolute;
+        width: 290.74px;
+        height: 55px;
+        left: 586px;
+        top: 306px;
+        legend
+            margin-bottom: 10px
+
     &__pagination
         position: absolute;
-        // width: 241px;
-        // height: 40.44px;
         left: 979px;
         top: 571px;
 
 
-.Text-Field_dropdown
-    // // @extend .Text-Field_email
-    color rgba(31, 32, 65, 0.5)
+.text-field
+    &__description
+        position absolute
+        top 0px
+        right 0px
+        font-weight normal
+        color $dark50
+        text-transform: uppercase;
+        font-size: 12px;
  
-.Text-Field_pretty
-    position absolute
-    width 300px
-    height 24px
-    left 14px
-    top 7px
-    line-height 18px
-    color rgba(31, 32, 65, 0.50)
-    border none
 
 
 
 
-.Form-Elements__Dropdown-1
+
+.Form-Elements__dropdown-1
     wrap 876px, 140px 
-.Form-Elements__Dropdown-2
+.Form-Elements__dropdown-2
     wrap 876px, 587px 
-.Form-Elements__Dropdown-3
+.Form-Elements__dropdown-3
     wrap 876px, 979px 
-
-.check-buttons
-    width 222px
-    height 100%px
-
-.Stars
-    height 24px
-    width 120px
-    img
-        float left
-        &:active
-            background-image url('/assets/img/star.svg')
-
-.Stars_1
-    position relative
-    top 34px
-.Stars_2
-    position relative
-    top 14px
-    left 140px
-.Filter-Data-Dropdown
-    width 150px
-    height 65px
-.Form-Elements__Data-Dropdown
-    wrap 607px, 141px 
-
-.Buttons
-    width 218px
-    height 195px
-
-
-.Button-solid_click
-    position absolute
-    width 99px
-    height 44px
-    right 0px
-    top 31px
-    background linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%)
-    opacity 0.5
-    border-radius 22px
-.Button__Button-empty
-    cont 105px, 0px 
-
-.Button__Button-empty_click
-    cont 105px, 119px 
-.Button-empty_click
-    // @extend .Button-empty
-    background linear-gradient(180deg, #deceff 0%, #c5d2fc 100%)
-.Form-Elements__Button-solid_long
-    cont 456px, 979px 
-.Button-solid_long
-    // @extend .Button-solid
-    width 320px
-.Button_text_long
-    // @extend .Button_text
-    width 280px
-.Buttons__Button-empty_pos-2
-    cont 180px, 1px 
-.Buttons__Button-empty_pos-3
-    cont 180px, 82px 
-.Button-empty__text_black
-    // @extend .Button-empty__text
-    color rgba(31, 32, 65, 0.5)
-.Expandable-Checkbox
-    width 266px
-    height 277px
-.Form-Elements__Expandable-Checkbox
-    cont 1246px, 140px 
-.Expandable-Checkbox__list
-    position absolute
-    width 222px
-    height 230.56px
-    left 0px
-    top 47px
-    input
-        float left
-    div
-        color rgba(31, 32, 65, 0.5)
-        margin-left 9.74px
-        padding-bottom 5px

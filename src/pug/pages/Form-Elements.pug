@@ -12,100 +12,125 @@ include ..\includes\calendar\calendar
 .Form-Elements
     +logo
     .Form-Elements__text-field_1
-        +text-field({legend: 'text field', description: 'default', text: 'Email'})
+        legend text field
+        .text-field__description default
+        +text-field({text: 'Email'})
+
     .Form-Elements__text-field_2
-        +text-field({legend: 'text field', description: 'Hover / Focus', text: 'This is pretty awesome'})
-    .Form-Elements__dropdown_1
+        legend text field
+        .text-field__description Hover / Focus
+        +text-field({text: 'This is pretty awesome'})
+
+    .Form-Elements__dropdown_field
+        legend dropdown
+        .text-field__description default
+        include .\..\includes\dropdown-guests\dropdown-guests
+
+    .Form-Elements__masked
+        legend masked text field
+        .text-field__description default
+        +text-field({text: 'ДД.ММ.ГГГГ'})
+
+    .Form-Elements__date-dropdown
+        +data-dropdown({ firstLegend:"date Dropdown", secondLegend:"date Dropdown"})
+
+    .Form-Elements__filter-dropdown
+        legend filter date dropdown
+        +data-filter
+
+    .Form-Elements__email
+        legend subscription text field
+        +text-field({text: 'Email', type: 'email'})
+
+    .Form-Elements__dropdown-1
         legend dropdown
         include .\..\includes\dropdown-guests\dropdown-guests
-    .Form-Elements__masked
-        +text-field({legend: 'masked text field', description: 'default', text: 'ДД.ММ.ГГГГ'})
-    .Form-Elements__date-dropdown
-        +data-dropdown
-        +data-dropdown
-    .Form-Elements__slider
-        legend Range Slider
-        include ..\includes\range-slider\range-slider
-    .Form-Elements__checkbox-buttons
-        legend Checkbox Buttons
-        +checkbox({ name: 'Можно курить'})
-        +checkbox({ name: 'Можно с питомцами'})
-        +checkbox({ name: 'Можно пригласить гостей (до 10 человек)'})
+    .Form-Elements__dropdown-expanded
+        legend dropdown
+        .text-field__description expanded
+        include .\..\includes\dropdown-guests\dropdown-guests
 
     .Form-Elements__expandable-checkbox-list_2
         include ..\includes\expandable-checkbox-list\expandable-checkbox-list
     .Form-Elements__expandable-checkbox-list
         include ..\includes\expandable-checkbox-list\expandable-checkbox-list
-    .Form-Elements__radio-button
-        legend radio-buttons
-        +radio-button
-        
-    .Form-Elements__toggle
-        legend toogle
-        +toggle({checked:true})
-        +toggle
-    .Form-Elements__like-button
-        legend like-button
-        include ..\includes\like-button\like-button
-        include ..\includes\like-button\like-button
-    .Form-Elements__pagination
-        include ..\includes\pagination\pagination
 
-
-
-    .Form-Elements__Data-Dropdown
-        legend filter date dropdown
-        +data-filter
-    .Form-Elements__email
-        +text-field({legend: 'subscription text field', text: 'Email', type: 'email'})
-        
-
-    .Form-Elements__stars
-        legend rate button
-        +rate-button({id: '1'})
-        +rate-button({id: '2'})
-
-            
-    .Form-Elements__solid-button
-        legend buttons
-        +button({text: 'click me'})
-        +button({text: 'click me'})
-    .Form-Elements__empty-button
-        +button({type: '_empty', text: 'click me'})
-        +button({type: '_empty', text: 'click me'})
-    .Form-Elements__button-name
-        .button__text_empty click me
-        .button__text_empty click me
-    .Form-Elements__long-button
-        +button({type: '_long', text: 'перейти к оплате'})
-    .Form-Elements__bullet-list
-        legend Bullet list
-        +bullet-list('Нельзя с питомцами')
-        +bullet-list('Без вечеринок и мероприятий')
-        +bullet-list('Время прибытия — после 13:00, а выезд до 12:00')
-
-    .Form-Elements__comment
-        include ..\includes\comment\comment
     .Form-Elements__comfort
         +comfort({img: '/assets/img/insert_emoticon.svg', title: 'Комфорт', description: 'Шумопоглощающие стены'})
     .Form-Elements__comfort_2
         +comfort({img: '/assets/img/location_city.svg', title: 'Удобство', description: 'Окно в каждой из спален'})
 
 
-    .Text-Field.Form-Elements__Dropdown-1
-        legend dropdown
-        include .\..\includes\dropdown-guests\dropdown-guests
-    .Form-Elements__Dropdown-2
-        legend dropdown
-        include .\..\includes\dropdown-guests\dropdown-guests
-    .Text-Field.Form-Elements__Dropdown-3
-        legend dropdown
-        include .\..\includes\dropdown-guests\dropdown-guests
 
+    .Form-Elements__checkbox-buttons
+        legend Checkbox Buttons
+        +checkbox({ name: 'Можно курить'})
+        +checkbox({ name: 'Можно с питомцами'})
+        +checkbox({ name: 'Можно пригласить гостей (до 10 человек)'})
+
+    .Form-Elements__radio-button
+        legend radio-buttons
+        +radio-button
+
+    .Form-Elements__toggle
+        legend toogle
+        +toggle({checked:true})
+        +toggle
+
+    .Form-Elements__like-button
+        legend like-button
+        include ..\includes\like-button\like-button
+        include ..\includes\like-button\like-button
+
+    .Form-Elements__rate-button
+        legend rate button
+        +rate-button({id: '1'})
+        +rate-button({id: '2'})
+
+    .Form-Elements__dropdown-2
+        legend dropdown
+        include .\..\includes\dropdown-guests\dropdown-guests
 
     .Form-Elements__rich-checkbox
         legend Rich Checkbox Buttons
         +checkbox({ name: 'Ширина коридоров в номере не менее 91 см.', title:'Широкий коридор'})
         +checkbox({ name: 'На 1 этаже вас встретит специалист и проводит до номера.', title:'Помощник для инвалидов'})
 
+    .Form-Elements__comment
+        include ..\includes\comment\comment
+
+
+
+    .Form-Elements__slider
+        legend Range Slider
+        include ..\includes\range-slider\range-slider
+
+    .Form-Elements__solid-button
+        legend buttons
+        +button({text: 'click me'})
+        +button({text: 'click me'})
+
+    .Form-Elements__empty-button
+        +button({type: '_empty', text: 'click me'})
+        +button({type: '_empty', text: 'click me'})
+
+    .Form-Elements__button-name
+        .button__text_empty click me
+        .button__text_empty click me
+
+    .Form-Elements__long-button
+        +button({type: '_long', text: 'перейти к оплате'})
+
+    .Form-Elements__pagination
+        include ..\includes\pagination\pagination
+
+    .Form-Elements__dropdown-3
+        legend dropdown
+        include .\..\includes\dropdown-guests\dropdown-guests
+
+    .Form-Elements__bullet-list
+        legend Bullet list
+        +bullet-list('Нельзя с питомцами')
+        +bullet-list('Без вечеринок и мероприятий')
+        +bullet-list('Время прибытия — после 13:00, а выезд до 12:00')
 
