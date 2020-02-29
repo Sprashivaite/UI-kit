@@ -399,8 +399,8 @@
 
 $(function() {
     $('.pagination').pagination({
-        items: 100,
-        itemsOnPage: 3,
+        items: 15,
+        itemsOnPage: 1,
         displayedPages: 3,
         edges: 1,
         prevText: false,
