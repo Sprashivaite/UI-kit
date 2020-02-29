@@ -44,11 +44,12 @@ include ..\includes\calendar\calendar
 
     .Form-Elements__dropdown-1
         legend dropdown
-        include .\..\includes\dropdown-guests\dropdown-guests
+        .text-field__description default
+        include .\..\includes\dropdown-facilities\dropdown-facilities
     .Form-Elements__dropdown-expanded
         legend dropdown
         .text-field__description expanded
-        include .\..\includes\dropdown-guests\dropdown-guests
+        include .\..\includes\dropdown-facilities\dropdown-facilities
 
     .Form-Elements__expandable-checkbox-list_2
         include ..\includes\expandable-checkbox-list\expandable-checkbox-list
@@ -84,8 +85,8 @@ include ..\includes\calendar\calendar
 
     .Form-Elements__rate-button
         legend rate button
-        +rate-button({id: '1'})
-        +rate-button({id: '2'})
+        +rate-button({rate:"3"})
+        //- +rate-button({id: '2'})
 
     .Form-Elements__dropdown-2
         legend dropdown

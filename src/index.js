@@ -11,5 +11,6 @@ import "./pug/includes/pagination/pagination.js"
 import "./pug/includes/calendar/calendar.js"
 import "./pug/includes/dropdown-guests/dropdown-guests.js"
 import "./pug/includes/data-dropdown/data-dropdown.js"
+import "./pug/includes/dropdown-facilities/dropdown-facilities.js"
 
 
