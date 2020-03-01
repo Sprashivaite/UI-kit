@@ -3,6 +3,8 @@ include ..\includes\registration\registration
 include ..\includes\logo\logo
 include ..\includes\rate-button\rate-button
 include ..\includes\calendar\calendar 
+include ..\includes\room-card\room-card
+include ..\includes\reservation\reservation
 
 .cards
     +logo
@@ -10,69 +12,14 @@ include ..\includes\calendar\calendar
         +search-rooms
     .cards__registration
         +registration
-    .reservation
-        form(action="" method = "get")
-            .reservation__com-data
-                .Data-Dropdown
-                    legend Прибытие
-                    .Data-Dropdown_Date-Picker
-                        input(type="date" class="Data-Dropdown_email")
-            .reservation__exit-data
-                .Data-Dropdown
-                    legend выезд
-                    .Data-Dropdown_Date-Picker
-                        input(type="date" class="Data-Dropdown_email")
-            .reservation__guests
-                legend Гости
-                .Text-Field_Default Default
-                .Text-Field_Date-Picker
-                    select.Text-Field_dropdown(type='text' value='Сколько гостей')
-                        option Сколько гостей
-                            option 1
-                            option 2
-            .reservation__description
-                .description__num №888
-                .description__lux люкс
-                .description__cost 9990₽ в сутки
-            .Final.reservation__Final Итого
-                output
-                    .Final__Sum 38 081₽
-                    .Final__border
-            .Count.reservation_Count
-                .Count__text
-                    div 9 990₽ х 4 суток
-                    div Сбор за услуги: скидка 2 179₽
-                    div Сбор за дополнительные услуги
-                .Count__Cost
-                    div 39 960₽
-                    div 0₽
-                    div 300₽
-                .inf.reservation__inf
-                    .i i
-                .inf.reservation__inf_2
-                    .i i
-            button.Button-solid_long.reservation__Button-solid_long
-                //- input(type="submit")
-                .Button_text_long забронировать
+    .cards__reservation
+        +reservation
     .cards__log-in
         include ..\includes\log-in\log-in 
-    .calendar
+    .cards__calendar
         +calendar
-    .lux-photo
-        img(src='/assets/img/№888.png')
-        .description
-            .description__num №888
-            .description__lux люкс
-            .description__cost 9990₽ в сутки
-            .description__rating
-                +rate-button
-            .description__reviews 145 Отзывов
-    .lux-photo-2
-        img(src='/assets/img/840.jpg')
-        .description
-            .description__num №840
-            .description__lux 
-            .description__cost 9990₽ в сутки
-            .description__rating
-                +rate-button
-            .description__reviews 65 Отзывов
+    .cards__room-card-1
+        +room-card({img: "/assets/img/№888.png", num:"888", lux: true, price: "9 990", rate:"5", reviews:"145"})
+    .cards__room-card-2
+        +room-card({img: "/assets/img/840.jpg", num:"840", lux: true, price: "9 990", rate:"4", reviews:"65"})
+

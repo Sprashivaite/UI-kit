@@ -1,0 +1,68 @@
+.room-card
+    position: absolute
+    width: 270px
+    height: 257px
+    background: #FFFFFF
+    box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05)
+    border-radius: 4px
+    z-index 3
+.description
+    position: absolute;
+    width: 245px;
+    height: 67px;
+    left: 20px;
+    top: 173px
+    &:after
+        content ''
+        position absolute
+        top: 31px;
+        left 0
+        width: 230px;
+        height: 1px;
+        border-bottom: 1px solid rgba(31, 32, 65, 0.1)
+.description__num
+    display inline
+    font-family: OpenSans
+    font-style: normal
+    font-weight: bold
+    font-size: 18px
+    line-height: 17px
+    color: #1f2041
+    &:before
+        content '№'
+        font-size: 14px
+        font-weight bold
+        margin-right: 8px
+.description__cost
+    wrap 2px, 133px
+    font-family: Montserrat
+    font-style: normal
+    line-height: 18px
+    b 
+        color: rgba(31, 32, 65, 0.5)
+    span
+        font-size: 12px
+.description__lux
+    wrap 6px, 60px
+    font-family: Montserrat
+    font-style: normal
+    font-weight: bold
+    font-size: 12px
+    line-height: 15px
+    text-transform: uppercase
+    color: #BC9CFF
+.description__rating
+    position: absolute
+    top: 41px
+.description__reviews
+    position: absolute
+    left: 140px
+    top: 44.56px
+    font-family: Montserrat
+    font-style: normal
+    font-size: 14px
+    line-height: 18px
+    text-align: right
+    color: rgba(31, 32, 65, 0.5)
+    b 
+        color: rgba(31, 32, 65, 0.5)

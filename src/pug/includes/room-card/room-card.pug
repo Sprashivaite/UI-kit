@@ -1,0 +1,14 @@
+mixin room-card(options = {})
+    .room-card
+        img(src= options.img)
+        .description
+            .description__num= options.num
+            .description__lux= (options.lux ? "люкс": '' ) 
+            .description__cost 
+                b= options.price + '₽' + ' '
+                span в сутки
+            .description__rating
+                +rate-button({rate: options.rate})
+            .description__reviews 
+                b= options.reviews + ' '
+                span Отзывов

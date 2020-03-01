@@ -1,0 +1,31 @@
+include ../button/button
+
+mixin reservation
+    form.reservation(action="" method = "get")
+        .reservation__com-data
+            +data-dropdown({firstLegend:"прибытие", secondLegend:"выезд"})
+        .reservation__guests
+            legend Гости
+            +dropdown-guests
+        .reservation__description
+            .reservation__description-num 888
+            .reservation__description-lux люкс
+            .reservation__description-cost 
+                b 9&nbsp990₽ 
+                span в сутки
+        
+        .reservation__count
+            .reservation__count-text
+                div 9 990₽ х 4 суток
+                div Сбор за услуги: скидка 2 179₽
+                div Сбор за дополнительные услуги
+            .reservation__count-cost
+                div 39 960₽
+                div 0₽
+                div 300₽
+            .inf.reservation__inf
+            .inf.reservation__inf_2
+        .reservation__final Итого
+            .reservation__final-sum 38 081₽
+        .reservation__button-solid
+            +button({type:"_long", text:"забронировать"})

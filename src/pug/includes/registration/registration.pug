@@ -2,6 +2,7 @@ include ../text-field/text-field
 include ../radio-button/radio-button
 include ../toggle/toggle
 include ../button/button
+include ../calendar/calendar
 mixin registration
     .registration
         .registration__title Регистрация аккаунта
@@ -14,6 +15,7 @@ mixin registration
                 +radio-button
             .registration__data
                 legend дата рождения
+                +data
             .registration__log-in
                 legend данные для входа в сервис
                 +text-field({text: "Email"})

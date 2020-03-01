@@ -1,10 +1,11 @@
 .cards
-    position: relative
+    position: absolute
     width: 1440px
     height: 1350px
     background: #F4F4F6
-    // left: 1490px
+    left: 1490px
     top: 0px
+    display inline-block
     &__search-rooms
         wrap 150px, 140px
     &__registration
@@ -13,155 +14,19 @@
         position: absolute
         left: 560px
         top: 701px
-.reservation
-    position: absolute
-    width: 380px
-    height: 511px
-    left: 560px
-    top: 150px
-    background: #FFFFFF
-    border: 1px solid rgba(0, 0, 0, 0.12)
-    box-sizing: border-box
-    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2)
-    border-radius: 4px
-.reservation__com-data
-    cont 90px, 30px
-.reservation__exit-data
-    cont 90px, 200px
-
-.reservation__Button-solid_long
-    cont 437px, 30px
-.Final
-    font-family: OpenSans
-    font-style: normal
-    font-weight: bold
-    font-size: 19px
-    line-height: 24px
-    color: #1F2041
-    width: 319px
-    height: 24px
-.reservation__Final
-    cont 393px, 31px
-.reservation__guests
-    cont 174px, 30px
-.reservation__description
-    cont 40px, 30px
-.Final__border
-    position: absolute
-    width: 182px
-    height: 1px
-    left: 64px
-    top: 18px
-    float: left
-    display: inline
-    border-bottom: 1px dashed rgba(31, 32, 65, 0.25)
-    box-sizing: border-box
-.Final__Sum 
-    position: absolute
-    right: 0px
-    display: inline
-    float: left
-.Count
-    height: 104px
-    width: 319px
-.reservation_Count
-    cont 259px, 31px
-.Count__text
-    width: 214px
-    div
-        margin-bottom: 10px 
-.Count__Cost
-    position: absolute
-    right: 0px
-    text-align: right
-    div
-        margin-bottom: 10px 
-.inf
-    width: 20px
-    height: 20px
-    border: 1px solid rgba(31, 32, 65, 0.25)
-    box-sizing: border-box
-    border-radius: 25px
-.reservation__inf
-    cont 34px, 219px
-    display: block
-.reservation__inf_2
-    cont 3436px, 219px
-    display: block
-.i
-    text-align: center
-    font-weight: bold
-    margin-top: 2px
-    font-size: 12px
-    line-height: 14px
-    color: rgba(31, 32, 65, 0.25)
-.calendar
-    position: absolute
-    left: 980px
-    top: 150px
-.lux-photo
-    position: absolute
-    width: 270px
-    height: 257px
-    left: 980px
-    top: 559.5px
-    background: #FFFFFF
-    box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05)
-    border-radius: 4px
-.description
-    position: absolute
-    width: 233px
-    height: 67px
-    left: 20px
-    top: 171px
-    
-.description__num
-    font-family: Quicksand
-    font-style: normal
-    font-weight: bold
-    font-size: 14px
-    line-height: 17px
-    color: #1F2041
-    border-bottom: 1px solid rgba(31, 32, 65, 0.1)
-    padding-bottom: 10px
-.description__cost
-    cont 4px, 133px
-    font-family: Montserrat
-    font-style: normal
-    font-weight: bold
-    font-size: 14px
-    line-height: 18px
-    color: rgba(31, 32, 65, 0.5)
-.description__lux
-    cont 7px, 60px
-    font-family: Montserrat
-    font-style: normal
-    font-weight: bold
-    font-size: 12px
-    line-height: 15px
-    text-transform: uppercase
-    color: #BC9CFF
-.description__rating
-    position: absolute
-    top: 43px
-.description__reviews
-    position: absolute
-    left: 140px
-    top: 46.56px
-    font-family: Montserrat
-    font-style: normal
-    font-weight: bold
-    font-size: 14px
-    line-height: 18px
-    text-align: right
-    color: rgba(31, 32, 65, 0.5)
-.lux-photo-2
-    position: absolute
-    width: 270px
-    height: 257px
-    left: 980px
-    top: 856.5px
-
-    background: #FFFFFF
-    box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05)
-    border-radius: 4px
+    &__room-card-1
+        position: absolute
+        left: 980px
+        top: 559.5px
+    &__room-card-2
+        position: absolute
+        left: 980px
+        top: 856.5px
+    &__reservation
+        position: absolute
+        left: 560px
+        top: 150px
+    &__calendar
+        position: absolute
+        left: 980px
+        top: 150px
