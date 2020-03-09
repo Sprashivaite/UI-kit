@@ -4,11 +4,12 @@
     height 70px
     background #ffffff
     box-shadow 0px 10px 20px rgba(31, 32, 65, 0.05)
-    display inline-block
     &__logo_color
-        wrap 15px, 140px 
+        position absolute
+        top 15px
+        left 9.7%
     &__nav
-        position relative
+        position absolute
         top: 23px;
         left: 512px;
         b 
@@ -19,7 +20,7 @@
             float left
             text-decoration none
         &_logged
-            position relative
+            position absolute
             top: 23px
             left: 564px
             b 
@@ -38,9 +39,13 @@
         margin -3px -5px 0 4px!important
         transform: rotate(180deg)
     &__button_empty
-        wrap 18px, 1100px
+        position absolute
+        top 18px
+        left 1100px
     &__button_register
-        wrap 18px, 1199px
+        position absolute
+        top 18px
+        left 1199px
     &__name
         position absolute
         left 1189px
@@ -58,5 +63,63 @@
             height 30px
             border-left 1px solid rgba(31, 32, 65, 0.1)
 
-
-
+.header_site
+    position relative
+    max-width 1200px
+    height 70px
+    background #ffffff
+    // box-shadow 0px 10px 20px rgba(31, 32, 65, 0.05)
+    margin 0 auto
+    &__logo_color
+        position absolute
+        top 15px
+        margin-left 20px
+    &__nav
+        position absolute
+        top: 23px;
+        right: 32.5%;
+        margin-right 20px
+        a
+            margin-left: 20px
+            float left
+            text-decoration none
+        &_logged_site
+            position absolute
+            top: 23px
+            left: 564px
+            a
+                margin-left: 20px
+                float left
+                text-decoration none
+    &__expand-more
+        background-image url('/assets/img/expand_more.svg')
+        display inline-block
+        background-repeat no-repeat
+        width 12px
+        height 21px
+        margin -3px 5px 0 9px!important
+        transform: rotate(180deg)
+    &__button_empty
+        position absolute
+        left: 488px;
+        top: -4px;
+    &__button_register
+        position absolute
+        left 595px
+        top: -4px;
+    &__name
+        position absolute
+        left 1189px
+        top 24px
+        width 240px
+        height: 24px;
+        color: rgba(31, 32, 65, 0.5);
+        white-space: pre
+        overflow-x: hidden;
+        &:before
+            content ''
+            position absolute
+            left: -32px;
+            top: -4px;
+            height 30px
+            border-left 1px solid rgba(31, 32, 65, 0.1)
