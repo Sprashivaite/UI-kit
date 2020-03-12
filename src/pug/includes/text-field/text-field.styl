@@ -1,11 +1,11 @@
 .text-field
     position relative
-    width 100%
-    height 100%
+    // width 100%
+    // height 100%
     &__border
         position absolute
-        width 318px
-        height 42px
+        width 19.875rem
+        height 2.625rem
         background #FFFFFF
         border 1px solid rgba(31, 32, 65, 0.25)
         border-radius 4px
@@ -17,16 +17,16 @@
             color rgba(31, 32, 65, 0.5)
         &_arrow
             @extends .text-field__border
-            width 260px
+            width 16.25rem
             &::after
                 content ''
                 position absolute
                 background-image url('/assets/img/arrow_forward.svg')
                 background-repeat: no-repeat
-                width 20px
-                height 20px
-                right: 8px;
-                top: 13px
+                width 1.25rem
+                height 1.25rem
+                right: 0.5rem;
+                top: 0.8125rem
                 z-index 2
         &_data
             @extends .text-field__border_arrow
@@ -40,10 +40,10 @@
     &__text
         position absolute
         outline-color: none
-        width 300px
-        height 24px
-        left 14px
-        top 7px
+        width 18.75rem
+        height 1.5rem
+        left 0.875rem
+        top 0.4375rem
         color rgba(31, 32, 65, 0.25)
         border none
         cursor pointer
@@ -54,4 +54,13 @@
             outline: none
         &_arrow
             @extends .text-field__text
-            width 220px
+            width 13.75rem
+
+.text-field__border_arrow
+.text-field__border_arrow_arrow
+.text-field__border_arrow_data
+.text-field__border_arrow_data_arrow
+.text-field__border_data
+.text-field__border_data_arrow
+    @media(max-width 1280px)
+        width 15rem
