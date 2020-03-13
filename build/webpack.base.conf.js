@@ -4,8 +4,6 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const webpack = require('webpack')
 const fs = require('fs')
-var os = require('os');
-var UglifyJsParallelPlugin = require('webpack-uglify-parallel');
 
 const PATHS = {
     src: path.join(__dirname, '../src'),
@@ -116,10 +114,6 @@ module.exports = {
             $: 'jquery',
             jQuery: 'jquery',
             'window.jQuery': 'jquery',
-        }),
-        new UglifyJsParallelPlugin({
-            workers: os.cpus().length, // usually having as many workers as cpu cores gives good results
-            // other uglify options
         }),
         // new HtmlWebpackPlugin({
         //     hash: false,

@@ -11,8 +11,10 @@
         height 472px
     @media(max-width 759px)
         height 672px
+    @media(max-width 520px)
+        height 672px
     @media(max-width 425px)
-        height 1072px
+        height 1010px
 .footer__top
     position relative
     max-width: 1140px;
@@ -92,6 +94,10 @@
     height 4.375rem
     background #FFFFFF
     margin: 0 auto
+    @media(max-width 500px)
+        height 8rem
+        display: flex;
+        justify-content: center;
 .footer__cc
     position absolute
     right 1.25rem
@@ -100,10 +106,17 @@
     width: 7rem
     display flex
     justify-content: space-between;
+    @media(max-width 500px)
+        left: 40%;
+        top: 4.25rem
+        margin 0
 .footer__copyright
     position absolute
     margin-left 1.25rem
     margin-top 1.4375rem
+    // @media(max-width 500px)
+    //     margin 1.4375rem auto
+    //     display inline-block
 
 
 

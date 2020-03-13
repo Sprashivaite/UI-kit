@@ -44,3 +44,23 @@ mixin header(options)
                     +button-header({text: "войти", type:'_empty'})
                 .header_site__button_register
                     +button-header({text: "зарегистрироваться"})
+        .header_site__burger
+            .hamburger-menu
+                input#menu__toggle(type='checkbox')
+                label.menu__btn(for='menu__toggle')
+                    span
+                ul.menu__box
+                    li
+                    a.menu__item(href='#') О нас
+                    li
+                    a.menu__item(href='#') Услуги
+                    li
+                    a.menu__item(href='#') Вакансии
+                    li
+                    a.menu__item(href='#') Новости
+                    li
+                    a.menu__item(href='#') Соглашения
+                    li
+                    a.menu__item(href='#') Войти
+                    li
+                    a.menu__item(href='#') Зарегистрироваться
