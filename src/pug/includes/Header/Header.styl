@@ -65,21 +65,24 @@
 
 .header_site
     position relative
-    max-width 75rem
+    max-width 1200px
     height 4.375rem
     background #ffffff
     margin 0 auto
     &__logo_color
         position absolute
         top 0.9375rem
-        margin-left 1.25rem
+        margin-left 20px
     &__nav
-        position absolute
+        position: absolute;
         top: 1.4375rem;
-        right: 27%;
-        margin-right 1.25rem
-        @media(max-width 1280px)
-            right: 300px;
+        right: 0%;
+        margin-right: 1.25rem;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        // @media(max-width 1280px)
+        //     right: 300px;
         a
             margin-left: 1.25rem
             float left
@@ -101,13 +104,14 @@
         margin -0.1875rem 0.3125rem 0 0.5625rem!important
         transform: rotate(180deg)
     &__button_empty
-        position absolute
+        // position absolute
         left: 30.5rem;
         top: -0.25rem;
+        margin 0 20px
         @media(max-width 1280px)
             left: 27rem;
     &__button_register
-        position absolute
+        // position absolute
         left 37.1875rem
         top: -0.25rem;
         @media(max-width 1280px)

@@ -1,23 +1,48 @@
 .footer
     position relative
     max-width 1440px
-    height 23.25rem
+    height 372px
     color $dark50
     background #FFFFFF
     left 0
     // bottom 0
     margin: 0 auto
+    @media(max-width 970px)
+        height 472px
+    @media(max-width 759px)
+        height 672px
+    @media(max-width 425px)
+        height 1072px
 .footer__top
     position relative
-    max-width: 1200px;
+    max-width: 1140px;
+    box-sizing: border-box;
+    margin 0 auto
+    padding: 0 20px
     top: 6.5625rem;
-    
-    margin: 0 auto
-    display flex
-    justify-content: space-between
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-column-gap: 40px;
+    @media(max-width 970px)
+        grid-template: 1fr 1fr / 1fr 1fr 1fr 
+        grid-row-gap: 40px;
+        top: 3.5625rem;
+    @media(max-width 759px)
+        grid-template: 1fr 1fr 1fr 1fr/1fr 1fr
+    @media(max-width 520px)
+        grid-template: auto 1fr 1fr 1fr/ 1fr 1fr
+    @media(max-width 424px)
+        grid-template: auto 1fr 1fr auto 1fr / 1fr
 .footer__toxin
-    margin-left: 20px;
     position: relative
+    @media(max-width 970px)
+        grid-row: 1 / 3
+    @media(max-width 759px)
+        grid-row: 1 / 1
+    @media(max-width 520px)
+        grid-column: 1 / 3
+    @media(max-width 424px)
+        grid-column: 1 / 1
 .footer__text
     width 16.25rem
     margin-top: 0.8125rem;
@@ -26,28 +51,20 @@
         margin-bottom 1.1875rem
     p
         margin 0.875rem 0px 0px 
+    // @media(max-width 970px)
+    //     justify-self: center
 .footer__about
-    margin-right: 2.8125rem;
-    margin-left: 1rem;
-    @media(max-width 1280px)
-        margin-left: 0;
     h3
         margin-bottom 1.1875rem
     p
         margin 0.875rem 0px 0px 0px
 .footer__support
-    margin-left: 0.5625rem;
-    margin-right: 0.75rem;
-    @media(max-width 1280px)
-        margin-left: 0;
-        margin-right: 0;
     h3
         margin-bottom 1.1875rem
     p
         margin 0.875rem 0px 0px 0px
 .footer__subscribe
     width 16rem
-    margin-right: 0.25rem;
     top 6.5rem
     h3
         margin-bottom 1.1875rem
@@ -56,6 +73,9 @@
 .footer__email
     margin-top: 1.375rem;
     margin-right: 1.25rem;
+
+
+
 .footer__bot
     position relative
     border-top 1px solid gray
@@ -84,6 +104,13 @@
     position absolute
     margin-left 1.25rem
     margin-top 1.4375rem
+
+
+
+
+
+
+
 
 
 .footer-elem
