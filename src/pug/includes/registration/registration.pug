@@ -18,9 +18,10 @@ mixin registration
                 +data
             .registration__log-in
                 legend данные для входа в сервис
-                +text-field({text: "Email"})
-                br
-                +text-field({text: "Пароль"})
+                .registration__log-in-email
+                    +text-field({text: "Email"})
+                .registration__log-in-pass
+                    +text-field({text: "Пароль"})
             .registration__toggle
                 +toggle
             .registration__button-solid
