@@ -1,9 +1,16 @@
 include ../rate-button/rate-button
 mixin room-card(options = {})
     .room-card
-        img(src= options.img)
+        .room-card__pictures
+            .room-card__picture_1(style= `background-image: url(${options.img_1})` )
+            if(options.img_2)
+                .room-card__picture_2(style= `background-image: url(${options.img_2})` )
+            if(options.img_3)
+                .room-card__picture_3(style= `background-image: url(${options.img_3})` )
+            if(options.img_4)
+                .room-card__picture_4(style= `background-image: url(${options.img_4})` )
         .room-card__buttons
-            .room-card__button-circle
+            .room-card__button-circle(style='background-color: white')
             .room-card__button-circle
             .room-card__button-circle
             .room-card__button-circle
