@@ -3,34 +3,16 @@ include ..\button\button
 
 mixin nav(name)
     a(href="/")= name
-mixin header_ui(options)
-    .header
-        .header__logo_color
-            +logo-color
-        
-        div(class = (options.login ? 'header__nav_logged' : 'header__nav') )
-            b
-                +nav('Home')
-            +nav('About Us')
-            +nav('Services')            
-            a.header__expand-more
-            +nav('Careers')
-            +nav('News')
-            +nav('Documentation')
-        if options.login == true
-            .header__name Cosmin Negoita
-        else if options.login == false
-            .header__button_empty
-                +button-header({text: "login", type:'_empty'})
-            .header__button_register
-                +button-header({text: "register"})
-
 mixin header(options)
     .header_site
         .header_site__logo_color
             +logo-color
         div(class = (options.login ? 'header_site__nav_logged' : 'header_site__nav') )
-            +nav('О нас')
+            if (options.bold) 
+                b 
+                    +nav('О нас')
+            if (!options.bold)
+                +nav('О нас')
             +nav('Услуги')            
             a.header_site__expand-more
             +nav('Вакансии')
@@ -38,7 +20,7 @@ mixin header(options)
             +nav('Соглашения')
             a.header_site__expand-more
             if options.login == true
-                .header_site__name Cosmin Negoita
+                span.header_site__name Юлий Цезарь
             else if options.login == false
                 .header_site__button_empty
                     +button-header({text: "войти", type:'_empty'})

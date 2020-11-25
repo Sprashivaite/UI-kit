@@ -4,9 +4,9 @@ include ..\..\includes\footer\footer
 
 .headers-footers
     +logo
-    .headers-footers__header
-        +header_ui({login: false})
-    .headers-footers__header_reg
-        +header_ui({login: true})
-    footer.headers-footers__footer
-        +ui-footer
+    header.headers-footers__header
+        +header({login: false, bold: true})
+    header.headers-footers__header_reg
+        +header({login: true, bold: true})
+    //- footer.headers-footers__footer
+    //-     +footer
