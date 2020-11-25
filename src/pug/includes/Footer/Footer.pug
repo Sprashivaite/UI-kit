@@ -1,59 +1,11 @@
 include ..\text-field\text-field
 
-mixin ui-footer
-    footer.footer
-        .footer__top
-            .footer__toxin
-                .footer__logo_color
-                    +logo-color
-                .footer__text 
-                    p Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis.
-            .footer__navigation
-                h3 NAVIGATION
-                p About Us
-                p News
-                p Support
-                p Products
-            .footer__about
-                h3 ABOUT US
-                p Who we are
-                p Our team
-                p Careers
-                p Investors
-            .footer__support
-                h3 SUPPORT
-                p Documentation
-                p Community
-                p Get in Touch
-            .footer__subscribe
-                h3 SUBSCRIBE TO OUR NEWSLETTER
-                p Receive our latest news and promotions in your inbox!
-                .footer__email
-                    +text-field({type: "email", text:"Your email address"})
-    .footer__bot
-        .footer__bot-content
-            span.footer__copyright Copyright &copy; 2018 Toxin UI Kit. All rights reserved.
-            section.footer__cc
-                img(src='/assets/img/1.jpg')
-                img(src='/assets/img/2.jpg')
-                img(src='/assets/img/3.jpg')
-    .footer-elem
-            .footer-elem__cont
-                .footer-elem__Logo
-                    +logo-color
-                .footer-elem__text
-                    | Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam
-                    | pellentesque aliquam curabitur cociis.
-                .footer-elem__cc
-                    img(src='/assets/img/1.jpg')
-                    img(src='/assets/img/2.jpg')
-                    img(src='/assets/img/3.jpg')
-
 mixin footer
     footer.footer
         footer.footer__top
             .footer__toxin
-                +logo-color
+                .footer__logo_color
+                    +logo-color
                 .footer__text 
                     span Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»
             .footer__navigation
@@ -77,7 +29,7 @@ mixin footer
                 h3 Подписка
                 p Получайте специальные предложения и новости сервиса
                 .footer__email
-                    +text-field({type: "email", text:"Your email address"})
+                    +text-field({type: "email", text:"Email"})
     .footer__bot
         .footer__bot-content
             span.footer__copyright Copyright &copy; 2018 Toxin отель. Все права зачищены. 
@@ -85,3 +37,13 @@ mixin footer
                 img(src='/assets/img/1.jpg')
                 img(src='/assets/img/2.jpg')
                 img(src='/assets/img/3.jpg')
+mixin footer_2
+    .footer-elem
+        .footer-elem__Logo
+            +logo-color
+        .footer-elem__text
+            | Copyright © 2018 Toxin отель. Все права защищены.
+        .footer-elem__cc
+            img(src='/assets/img/1.jpg')
+            img(src='/assets/img/2.jpg')
+            img(src='/assets/img/3.jpg')
