@@ -2,6 +2,11 @@ include ../rate-button/rate-button
 mixin room-card(options = {})
     .room-card
         img(src= options.img)
+        .room-card__buttons
+            .room-card__button-circle
+            .room-card__button-circle
+            .room-card__button-circle
+            .room-card__button-circle
         .description
             .description__num= options.num
             .description__lux= (options.lux ? "люкс": '' ) 

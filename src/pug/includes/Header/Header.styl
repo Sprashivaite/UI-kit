@@ -19,10 +19,14 @@
         &_logged
             position absolute
             top: 1.4375rem
-            left: 35.75rem
+            right: 0;
+            @media(max-width 1023px)
+              margin-right 80px
             a
                 margin-left: 1.25rem
                 text-decoration none
+                @media(max-width 1023px)
+                  display none
         @media(max-width 1023px)
             margin-right 80px
         a
@@ -161,7 +165,7 @@
 
   color: #333;
 
-  font-family: OpenSans, sans-serif;
+  font-family: Montserrat, sans-serif;
   font-size: 20px;
   font-weight: 600;
 
