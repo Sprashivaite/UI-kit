@@ -8,6 +8,8 @@
     box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05)
     border-radius: 4px
     z-index 3
+        transition-delay: 6s
+    transition-duration: 6s
     &__button-circle
         height: 7.49px;
         width: 7.5px;
@@ -23,10 +25,50 @@
         top 128px
         right 15px
         width: 41.25px;
-        height: 7.49px;
+        height: 10px;
+        margin: 5px
     &__picture_1
         height: 151.3759002685547px;
         width: 270px;
+.room-card__button-left
+    display none
+    position: absolute;
+    width: 42px;
+    height: 151px; 
+    top 0
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 99.99%, rgba(255, 255, 255, 0) 100%);
+    transition-property: display
+    transition-delay: 6s
+    transition-duration: 6s
+    &:after
+        content: "";
+        position: absolute;
+        background-image: url(/assets/img/room-card-arrow.svg);
+        background-size: cover;
+        width: 8px;
+        height: 13px;
+        top: 68px;
+        left: 18px;
+        transform: rotate(180deg);
+.room-card__button-right
+    display none
+    position: absolute;
+    top 0
+    width: 42px;
+    height: 151px; 
+    right 0
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 99.99%, rgba(255, 255, 255, 0) 100%);
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+    &:after
+        content: "";
+        position: absolute;
+        background-image: url(/assets/img/room-card-arrow.svg);
+        background-size: cover;
+        width: 8px;
+        height: 13px;
+        top: 68px;
+        left: 18px;
+        transform: rotate(180deg);
 .room-card__picture_2,.room-card__picture_3,.room-card__picture_4,.room-card__picture_5
     height: 151.3759002685547px;
     width: 270px;

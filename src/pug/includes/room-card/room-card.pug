@@ -10,10 +10,12 @@ mixin room-card(options = {})
             if(options.img_4)
                 .room-card__picture_4(style= `background-image: url(${options.img_4})` )
         .room-card__buttons
-            .room-card__button-circle(style='background-color: white')
-            .room-card__button-circle
-            .room-card__button-circle
-            .room-card__button-circle
+            .room-card__button-circle(style='background-color: white', data-target='true')
+            .room-card__button-circle(data-target='false')
+            .room-card__button-circle(data-target='false')
+            .room-card__button-circle(data-target='false')
+        .room-card__button-left
+        .room-card__button-right
         .description
             .description__num= options.num
             .description__lux= (options.lux ? "люкс": '' ) 
