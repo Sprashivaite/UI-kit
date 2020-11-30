@@ -50,13 +50,14 @@ $(document).ready(function () {
         .each(resizeInput);
     
     //show-hide
-    $('.dropdown__dropbtn').click(function () {
-        
+    $('.dropdown__dropbtn').click(function () {        
         if($(this).next('.dropdown-content').hasClass('dropdown-content__show')){
-            $(this).css('border', '1px solid #e2e2e2')
+            $(this).css('border', '1px solid #e2e2e2');
+            $(this).find('.material-icons').css('transform', 'rotate(0deg)');
             $(this).next('.dropdown-content').removeClass('dropdown-content__show');
         } else {
-            $(this).css('border', '1px solid rgba(31,32,65,.5)')
+            $(this).find('.material-icons').css('transform', 'rotate(180deg)');
+            $(this).css('border', '1px solid rgba(31,32,65,.5)');
             $(this).next('.dropdown-content').addClass('dropdown-content__show')
         };
 
