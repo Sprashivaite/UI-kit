@@ -9,9 +9,10 @@ include ..\..\includes\rate-button\rate-button
 include ..\..\includes\radio-button\radio-button
 include ..\..\includes\toggle\toggle
 include ..\..\includes\calendar\calendar
-include .\..\includes\dropdown-guests\dropdown-guests
+include ..\..\includes\dropdown-guests\dropdown-guests
 .Form-Elements
     +logo
+    
     .Form-Elements__text-field_1
         legend text field
         .text-field__description default
@@ -25,7 +26,7 @@ include .\..\includes\dropdown-guests\dropdown-guests
     .Form-Elements__dropdown_field
         legend dropdown
         .text-field__description default
-        include .\..\includes\dropdown-guests\dropdown-guests
+        +dropdown-guests
 
     .Form-Elements__masked
         legend masked text field
@@ -33,7 +34,7 @@ include .\..\includes\dropdown-guests\dropdown-guests
         +text-field({text: 'ДД.ММ.ГГГГ'})
 
     .Form-Elements__date-dropdown
-        +data-dropdown({ firstLegend:"date Dropdown", secondLegend:"date Dropdown"})
+        //- +data-dropdown({ firstLegend:"date Dropdown", secondLegend:"date Dropdown"})
 
     .Form-Elements__filter-dropdown
         legend filter date dropdown
@@ -46,16 +47,16 @@ include .\..\includes\dropdown-guests\dropdown-guests
     .Form-Elements__dropdown-1
         legend dropdown
         .text-field__description default
-        include .\..\includes\dropdown-facilities\dropdown-facilities
+        //- include .\..\includes\dropdown-facilities\dropdown-facilities
     .Form-Elements__dropdown-expanded
         legend dropdown
         .text-field__description expanded
-        include .\..\includes\dropdown-facilities\dropdown-facilities
+        //- include .\..\includes\dropdown-facilities\dropdown-facilities
 
     .Form-Elements__expandable-checkbox-list_2
-        include ..\includes\expandable-checkbox-list\expandable-checkbox-list
+        //- include ..\includes\expandable-checkbox-list\expandable-checkbox-list
     .Form-Elements__expandable-checkbox-list
-        include ..\includes\expandable-checkbox-list\expandable-checkbox-list
+        //- include ..\includes\expandable-checkbox-list\expandable-checkbox-list
 
     .Form-Elements__comfort
         +comfort({img: '/assets/img/insert_emoticon.svg', title: 'Комфорт', description: 'Шумопоглощающие стены'})
@@ -81,8 +82,8 @@ include .\..\includes\dropdown-guests\dropdown-guests
 
     .Form-Elements__like-button
         legend like-button
-        include ..\includes\like-button\like-button
-        include ..\includes\like-button\like-button
+        //- include ..\includes\like-button\like-button
+        //- include ..\includes\like-button\like-button
 
     .Form-Elements__rate-button
         legend rate button
@@ -91,7 +92,7 @@ include .\..\includes\dropdown-guests\dropdown-guests
 
     .Form-Elements__dropdown-2
         legend dropdown
-        +dropdown-guests
+        //- +dropdown-guests
         
         
 
@@ -101,13 +102,13 @@ include .\..\includes\dropdown-guests\dropdown-guests
         +checkbox({ name: 'На 1 этаже вас встретит специалист и проводит до номера.', title:'Помощник для инвалидов'})
 
     .Form-Elements__comment
-        include ..\includes\comment\comment
+        //- include ..\includes\comment\comment
 
 
 
     .Form-Elements__slider
         legend Range Slider
-        include ..\includes\range-slider\range-slider
+        //- include ..\includes\range-slider\range-slider
 
     .Form-Elements__solid-button
         legend buttons
@@ -127,11 +128,11 @@ include .\..\includes\dropdown-guests\dropdown-guests
 
     .Form-Elements__pagination
         legend pagination
-        include ..\includes\pagination\pagination
+        //- include ..\includes\pagination\pagination
 
     .Form-Elements__dropdown-3
         legend dropdown
-        +dropdown-guests
+        //- +dropdown-guests
 
     .Form-Elements__bullet-list
         legend Bullet list
