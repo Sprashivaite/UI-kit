@@ -15,6 +15,7 @@ include ..\..\includes\dropdown-guests\dropdown-guests
 include ..\..\includes\dropdown-facilities\dropdown-facilities
 include ..\..\includes\expandable-checkbox-list\expandable-checkbox-list
 include ..\..\includes\like-button\like-button
+include ..\..\includes\pagination\pagination
 
 .Form-Elements
     +logo
@@ -60,7 +61,7 @@ include ..\..\includes\like-button\like-button
         +dropdown-facilities
 
     .Form-Elements__expandable-checkbox-list_2
-        +expandable-checkbox-list
+        +expandable-checkbox-list({open: true})
     .Form-Elements__expandable-checkbox-list
         +expandable-checkbox-list
 
@@ -135,11 +136,11 @@ include ..\..\includes\like-button\like-button
 
     .Form-Elements__pagination
         legend pagination
-        //- include ..\includes\pagination\pagination
+        +pagination
 
     .Form-Elements__dropdown-3
         legend dropdown
-        //- +dropdown-guests
+        +dropdown-guests
 
     .Form-Elements__bullet-list
         legend Bullet list
