@@ -1,5 +1,6 @@
-input(type="checkbox" class='like-button' id='like')
-.like-button__symbol
-label.like-button__value(for ='like') 0
+mixin like-button
+    .like-button-container
     
-    //- .like-button
+        input(type="checkbox" class='like-button') 
+        .like-button__symbol
+        .like-button__value(for ='like') 0

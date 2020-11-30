@@ -10,6 +10,10 @@ include ..\..\includes\radio-button\radio-button
 include ..\..\includes\toggle\toggle
 include ..\..\includes\calendar\calendar
 include ..\..\includes\dropdown-guests\dropdown-guests
+include ..\..\includes\dropdown-facilities\dropdown-facilities
+include ..\..\includes\expandable-checkbox-list\expandable-checkbox-list
+include ..\..\includes\like-button\like-button
+
 .Form-Elements
     +logo
     
@@ -47,16 +51,16 @@ include ..\..\includes\dropdown-guests\dropdown-guests
     .Form-Elements__dropdown-1
         legend dropdown
         .text-field__description default
-        //- include .\..\includes\dropdown-facilities\dropdown-facilities
+        +dropdown-facilities
     .Form-Elements__dropdown-expanded
         legend dropdown
         .text-field__description expanded
-        //- include .\..\includes\dropdown-facilities\dropdown-facilities
+        +dropdown-facilities
 
     .Form-Elements__expandable-checkbox-list_2
-        //- include ..\includes\expandable-checkbox-list\expandable-checkbox-list
+        +expandable-checkbox-list
     .Form-Elements__expandable-checkbox-list
-        //- include ..\includes\expandable-checkbox-list\expandable-checkbox-list
+        +expandable-checkbox-list
 
     .Form-Elements__comfort
         +comfort({img: '/assets/img/insert_emoticon.svg', title: 'Комфорт', description: 'Шумопоглощающие стены'})
@@ -82,8 +86,9 @@ include ..\..\includes\dropdown-guests\dropdown-guests
 
     .Form-Elements__like-button
         legend like-button
-        //- include ..\includes\like-button\like-button
-        //- include ..\includes\like-button\like-button
+        .Form-Elements__like-buttons
+            +like-button
+            +like-button
 
     .Form-Elements__rate-button
         legend rate button

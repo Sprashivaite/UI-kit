@@ -1,4 +1,4 @@
-$(document).ready(function () {
+(function ($) {
     $('.minus').click(function () {
         var $input = $(this).parent().find('input');
         var count = parseInt($input.val()) - 1;
