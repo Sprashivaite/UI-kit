@@ -1,6 +1,6 @@
-mixin like-button
+mixin like-button(options ={})
     .like-button-container
     
-        input(type="checkbox" class='like-button') 
+        input(type="checkbox" class='like-button' checked=(options.checked ? options.checked: false)) 
         .like-button__symbol
-        .like-button__value(for ='like') 0
+        .like-button__value(for ='like')= (options.value ? options.value: 0)

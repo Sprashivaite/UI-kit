@@ -25,9 +25,9 @@ for (const button of likeButtons) {
         let value = button.querySelector('.like-button__value');
         if(input.checked){
             value.innerHTML = +value.innerHTML + 1
-     }}, );
+     }});
     
-    input.addEventListener('click', ()=>{
+     input.addEventListener('click', ()=>{
         let input = button.querySelector('.like-button')
         let value = button.querySelector('.like-button__value');
         if(!input.checked){
