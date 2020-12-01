@@ -2,7 +2,7 @@
     position relative
     &__border
         position absolute
-        width 19.875rem
+        min-width 100%
         height 2.625rem
         background #FFFFFF
         border 1px solid rgba(31, 32, 65, 0.25)
@@ -15,7 +15,7 @@
             color rgba(31, 32, 65, 0.5)
         &_arrow
             @extends .text-field__border
-            width 16.25rem
+            // width 16.25rem
             &::after
                 content ''
                 position absolute
@@ -39,7 +39,7 @@
     &__text
         position absolute
         outline-color: none
-        width 18.75rem
+        // width 18.75rem
         height 1.5rem
         left 0.875rem
         top 0.4375rem
@@ -61,4 +61,4 @@
 .text-field__border_data
 .text-field__border_data_arrow
     @media(max-width 1280px)
-        width 15rem
+        // width 15rem

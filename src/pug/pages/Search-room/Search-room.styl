@@ -1,16 +1,22 @@
 .search-rooms-page
     background-color: #FFFFFF;
-    width 100%
+    max-width 1440px
     min-height: calc(100vh - 372px);
+    height 100%
+    margin: 0 auto
 .search-rooms-page__options
-    margin-top: 25px;
-    margin-left: 2.5%;
-    width: 266px;
-.search-rooms-page__options
-    // margin-top 30px
-    display grid
-    grid-template-rows: 1fr 1fr 1fr auto auto auto;
-    grid-row-gap: 30px;
+    margin-top: 1.5rem;
+    margin-left: 8.7rem
+    width: 16.625rem;
+    height: 755px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between
+    @media(max-width 1430px)
+        margin-left: 4.7rem
+.search-rooms-page__option 
+    min-height 64px
+    
 .search-rooms-body
     position relative
     height: 1455px;
@@ -19,19 +25,32 @@
     background: #FFFFFF;
 .search-rooms-page__title
     position absolute
-    left 40%
-    top 0
+    left: 29rem;
+    top: 0.4rem;
     font-family: Montserrat
     font-weight: bold;
-    font-size: 24px;
-    line-height: 30px;
+    font-size: 1.5rem;
+    line-height: 1.875rem;
     color: #1F2041
 .search-rooms-page__hotels
     position absolute
-    width 900px
-    height 1300px
-    left 30%
-    top 3%
+    width: 850px;
+    height: 1108px
+    left: 29rem;
+    top: 3.5rem
     display grid
     grid-template: 1fr 1fr 1fr 1fr / 1fr 1fr 1fr 
     grid-row-gap: 4px;
+    @media(max-width 1430px)
+        left: 25rem;
+        height: 100%
+    @media(max-width 1280px)        
+        width: 600px;
+        grid-template: 1fr 1fr 1fr 1fr 1fr / 1fr 1fr
+    @media(max-width 1022px) 
+        width: 100%
+        grid-template: 1fr 1fr 1fr 1fr 1fr 1fr / 1fr
+.search-rooms-pagination
+    position absolute
+    left: 47.2rem;
+    top: 74.3rem;
