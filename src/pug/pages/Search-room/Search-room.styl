@@ -10,45 +10,59 @@
     display: flex;
     flex-direction: column; 
     float left 
+    height: 748px;
+    justify-content: space-between
+    margin-right: 4%;
+    @media(max-width 430px)
+        margin-left: 25%; 
+        height: 948px;
+        margin-bottom 250px
 .search-rooms-page__option-dropdowns 
     min-height 84px
-    // margin-bottom 20px
 .search-rooms-page__option
-    margin-bottom: 12px;
-    min-height: 93px  
+    // margin-bottom: 12px;
+    // min-height: 93px  
 .search-rooms-body
+    position relative
     height: 1333px;
     background: #fff;
     margin-top: 1.4375rem;
-.search-rooms-page__title
-    position absolute
-    left: 29rem;
-    top: 0.4rem;
+    padding-bottom 6rem
+    @media(max-width 1430px)
+        height 100%
+.search-rooms-page__title 
     font-family: Montserrat
     font-weight: bold;
     font-size: 1.5rem;
     line-height: 1.875rem;
     color: #1F2041
+    padding-top 0.5rem
+    @media(max-width 320px)
+        // width  33.0625rem
+        padding-left: 20%;
 .search-rooms-page__hotels
-    position relative
+    // position relative
     width: 850px;
     height: 1108px
-    left: 4.2%;
-    top: 3.5rem
+    margin-top: 1.25rem;
     display grid
     grid-template: 1fr 1fr 1fr 1fr / 1fr 1fr 1fr 
     grid-row-gap: 4px;
     @media(max-width 1430px)
-        left: 25rem;
-        // 
+        // left: 25rem;
+        
     @media(max-width 1280px)        
         width: 600px;
-        height: 100%
-        grid-template: 1fr 1fr 1fr 1fr 1fr / 1fr 1fr
+        height 1800px
+        grid-template: 1fr 1fr 1fr 1fr 1fr 1fr / 1fr 1fr
     @media(max-width 1022px) 
-        width: 100%
-        grid-template: 1fr 1fr 1fr 1fr 1fr 1fr / 1fr
-.search-rooms-pagination
-    position absolute
-    left: 47.2rem;
-    top: 74.3rem;
+        width: 350px;
+        height 3600px
+        grid-template: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr / 1fr
+    @media(max-width 430px)
+        margin-left 25%
+.search-rooms-pagination 
+    margin-left: 52.4%;
+    margin-top: 1.5rem
+    @media(max-width 430px)
+        margin-left 20%
