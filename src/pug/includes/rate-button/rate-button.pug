@@ -1,2 +1,8 @@
 mixin rate-button(options= {})
-    span(class= 'rate-button_' +( options.rate ? options.rate: '1') )
+    .rate-button
+        span.rate-button__star
+            span=( options.rate == '5' || '4' || '3' || '2' || '1' ? 'star': 'star_border')
+            span=( options.rate == '5' || '4' || '3' || '2' ? 'star': 'star_border')
+            span=( options.rate == '5' || '4' || '3' ? 'star': 'star_border')
+            span=( options.rate == '5' || '4' ? 'star': 'star_border')
+            span=( options.rate == '5' ? 'star': 'star_border')

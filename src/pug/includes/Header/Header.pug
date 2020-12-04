@@ -4,45 +4,46 @@ include ..\button\button
 mixin nav(name)
     a(href="/")= name
 mixin header(options)
-    .header_site
-        .header_site__logo_color
-            +logo-color
-        div(class = (options.login ? 'header_site__nav_logged' : 'header_site__nav') )
-            if (options.bold) 
-                b 
+    header
+        .header_site
+            .header_site__logo_color
+                +logo-color
+            div(class = (options.login ? 'header_site__nav_logged' : 'header_site__nav') )
+                if (options.bold) 
+                    b 
+                        +nav('О нас')
+                if (!options.bold)
                     +nav('О нас')
-            if (!options.bold)
-                +nav('О нас')
-            +nav('Услуги')            
-            a.header_site__expand-more
-            +nav('Вакансии')
-            +nav('Новости')
-            +nav('Соглашения')
-            a.header_site__expand-more
-            if options.login == true
-                span.header_site__name Юлий Цезарь
-            else if options.login == false
-                .header_site__button_empty
-                    +button-header({text: "войти", type:'_empty'})
-                .header_site__button_register
-                    +button-header({text: "зарегистрироваться"})
-        .header_site__burger
-            .hamburger-menu
-                input#menu__toggle(type='checkbox')
-                label.menu__btn(for='menu__toggle')
-                    span
-                ul.menu__box
-                    li
-                    a.menu__item(href='#') О нас
-                    li
-                    a.menu__item(href='#') Услуги
-                    li
-                    a.menu__item(href='#') Вакансии
-                    li
-                    a.menu__item(href='#') Новости
-                    li
-                    a.menu__item(href='#') Соглашения
-                    li
-                    a.menu__item(href='#') Войти
-                    li
-                    a.menu__item(href='#') Зарегистрироваться
+                +nav('Услуги')            
+                a.header_site__expand-more
+                +nav('Вакансии')
+                +nav('Новости')
+                +nav('Соглашения')
+                a.header_site__expand-more
+                if options.login == true
+                    span.header_site__name Юлий Цезарь
+                else if options.login == false
+                    .header_site__button_empty
+                        +button-header({text: "войти", type:'_empty'})
+                    .header_site__button_register
+                        +button-header({text: "зарегистрироваться"})
+            .header_site__burger
+                .hamburger-menu
+                    input#menu__toggle(type='checkbox')
+                    label.menu__btn(for='menu__toggle')
+                        span
+                    ul.menu__box
+                        li
+                        a.menu__item(href='#') О нас
+                        li
+                        a.menu__item(href='#') Услуги
+                        li
+                        a.menu__item(href='#') Вакансии
+                        li
+                        a.menu__item(href='#') Новости
+                        li
+                        a.menu__item(href='#') Соглашения
+                        li
+                        a.menu__item(href='#') Войти
+                        li
+                        a.menu__item(href='#') Зарегистрироваться

@@ -1,12 +1,11 @@
 .text-field
     position relative
-    &__border
-        position absolute
-        min-width 100%
-        height 2.625rem
+    &__border 
+        height 2.75rem
         background #FFFFFF
         border 1px solid rgba(31, 32, 65, 0.25)
         border-radius 4px
+        box-sizing: border-box
         &:hover
             border 1px solid rgba(31, 32, 65, 0.5)
             color rgba(31, 32, 65, 0.5)
@@ -14,8 +13,7 @@
             border 1px solid rgba(31, 32, 65, 0.5)
             color rgba(31, 32, 65, 0.5)
         &_arrow
-            @extends .text-field__border
-            // width 16.25rem
+            @extends .text-field__border 
             &::after
                 content ''
                 position absolute
@@ -23,7 +21,7 @@
                 background-repeat: no-repeat
                 width 20px
                 height 20px
-                right: 0.5rem;
+                right: .7rem;
                 top: 0.8125rem
                 z-index 2
         &_data
@@ -36,29 +34,22 @@
                 top: 7px
                 right: 13px;
                 cursor pointer
-    &__text
-        position absolute
-        outline-color: none
-        // width 18.75rem
-        height 1.5rem
-        left 0.875rem
-        top 0.4375rem
+    &__text 
+        outline-color: none;
+        height: 1.5rem; 
+        color: rgba(31,32,65,.25);
+        border: none;
+        cursor: pointer;
+        margin-top: 0.5625rem;
+        margin-left: 0.75rem
+        font-size 0.875rem
         color rgba(31, 32, 65, 0.25)
-        border none
-        cursor pointer
         &:hover
             color rgba(31, 32, 65, 0.75)
         &:focus
             color rgba(31, 32, 65, 0.75)
-            outline: none
-        &_arrow
-            @extends .text-field__text
-            width 13.75rem
-.text-field__border_arrow
-.text-field__border_arrow_arrow
-.text-field__border_arrow_data
-.text-field__border_arrow_data_arrow
-.text-field__border_data
-.text-field__border_data_arrow
-    @media(max-width 1280px)
-        // width 15rem
+            outline: none  
+input::placeholder
+    color rgba(31, 32, 65, 0.25)
+    &:hover
+        color rgba(31, 32, 65, 0.75)
