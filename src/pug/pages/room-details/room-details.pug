@@ -1,0 +1,31 @@
+include ..\..\includes\header\header
+include ..\..\includes\footer\footer
+include ..\..\includes\comfort\comfort 
+
+.room-details-page
+    +header({login: false})
+    .room-details-page__body
+        .room-details-page__images
+        
+            img.room-details-page__big-image(src="/assets/img/room-details-big-picture.png", alt="Фото отеля")
+            img(src="/assets/img/room-details-small-picture-2.png", alt="Фото отеля")
+            img(src="/assets/img/room-details-small-picture-1.png", alt="Фото отеля")
+        .room-details-page__about-the-room
+            h2 Сведения о номере
+            +comfort({img: '/assets/img/insert_emoticon.svg', title: 'Комфорт', description: 'Шумопоглощающие стены'})
+            +comfort({img: '/assets/img/location_city.svg', title: 'Удобство', description: 'Окно в каждой из спален'})
+            +comfort({img: '/assets/img/cosiness.svg', title: 'Уют', description: 'Номер оснащён камином'})
+        .room-details-page__impressions
+            h2 Впечатления от номера
+            .impressions__circle
+                .impressions__circle_left
+                .impressions__circle_right-top
+                .impressions__circle_right-bot
+                h3.impressions__circle_text 260 
+                    span голосов
+            .impressions__rating
+                p.impressions__rating_well Великолепно 
+                p.impressions__rating_good Хорошо 
+                p.impressions__rating_satisfactorily Удовлетворительно 
+                p.impressions__rating_disappointed Разочарован
++footer
