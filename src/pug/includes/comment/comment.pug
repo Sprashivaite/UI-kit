@@ -2,10 +2,10 @@ include ../like-button/like-button
 mixin comment(options={})
     .comment
         .comment__user
-            img(src='/assets/img/murad.png')
-            b Мурад Сарафанов  
-            p 5 дней назад
+            img(src=(options.img ? options.img: ''))
+            b=(options.name ? options.name: 'имя')
+            p=(options.data ? options.data: 'дата') 
             
-        .comment__text= (options.text ? options.text: '')
+        .comment__text= (options.text ? options.text: 'текст')
         .comment__like
-            +like-button({value: 12, checked: true})
+            +like-button({value: options.like_value, checked: options.like_checked})

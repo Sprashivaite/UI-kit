@@ -1,25 +1,34 @@
 .room-details-page
     background-color: #FFFFFF;
-    width 1440px
+    max-width 1440px
     min-height: calc(100vh - 372px);
     height 100%
     margin: 0 auto
     &__body
         position relative
-        height: 1333px;
+        height: 1423px
         background: #fff;
         padding-bottom 6rem
+        @media(max-width 1430px)
+            height 100%
     &__images
         max-width: 1440px
-        height: 485px;
+        margin 0 auto
+        width 100%
+        @media(max-width 1439px)
+            max-width 981px
         // display grid
         // grid-template-columns: 1fr 1fr 1fr
         // grid-template-rows 1fr 1fr
         img 
             // display inline-block
             float left  
+            @media(max-width 1439px)
+                max-width 100%
     &__big-image
         float right
+        @media(max-width 1439px)
+            width 100%
         // grid-column-start: 1;
         // grid-column-end: 3;
         // grid-row-start: 1;
@@ -33,8 +42,6 @@
         margin-top: 70px;
         vertical-align: top 
         margin-left: 5%;
-    h2
-        font-size: 1.37rem;
 .impressions__circle
     margin-top 24px
     height 120px
@@ -158,3 +165,46 @@
             border-radius: 50%
             margin-left: -14px;
             margin-top: 6px; 
+.room-details-page__reservation
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 69px;
+    margin-right: 9.5%;
+    float right
+    width: 380px;
+    height: 511px;
+    @media(max-width 1280px)
+        float: none
+        margin-right: 0;
+        margin-left 5%
+    @media(max-width 800px)
+        margin-right: 0;
+        margin-left 0;
+
+.room-details-page__comment
+    display inline-block
+    vertical-align: top;
+    margin-left: 9.6%;
+    margin-top: 8px
+    height 332px
+    display inline-flex
+    flex-direction: column
+    justify-content: space-between
+    width 712px
+    @media(max-width 800px)
+        width 100%
+        height 430px
+.room-details-page__rules
+    display inline-block
+    margin-left 11%
+    width 240px
+    h2 
+        margin-bottom:  17px
+.room-details-page__cancel
+    display inline-block
+    width 341px
+    margin-left 7%
+    vertical-align top
+    h2 
+        margin-bottom:  17px
+    

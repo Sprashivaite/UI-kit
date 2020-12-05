@@ -1,8 +1,11 @@
 .comment
-    width 711px
+    max-width 711px
     height 133px
+    position relative
+    @media(max-width 711px)
+        height 100%
     &__user
-        width 278.05px
+        max-width 278.05px
         height 51px
         position relative
         b
@@ -15,5 +18,20 @@
             margin-top 24px
         img
             float left
+            width 44px
+            height 44px
+            overflow:hidden;
     &__text
         wrap 59px, 58px 
+// .comment__img
+//     position: relative;
+//     float left
+//     width 44px
+//     height 44px
+//     overflow:hidden;
+//     img
+//         position: absolute;
+//         top:50%;
+//         left:50%;
+//         transform:translate(-50%,-50%);
+//         object-fit:cover;
