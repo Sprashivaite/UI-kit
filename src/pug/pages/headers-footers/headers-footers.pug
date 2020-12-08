@@ -3,12 +3,13 @@ include ..\..\includes\header\header
 include ..\..\includes\footer\footer
 
 .headers-footers
-    +logo
-    header.headers-footers__header
+    aside.headers-footers__logo
+        +logo
+    section.headers-footers__header
         +header({login: false, bold: true})
-    header.headers-footers__header_reg
+    section.headers-footers__header_reg
         +header({login: true, bold: true})
-    .headers-footers__footer
+    section.headers-footers__footer
         +footer
-    .headers-footers__footer_2
+    section.headers-footers__footer_2
         +footer_2

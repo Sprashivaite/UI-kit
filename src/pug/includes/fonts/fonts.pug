@@ -1,12 +1,2 @@
-mixin fonts
-    .fonts
-        .fonts__styles
-            h1 This one is the sub-section or widget title
-            h2 Next one is the item title inside widgets
-            h3 This is a label or CTA text
-            |This is the body text which is used for most <br> of the design, like paragraphs, lists, etc.
-        .fonts__tegs
-            .fonts__tegs_h1 H1
-            .fonts__tegs_h2 H2
-            .fonts__tegs_h3 H3
-            .fonts__tegs_body Body
+mixin fonts(options = {})
+    article.fonts( tag=options.tag )!=options.spec

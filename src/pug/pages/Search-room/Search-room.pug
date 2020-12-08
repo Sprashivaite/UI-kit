@@ -11,8 +11,8 @@ include ..\..\includes\pagination\pagination
 
 .search-rooms-page
     +header({login: false})
-    .search-rooms-body
-        .search-rooms-page__options
+    main.search-rooms-body
+        section.search-rooms-page__options
             .search-rooms-page__option 
                 legend даты пребывания в отеле
                 +data-filter
@@ -25,20 +25,20 @@ include ..\..\includes\pagination\pagination
                 .range-slider-descr Стоимость за сутки пребывания в номере
             .search-rooms-page__option
                 legend правила дома
-                +checkbox({ name: 'Можно курить'})
-                +checkbox({ name: 'Можно с питомцами'})
-                +checkbox({ name: 'Можно пригласить гостей (до 10 человек)'})
+                +checkbox({ name: "Можно курить"})
+                +checkbox({ name: "Можно с питомцами"})
+                +checkbox({ name: "Можно пригласить гостей (до 10 человек)"})
             .search-rooms-page__option
                 legend доступность
-                +checkbox({ name: 'Ширина коридоров в номере не менее 91 см.', title:'Широкий коридор'})
-                +checkbox({ name: 'На 1 этаже вас встретит специалист и проводит до номера.', title:'Помощник для инвалидов'})
+                +checkbox({ name: "Ширина коридоров в номере не менее 91 см.", title:"Широкий коридор"})
+                +checkbox({ name: "На 1 этаже вас встретит специалист и проводит до номера.", title:"Помощник для инвалидов"})
             .search-rooms-page__option
                 legend удобства номера
                 +dropdown-facilities
             .search-rooms-page__option
                 +expandable-checkbox-list
-        .search-rooms-page__title Номера, которые мы для вас подобрали
-        .search-rooms-page__hotels
+        h1.search-rooms-page__title Номера, которые мы для вас подобрали
+        section.search-rooms-page__hotels
             div
                 +room-card({img_1: "/assets/img/№888.png", num:"888", lux: true, price: "9 990", rate:"5", reviews:"145"})
             div
@@ -63,6 +63,6 @@ include ..\..\includes\pagination\pagination
                 +room-card({img_1: "/assets/img/444.png", num:"444", lux: false, price: "5 000", rate:"3", reviews:"15"})
             div
                 +room-card({img_1: "/assets/img/352.png", num:"352", lux: false, price: "5 000", rate:"3", reviews:"55"})
-        .search-rooms-pagination
+        section.search-rooms-pagination
             +pagination
 +footer

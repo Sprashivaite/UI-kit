@@ -5,7 +5,7 @@ include ../button/button
 include ../calendar/calendar
 mixin registration
     .registration
-        .registration__title Регистрация аккаунта
+        h1.registration__title Регистрация аккаунта
         form(action="" method = "post")
             .registration__name
                 +text-field({text: "Имя"})

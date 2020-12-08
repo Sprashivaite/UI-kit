@@ -1,7 +1,7 @@
-mixin coub(options = {})
-    .coubs
-        .coubs__coub(class= 'coubs__coub_' + options.color)
-        .coubs__description
+mixin color(options = {})
+    article.color
+        .color__coub(class= "color__coub_" + options.coube_color)
+        .color__description
             h2= options.name
             h2= options.code
             

@@ -1,16 +1,25 @@
 include ..\checkbox\checkbox
 mixin expandable-checkbox-list(options={})
-    label.expandable-checkbox-list(for='list')
+    label.expandable-checkbox-list(for="list")
         legend.expandable-checkbox-list__text дополнительные удобства
-        input.expandable-checkbox-list__button(type='checkbox' id='list' checked=(options.open ? options.open: false))
+        input.expandable-checkbox-list__button(type="checkbox" id="list" checked=(options.open ? options.open: false))
         .expandable-checkbox-list__expand-more
-            img(src = '/assets/img/expand_more.svg')
+            img(src = "/assets/img/expand_more.svg")
         .expandable-checkbox-list__list
-            +checkbox({ name: 'Завтрак'})
-            +checkbox({ name: 'Письменный стол'})
-            +checkbox({ name: 'Стул для кормления'})
-            +checkbox({ name: 'Кроватка'})
-            +checkbox({ name: 'Телевизор'})
-            +checkbox({ name: 'Шампунь'})
-            +checkbox({ name: 'Телевизор'})
-            +checkbox({ name: 'Шампунь'})
+            ul
+                li
+                    +checkbox({ name: "Завтрак"})
+                li
+                    +checkbox({ name: "Письменный стол"})
+                li
+                    +checkbox({ name: "Стул для кормления"})
+                li
+                    +checkbox({ name: "Кроватка"})
+                li
+                    +checkbox({ name: "Телевизор"})
+                li
+                    +checkbox({ name: "Шампунь"})
+                li
+                    +checkbox({ name: "Телевизор"})
+                li
+                    +checkbox({ name: "Шампунь"})

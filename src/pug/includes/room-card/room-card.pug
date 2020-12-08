@@ -1,7 +1,7 @@
 include ../rate-button/rate-button
 mixin room-card(options = {})
     .room-card
-        .room-card__pictures
+        figure.room-card__pictures
             .room-card__picture_1(style= `background-image: url(${options.img_1})` )
             if(options.img_2)
                 .room-card__picture_2(style= `background-image: url(${options.img_2})` )
@@ -10,20 +10,20 @@ mixin room-card(options = {})
             if(options.img_4)
                 .room-card__picture_4(style= `background-image: url(${options.img_4})` )
         .room-card__buttons
-            .room-card__button-circle(style='background-color: white', data-target='true')
-            .room-card__button-circle(data-target='false')
-            .room-card__button-circle(data-target='false')
-            .room-card__button-circle(data-target='false')
+            .room-card__button-circle(style="background-color: white", data-target="true")
+            .room-card__button-circle(data-target="false")
+            .room-card__button-circle(data-target="false")
+            .room-card__button-circle(data-target="false")
         .room-card__button-left
         .room-card__button-right
         .description
             .description__num= options.num
-            .description__lux= (options.lux ? "люкс": '' ) 
+            .description__lux= (options.lux ? "люкс": "" ) 
             .description__cost 
-                b= options.price + '₽' + ' '
+                b= options.price + "₽" + " "
                 span в сутки
             .description__rating
                 +rate-button({rate: options.rate})
             .description__reviews 
-                b= options.reviews + ' '
+                b= options.reviews + " "
                 span Отзывов
