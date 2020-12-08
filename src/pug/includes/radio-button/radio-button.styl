@@ -1,53 +1,53 @@
 .radio-button
-    position relative
-    height 20px
-    width 110px
+  position relative
+  height 20px
+  width 110px
+  display inline-block
+  margin-right 8px
+  cursor pointer
+  &__label
     display inline-block
-    margin-right 8px
+    position absolute
+    width: 68px;
+    height: 12px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    color: rgba(31, 32, 65, 0.5);
+    margin-top -3px
+    margin-left 10px
     cursor pointer
-    &__label
-        display inline-block
+  &__input
+    appearance none
+    background: #FFFFFF;
+    border: 1px solid rgba(31, 32, 65, 0.25);
+    box-sizing: border-box;
+    border-radius: 10px;
+    width: 20px;
+    height: 20px;
+    float left
+    cursor pointer
+    &:focus
+      outline: none
+    &:checked
+      background: #FFFFFF;
+      border: 1px solid #BC9CFF;
+      box-sizing: border-box;
+      border-radius: 10px;
+      width: 20px;
+      height: 20px;
+      float left
+      outline: none
+      &:before
+        content ''
         position absolute
-        width: 68px;
+        width: 12px;
         height: 12px;
-        font-family: Montserrat;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 14px;
-        color: rgba(31, 32, 65, 0.5);
-        margin-top -3px
-        margin-left 10px
-        cursor pointer
-    &__input
-        appearance none
-        background: #FFFFFF;
-        border: 1px solid rgba(31, 32, 65, 0.25);
-        box-sizing: border-box;
+        left: 4px;
+        top: 4px
+        background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
         border-radius: 10px;
-        width: 20px;
-        height: 20px;
-        float left
-        cursor pointer
-        &:focus
-            outline: none
-        &:checked
-            background: #FFFFFF;
-            border: 1px solid #BC9CFF;
-            box-sizing: border-box;
-            border-radius: 10px;
-            width: 20px;
-            height: 20px;
-            float left
-            outline: none
-            &:before
-                content ''
-                position absolute
-                width: 12px;
-                height: 12px;
-                left: 4px;
-                top: 4px
-                background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-                border-radius: 10px;
 .radio-button__input:checked ~ .radio-button__label {
-    color: rgba(31, 32, 65, 0.75);
+  color: rgba(31, 32, 65, 0.75);
 }

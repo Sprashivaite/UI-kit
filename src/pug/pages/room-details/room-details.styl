@@ -1,202 +1,202 @@
 .room-details-page
-    background-color: #FFFFFF;
-    max-width 1440px
-    min-height: calc(100vh - 372px);
-    height 100%
-    margin: 0 auto
-    &__body
-        position relative
-        height: 1423px
-        background: #fff;
-        padding-bottom 6rem
-        @media(max-width 1430px)
-            height 100%
-    &__images
-        max-width: 1440px
-        margin 0 auto
-        width 100%
-        @media(max-width 1439px)
-            max-width 981px
-        img 
-            float left  
-            @media(max-width 1439px)
-                max-width 100%
-    &__big-image
-        float right
-        @media(max-width 1439px)
-            width 100%
-    &__about-the-room
-        display: inline-block;
-        margin-left: 9.7%;
-        margin-top: 70px;
-    &__impressions
-        display inline-block
-        margin-top: 70px;
-        vertical-align: top 
-        margin-left: 5%;
-.impressions__circle
-    margin-top 24px
-    height 120px
+  background-color: #FFFFFF;
+  max-width 1440px
+  min-height: calc(100vh - 372px);
+  height 100%
+  margin: 0 auto
+  &__body
     position relative
-    width: 120px;
-    display: inline-block;
-.impressions__circle_left
-    position absolute
-    z-index 2
-    width: 120px;
-    height: 121px;
-    clip: rect(0,60px,121px,0px);
-    background-image: linear-gradient(180deg, #FFE39C 0%, #FFBA9C 100%);
-    border-radius 50%
-    &:before
-        content: ''
-        position absolute
-        top: 5px;
-        left: 5px;
-        z-index: 3;
-        width: 112px;
-        height: 111px;
-        clip: rect(0,60px,121px,0px);
-        background: white;
-        border-radius 50%
-.impressions__circle_right-top
-    position absolute
-    left 1px
-    z-index 2
-    width: 120px;
-    height: 121px;
-    clip: rect(0,121px,60px,60px);
-    background: #C4C4C4;;
-    border-radius 50%
-    &:before
-        content: ''
-        position absolute
-        top: 6px;
-        z-index: 3;
-        width: 115px;
-        height: 110px;
-        clip: rect(0,121px,60px,60px);
-        background: white;
-        border-radius 50%
-.impressions__circle_right-bot
-    position absolute
-    left: 1px;
-    z-index: 2;
-    top: 0px;
-    width: 120px;
-    height: 121px;
-    clip: rect(61px,121px,121px,60px)
-    background-image: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%)
-    border-radius 50%
-    &:before
-        content: ''
-        position absolute
-        top: 0px;
-        z-index: 3;
-        width: 115px;
-        height: 116px;
-        clip: rect(61px,121px,121px,60px)
-        background: white;
-        border-radius 50%
-.impressions__circle_text
-    position absolute
-    z-index 4
-    color: #BC9CFF;
-    font-weight: bold;
-    font-size: 24px;
-    line-height: 21px;
-    width: 107px;
-    align-items: center;
-    text-align: center;
-    top: 36px;
-    left: 5px;
-    span 
-        font-size: 12px;
-.impressions__rating
-    display: inline-block;
-    margin-left: 43px;
-    vertical-align: top;
-    margin-top: 50px;
-    &_well
-        &:before
-            content: ''
-            position absolute
-            background: linear-gradient(180deg, #FFE39C 0%, #FFBA9C 100%);
-            width: 10px;
-            height: 10px;
-            border-radius: 50%
-            margin-left: -14px;
-            margin-top: 6px;
-    &_good
-        &:before
-            content: ''
-            position absolute
-            background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
-            width: 10px;
-            height: 10px;
-            border-radius: 50%
-            margin-left: -14px;
-            margin-top: 6px; 
-    &_satisfactorily
-        &:before
-            content: ''
-            position absolute
-            background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-            width: 10px;
-            height: 10px;
-            border-radius: 50%
-            margin-left: -14px;
-            margin-top: 6px; 
-    &_disappointed
-        &:before
-            content: ''
-            position absolute
-            background: linear-gradient(180deg, #919191 0%, #3D4975 100%);
-            width: 10px;
-            height: 10px;
-            border-radius: 50%
-            margin-left: -14px;
-            margin-top: 6px; 
-.room-details-page__reservation
-    display: inline-block;
-    vertical-align: top;
-    margin-top: 69px;
-    margin-right: 9.5%;
+    height: 1423px
+    background: #fff;
+    padding-bottom 6rem
+    @media(max-width 1430px)
+      height 100%
+  &__images
+    max-width: 1440px
+    margin 0 auto
+    width 100%
+    @media(max-width 1439px)
+      max-width 981px
+    img 
+      float left  
+      @media(max-width 1439px)
+        max-width 100%
+  &__big-image
     float right
-    width: 380px;
-    height: 511px;
-    @media(max-width 1280px)
-        float: none
-        margin-right: 0;
-        margin-left 5%
-    @media(max-width 800px)
-        margin-right: 0;
-        margin-left 0;
+    @media(max-width 1439px)
+      width 100%
+  &__about-the-room
+    display: inline-block;
+    margin-left: 9.7%;
+    margin-top: 70px;
+  &__impressions
+    display inline-block
+    margin-top: 70px;
+    vertical-align: top 
+    margin-left: 5%;
+.impressions__circle
+  margin-top 24px
+  height 120px
+  position relative
+  width: 120px;
+  display: inline-block;
+.impressions__circle_left
+  position absolute
+  z-index 2
+  width: 120px;
+  height: 121px;
+  clip: rect(0,60px,121px,0px);
+  background-image: linear-gradient(180deg, #FFE39C 0%, #FFBA9C 100%);
+  border-radius 50%
+  &:before
+    content: ''
+    position absolute
+    top: 5px;
+    left: 5px;
+    z-index: 3;
+    width: 112px;
+    height: 111px;
+    clip: rect(0,60px,121px,0px);
+    background: white;
+    border-radius 50%
+.impressions__circle_right-top
+  position absolute
+  left 1px
+  z-index 2
+  width: 120px;
+  height: 121px;
+  clip: rect(0,121px,60px,60px);
+  background: #C4C4C4;;
+  border-radius 50%
+  &:before
+    content: ''
+    position absolute
+    top: 6px;
+    z-index: 3;
+    width: 115px;
+    height: 110px;
+    clip: rect(0,121px,60px,60px);
+    background: white;
+    border-radius 50%
+.impressions__circle_right-bot
+  position absolute
+  left: 1px;
+  z-index: 2;
+  top: 0px;
+  width: 120px;
+  height: 121px;
+  clip: rect(61px,121px,121px,60px)
+  background-image: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%)
+  border-radius 50%
+  &:before
+    content: ''
+    position absolute
+    top: 0px;
+    z-index: 3;
+    width: 115px;
+    height: 116px;
+    clip: rect(61px,121px,121px,60px)
+    background: white;
+    border-radius 50%
+.impressions__circle_text
+  position absolute
+  z-index 4
+  color: #BC9CFF;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 21px;
+  width: 107px;
+  align-items: center;
+  text-align: center;
+  top: 36px;
+  left: 5px;
+  span 
+    font-size: 12px;
+.impressions__rating
+  display: inline-block;
+  margin-left: 43px;
+  vertical-align: top;
+  margin-top: 50px;
+  &_well
+    &:before
+      content: ''
+      position absolute
+      background: linear-gradient(180deg, #FFE39C 0%, #FFBA9C 100%);
+      width: 10px;
+      height: 10px;
+      border-radius: 50%
+      margin-left: -14px;
+      margin-top: 6px;
+  &_good
+    &:before
+      content: ''
+      position absolute
+      background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+      width: 10px;
+      height: 10px;
+      border-radius: 50%
+      margin-left: -14px;
+      margin-top: 6px; 
+  &_satisfactorily
+    &:before
+      content: ''
+      position absolute
+      background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+      width: 10px;
+      height: 10px;
+      border-radius: 50%
+      margin-left: -14px;
+      margin-top: 6px; 
+  &_disappointed
+    &:before
+      content: ''
+      position absolute
+      background: linear-gradient(180deg, #919191 0%, #3D4975 100%);
+      width: 10px;
+      height: 10px;
+      border-radius: 50%
+      margin-left: -14px;
+      margin-top: 6px; 
+.room-details-page__reservation
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 69px;
+  margin-right: 9.5%;
+  float right
+  width: 380px;
+  height: 511px;
+  @media(max-width 1280px)
+    float: none
+    margin-right: 0;
+    margin-left 5%
+  @media(max-width 800px)
+    margin-right: 0;
+    margin-left 0;
 
 .room-details-page__comment
-    display inline-block
-    vertical-align: top;
-    margin-left: 9.6%;
-    margin-top: 8px
-    height 332px
-    display inline-flex
-    flex-direction: column
-    justify-content: space-between
-    width 712px
-    @media(max-width 800px)
-        width 100%
-        height 430px
+  display inline-block
+  vertical-align: top;
+  margin-left: 9.6%;
+  margin-top: 8px
+  height 332px
+  display inline-flex
+  flex-direction: column
+  justify-content: space-between
+  width 712px
+  @media(max-width 800px)
+    width 100%
+    height 430px
 .room-details-page__rules
-    display inline-block
-    margin-left 11%
-    width 240px
-    h2 
-        margin-bottom:  17px
+  display inline-block
+  margin-left 11%
+  width 240px
+  h2 
+    margin-bottom:  17px
 .room-details-page__cancel
-    display inline-block
-    width 341px
-    margin-left 7%
-    vertical-align top
-    h2 
-        margin-bottom:  17px
-    
+  display inline-block
+  width 341px
+  margin-left 7%
+  vertical-align top
+  h2 
+    margin-bottom:  17px
+  

@@ -1,55 +1,55 @@
 .text-field
-    position relative
-    &__border 
-        height 2.75rem
-        background #FFFFFF
-        border 1px solid rgba(31, 32, 65, 0.25)
-        border-radius 4px
-        box-sizing: border-box
-        &:hover
-            border 1px solid rgba(31, 32, 65, 0.5)
-            color rgba(31, 32, 65, 0.5)
-        &:focus
-            border 1px solid rgba(31, 32, 65, 0.5)
-            color rgba(31, 32, 65, 0.5)
-        &_arrow
-            @extends .text-field__border 
-            &::after
-                content ''
-                position absolute
-                background-image url('/assets/img/arrow_forward.svg')
-                background-repeat: no-repeat
-                width 20px
-                height 20px
-                right: .7rem;
-                top: 0.8125rem
-                z-index 2
-        &_data
-            @extends .text-field__border_arrow
-            &::after
-                content ''
-                background-image url('/assets/img/expand-more.svg')
-                background-repeat: no-repeat
-                transform: rotate(180deg)
-                top: 7px
-                right: 13px;
-                cursor pointer
-    &__text 
-        outline-color: none;
-        height: 1.5rem; 
-        color: rgba(31,32,65,.25);
-        border: none;
-        cursor: pointer;
-        margin-top: 0.5625rem;
-        margin-left: 0.75rem
-        font-size 0.875rem
-        color rgba(31, 32, 65, 0.25)
-        &:hover
-            color rgba(31, 32, 65, 0.75)
-        &:focus
-            color rgba(31, 32, 65, 0.75)
-            outline: none  
-input::placeholder
+  position relative
+  &__border 
+    height 2.75rem
+    background #FFFFFF
+    border 1px solid rgba(31, 32, 65, 0.25)
+    border-radius 4px
+    box-sizing: border-box
+    &:hover
+      border 1px solid rgba(31, 32, 65, 0.5)
+      color rgba(31, 32, 65, 0.5)
+    &:focus
+      border 1px solid rgba(31, 32, 65, 0.5)
+      color rgba(31, 32, 65, 0.5)
+    &_arrow
+      @extends .text-field__border 
+      &::after
+        content ''
+        position absolute
+        background-image url('/assets/img/arrow_forward.svg')
+        background-repeat: no-repeat
+        width 20px
+        height 20px
+        right: .7rem;
+        top: 0.8125rem
+        z-index 2
+    &_data
+      @extends .text-field__border_arrow
+      &::after
+        content ''
+        background-image url('/assets/img/expand-more.svg')
+        background-repeat: no-repeat
+        transform: rotate(180deg)
+        top: 7px
+        right: 13px;
+        cursor pointer
+  &__text 
+    outline-color: none;
+    height: 1.5rem; 
+    color: rgba(31,32,65,.25);
+    border: none;
+    cursor: pointer;
+    margin-top: 0.5625rem;
+    margin-left: 0.75rem
+    font-size 0.875rem
     color rgba(31, 32, 65, 0.25)
     &:hover
-        color rgba(31, 32, 65, 0.75)
+      color rgba(31, 32, 65, 0.75)
+    &:focus
+      color rgba(31, 32, 65, 0.75)
+      outline: none  
+input::placeholder
+  color rgba(31, 32, 65, 0.25)
+  &:hover
+    color rgba(31, 32, 65, 0.75)
