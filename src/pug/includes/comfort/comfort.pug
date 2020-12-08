@@ -1,6 +1,6 @@
 mixin comfort(options = {})
     .comfort
-        img(src= options.img)
+        img.comfort__img(src= options.img, alt="иконка")
         .comfort__text 
             b= options.title
             p= options.description
