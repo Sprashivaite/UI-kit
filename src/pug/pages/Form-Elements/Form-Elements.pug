@@ -88,8 +88,9 @@ include ..\..\includes\pagination\pagination
 
     section.Form-Elements__toggle
         legend toogle
-        +toggle({checked:true})
-        +toggle
+        .Form-Elements__toggles
+            +toggle({checked:true})
+            +toggle
 
     section.Form-Elements__like-button
         legend like-button
@@ -128,12 +129,16 @@ include ..\..\includes\pagination\pagination
 
     section.Form-Elements__solid-button
         legend buttons
-        +button({text: "click me"})
-        +button({text: "click me"})
+        .Form-Elements__solid-button_1
+            +button({text: "click me"})
+        .Form-Elements__solid-button_2
+            +button({text: "click me"})
 
     section.Form-Elements__empty-button
-        +button({type: "_empty", text: "click me"})
-        +button({type: "_empty", text: "click me"})
+        .Form-Elements__empty-button_1
+            +button({type: "_empty", text: "click me"})
+        .Form-Elements__empty-button_2
+            +button({type: "_empty", text: "click me"})
 
     section.Form-Elements__button-name
         .button__text_empty click me

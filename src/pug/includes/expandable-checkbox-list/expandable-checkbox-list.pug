@@ -1,10 +1,9 @@
 include ..\checkbox\checkbox
+
 mixin expandable-checkbox-list(options={})
     label.expandable-checkbox-list
         legend.expandable-checkbox-list__text дополнительные удобства
         input.expandable-checkbox-list__button(type="checkbox" checked=(options.open ? options.open: false))
-        .expandable-checkbox-list__expand-more
-            img(src = "/assets/img/expand-more.svg", alt="открыть")
         .expandable-checkbox-list__list
             ul
                 li

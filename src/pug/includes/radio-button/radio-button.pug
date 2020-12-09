@@ -1,7 +1,8 @@
 mixin radio-button(options = {})
-    label.radio-button
-        input.radio-button__input(type="radio"  name="fe__radio" value="m" checked="checked")
-        .radio-button__label(for="fe__radio-m") Мужчина
-    label.radio-button
-        input.radio-button__input(type="radio"  name="fe__radio" value="w")
-        .radio-button__label(for="fe__radio-w") Женщина
+    .radio-buttons
+        label.radio-button
+            input.radio-button__input(type="radio"  name="fe__radio" value="m" checked="checked")
+            .radio-button__label(for="fe__radio-m") Мужчина
+        label.radio-button
+            input.radio-button__input(type="radio"  name="fe__radio" value="w")
+            .radio-button__label(for="fe__radio-w") Женщина

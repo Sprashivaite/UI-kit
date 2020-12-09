@@ -5,27 +5,28 @@ include ../button/button
 include ../calendar/calendar
 mixin registration
     .registration
-        h1.registration__title Регистрация аккаунта
-        form(action="" method = "post")
-            .registration__name
-                +text-field({text: "Имя"})
-            .registration__surname
-                +text-field({text: "Фамилия"})
-            .registration__radio
-                +radio-button
-            .registration__data
-                legend дата рождения
-                +data
-            .registration__log-in
-                legend данные для входа в сервис
-                .registration__log-in-email
-                    +text-field({text: "Email"})
-                .registration__log-in-pass
-                    +text-field({text: "Пароль"})
-            .registration__toggle
-                +toggle
-            .registration__button-solid
-                +button({type:"_long", text:"перейти к оплате"})
-            .registration__text Уже есть аккаунт на Toxin
-        .registration__button-empty
-            +button({type:"_empty", text:"войти"})
+        .registration__container
+            h1.registration__title Регистрация аккаунта
+            form(action="" method = "post")
+                .registration__name
+                    +text-field({text: "Имя"})
+                .registration__surname
+                    +text-field({text: "Фамилия"})
+                .registration__radio
+                    +radio-button
+                .registration__data
+                    legend дата рождения
+                    +data
+                .registration__log-in
+                    legend данные для входа в сервис
+                    .log-in__email
+                        +text-field({text: "Email"})
+                    .log-in__pass
+                        +text-field({text: "Пароль"})
+                .registration__toggle
+                    +toggle
+                .registration__button-solid
+                    +button({type:"_long", text:"перейти к оплате"})
+                .registration__text Уже есть аккаунт на Toxin
+                .registration__button-empty
+                    +button({type:"_empty", text:"войти"})

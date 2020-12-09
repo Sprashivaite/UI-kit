@@ -1,12 +1,12 @@
 .button
   position relative
-  width 99px
+  width 100%
+  min-width 70px
   height 44px
   background linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%)
   border-radius 22px
   border none
   display flex
-  flex-direction: column
   align-items center
   justify-content: center
   cursor pointer
@@ -28,10 +28,9 @@
         color $dark50
   &_long
     @extend .button
-    width: 20rem
     &::after
       content: ''
-      background-image url('\assets\img\arrow-forward-white.svg')
+      background-image url('/assets/img/arrow-forward-white.svg')
       width 18px
       height 18px
       right 0.8125rem
@@ -41,8 +40,8 @@
     &::after
       content: ''
       position absolute
-      width 5.9375rem
-      height 2.5rem
+      width: 96%;
+      height: 92%;
       left 0.125rem
       top 0.125rem
       background-color white

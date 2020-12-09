@@ -4,30 +4,30 @@ include ../dropdown-guests/dropdown-guests
 
 mixin reservation
     form.reservation(action="" method = "get")
-        .reservation__com-data
-            +data-dropdown({firstLegend:"прибытие", secondLegend:"выезд"})
-        .reservation__guests
-            legend Гости
-            +dropdown-guests
-        .reservation__description
-            .reservation__description-num 888
-            .reservation__description-lux люкс
-            .reservation__description-cost 
-                b 9&nbsp990₽ 
-                span в сутки
-        
-        .reservation__count
-            .reservation__count-text
-                p 9 990₽ х 4 суток
-                p Сбор за услуги: скидка 2 179₽
-                p Сбор за дополнительные услуги
-            .reservation__count-cost
-                p 39 960₽
-                p 0₽
-                p 300₽
-            .inf.reservation__inf
-            .inf.reservation__inf_2
-        .reservation__final Итого
-            .reservation__final-sum 38 081₽
-        .reservation__button-solid
-            +button({type:"_long", text:"забронировать"})
+        .reservation__container
+            .reservation__description
+                h1.description__num 888
+                h3.description__lux люкс
+                .description__cost 
+                    b 9 990₽ 
+                    span в сутки
+            .reservation__com-data
+                +data-dropdown({firstLegend:"прибытие", secondLegend:"выезд"})
+            .reservation__guests
+                legend Гости
+                +dropdown-guests            
+            .reservation__count
+                .count__text
+                    p 9 990₽ х 4 суток
+                    p.count__inf Сбор за услуги: скидка 2 179₽
+                    p.count__inf Сбор за дополнительные услуги 
+                .count__cost
+                    p 39 960₽
+                    p 0₽
+                    p 300₽
+
+            .reservation__final
+                h2.final__text Итого
+                h2.final__sum  38 081₽
+            .reservation__button-solid
+                +button({type:"_long", text:"забронировать"})

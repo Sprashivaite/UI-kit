@@ -1,118 +1,99 @@
 .reservation
-  position: absolute
-  width: 380px
+  position: relative
+  min-width: 300px
   height: 511px
   background: #FFFFFF
   border: 1px solid rgba(0, 0, 0, 0.12)
   box-sizing: border-box
   box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2)
   border-radius: 4px
-  &__button-solid
-    wrap 436px, 29px
+  &__container
+    width: 85%;
+    margin-left: 7.6%;
+    margin-top: 39px;
+  &__description
+    width 100%
+    .description__num
+      color: #1F2041;
+      display inline-block
+      &:before
+        content '№'
+        font-size: 14px
+        font-weight bold
+        margin-right: 5px
+    .description__lux
+      color: #BC9CFF
+      display inline-block
+    .description__cost
+      display inline-block
+      float right
+      margin-top 8px
+      >*
+        color: rgba(31,32,65,.5);
+      span
+        font-size: 12px
   &__com-data
-    wrap 82px, 29px
+    width 100%
+    margin-top: 10px;
+  &__guests
+    width 100%
+    margin-top: 19px;
+  &__count
+    // height 110px
+    width 100%
+    margin-top: 20px;
+    .count__text
+      width: 67%
+      display inline-block
+      p
+        margin-bottom: 10px   
+    .count__cost
+      float right
+      text-align right
+      p
+        margin-bottom: 10px    
+    .count__inf
+      position relative
+      &:after
+        content: 'i';
+        font-weight: 700;
+        right: -25px;
+        top 0
+        font-size: 12px;
+        color: rgba(31,32,65,.25);
+        position: absolute;
+        border: 1px solid rgba(31, 32, 65, 0.25)
+        border-radius: 25px
+        text-align center
+        line-height: 20px;
+        width: 20px
+        height: 20px
+        cursor pointer
+  &__final
+    width: 328px
+    height: 24px
+    display inline-block
+    position relative
+    width 100%
+    margin-top: 10px;
+    .final__text
+      display inline-block
+      &:after
+        content: ''
+        position: absolute
+        width: 182px
+        height: 1px
+        bottom 0
+        display: inline
+        border-bottom: dotted rgba(31, 32, 65, 0.25)      
+    .final__sum 
+      display inline-block
+      float right
+  &__button-solid
+    margin-top 20px
+    width 100%
 
-.reservation__final
-  wrap 392px, 30px
-  font-family: Montserrat
-  font-style: normal
-  font-weight: bold
-  font-size: 19px
-  line-height: 24px
-  color: #1F2041
-  width: 328px
-  height: 24px
-  &:after
-    content: ''
-    position: absolute
-    width: 182px
-    height: 1px
-    left: 64px
-    top: 18px
-    float: left
-    display: inline
-    border-bottom: dotted rgba(31, 32, 65, 0.25)
-    box-sizing: border-box
-.reservation__guests
-  wrap 166px, 29px
-  width: 20rem
 
-.reservation__final-sum 
-  position: absolute
-  font-family: Montserrat;
-  right: 0px
-  display: inline
-  float: left
-.reservation__count
-  wrap 255px, 30px
-  display flex  
-  height: 104px
-  width: 319px
-.reservation__count-text
-  width: 214px
-  p
-    margin-bottom: 10px 
-.reservation__count-cost
-  position: absolute
-  right: 0px
-  text-align: right
-  p
-    margin-bottom: 10px 
-.inf
-  width: 20px
-  height: 20px
-  border: 1px solid rgba(31, 32, 65, 0.25)
-  box-sizing: border-box
-  border-radius: 25px
-  &:after
-    content: 'i';
-    text-align: center;
-    font-weight: 700;
-    margin-top: 2px;
-    font-size: 12px;
-    line-height: 14px;
-    color: rgba(31,32,65,.25);
-    position: absolute;
-    margin-left: 7px;
-.reservation__inf
-  wrap 34px, 218px
-.reservation__inf_2
-  wrap 71px, 218px
 
-.reservation__description
-  wrap 46px, 29px
-  
-.reservation__description-num
-  position: absolute;
-  width: 64px;
-  height: 30px;
-  font-family: Montserrat
-  font-style: normal;
-  font-weight: bold;
-  font-size: 23px;
-  line-height: 17px;
-  color: #1F2041;
-  &:before
-    content '№'
-    font-size: 14px
-    font-weight bold
-    margin-right: 5px
-.reservation__description-lux
-  wrap 6px, 69px
-  font-family: Montserrat
-  font-style: normal
-  font-weight: bold
-  font-size: 12px
-  line-height: 15px
-  text-transform: uppercase
-  color: #BC9CFF
-.reservation__description-cost
-  wrap 4px, 220px
-  font-family: Montserrat
-  font-style: normal
-  line-height: 18px
-  width auto
-  b 
-    color: rgba(31, 32, 65, 0.5)
-  span
-    font-size: 12px
+
+
