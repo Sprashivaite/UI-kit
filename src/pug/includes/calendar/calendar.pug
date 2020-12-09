@@ -1,13 +1,7 @@
+include ..\text-field\text-field
+
 mixin calendar
     div(class="datepicker-here" data-clear-button="true" data-range="true" data-multiple-dates-separator=" - " data-auto-Close="true")
-
-mixin data-filter
-    .text-field
-        .text-field__border_data
-            input.text-field__text(class="datepicker-here" value="ДД.ММ.ГГГГ" type="data" data-clear-button="true" data-range="true"  data-multiple-dates-separator=" - " data-date-format="d M" id="#my-datepicker")
-
-
 mixin data
     .text-field
-        .text-field__border
-            input.text-field__text(class="datepicker-here" value="ДД.ММ.ГГГГ" type="data" data-clear-button="true" id="#my-datepicker")
+        input.text-field__border(class="datepicker-here" value="ДД.ММ.ГГГГ" type="data" data-clear-button="true" id="#my-datepicker")
