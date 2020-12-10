@@ -13,35 +13,17 @@
     margin-top: 39px;
   &__description
     width 100%
-    .description__num
-      color: #1F2041;
-      display inline-block
-      &:before
-        content '№'
-        font-size: 14px
-        font-weight bold
-        margin-right: 5px
-    .description__lux
-      color: #BC9CFF
-      display inline-block
-    .description__cost
-      display inline-block
-      float right
-      margin-top 8px
-      >*
-        color: rgba(31,32,65,.5);
-      span
-        font-size: 12px
+
   &__com-data
     width 100%
     margin-top: 10px;
   &__guests
     width 100%
-    margin-top: 19px;
+    margin-top: 14px;
   &__count
     // height 110px
     width 100%
-    margin-top: 20px;
+    margin-top: 15px
     .count__text
       width: 67%
       display inline-block
@@ -81,11 +63,11 @@
       &:after
         content: ''
         position: absolute
-        width: 182px
+        width: 57%
         height: 1px
         bottom 0
         display: inline
-        border-bottom: dotted rgba(31, 32, 65, 0.25)      
+        border-bottom: 1px dashed rgba(31, 32, 65, 0.25)      
     .final__sum 
       display inline-block
       float right
@@ -93,7 +75,25 @@
     margin-top 20px
     width 100%
 
-
+.description__num
+  color: #1F2041;
+  display inline-block
+  &:before
+    content '№'
+    font-size: 14px
+    font-weight bold
+    margin-right: 5px
+.description__lux
+  color: #BC9CFF
+  display inline-block
+.description__cost
+  display inline-block
+  float right
+  margin-top 8px
+  >*
+    color: rgba(31,32,65,.5);
+  span
+    font-size: 12px
 
 
 

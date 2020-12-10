@@ -16,9 +16,9 @@ mixin room-card(options = {})
             .room-card__button-circle(data-target="false")
         .room-card__button-left
         .room-card__button-right
-        .description
-            .description__num= options.num
-            .description__lux= (options.lux ? "люкс": "" ) 
+        .room-card__description
+            h2.description__num= options.num
+            h3.description__lux= (options.lux ? "люкс": "" ) 
             .description__cost 
                 b= options.price + "₽" + " "
                 span в сутки

@@ -2,8 +2,8 @@ include ../text-field/text-field
 include ../button/button
 mixin log-in
     .log-in
-        form(action="" method = "post")
-            .log-in__title Войти
+        form.log-in__container(action="" method = "post")
+            h1.log-in__title Войти
             .log-in__name
                 +text-field({text:"Email"})
             .log-in__pass
@@ -11,5 +11,5 @@ mixin log-in
             .log-in__button-solid
                 +button({type:"_long", text:"войти"})
             .log-in__text Нет аккаунта на Toxin?
-        .log-in__button-empty
-            +button({type:"_empty", text:"создать"})
+            .log-in__button-empty
+                +button({type:"_empty", text:"создать"})
