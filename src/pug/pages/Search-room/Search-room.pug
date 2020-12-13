@@ -8,7 +8,7 @@ include ..\..\includes\dropdown-facilities\dropdown-facilities
 include ..\..\includes\expandable-checkbox-list\expandable-checkbox-list
 include ..\..\includes\room-card\room-card
 include ..\..\includes\pagination\pagination
-
+include ..\..\includes\data-dropdown\data-dropdown
 .search-rooms-page
     +header({login: false})
     main.search-rooms-body
@@ -37,20 +37,21 @@ include ..\..\includes\pagination\pagination
                 +dropdown-facilities
             .search-rooms-page__option
                 +expandable-checkbox-list
-        h1.search-rooms-page__title Номера, которые мы для вас подобрали
-        section.search-rooms-page__hotels
-                +room-card({img_1: "/assets/img/room-888.png", num:"888", lux: true, price: "9 990", rate:"5", reviews:"145"})
-                +room-card({img_1: "/assets/img/room-840.jpg", num:"840", lux: false, price: "9 990", rate:"4", reviews:"65"})
-                +room-card({img_1: "/assets/img/room-980.png", num:"980", lux: true, price: "8 500", rate:"3", reviews:"35"})
-                +room-card({img_1: "/assets/img/room-856.png", num:"856", lux: false, price: "7 300", rate:"5", reviews:"19"})
-                +room-card({img_1: "/assets/img/room-740.png", num:"740", lux: false, price: "6 000", rate:"4", reviews:"44"})
-                +room-card({img_1: "/assets/img/room-982.png", num:"982", lux: false, price: "5 800", rate:"3", reviews:"56"})
-                +room-card({img_1: "/assets/img/room-678.png", num:"678", lux: false, price: "5 000", rate:"5", reviews:"45"})
-                +room-card({img_1: "/assets/img/room-450.png", num:"450", lux: false, price: "5 300", rate:"4", reviews:"39"})
-                +room-card({img_1: "/assets/img/room-350.png", num:"350", lux: false, price: "5 000", rate:"3", reviews:"77"})
-                +room-card({img_1: "/assets/img/room-666.png", num:"666", lux: false, price: "5 000", rate:"3", reviews:"25"})
-                +room-card({img_1: "/assets/img/room-444.png", num:"444", lux: false, price: "5 000", rate:"3", reviews:"15"})
-                +room-card({img_1: "/assets/img/room-352.png", num:"352", lux: false, price: "5 000", rate:"3", reviews:"55"})
-        section.search-rooms-pagination
-            +pagination
+        .search-rooms-page__rigth-container
+            h1.search-rooms-page__title Номера, которые мы для вас подобрали
+            section.search-rooms-page__hotels
+                    +room-card({img_1: "/assets/img/room-888.png", num:"888", lux: true, price: "9 990", rate:"5", reviews:"145"})
+                    +room-card({img_1: "/assets/img/room-840.jpg", num:"840", lux: false, price: "9 990", rate:"4", reviews:"65"})
+                    +room-card({img_1: "/assets/img/room-980.png", num:"980", lux: true, price: "8 500", rate:"3", reviews:"35"})
+                    +room-card({img_1: "/assets/img/room-856.png", num:"856", lux: false, price: "7 300", rate:"5", reviews:"19"})
+                    +room-card({img_1: "/assets/img/room-740.png", num:"740", lux: false, price: "6 000", rate:"4", reviews:"44"})
+                    +room-card({img_1: "/assets/img/room-982.png", num:"982", lux: false, price: "5 800", rate:"3", reviews:"56"})
+                    +room-card({img_1: "/assets/img/room-678.png", num:"678", lux: false, price: "5 000", rate:"5", reviews:"45"})
+                    +room-card({img_1: "/assets/img/room-450.png", num:"450", lux: false, price: "5 300", rate:"4", reviews:"39"})
+                    +room-card({img_1: "/assets/img/room-350.png", num:"350", lux: false, price: "5 000", rate:"3", reviews:"77"})
+                    +room-card({img_1: "/assets/img/room-666.png", num:"666", lux: false, price: "5 000", rate:"3", reviews:"25"})
+                    +room-card({img_1: "/assets/img/room-444.png", num:"444", lux: false, price: "5 000", rate:"3", reviews:"15"})
+                    +room-card({img_1: "/assets/img/room-352.png", num:"352", lux: false, price: "5 000", rate:"3", reviews:"55"})
+            section.search-rooms-pagination
+                +pagination
 +footer

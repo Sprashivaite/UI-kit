@@ -2,8 +2,9 @@ include ..\..\includes\header\header
 include ..\..\includes\footer\footer
 include ..\..\includes\registration\registration
 
-.sign-in
+.registration-page
     +header({login: false})
-    main.registration__img
-        +registration
+    main.registration-page__img
+        .registration-page__registration-form
+            +registration
 +footer

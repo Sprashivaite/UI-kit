@@ -147,26 +147,5 @@ $(function() {
     selectionText: 'Сколько гостей',
     textPlural: 'гостей',
   });
-  function changeGuestsText(dropdown){
-  let guestsText = dropdown.querySelector('.iqdropdown-selection')
-  if(guestsText.innerHTML === "1 гостей"){guestsText.innerHTML = "1 гость"}
-  if(guestsText.innerHTML === "2 гостей"){guestsText.innerHTML = "2 гостя"}
-  if(guestsText.innerHTML === "3 гостей"){guestsText.innerHTML = "3 гостя"}
-  if(guestsText.innerHTML === "4 гостей"){guestsText.innerHTML = "4 гостя"}
-}
-let dropdowns = document.querySelectorAll('.iqdropdown')
-for (const dropdown of dropdowns) {
-  dropdown.addEventListener('click', ()=>{
-    let controls = dropdown.querySelectorAll('.iqdropdown-item-controls');
-    for (const control of controls) {
-      control.addEventListener('click',()=>{
-      changeGuestsText(dropdown)
-    })
-    }    
-  })
-}
-
 });
-
-
 

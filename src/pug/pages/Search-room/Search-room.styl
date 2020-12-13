@@ -1,27 +1,11 @@
 .search-rooms-page
   background-color: #FFFFFF;
   max-width 1440px
+  min-width 320px
   min-height: calc(100vh - 372px);
   height 100%
   margin: 0 auto
-.search-rooms-page__options 
-  margin-left: 9.8%;
-  width: 16.625rem;
-  display: flex;
-  flex-direction: column; 
-  float left 
-  height: 748px;
-  justify-content: space-between
-  margin-right: 4%;
-  @media(max-width 430px)
-    margin-left: 25%; 
-    height: 948px;
-    margin-bottom 250px
-.search-rooms-page__option-dropdowns 
-  min-height 84px
-.search-rooms-page__option
-  // margin-bottom: 12px;
-  // min-height: 93px  
+
 .search-rooms-body
   position relative
   height: 1333px;
@@ -30,34 +14,69 @@
   padding-bottom 6rem
   @media(max-width 1430px)
     height 100%
+.search-rooms-page__rigth-container
+  display inline-block
+  vertical-align: top 
+  width  50%;
+  @media(max-width 730px)
+    margin-top 60px 
+    width 100%
 .search-rooms-page__title 
+  vertical-align: top 
+  display inline-block
   padding-top 0.5rem
-  @media(max-width 320px)
-    // width  33.0625rem
+  max-width 529px
+  @media(max-width 720px)
     padding-left: 20%;
+.search-rooms-page__options 
+  margin-left: 9.8%;
+  width 100%
+  max-width: 266px;
+  display: inline-flex;
+  flex-direction: column;
+  height: 737px;
+  justify-content: space-between
+  margin-right: 4%;
+  // margin-bottom 250px
+  @media(max-width 735px)
+    margin-left: 25%; 
+    // height: auto;
+.search-rooms-page__option
+  // margin-bottom: 12px;
+  // min-height: 93px  
 .search-rooms-page__hotels
-  // position relative
+  vertical-align: top 
   width: 850px;
   height: 1108px
   margin-top: 1.25rem;
-  display grid
+  display inline-grid
   grid-template: 1fr 1fr 1fr 1fr / 1fr 1fr 1fr 
   grid-row-gap: 4px;
-  @media(max-width 1430px)
+  // @media(max-width 1430px)
     // left: 25rem;
-    
-  @media(max-width 1280px)    
+  // @media(max-width 1300px)
+  //   margin 60 auto
+  //   margin-top 60px
+  @media(max-width 1300px)    
     width: 600px;
     height 1800px
     grid-template: 1fr 1fr 1fr 1fr 1fr 1fr / 1fr 1fr
   @media(max-width 1022px) 
-    width: 350px;
+    max-width: 350px;
+    width 100%
     height 3600px
     grid-template: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr / 1fr
-  @media(max-width 430px)
+  @media(max-width 740px)
     margin-left 25%
+  > div
+    width 270px
 .search-rooms-pagination 
-  margin-left: 52.4%;
+  margin-left: 40.4%;
   margin-top: 1.5rem
-  @media(max-width 430px)
-    margin-left 20%
+  width: 251px;
+  @media(max-width 1300px)
+    margin-left: 25%;
+  @media (min-width:736px) and (max-width 1020px)
+    margin-left: 10%;
+  @media(max-width 735px)
+    margin-left: 25%;    
