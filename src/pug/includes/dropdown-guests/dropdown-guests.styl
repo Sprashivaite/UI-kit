@@ -17,46 +17,37 @@
   line-height: 18px 
   color: rgba(31, 32, 65, 0.75) 
   }
-.iqdropdown-selection:after {
+.iqdropdown > .iqdropdown-selection:after {
   content ''
-  background-image url('/assets/img/expand-more.svg') !important
-  transform: rotate(180deg)
-  transition: 0.3s
-  background-size: contain !important
-  width: 12px !important
-  height: 8px !important
-  }
-.iqdropdown.menu-open .iqdropdown-selection:after {
-  content ''
-  background-image url('/assets/img/expand-more.svg') !important
-  background-size: contain !important
+  background-image url('/assets/img/expand-more.svg') 
+  background-size: contain 
   display flex
   justify-content center
   align-items center
-  width: 2.75rem 
-  height: 2.75rem 
+  width: 12px 
+  height: 12px 
+  margin-top: -2px;  
+  transform: rotate(180deg)
   transition: 0.3s
-  transform: rotate(360deg)
-  margin-top: -2px;
   }
 .iqdropdown .icon-decrement {
 
-  color: rgba(31, 32, 65, 0.5) !important
+  color: rgba(31, 32, 65, 0.5) 
   }
 
 .iqdropdown-item 
-  font-family: Montserrat !important
-  font-size: 12px !important
-  line-height: 15px !important
-  text-transform: uppercase !important
-  color: #1F2041 !important
-  font-style: normal !important
-  font-weight: bold !important
+  font-family: Montserrat 
+  font-size: 12px 
+  line-height: 15px 
+  text-transform: uppercase 
+  color: #1F2041 
+  font-style: normal 
+  font-weight: bold 
   width: 8.75rem
   height: 15px 
 .iqdropdown .iqdropdown-menu-option
-  height: 26px!important
-  margin: 5px 0 7px 0 !important
+  height: 26px
+  margin: 5px 0 7px 0 
 .iqdropdown .iqdropdown-menu
   border: 1px solid rgba(31, 32, 65, 0.5) 
   top: 2.625rem 
@@ -85,11 +76,11 @@
   @media(max-width 767px) {
     margin-left: 3rem
   }
-.iqdropdown button
-  border-radius: 22px !important
-  width: 30px !important
-  height: 30px !important
-  padding: 7px 0 0 0 !important
+.iqdropdown .iqdropdown-item-controls button
+  border-radius: 22px 
+  width: 30px 
+  height: 30px 
+  padding: 7px 0 0 0 
 .iqdropdown .icon-decrement.icon-increment:before, .iqdropdown .icon-decrement:after
   content '';
   top 4px;
@@ -106,7 +97,19 @@
   border: 1px solid rgba(31, 32, 65, 0.5);
   border-bottom-right-radius: 0px;
   border-bottom-left-radius: 0px;
-
+.iqdropdown.menu-open .iqdropdown-selection:after {
+  content ''
+  background-image url('/assets/img/expand-more.svg') 
+  background-size: contain 
+  display flex
+  justify-content center
+  align-items center
+  width: 12px 
+  height: 12px 
+  margin-top: -2px;  
+  transform: rotate(0deg)
+  transition: 0.3s
+  }
 
 .iqdropdown__apply
   position absolute
