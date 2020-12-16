@@ -18,8 +18,9 @@ include ..\..\includes\like-button\like-button
 include ..\..\includes\pagination\pagination
 
 .Form-Elements
-    +logo
-    
+    section.Form-Elements__logo_color
+        +logo
+
     section.Form-Elements__text-field_1
         legend text field
         .text-field__description default
@@ -69,7 +70,6 @@ include ..\..\includes\pagination\pagination
         +comfort({img: "/assets/img/insert_emoticon.svg", title: "Комфорт", description: "Шумопоглощающие стены"})
     section.Form-Elements__comfort_2
         +comfort({img: "/assets/img/location-city.svg", title: "Удобство", description: "Окно в каждой из спален"})
-
 
 
     section.Form-Elements__checkbox-buttons

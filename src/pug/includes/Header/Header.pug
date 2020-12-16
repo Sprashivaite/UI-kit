@@ -17,11 +17,11 @@ mixin header(options ={})
                     if (!options.bold)
                         +a("О нас")
                     +a("Услуги")            
-                    a.header__expand-more
+                    .header__expand-more
                     +a("Вакансии")
                     +a("Новости")
                     +a("Соглашения")
-                    a.header__expand-more
+                    .header__expand-more
                 if options.login == true
                     span.header__name Юлий Цезарь
                 else if options.login == false

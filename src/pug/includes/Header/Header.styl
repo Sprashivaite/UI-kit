@@ -23,7 +23,7 @@ header
     ul
       display: flex;
     a
-      margin-left: 1.25rem
+      margin-left: 20px
       text-decoration none
       @media(max-width 900px)
         display none
@@ -37,14 +37,12 @@ header
     background-repeat no-repeat
     width 12px
     height 21px
-    margin -4px 5px 0 8px!important
+    margin -4px 5px 0 8px
     transform: rotate(180deg)
     cursor pointer
   &__button_empty
     margin 0 20px
     width 87px
-    // @media(max-width 900px)
-    //   margin-right 40px
     @media(max-width 600px)
       display none
   &__button_register
@@ -72,7 +70,6 @@ header
   z-index: 10
   @media(max-width 900px)
     display: block
-    
 .burger__toggle 
   opacity 0
   &:checked 
@@ -85,10 +82,9 @@ header
         &::after 
           top: 0;
           transform: rotate(90deg);
-
-.burger__toggle:checked ~ .burger__menu 
-  visibility: visible;
-  left: 0;
+    ~ .burger__menu 
+      visibility: visible;
+      left: 0;
 .burger__btn 
   display: flex;
   align-items: center;
@@ -108,15 +104,12 @@ header
     height: 2px;
     background-color: $dark50;
     transition-duration: .25s;
-
-.burger__btn 
   > span::before 
     content: '';
     top: -8px;
   > span::after 
     content: '';
     top: 8px;
-
 .burger__menu 
   display: block;
   position: fixed;
@@ -131,7 +124,6 @@ header
   background-color: #6FCF97;
   box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
   transition-duration: .25s;
-
 .menu__item 
   display: block;
   padding: 12px 24px;
