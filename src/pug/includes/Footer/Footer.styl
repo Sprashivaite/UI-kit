@@ -1,43 +1,28 @@
-footer
-  left 0
-  bottom 0
 .footer
   position relative
   min-width 320px
   max-width 1440px
-  height 372px
   color $dark50
   background #FFFFFF
-  left 0
-  bottom 0
   margin: 0 auto
-  grid-row: 2 / 3
   border-top: 1px solid rgba(31, 32, 65, 0.25);
   box-sizing: border-box
   @media(max-width 1180px)
-    margin-left 20px
-  @media(max-width 970px)
-    height 472px
-  @media(max-width 759px)
-    height 672px
-  @media(max-width 520px)
-    height 672px
-  @media(max-width 424px)
-    height 1010px
+    margin-left 0 20px
 .footer__top
   position relative
   max-width: 1160px;
   min-width 320px
+  min-height 372px
   box-sizing: border-box;
-  margin 0 auto
-  top: 6.5625rem;
+  margin 6.5625rem auto 20px
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-column-gap: 40px;
   @media(max-width 970px)
     grid-template: 1fr 1fr / 1fr 1fr 1fr 
     grid-row-gap: 40px;
-    top: 3.5625rem;
+    margin-top: 3.5625rem;
   @media(max-width 759px)
     grid-template: 1fr 1fr 1fr /1fr 1fr
   @media(max-width 520px)
@@ -79,18 +64,15 @@ footer
 .footer__bot
   position relative
   border-top 1px solid gray
-  height 4.375rem
-  left 0px
+  min-height 70px
   background #FFFFFF
   box-shadow 0px 10px 20px rgba(31, 32, 65, 0.05)
 .footer__bot-content
   position relative
   max-width 1200px
-  height 4.375rem
   background #FFFFFF
   margin: 0 auto
   @media(max-width 500px)
-    height 8rem
     display: flex;
     justify-content: center;
 .footer__copyright
@@ -99,7 +81,6 @@ footer
   margin-top 1.4375rem
 .footer__cc
   margin-top 23px
-  height 22px
   width: 112px
   display inline-block
   float right
@@ -126,13 +107,10 @@ footer
   width 105px
 .footer-elem__toxin
   width 53.19px
-  height 12.95px
 .footer-elem__text
   width 560px
-  height 48px
   text-align center
 .footer-elem__cc
-  height 22px
   width: 112px
   display: flex
   justify-content: space-between;

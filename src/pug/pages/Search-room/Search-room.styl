@@ -3,24 +3,21 @@
   max-width 1440px
   min-width 320px
   min-height: calc(100vh - 372px);
-  height 100%
   margin: 0 auto
 
 .search-rooms-body
   position relative
-  height: 1333px;
+  min-height: 1333px;
   background: #fff;
   margin-top: 1.4375rem;
   padding-bottom 6rem
-  @media(max-width 1430px)
-    height 100%
 .search-rooms-page__options 
   margin-left: 9.8%;
   width 100%
   max-width: 266px;
   display: inline-flex;
   flex-direction: column;
-  height: 737px;
+  min-height: 737px;
   justify-content: space-between
   margin-right: 4%;
   @media(max-width 735px)
@@ -43,19 +40,17 @@
 .search-rooms-page__hotels
   vertical-align: top 
   width: 850px;
-  height: 1108px
+  min-height: 1108px
   margin-top: 1.25rem;
   display inline-grid
   grid-template: 1fr 1fr 1fr 1fr / 1fr 1fr 1fr 
   grid-row-gap: 4px;
   @media(max-width 1300px)    
     width: 600px;
-    height 1800px
     grid-template: 1fr 1fr 1fr 1fr 1fr 1fr / 1fr 1fr
   @media(max-width 1022px) 
     max-width: 350px;
     width 100%
-    height 3600px
     grid-template: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr / 1fr
   @media(max-width 740px)
     margin-left 25%

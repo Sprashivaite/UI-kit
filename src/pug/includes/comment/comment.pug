@@ -5,7 +5,8 @@ mixin comment(options={})
             img(src=(options.img ? options.img: "") alt="аватарка")
             b=(options.name ? options.name: "имя")
             p=(options.data ? options.data: "дата") 
-            
-        span.comment__text= (options.text ? options.text: "текст")
         .comment__like
-            +like-button({value: options.like_value, checked: options.like_checked})
+            +like-button({value: options.like_value, checked: options.like_checked})    
+        .comment__text= (options.text ? options.text: "текст")
+        
+            

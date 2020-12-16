@@ -2,7 +2,7 @@ include ..\text-field\text-field
 
 mixin footer
     footer.footer
-        footer.footer__top
+        .footer__top
             .footer__toxin
                 .footer__logo_color
                     +logo-color
@@ -44,20 +44,20 @@ mixin footer
                 p Получайте специальные предложения и новости сервиса
                 form(action="#", method="post").footer__email
                     +text-field({type: "email", text:"Email"})
-    .footer__bot
-        .footer__bot-content
-            .footer__copyright Copyright &copy; 2018 Toxin отель. Все права зачищены. 
-            section.footer__cc
-                ul
-                    li
-                        a(href="https://twitter.com/", target="_blank", rel="noopener noreferrer")
-                            img(src="/assets/img/twitter.jpg", alt="twitter")
-                    li
-                        a(href="https://www.facebook.com/", target="_blank", rel="noopener noreferrer")
-                            img(src="/assets/img/facebook.jpg", alt="facebook")
-                    li
-                        a(href="https://www.instagram.com/", target="_blank", rel="noopener noreferrer")
-                            img(src="/assets/img/instagram.jpg", alt="instagram")
+        .footer__bot
+            .footer__bot-content
+                .footer__copyright Copyright &copy; 2018 Toxin отель. Все права зачищены. 
+                section.footer__cc
+                    ul
+                        li
+                            a(href="https://twitter.com/", target="_blank", rel="noopener noreferrer")
+                                img(src="/assets/img/twitter.jpg", alt="twitter")
+                        li
+                            a(href="https://www.facebook.com/", target="_blank", rel="noopener noreferrer")
+                                img(src="/assets/img/facebook.jpg", alt="facebook")
+                        li
+                            a(href="https://www.instagram.com/", target="_blank", rel="noopener noreferrer")
+                                img(src="/assets/img/instagram.jpg", alt="instagram")
 mixin footer_2
     .footer-elem
         .footer-elem__Logo

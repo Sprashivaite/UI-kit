@@ -2,15 +2,12 @@
   background-color: #FFFFFF;
   max-width 1440px
   min-height: calc(100vh - 372px);
-  height 100%
   margin: 0 auto
   &__body
     position relative
-    height: 1423px
+    min-height: 1423px
     background: #fff;
     padding-bottom 6rem
-    @media(max-width 1430px)
-      height 100%
   &__images
     max-width: 1440px
     margin 0 auto
@@ -165,7 +162,7 @@
   margin-right: 9.5%;
   float right
   width: 380px;
-  height: 511px;
+  min-height: 511px;
   padding: 10px;
   @media(max-width 1280px)
     float: none
@@ -183,14 +180,13 @@
   vertical-align: top;
   margin-left: 9.6%;
   margin-top: 8px
-  height 332px
+  min-height 332px
   display inline-flex
   flex-direction: column
   justify-content: space-between
   width 712px
   @media(max-width 800px)
     width 100%
-    height 430px
     margin-top: 20px
 .room-details-page__rules
   display inline-block
