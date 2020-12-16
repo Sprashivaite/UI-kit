@@ -3,6 +3,7 @@
   height 70px
   position relative
   &__coub
+    display: inline-block;
     width: 70px
     height: 70px
     border-radius: 6px
@@ -22,9 +23,10 @@
     &_green
       background-color: $green
   &__description
-    position absolute
-    top: 8.5px
-    left 110px
+    display: inline-block;
+    vertical-align: top;
+    margin-top 5px
+    margin-left 20px
     :last-child
       font-weight normal
       padding-top 6px

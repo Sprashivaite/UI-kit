@@ -2,9 +2,9 @@ mixin checkbox(options = {})
     .checkbox
     label.checkbox__label
         input.checkbox__input(type="checkbox" name= options.name)
-        span.checkbox__box 
+        .checkbox__box 
         b= options.title 
-        p.checkbox__label_text(class= (options.title ? "checkbox__label_rich": "") )= options.name 
+        p.checkbox__text(class= (options.title ? "checkbox__rich": "") )= options.name 
 
 
 
