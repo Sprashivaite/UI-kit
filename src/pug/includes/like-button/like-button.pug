@@ -3,4 +3,4 @@ mixin like-button(options ={})
     
         input(type="checkbox" class="like-button" checked=(options.checked ? options.checked: false)) 
         .like-button__symbol
-        .like-button__value(for ="like")= (options.value ? options.value: 0)
+        .like-button__value= (options.value ? options.value: 0)

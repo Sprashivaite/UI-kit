@@ -23,7 +23,7 @@ mixin header(options ={})
                     +a("Соглашения")
                     .header__expand-more
                 if options.login == true
-                    span.header__name Юлий Цезарь
+                    .header__name Юлий Цезарь
                 else if options.login == false
                     li.header__button_empty
                         +button-header({text: "войти", type:"_empty"})

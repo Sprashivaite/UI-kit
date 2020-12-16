@@ -51,18 +51,19 @@ header
     @media(max-width 600px)
       display none
   &__name
-    color: rgba(31, 32, 65, 0.5);
-    white-space: pre
-    overflow-x: hidden;
-    margin-left: 44px;
-    font-size: 14px;
+    color: rgba(31,32,65,.5);
+    white-space: pre;
+    margin-left: 20px;
+    display: inline-flex;
+    align-items: center;
+    overflow hidden
     &:before
       content ''
-      position absolute
-      margin-left: -21px;
-      top: 20px;
+      display inline-block
+      margin-right: 20px;
       height 30px
-      border-left 1px solid rgba(31, 32, 65, 0.1)
+      width 1px
+      background-color rgba(31, 32, 65, 0.1)
 
 .header__burger
   display: none
