@@ -1,0 +1,12 @@
+//- options {
+        color: цвет куба ("dark-100", "dark-75", "dark-50", "dark-25", "dark-5", "purple", "green"),
+        name: название цвета,
+        code: код цвета
+//- }
+
+mixin color-cube(options = {})
+    .color-cube
+        div(class=(options.color ? "color-cube__cube_" + options.color: "color-cube__cube_dark-100"))
+        .color-cube__title
+            h2= options.name
+            h2= options.code
