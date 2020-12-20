@@ -7,18 +7,22 @@ include ..\..\includes\room-card\room-card
 include ..\..\includes\reservation\reservation
 include ..\..\includes\log-in\log-in 
 .cards
-    +logo
-    section.cards__search-rooms
-        +search-rooms
-    section.cards__reservation
-        +reservation       
-    section.cards__calendar
-        +calendar         
-    section.cards__registration
-        +registration
-    section.cards__log-in
-        +log-in
-    section.cards__room-card-1
-        +room-card({img_1: "/assets/img/room-888.png",img_2: "/assets/img/room-840.jpg",img_3: "/assets/img/room-888.png",img_4: "/assets/img/room-840.jpg", num:"888", lux: true, price: "9 990", rate:"5", reviews:"145"})
-    section.cards__room-card-2
-        +room-card({img_1: "/assets/img/room-840.jpg",img_2: "/assets/img/room-888.png", num:"840", lux: false, price: "9 990", rate:"4", reviews:"65"})
+    .cards__logo
+        +logo
+    section.cards__left-container
+        section.cards__search-rooms
+            +search-rooms
+        section.cards__registration
+            +registration
+    section.cards__middle-container        
+        section.cards__reservation
+            +reservation       
+        section.cards__log-in
+            +log-in   
+    section.cards__right-container    
+        section.cards__calendar
+            +calendar           
+        section.cards__room-card-1
+            +room-card({img_1: "/assets/img/room-888.png",img_2: "/assets/img/room-840.jpg",img_3: "/assets/img/room-888.png",img_4: "/assets/img/room-840.jpg", num:"888", lux: true, price: "9 990", rate:"5", reviews:"145"})
+        section.cards__room-card-2
+            +room-card({img_1: "/assets/img/room-840.jpg",img_2: "/assets/img/room-888.png", num:"840", lux: false, price: "9 990", rate:"4", reviews:"65"})
