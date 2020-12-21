@@ -5,56 +5,55 @@ header
   max-width 1200px
   min-width 320px
   min-height 70px
-  background #ffffff
+  display flex
+  align-items: center;
+  justify-content: space-between
   margin 0 auto
-  &__logo_color
-    margin-top 20px
+  background #ffffff
+  &__logo-color
     margin-left 20px
-    display inline-block
   &__nav
-    vertical-align top
-    margin-top: 18px;
-    margin-right: 24px;
-    float right
     display: inline-flex;
-    align-items: center;
-    justify-content: flex-start;
+    align-items: center;    
+    margin-right: 20px;
     ul
       display: flex;
     a
       margin-left: 20px
       text-decoration none
+      &:focus
+        outline none
+        border: 1px solid $dark25;
+        border-radius 10%
       @media(max-width 900px)
         display none
-    &_logged
-      @extends .header__nav
-      margin-right: 18px;
-      margin-top 23px
   &__expand-more
-    background-image url('/assets/img/expand-more.svg')
     display inline-block
+    background-image url('/assets/img/expand-more.svg')
     background-repeat no-repeat
     width 12px
-    height 21px
-    margin -4px 5px 0 8px
+    height 16px
+    margin 0px 5px 0 8px
     transform: rotate(180deg)
     cursor pointer
   &__button_empty
-    margin 0 20px
-    width 87px
+    height 34px
+    width 87px    
+    margin-left 22px
     @media(max-width 600px)
       display none
   &__button_register
+    margin-left 19px
     @media(max-width 900px)
       margin-right 40px
     @media(max-width 600px)
       display none
   &__name
+    display: inline-flex;
+    align-items: center; 
+    margin-left: 20px;       
     color: rgba(31,32,65,.5);
     white-space: pre;
-    margin-left: 20px;
-    display: inline-flex;
-    align-items: center;
     overflow hidden
     &:before
       content ''
@@ -63,75 +62,73 @@ header
       height 30px
       width 1px
       background-color rgba(31, 32, 65, 0.1)
-
+      
 .header__burger
   display: none
   position: fixed
   z-index: 10
   @media(max-width 900px)
     display: block
-.burger__toggle 
-  opacity 0
-  &:checked 
-    ~ .burger__btn 
-      span
-        transform: rotate(45deg); 
-        &::before 
-          top: 0;
-          transform: rotate(0deg);
-        &::after 
-          top: 0;
-          transform: rotate(90deg);
-    ~ .burger__menu 
-      visibility: visible;
-      left: 0;
-.burger__btn 
-  display: flex;
-  align-items: center;
-  position: fixed;
-  top: 20px;
-  right : 20px;
-  width: 26px;
-  height: 26px;
-  cursor: pointer;
-  z-index: 1;
-  > span,
-  > span::before,
-  > span::after 
+.burger
+  &__toggle 
+    opacity 0
+    &:checked 
+      ~ .burger__btn 
+        span
+          transform: rotate(45deg); 
+          &::before 
+            top: 0;
+            transform: rotate(0deg);
+          &::after 
+            top: 0;
+            transform: rotate(90deg);
+      ~ .burger__menu 
+        visibility: visible;
+        left: 0;
+  &__btn 
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 20px;
+    right : 20px;
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+    z-index: 1;
+    > span,
+    > span::before,
+    > span::after 
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      background-color: $dark50;
+      transition-duration: .25s;
+    > span::before 
+      content: '';
+      top: -8px;
+    > span::after 
+      content: '';
+      top: 8px;
+  &__menu 
     display: block;
-    position: absolute;
+    position: fixed;
+    visibility: hidden;
+    top: 0;
+    left: -100%;
     width: 100%;
-    height: 2px;
-    background-color: $dark50;
+    height: 100%;
+    margin: 0;
+    padding: 80px 0;
+    background-color: #6FCF97;
     transition-duration: .25s;
-  > span::before 
-    content: '';
-    top: -8px;
-  > span::after 
-    content: '';
-    top: 8px;
-.burger__menu 
-  display: block;
-  position: fixed;
-  visibility: hidden;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  padding: 80px 0;
-  list-style: none;
-  background-color: #6FCF97;
-  box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
-  transition-duration: .25s;
-.menu__item 
-  display: block;
-  padding: 12px 24px;
-  color: #333;
-  font-family: Montserrat, Arial, sans-serif;
-  font-size: 20px;
-  font-weight: 600;
-  text-decoration: none;
-  transition-duration: .25s;
-  &:hover 
-    background-color: #CFD8DC;
+    .menu__item 
+      display: block;
+      padding: 12px 24px;
+      color: #333;
+      font-family: Montserrat, Arial, sans-serif;
+      font-size: 20px;
+      font-weight: 600;
+      transition-duration: .25s;
+      &:hover 
+        background-color: #CFD8DC;
