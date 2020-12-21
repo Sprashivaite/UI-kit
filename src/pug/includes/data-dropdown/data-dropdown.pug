@@ -1,3 +1,8 @@
+//- options{
+//- firstLegend: название левого dropdown,
+    secondLegend: название правого dropdown
+//- }
+
 include ..\text-field\text-field
 
 mixin data-dropdown(options = {})
@@ -15,5 +20,5 @@ mixin data-dropdown(options = {})
 
 mixin data-filter
     .text-field
-        input.text-field__border(class="datepicker-here" value="ДД.ММ.ГГГГ" type="data" data-clear-button="true" data-range="true"  data-multiple-dates-separator=" - " data-date-format="d M")
+        input.text-field__border(class="datepicker-here" placeholder="ДД.ММ.ГГГГ" type="data" data-clear-button="true" data-range="true"  data-multiple-dates-separator=" - " data-date-format="d M")
         button.text-field__data

@@ -1,8 +1,13 @@
+//- options{
+//-     open: открытое/закрытое состояние (true, false),
+//-     title: заголовок
+//- }
+
 include ..\checkbox\checkbox
 
 mixin expandable-checkbox-list(options={})
     label.expandable-checkbox-list
-        h3.expandable-checkbox-list__text дополнительные удобства
+        h3.expandable-checkbox-list__text= options.title 
         input.expandable-checkbox-list__button(type="checkbox" checked=(options.open ? options.open: false))
         .expandable-checkbox-list__list
             ul
@@ -14,10 +19,6 @@ mixin expandable-checkbox-list(options={})
                     +checkbox({ name: "Стул для кормления"})
                 li
                     +checkbox({ name: "Кроватка"})
-                li
-                    +checkbox({ name: "Телевизор"})
-                li
-                    +checkbox({ name: "Шампунь"})
                 li
                     +checkbox({ name: "Телевизор"})
                 li
