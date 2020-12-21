@@ -1,35 +1,46 @@
+//- options {
+        login: залогинен ли пользователь (true, false),
+        bold: первая ссылка полужирным(true, false)
+        code: код цвета
+//- }
+
 include ..\logo-color\logo-color
 include ..\button\button
 
-mixin a(name)
-    li
-        a(href="change-me.html")= name
 mixin header(options ={})
     header
         .header
-            .header__logo_color
+            .header__logo-color
                 +logo-color
-            nav(class = (options.login ? "header__nav_logged" : "header__nav") )
+            nav.header__nav
                 ul
                     if (options.bold) 
                         b 
-                            +a("О нас")
+                            li
+                                a(href="change-me.html") О нас
                     if (!options.bold)
-                        +a("О нас")
-                    +a("Услуги")            
+                        li
+                            a(href="change-me.html") О нас
+                    li
+                        a(href="change-me.html") Услуги            
                     .header__expand-more
-                    +a("Вакансии")
-                    +a("Новости")
-                    +a("Соглашения")
-                    .header__expand-more
+                    li
+                        a(href="change-me.html") Вакансии
+                    li
+                        a(href="change-me.html") Новости
+                    li
+                        a(href="change-me.html") Соглашения
+                    li 
+                        .header__expand-more
                 if options.login == true
                     .header__name Юлий Цезарь
-                else if options.login == false
-                    li.header__button_empty
-                        +button-header({text: "войти", type:"_empty"})
-                    li.header__button_register
+                else 
+                    .header__button_empty
+                        +button({text: "войти", type:"_empty"})
+                    .header__button_register
                         +button-header({text: "зарегистрироваться"})
-    label.header__burger
+    
+        label.header__burger
             input.burger__toggle(type="checkbox")
             .burger__btn
                 span
