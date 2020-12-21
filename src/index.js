@@ -3,7 +3,7 @@ import './styl/main.styl'
 
 import ionRangeSlider from 'ion-rangeslider'
 // import 'item-quantity-dropdown/lib/item-quantity-dropdown.min.js'
-import 'item-quantity-dropdown/lib/item-quantity-dropdown.min.css'
+// import 'item-quantity-dropdown/lib/item-quantity-dropdown.min.css'
 import './pug/includes/range-slider/range-slider.js'
 import "./pug/includes/rate-button/rate-button.js"
 import "./pug/includes/like-button/like-button.js"

@@ -2,11 +2,25 @@
 @import "../pug/pages/*"
 @import "../pug/pages/*/*"
 @import "../pug/includes/*"
+html 
+    font-family Montserrat, Arial, sans-serif;
+    font-style normal
+    font-weight normal
+    font-size 16px
+    color $dark75
+    background-color #fff
+    line-height 1.15
+    
+    @media(max-width 1024px)
+        font-size 14px
+    @media(max-width 767px)
+        font-size 12px
 body
   background-color white
   width 100%
   height 100%
   font-size 14px
+  line-height: 22px
 h1 
   font-family Montserrat, Arial, sans-serif;
   font-style normal
@@ -47,23 +61,10 @@ b
 a
     color $dark50
     font-size 14px
-// html
-html 
-    font-family Montserrat, Arial, sans-serif;
-    font-style normal
-    font-weight normal
-    font-size 16px
-    line-height 1.5rem
-    color $dark75
-    background-color #fff
-    @media(max-width 1024px)
-        font-size 14px
-    @media(max-width 767px)
-        font-size 12px
-p 
-    line-height 24px
-    // font-size 1rem
+
+p
     margin 0
+    
 li
     list-style none
 ol
@@ -71,6 +72,7 @@ ol
 ul
     margin 0
     padding 0
-
+div
+    box-sizing: border-box;
 a
     text-decoration none
