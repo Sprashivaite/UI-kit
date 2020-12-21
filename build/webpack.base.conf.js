@@ -115,13 +115,8 @@ module.exports = {
             jQuery: 'jquery',
             'window.jQuery': 'jquery',
         }),
-        // new HtmlWebpackPlugin({
-        //     hash: false,
-        //     template: `${PATHS.src}/index.html`,
-        //     filename: './index.html'
-        // }),
         new CopyWebpackPlugin([
-            { from: `${PATHS.src}/img`, to: `${PATHS.assets}img` },
+            { from: `${PATHS.src}/pug/includes/**/*.{png,jpg,gif,svg}`, to: `${PATHS.assets}img/[name].[ext]`},
             { from: `${PATHS.src}/fonts`, to: `${PATHS.assets}fonts` },
         ]),
         ...PAGES.map(page => new HtmlWebpackPlugin({
