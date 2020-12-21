@@ -1,58 +1,67 @@
 .logo-color
-  position relative
-  width 40px
-  height 40px
-  background-image -webkit-linear-gradient(270deg, #BC9CFF 0%, #8BA4F9 100%)
-  border-radius 50%
+  line-height 0
   &__circle
-    top 2.5px
-    left 2.5px
     position relative
-    width 35px
-    height 35px
-    border 2.2px solid none
+    width 40px
+    height 40px
+    background-image -webkit-linear-gradient(270deg, #BC9CFF 0%, #8BA4F9 100%)
     border-radius 50%
-    background white
-    z-index 1
-  &__circle-back-1
+    display inline-block
+    &:after
+      content ''
+      position absolute
+      top 2.5px
+      left 2.5px
+      width 35px
+      height 35px
+      border 2.2px solid none
+      border-radius 50%
+      background white
+      z-index 1      
+  &__part-left
     position absolute
-    top 15px
-    left -3px
-    width 19.52px
-    height 19.52px
-    background white
-    z-index 1
-    border-radius 44%
-    clip rect(0px, auto, 11.5px, 10px)
-  &__circle-part-1-color
-    position absolute
-    width 21.52px
-    height 21.52px
-    left -3px
-    top 13px
-    border-radius 44%
+    width: 21px;
+    height: 26px;
+    border-radius: 43%;
+    left: 0px;
+    top: 15px;
     clip rect(0px ,auto,11.5px,10px)
     background-image -webkit-linear-gradient(270deg, #BC9CFF 0%, #8BA4F9 100%)
-  &__circle-back-2
+    z-index 3
+    &:after
+      content ''
+      position absolute
+      top: 2px;
+      left: -2px;      
+      width: 21px;
+      height: 26px;
+      border-radius: 40%;
+      background white
+      z-index 3
+      clip rect(0px, auto, 11.5px, 10px)
+  &__part-right
     position absolute
-    width 20.12px
-    height 20.12px
-    top 15.5px
-    left 16px
-    border-radius 50%
-    clip rect(0px, 12px, 5.5px, 3px)
-    background white
-    z-index 1
-  &__circle-part-2-color
-    position absolute
-    width 18.12px
-    height 18.12px
-    left 16px
-    top 13px
+    width: 21px;
+    height: 28px;
+    left: 18px;
+    top: 15px;
     border-radius 50%
     clip rect(0px, 12px, 5.5px, 3px)
     background-image -webkit-linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%)
+    z-index 3
+    &:after
+      content ''
+      position absolute
+      width: 21px;
+      height: 28px;
+      left: 1px;
+      top 2px
+      border-radius 50%
+      clip rect(0px, 12.5px, 5.5px, 3px)
+      background white
+      z-index 3      
   &__toxin
-    position absolute
-    left 52px
-    top 10px
+    display inline-block
+    vertical-align top
+    margin-left: 12px;
+    margin-top: 13px;
