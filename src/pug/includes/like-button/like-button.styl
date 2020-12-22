@@ -22,7 +22,7 @@
     height: 18px;
     box-sizing: border-box;
     border-radius: 10px;
-  &::after
+  &:after
     content: ''
     background-image: url(/assets/img/favorite-border.svg);
     width: 10px;
@@ -31,17 +31,17 @@
     z-index: 2;
     margin-top: 6px;
     margin-left: 5px;
-    &:checked
-      background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-      &::after
-        content: ''
-        background-image: url(/assets/img/favorite.svg);
-        width: 10px;
-        height: 8px;
-        position: absolute;
-        z-index: 2;
-        margin-top: 6px;
-        margin-left: 5px;
+  &:checked
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    &:after
+      content: ''
+      background-image: url(/assets/img/favorite.svg);
+      width: 10px;
+      height: 8px;
+      position: absolute;
+      z-index: 2;
+      margin-top: 6px;
+      margin-left: 5px;
   &__value
     position absolute
     font-size: 10px;
