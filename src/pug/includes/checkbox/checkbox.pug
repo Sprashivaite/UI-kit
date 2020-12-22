@@ -5,7 +5,8 @@ mixin checkbox(options = {})
     label.checkbox__label
         input.checkbox__input(type="checkbox" name= options.name)
         .checkbox__box 
-        b= options.title 
+        if(options.title )
+            b= options.title 
         p.checkbox__text(class= (options.title ? "checkbox__rich": "") )= options.name 
 
 
