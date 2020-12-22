@@ -11,6 +11,7 @@
   align-items center
   justify-content: center
   cursor pointer
+
   &:active
     background linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%)
     opacity 0.5
@@ -30,13 +31,13 @@
         color $dark50
   &_long
     @extend .button
-    &::after
-      content: ''
-      background-image url('/assets/img/arrow-forward-white.svg')
-      width 18px
-      height 18px
-      right 13px
-      position absolute
+    span
+      font-family: 'Material Icons';
+      font-size: 24px;
+      right: 10px;
+      z-index 2
+      color #fff
+      position: absolute;
   &_empty
     @extend .button
     &::after

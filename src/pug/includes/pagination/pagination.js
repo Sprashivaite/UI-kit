@@ -181,7 +181,7 @@
 
 			// Generate Next link (if option set for at front)
 			if (o.nextText && o.nextAtFront) {
-				methods._appendItem.call(this, !o.invertPageOrder ? o.currentPage + 1 : o.currentPage - 1, {text: o.nextText, classes: 'next'});
+				methods._appendItem.call(this, !o.invertPageOrder ? o.currentPage + 1 : o.currentPage - 1, {text: o.nextText, classes: 'next material-icons'});
 			}
 
 			// Generate start edges
@@ -261,7 +261,7 @@
 
 			// Generate Next link (unless option is set for at front)
 			if (o.nextText && !o.nextAtFront) {
-				methods._appendItem.call(this, !o.invertPageOrder ? o.currentPage + 1 : o.currentPage - 1, {text: o.nextText, classes: 'next'});
+				methods._appendItem.call(this, !o.invertPageOrder ? o.currentPage + 1 : o.currentPage - 1, {text: o.nextText, classes: 'next material-icons'});
 			}
 
 			if (o.ellipsePageSet && !o.disabled) {
@@ -307,7 +307,7 @@
 				$link = $('<span class="current">' + (options.text) + '</span>');
 			} else {
 				if (o.useAnchors) {
-					$link = $('<a href="' + o.hrefTextPrefix + (pageIndex + 1) + o.hrefTextSuffix + '" class="page-link">' + (options.text) + '</a>');
+					$link = $('<a href="' + o.hrefTextPrefix + (pageIndex + 1) + o.hrefTextSuffix + '" class="page-link">' + '<span class="material-icons">' + (options.text) + '</span>' + '</a>');
 				} else {
 					$link = $('<span >' + (options.text) + '</span>');
 				}
@@ -405,6 +405,6 @@ $(function() {
         edges: 1,
         prevText: false,
         cssStyle: 'light-theme',
-        // nextText: url('\assets\img\arrow_forward_white.svg'),
-    });
+        nextText: 'arrow_forward'
+	});
 });

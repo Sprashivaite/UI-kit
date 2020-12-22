@@ -45,7 +45,7 @@ span.ellipse.clickable {
 
 .light-theme a, .light-theme span {
   float: left;
-  color: #666;
+  color: rgba(31, 32, 65, 0.5);;
   font-size: 12px;
   line-height: 42px;
   font-weight: 400;
@@ -57,10 +57,12 @@ span.ellipse.clickable {
   border-radius: 22px;
   text-decoration: none
 }
-
+.light-theme a .next{
+  font-size: 24px;
+  }
 .light-theme a:hover, .light-theme li:not(.disabled):not(.active) span:hover {
 	text-decoration: none;
-	background: #FCFCFC;
+	// background: #FCFCFC;
 }
 
 .light-theme .current {
@@ -82,26 +84,24 @@ span.ellipse.clickable {
 .next::after {
   content: '';
   position absolute;
-  background-image url('\assets\img\circle-2.svg');
-  background-size: cover
+  background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+  border-radius: 22px
   width: 40px;
   height: 40px;
   right: 6px;
-  }
-.next::before{
-  content: '';
-  position absolute;
-  background-image url('\assets\img\arrow-forward-white.svg');
-  background-size: cover
-  width: 18px;
-  height: 18px;
-  z-index: 2;
-  margin-top: 11px;
-  margin-right: 11px;
+  z-index: 1;
   }
 .current.next{
   display: none;
 }
+.light-theme a.material-icons span{
+  font-family: 'Material Icons';
+  font-size: 24px;
+  left: -4px;
+  z-index 2
+  color #fff
+  position: absolute;
+  }
 
 .pagination__descr{
   position: absolute;
