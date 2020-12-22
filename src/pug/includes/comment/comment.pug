@@ -1,6 +1,13 @@
+//- img: аватарка,
+//- name: имя,
+//- data: дата,
+//- like_value: количество лайков,
+//- checked: поставлен лайк,
+//- text: комментарий
+
 include ../like-button/like-button
 mixin comment(options={})
-    article.comment
+    .comment
         .comment__user
             img(src=(options.img ? options.img: "") alt="аватарка")
             b=(options.name ? options.name: "имя")
