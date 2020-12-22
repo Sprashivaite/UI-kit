@@ -7,4 +7,5 @@
 mixin button(options = {})
     button(class= "button" + (options.type ? options.type : "") )
         div(class = ( options.type === "_empty" ? "button__text_empty": "button__text"))= options.text
-
+        if(options.type === "_long")
+            span.material-icons arrow_forward
