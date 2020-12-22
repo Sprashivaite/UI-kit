@@ -3,6 +3,7 @@
   width 100%
   min-width 70px
   height 100%
+  min-height 35px
   background linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%)
   border-radius 22px
   border none
@@ -55,33 +56,3 @@
       z-index 1
     &:focus
       outline none
-
-
-
-
-
-.button-header
-  @extend .button
-  height auto 
-  width auto 
-  &__text
-    @extend .button__text
-    padding 9px 15px 10px 12px
-    &_empty
-      @extend .button__text_empty
-      padding 8px 17px
-      background-color #FFFFFF
-      border-radius 22px
-  &_empty
-    @extend .button_empty
-    height auto 
-    width auto
-    padding 2px
-    &::after
-      height auto 
-      width auto
-    &:active
-      height auto 
-      width auto
-
-

@@ -1,6 +1,3 @@
-//- button - фиксированная ширина
-//- button-header - ширина зависит от длины названия
-//- 
 //- options.text = название кнопки
 //- options.type = тип кнопки: 
 //-                            "button" - по умолчанию. 
@@ -10,6 +7,4 @@
 mixin button(options = {})
     button(class= "button" + (options.type ? options.type : "") )
         div(class = ( options.type === "_empty" ? "button__text_empty": "button__text"))= options.text
-mixin button-header(options = {})
-    button(class= "button-header" + (options.type ? options.type : "") )
-        div(class = ( options.type === "_empty" ? "button-header__text_empty": "button-header__text"))= options.text
+
