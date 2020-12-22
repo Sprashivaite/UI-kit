@@ -1,10 +1,8 @@
 .radio-buttons
-  display flex
-  justify-content space-between
   min-width 221px
 .radio-button
   position relative
-  width 110px
+  min-width 110px
   display inline-block
   margin-right 8px
   cursor pointer
@@ -23,11 +21,15 @@
     height: 20px;
     float left
     cursor pointer
+    &:hover
+      border: 1px solid #BC9CFF;
     &:focus
       outline: none
     &:checked
       border: 1px solid #BC9CFF;
       outline: none
+      ~ .radio-button__label
+        color: rgba(31, 32, 65, 0.75);
       &:before
         content ''
         position absolute
@@ -37,6 +39,3 @@
         top: 4px
         background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
         border-radius: 10px;
-.radio-button__input:checked ~ .radio-button__label {
-  color: rgba(31, 32, 65, 0.75);
-}
