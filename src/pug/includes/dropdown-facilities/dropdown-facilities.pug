@@ -1,24 +1,24 @@
 mixin dropdown-facilities
-    .dropdown
-        button.dropdown__dropbtn
-            .btnText 2 спальни, 2 кровати
-            i.material-icons expand_more
-        .dropdown-content
-            .dropdown-content__line
-            p спальни
-            .dropdown-content__box-button
-                button.minus -
-                input.adult(type="text", value="2", disabled="", size="1")
-                button.plus +
-            .dropdown-content__line
-            p кровати
-            .dropdown-content__box-button
-                button.minus -
-                input.child(type="text", value="2", disabled="", size="1")
-                button.plus +
-            .dropdown-content__line
-            p ванные комнаты
-            .dropdown-content__box-button
-                button.minus -
-                input.baby(type="text", value="0", disabled="", size="1")
-                button.plus +
+        .dropdown-facilities
+            button.dropdown__dropbtn
+                .dropbtn__text 2 спальни, 2 кровати
+                i.material-icons expand_more
+            .dropdown-content
+                .dropdown-content__line
+                    p спальни
+                    .dropdown-content__box-button
+                        button.minus -
+                        input.adult(type="text", value="2", disabled="", size="1")
+                        button.plus +
+                .dropdown-content__line
+                    p кровати
+                    .dropdown-content__box-button
+                        button.minus -
+                        input.child(type="text", value="2", disabled="", size="1")
+                        button.plus +
+                .dropdown-content__line
+                    p ванные комнаты
+                    .dropdown-content__box-button
+                        button.minus -
+                        input.baby(type="text", value="0", disabled="", size="1")
+                        button.plus +

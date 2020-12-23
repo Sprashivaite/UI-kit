@@ -1,12 +1,11 @@
-.dropdown {
+.dropdown-facilities
   display: flex;
-  width: 266px;
-  flex-direction: column;
-  align-items: stretch;
-  position: relative;
-  &__dropbtn {
+  min-width: 266px;
+  width 100%
+  position: relative;    
+.dropdown
+  &__dropbtn 
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
     align-items: center;
     width: 100%;
@@ -16,154 +15,60 @@
     border-radius: 2px;
     padding-left: 15px;
     outline: none 
-    p {
-      font-size: 14px;
-      color:grey;
-      height: 20px;
-    }
-    i {
-      color: #e2e2e2
-      transition-duration: 0.5s;
-    }
-  }
-}
-.btnText {
+    &:hover, &:focus
+      border-radius: 2px;
+      border: 1px solid $dark50;
+    i 
+      color: rgba(31,32,65,.75);
+      transition-duration: .5s;
+      font-family: Material Icons;
+      font-style: normal;
+      font-size: 24px;
+.dropdown-facilities .dropbtn__text 
   font-size: 14px;
-  color:grey;
   height: 20px;
-  }
-.dropdown__dropbtn:hover
-  border-radius: 2px;
-  border: 1px solid $dark50;
-.dropdown__dropbtn i
-  background-color:  rgba(31, 32, 65, 0.75);
-
-.btnItems-container{
-  position: absolute;
-  background-color: white;
-  width: 100%;
-  top: 30px;
-}
-.minus, .plus {
-  font-size: 18px;
-  line-height: 22px;
-  color: #e2e2e2;
-  width: 30px;
-  height: 30px;
-  border: 1px solid #e2e2e2;
-  border-radius: 22px;
-  background: white;
-  color: grey;
-  font-family Montserrat, Arial, sans-serif;
-  text-transform: uppercase;
-}
-
-.dropdown-content {
+  color:  rgba(31,32,65,.75);
+.dropdown-facilities .dropdown-content 
   padding: 0px 5px 6px 13px;
-  border: 1px solid grey;
   box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
   border: 1px solid rgba(31,32,65,.5);
   display: none;
-  position: absolute;
-  background-color: white;
-  width: 266px;
-  top: 43px;
-  z-index: 1;
-  font-family Montserrat, Arial, sans-serif;
-  text-transform: uppercase;
-  font-size: 12px;
-  line-height: 15px;
-  &__show{
-    display block
-  }
-    p{
-      display inline-block
-      font-weight: bold;
-      }
-  &__line {
+  position: absolute; 
+  min-width: 266px;
+  width 100%
+  top: 42px;
+  z-index: 1; 
+  height 117px
+  border-radius 2px
+  background-color: #fff
+  &__show
+    display block  
+  &__line 
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 7px;
-    width: 245px;
-
-    p, input {
-      font-family: Montserrat, Arial, sans-serif;;
-      font-style: normal;
+    margin-bottom: 5px;
+    margin-top 3px
+    width: 100%
+    p, input 
       font-weight: bold;
       font-size: 12px;
-      line-height: 15px;
       text-transform: uppercase;
-      color: #1F2041;
-
-    }
-
-  }
-  &__box-button {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-end;
-    display inline-block
-    float: right;
-
-    input {
+      display inline-block
+      color #1F2041  
+  &__box-button 
+    margin-top: 2px
+    .minus, .plus 
+      font-size: 18px;
+      line-height: 22px;
+      color: rgba(31, 32, 65, 0.5)
+      width: 30px;
+      height: 30px;
+      border: 1px solid #e2e2e2;
+      border-radius: 22px;
+      background: white;
+      outline: none    
+    input 
       border: none;
       text-align: center;
-      width: 33px;
-      background-color: white;
-      font-family Montserrat, Arial, sans-serif;
-      text-transform: uppercase;
-      font-size: 12px;
-      line-height: 15px;
-      outline: none
-    }
-
-    .number {
-      margin: 0 12px 0 12px;
-    }
-  }
-}
-.form-elements__btn-container {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 19px;
-
-  .clear, .submit {
-    border: none;
-    text-transform: uppercase;
-    background-color: transparent;
-    font-family: Montserrat, Arial, sans-serif;
-    font-size: 12px;
-  }
-
-  .clear {
-    color: grey;
-    padding-left: 0px;
-  }
-
-  .submit {
-    color: red;
-    padding-right: 0px;
-  }
-}
-.dropdown-content__box-button .adult,.dropdown-content__box-button .child,.dropdown-content__box-button .baby
-  color: grey;
-  font-family Montserrat, Arial, sans-serif;
-  text-transform: uppercase;
-  font-weight: bold
-.material-icons
-  font-family: 'Material Icons';
-  font-weight: normal;
-  font-style: normal;
-  font-size: 24px;
-  line-height: 1;
-  letter-spacing: normal;
-  text-transform: none;
-  display: inline-block;
-  word-wrap: normal;
-  -moz-font-feature-settings: 'liga';
-  -moz-osx-font-smoothing: grayscale;
-  background: rgba(31, 32, 65, 0.75);
-  -webkit-background-clip: text; 
-  -webkit-text-fill-color: transparent;
+      width: 29px;
