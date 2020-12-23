@@ -18,29 +18,29 @@ include ..\..\includes\like-button\like-button
 include ..\..\includes\pagination\pagination
 
 .Form-Elements
-    section.Form-Elements__logo_color
+    section.Form-Elements__logo
         +logo
 
     section.Form-Elements__left-container
 
         section.Form-Elements__text-field_1
             legend text field
-            .text-field__description default
+                .text-field__description default
             +text-field({text: "Email"})
 
         section.Form-Elements__text-field_2
             legend text field
-            .text-field__description Hover / Focus
+                .text-field__description Hover / Focus
             +text-field({text: "This is pretty awesome"})
 
         section.Form-Elements__dropdown_field
             legend dropdown
-            .text-field__description default
+                .text-field__description default
             +dropdown-guests
 
         section.Form-Elements__masked
             legend masked text field
-            .text-field__description default
+                .text-field__description default
             +text-field({text: "ДД.ММ.ГГГГ"})
 
         section.Form-Elements__date-dropdown
@@ -56,18 +56,19 @@ include ..\..\includes\pagination\pagination
 
         section.Form-Elements__dropdown-1
             legend dropdown
-            .text-field__description default
+                .text-field__description default 
             +dropdown-facilities
         section.Form-Elements__dropdown-expanded
             legend dropdown
-            .text-field__description expanded
+                .text-field__description expanded
             +dropdown-facilities
 
-        section.Form-Elements__expandable-checkbox-list_2
-            +expandable-checkbox-list({open: true})
-        section.Form-Elements__expandable-checkbox-list
-            +expandable-checkbox-list
 
+        section.Form-Elements__expandable-checkbox-list
+            +expandable-checkbox-list({title:"expandable-checkbox-list"})
+        section.Form-Elements__expandable-checkbox-list_2
+            +expandable-checkbox-list({title:"expandable-checkbox-list",open: true})
+            
         section.Form-Elements__comfort
             +comfort({img: "/assets/img/insert_emoticon.svg", title: "Комфорт", description: "Шумопоглощающие стены"})
         section.Form-Elements__comfort_2
@@ -121,7 +122,7 @@ include ..\..\includes\pagination\pagination
                     +checkbox({ name: "На 1 этаже вас встретит специалист и проводит до номера.", title:"Помощник для инвалидов"})
 
         section.Form-Elements__comment
-            +comment({name: "Мурад Сарафанов", data:"5 дней назад", img:"/assets/img/murad.png", like_value: 12,like_checked: true, text: "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены,действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей."})
+            +comment({name: "Мурад Сарафанов", data:"5 дней назад", img:"/assets/img/murad.jpg", like_value: 12,like_checked: true, text: "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены,действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей."})
 
     section.Form-Elements__right-container
 
@@ -161,9 +162,9 @@ include ..\..\includes\pagination\pagination
             legend Bullet list
             ul
                 li 
-                    +bullet-list("Нельзя с питомцами")
+                    +bullet-list({text: "Нельзя с питомцами"})
                 li
-                    +bullet-list("Без вечеринок и мероприятий")
+                    +bullet-list({text: "Без вечеринок и мероприятий"})
                 li
-                    +bullet-list("Время прибытия — после 13:00, а выезд до 12:00")
+                    +bullet-list({text: "Время прибытия — после 13:00, а выезд до 12:00"})
 
