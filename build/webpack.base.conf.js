@@ -116,7 +116,7 @@ module.exports = {
             'window.jQuery': 'jquery',
         }),
         new CopyWebpackPlugin([
-            { from: `${PATHS.src}/pug/includes/**/*.{png,jpg,gif,svg}`, to: `${PATHS.assets}img/[name].[ext]`},
+            { from: `${PATHS.src}/pug/**/*.{png,jpg,gif,svg}`, to: `${PATHS.assets}img/[name].[ext]`},
             { from: `${PATHS.src}/fonts`, to: `${PATHS.assets}fonts` },
         ]),
         ...PAGES.map(page => new HtmlWebpackPlugin({
