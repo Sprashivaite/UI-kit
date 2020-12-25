@@ -5,12 +5,12 @@
   margin: 0 auto
 .search-rooms-body
   position relative
-  min-height: 1333px;
+  min-height: 1344px;
   background: #fff;
   margin-top: 1.4375rem;
-  margin: 23px 0 0 9.8%;
+  margin: 13px 0 0 9.8%;
+  display: flex;
   @media(max-width 730px)
-    display: flex;
     flex-direction: column;
     align-items: center;
 .search-rooms-page__options   
@@ -19,7 +19,6 @@
   flex-direction: column;
   margin-right: 4.5%;
   .options__data-filter
-    display block
   .options__dropdown-guests
     margin-top: 10px
   .options__range-slider
@@ -40,42 +39,29 @@
   .options__checkbox-list
     margin-top: 25px
 .search-rooms-page__rigth-container
-  display inline-block
-  vertical-align: top 
   display: inline-flex;
   flex-direction: column;
-  align-items: center;
-  @media(min-width 731px) and (max-width 1022px)
-    width 50%    
+  align-items center
   @media(max-width 730px)
-    margin-top 80px
+    margin-top 180px
 .search-rooms-page__title 
-  vertical-align: top 
-  display inline-block
-  padding-top 0.5rem
-.search-rooms-page__hotels
-  vertical-align: top 
-  width: 104%;
+  padding-top 1rem
+  margin-right auto
+.search-rooms-page__hotels  
   margin-top: 1.25rem;
   display inline-grid
-  grid-template: 1fr 1fr 1fr 1fr / 1fr 1fr 1fr 
-  grid-row-gap: 4px;
+  grid-template: repeat(4, 270px) / 270px 270px 270px 
+  grid-row-gap: 9px;
+  grid-column-gap 11px
   @media(min-width 1700px)
-    grid-template:1fr 1fr 1fr / 1fr 1fr 1fr 1fr   
-  @media(min-width 1023px) and (max-width 1300px)    
-    width: 600px;
-    grid-template: 1fr 1fr 1fr 1fr 1fr 1fr / 1fr 1fr
-  @media(max-width 1022px) 
-    width: 300px;    
-    grid-template: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr / 1fr
-  @media(max-width 730px)
-    > div
-      width 270px
+    grid-template:repeat(3, 270px) / 270px 270px 270px 270px   
+  @media(min-width 1000px) and (max-width 1300px)
+    grid-template: repeat(6, 270px) / 270px 270px
+  @media(max-width 999px) 
+    grid-template: repeat(12, 270px) / 270px
 .search-rooms-pagination 
   margin-top: 1.5rem
   width: 251px;
   height 80px
-  align-self: flex-start;
   @media (max-width:1020px) 
     margin-left: 0;
-    align-self: center

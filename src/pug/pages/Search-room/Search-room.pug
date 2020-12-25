@@ -13,30 +13,30 @@ include ..\..\includes\data-dropdown\data-dropdown
     +header({login: false})
     main.search-rooms-body
         section.search-rooms-page__options
-            .search-rooms-page__option 
+            .options__data-filter
                 legend даты пребывания в отеле
                 +data-filter
-            .search-rooms-page__option 
+            .options__dropdown-guests
                 legend гости
                 +dropdown-guests
-            .search-rooms-page__option
+            .options__range-slider
                 legend.range-slider-name диапазон цены
                 +range-slider
                 .range-slider-descr Стоимость за сутки пребывания в номере
-            .search-rooms-page__option
+            .options__checkbox
                 legend правила дома
                 +checkbox({ name: "Можно курить"})
                 +checkbox({ name: "Можно с питомцами"})
                 +checkbox({ name: "Можно пригласить гостей (до 10 человек)"})
-            .search-rooms-page__option
+            .options__checkbox-2
                 legend доступность
                 +checkbox({ name: "Ширина коридоров в номере не менее 91 см.", title:"Широкий коридор"})
                 +checkbox({ name: "На 1 этаже вас встретит специалист и проводит до номера.", title:"Помощник для инвалидов"})
-            .search-rooms-page__option
+            .options__dropdown-facilities
                 legend удобства номера
                 +dropdown-facilities
-            .search-rooms-page__option
-                +expandable-checkbox-list
+            .options__checkbox-list
+                +expandable-checkbox-list({title:'дополнительные удобства'})
         .search-rooms-page__rigth-container
             h1.search-rooms-page__title Номера, которые мы для вас подобрали
             section.search-rooms-page__hotels

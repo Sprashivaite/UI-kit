@@ -1,37 +1,60 @@
 .room-details-page
   background-color: #FFFFFF;
   min-height: calc(100vh - 372px);
-  margin: 0 auto
   &__body
     position relative
     min-height: 1423px
     background: #fff;
-    padding-bottom 6rem
-    max-width 1440px
+    max-width 1800px
     margin: 0 auto
+    @media(max-width 1080px)
+      display: flex;
+      flex-direction: column;
+      align-items: center;
   &__images
     max-width: 1440px
-    margin 0 auto
-    width 100%
-    @media(max-width 1439px)
-      max-width 981px
+    margin: 0 auto
+    display grid
+    grid-template auto auto / auto auto
+    @media(min-width 1200px)
+      grid-template auto auto /auto auto
+    @media(max-width 550px)
+      grid-template auto auto auto / auto 
     img 
-      float left  
-      @media(max-width 1439px)
-        max-width 100%
-  &__big-image
-    float right
-    @media(max-width 1439px)
-      width 100%
-  &__about-the-room
-    display: inline-block;
+      object-fit: fill;
+      max-width 100%
+      @media(max-width 1200px)
+        width 100%
+    .room-details-page__big-image 
+      object-fit: cover;      
+      height 100%
+      grid-row-start: span 2
+      grid-column-start: span 1
+      margin: 0 auto      
+      @media(min-width 551px) and (max-width 1200px)
+        grid-column-start: span 2
+        height auto
+      @media(max-width 550px)
+        grid-column-start: span 1
+        grid-row-start: span 1
+        height auto
+  &__bottom-container
     margin-left: 9.7%;
     margin-top: 70px;
-  &__impressions
-    display inline-block
-    margin-top: 70px;
-    vertical-align: top 
-    margin-left: 5%;
+    position relative
+    display inline-flex
+    flex-wrap: wrap
+    max-width 50%
+    // margin-right 40px
+    @media(max-width 1080px)
+      max-width 90%
+      margin: 70px 20px
+    //   align-items: center
+  &__about-the-room
+    margin-right: 15%;
+    margin-bottom 8px
+
+  
 .impressions__circle
   margin-top 24px
   height 120px
@@ -159,46 +182,36 @@
 .room-details-page__reservation
   display: inline-block;
   vertical-align: top;
-  margin-top: 69px;
-  margin-right: 9.5%;
-  float right
-  width: 380px;
-  min-height: 511px;
-  padding: 10px;
-  @media(max-width 1280px)
-    float: none
-    margin-right: 0;
-    margin-left 5%
-  @media(min-width 381px) and (max-width 800px)
-    margin-right: 0;
-    margin-left 10%;
-  @media(max-width 380px)
-    margin-right: 0;
-    margin-left 0;
+  margin: 70px 20px 20px 60px;
+  max-width: 380px;
+  width 95%
+  height: 31.9375rem;
+  @media(max-width 1080px)
+    margin: 60px 0;
 
-.room-details-page__comment
-  display inline-block
-  vertical-align: top;
-  margin-left: 9.6%;
-  margin-top: 8px
-  min-height 332px
+.room-details-page__comments
+  min-height 300px
   display inline-flex
   flex-direction: column
-  justify-content: space-between
   width 712px
+  h2 
+    margin-bottom 21px
+  div
+    margin-bottom 14px
   @media(max-width 800px)
     width 100%
     margin-top: 20px
 .room-details-page__rules
-  display inline-block
-  margin-left 11%
   width 240px
+  margin-top: 1%;
+  margin-left: 3%;
+  margin-right: 14%
   h2 
     margin-bottom:  17px
 .room-details-page__cancel
-  display inline-block
   width 341px
-  margin-left 7%
+  
+  margin-top: 1%;
   vertical-align top
   h2 
     margin-bottom:  17px
