@@ -36,9 +36,11 @@ mixin header(options ={})
                     .header__name Юлий Цезарь
                 else 
                     .header__button_empty
-                        +button({text: "войти", type:"_empty"})
+                        form(action="sign-in.html")
+                            +button({text: "войти", type:"_empty"})
                     .header__button_register
-                        +button({text: "зарегистрироваться"})
+                        form(action="registration.html")
+                            +button({text: "зарегистрироваться"})
     
         label.header__burger
             input.burger__toggle(type="checkbox")
