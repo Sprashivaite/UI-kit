@@ -13,8 +13,8 @@ const PATHS = {
     assets: 'assets/'
 };
 
-const PAGES_DIR = `${PATHS.src}/pages/`
-const PAGES = fs.readdirSync(PAGES_DIR).filter(fileName => fileName.endsWith('.pug'))
+const PAGES_DIR = `${PATHS.src}\\pages`
+const PAGES = fs.readdirSync(PAGES_DIR).filter(fileName => fileName)
 
 module.exports = {
     externals: {
@@ -121,10 +121,13 @@ module.exports = {
             { from: `${PATHS.src}/**/*.{png,jpg,gif,svg}`, to: `${PATHS.assets}img/[name].[ext]`},
             { from: `${PATHS.src}/fonts`, to: `${PATHS.assets}fonts` },
         ]),
-        new FaviconsWebpackPlugin('./src/favicon.svg'),
+        new FaviconsWebpackPlugin({
+            logo: './src/favicon.svg',
+            outputPath: '/favicon',
+        }),
         ...PAGES.map(page => new HtmlWebpackPlugin({
-            template: `${PAGES_DIR}/${page}`,
-            filename: `./${page.replace(/\.pug/,'.html')}`
-          }))
+            template: `${PAGES_DIR}\\${page}\\${page}.pug`,
+            filename: `${page}.html`,
+          })),  
     ]
 };
