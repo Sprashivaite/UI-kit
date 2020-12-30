@@ -2,8 +2,10 @@ const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
 const webpack = require('webpack')
 const fs = require('fs')
+
 
 const PATHS = {
     src: path.join(__dirname, '../src'),
@@ -119,6 +121,7 @@ module.exports = {
             { from: `${PATHS.src}/**/*.{png,jpg,gif,svg}`, to: `${PATHS.assets}img/[name].[ext]`},
             { from: `${PATHS.src}/fonts`, to: `${PATHS.assets}fonts` },
         ]),
+        new FaviconsWebpackPlugin('./src/favicon.svg'),
         ...PAGES.map(page => new HtmlWebpackPlugin({
             template: `${PAGES_DIR}/${page}`,
             filename: `./${page.replace(/\.pug/,'.html')}`
