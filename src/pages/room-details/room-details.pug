@@ -4,47 +4,54 @@ include ..\..\components\comfort\comfort
 include ..\..\components\reservation\reservation 
 include ..\..\components\comment\comment 
 include ..\..\components\bullet-list\bullet-list
+<!DOCTYPE html>
+html(lang="ru")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="initial-scale=1.0, width=device-width")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        title Document
+    body 
+        .room-details-page
+            +header({login: false})
+            main.room-details-page__body
+                .room-details-page__images
+                
+                    img.room-details-page__big-image(src="/assets/img/room-details-big-picture.png", alt="Фото отеля")        
+                    img.room-details-page__small-image(src="/assets/img/room-details-small-picture-1.png", alt="Фото отеля")            
+                    img(src="/assets/img/room-details-small-picture-2.png", alt="Фото отеля")
+                .room-details-page__bottom-container
+                    .room-details-page__about-the-room
+                        h2 Сведения о номере
+                        +comfort({img: "/assets/img/insert_emoticon.svg", title: "Комфорт", description: "Шумопоглощающие стены"})
+                        +comfort({img: "/assets/img/location-city.svg", title: "Удобство", description: "Окно в каждой из спален"})
+                        +comfort({img: "/assets/img/cosiness.svg", title: "Уют", description: "Номер оснащён камином"})
+                    .room-details-page__impressions
+                        h2 Впечатления от номера
+                        .impressions__circle
+                            .impressions__circle_left
+                            .impressions__circle_right-top
+                            .impressions__circle_right-bot
+                            h3.impressions__circle_text 260 
+                                span голосов
+                        .impressions__rating
+                            p.impressions__rating_well Великолепно 
+                            p.impressions__rating_good Хорошо 
+                            p.impressions__rating_satisfactorily Удовлетворительно 
+                            p.impressions__rating_disappointed Разочарован
 
-.room-details-page
-    +header({login: false})
-    main.room-details-page__body
-        .room-details-page__images
-        
-            img.room-details-page__big-image(src="/assets/img/room-details-big-picture.png", alt="Фото отеля")        
-            img.room-details-page__small-image(src="/assets/img/room-details-small-picture-1.png", alt="Фото отеля")            
-            img(src="/assets/img/room-details-small-picture-2.png", alt="Фото отеля")
-        .room-details-page__bottom-container
-            .room-details-page__about-the-room
-                h2 Сведения о номере
-                +comfort({img: "/assets/img/insert_emoticon.svg", title: "Комфорт", description: "Шумопоглощающие стены"})
-                +comfort({img: "/assets/img/location-city.svg", title: "Удобство", description: "Окно в каждой из спален"})
-                +comfort({img: "/assets/img/cosiness.svg", title: "Уют", description: "Номер оснащён камином"})
-            .room-details-page__impressions
-                h2 Впечатления от номера
-                .impressions__circle
-                    .impressions__circle_left
-                    .impressions__circle_right-top
-                    .impressions__circle_right-bot
-                    h3.impressions__circle_text 260 
-                        span голосов
-                .impressions__rating
-                    p.impressions__rating_well Великолепно 
-                    p.impressions__rating_good Хорошо 
-                    p.impressions__rating_satisfactorily Удовлетворительно 
-                    p.impressions__rating_disappointed Разочарован
-
-            .room-details-page__comments
-                h2 Отзывы посетителей номера
-                +comment({name: "Мурад Сарафанов", data:"5 дней назад", img:"/assets/img/murad.jpg", like_value: 12,like_checked: true, text: "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены,действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей."})
-                +comment({name: "Патрисия Стёклышкова",data:"Неделю назад", img:"/assets/img/patrisia.jpg",like_value: 2,text: "Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент"})
-            .room-details-page__rules
-                h2 Правила
-                +bullet-list({text:"Нельзя с питомцами"})
-                +bullet-list({text:"Без вечеринок и мероприятий"})
-                +bullet-list({text:"Время прибытия — после 13:00, а выезд до 12:00"})
-            .room-details-page__cancel
-                h2 Отмена
-                span Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.
-        .room-details-page__reservation
-            +reservation
-+footer
+                    .room-details-page__comments
+                        h2 Отзывы посетителей номера
+                        +comment({name: "Мурад Сарафанов", data:"5 дней назад", img:"/assets/img/murad.jpg", like_value: 12,like_checked: true, text: "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены,действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей."})
+                        +comment({name: "Патрисия Стёклышкова",data:"Неделю назад", img:"/assets/img/patrisia.jpg",like_value: 2,text: "Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент"})
+                    .room-details-page__rules
+                        h2 Правила
+                        +bullet-list({text:"Нельзя с питомцами"})
+                        +bullet-list({text:"Без вечеринок и мероприятий"})
+                        +bullet-list({text:"Время прибытия — после 13:00, а выезд до 12:00"})
+                    .room-details-page__cancel
+                        h2 Отмена
+                        span Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.
+                .room-details-page__reservation
+                    +reservation
+        +footer
