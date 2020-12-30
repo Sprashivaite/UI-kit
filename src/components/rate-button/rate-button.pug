@@ -1,0 +1,11 @@
+//-  rate: количество звёзд (1...5)
+
+
+mixin rate-button(options= {})
+    .rate-button
+        .rate-button__star
+            span=( options.rate == "5" || "4" || "3" || "2" || "1" ? "star": "star_border")
+            span=( options.rate == "5" || "4" || "3" || "2" ? "star": "star_border")
+            span=( options.rate == "5" || "4" || "3" ? "star": "star_border")
+            span=( options.rate == "5" || "4" ? "star": "star_border")
+            span=( options.rate == "5" ? "star": "star_border")

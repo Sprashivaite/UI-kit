@@ -11,7 +11,7 @@ const PATHS = {
     assets: 'assets/'
 };
 
-const PAGES_DIR = `${PATHS.src}/pug/pages/`
+const PAGES_DIR = `${PATHS.src}/pages/`
 const PAGES = fs.readdirSync(PAGES_DIR).filter(fileName => fileName.endsWith('.pug'))
 
 module.exports = {
@@ -116,7 +116,7 @@ module.exports = {
             'window.jQuery': 'jquery',
         }),
         new CopyWebpackPlugin([
-            { from: `${PATHS.src}/pug/**/*.{png,jpg,gif,svg}`, to: `${PATHS.assets}img/[name].[ext]`},
+            { from: `${PATHS.src}/**/*.{png,jpg,gif,svg}`, to: `${PATHS.assets}img/[name].[ext]`},
             { from: `${PATHS.src}/fonts`, to: `${PATHS.assets}fonts` },
         ]),
         ...PAGES.map(page => new HtmlWebpackPlugin({

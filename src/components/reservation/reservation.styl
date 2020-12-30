@@ -1,0 +1,96 @@
+.reservation
+  position: relative
+  min-width: 320px
+  background: #FFFFFF
+  border: 1px solid rgba(0, 0, 0, 0.12)
+  box-sizing: border-box
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2)
+  border-radius: 4px
+  &__container
+    width: 85%;
+    margin-left: 7.6%;
+    margin-top: 39px;
+  &__description
+    width 100%
+    .description__num
+      color: #1F2041;
+      display inline-block
+      &:before
+        content '№'
+        font-size: 14px
+        font-weight bold
+        margin-right: 5px
+    .description__lux
+      color: #BC9CFF
+      display inline-block
+    .description__cost
+      display inline-block
+      float right
+      margin-top 8px
+      >*
+        color: rgba(31,32,65,.5);
+      span
+        font-size: 12px
+  &__com-data
+    width 100%
+    margin-top: 10px;
+  &__guests
+    width 100%
+    margin-top: 14px;
+  &__count
+    width 100%
+    margin-top: 20px
+    .count__text
+      width: 67%
+      display inline-block
+      p
+        margin-bottom: 12px   
+    .count__cost
+      float right
+      text-align right
+      p
+        margin-bottom: 10px    
+    .count__inf
+      position relative
+      &:after
+        content: 'i';
+        font-weight: 700;
+        right: -25px;
+        top 0
+        font-size: 12px;
+        color: rgba(31,32,65,.25);
+        position: absolute;
+        border: 1px solid rgba(31, 32, 65, 0.25)
+        border-radius: 25px
+        text-align center
+        line-height: 20px;
+        width: 20px
+        height: 20px
+        cursor pointer
+  &__final
+    display inline-block
+    position relative
+    width 100%
+    margin-top: 12px;
+    .final__text
+      display inline-block
+      &:after
+        content: ''
+        position: absolute
+        width: 57%
+        height: 1px
+        bottom 5px
+        display: inline
+        border-bottom: 1px dashed rgba(31, 32, 65, 0.25)      
+    .final__sum 
+      display inline-block
+      float right
+  &__button-solid
+    margin-top 20px
+    width 100%
+    height 44px
+    margin-bottom 30px
+
+
+
+

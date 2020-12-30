@@ -1,0 +1,25 @@
+include ..\..\components\color-cube\color-cube
+include ..\..\components\logo\logo
+include ..\..\components\fonts-description\fonts-description
+
+
+main.colors-type
+    section.colors-type__logo
+        +logo
+    .colors-type__cubes
+        +color-cube({color: "dark-100", name: "Dark Shade 100%", code: "#1F2041"})
+        +color-cube({color: "dark-75", name: "Dark Shade 75%", code: "#1F2041"})
+        +color-cube({color: "dark-50", name: "Dark Shade 50%", code: "#1F2041"})
+        +color-cube({color: "dark-25", name: "Dark Shade 25%", code: "#1F2041"})
+        +color-cube({color: "dark-5", name: "Dark Shade 5%", code: "#1F2041"})
+        +color-cube({color: "purple", name: "Purple", code: "#BC9CFF"})
+        +color-cube({color: "green", name: "Green", code: "#6FCF97"})
+    section.colors-type__fonts
+        h1 
+            +fonts-description({tag: "H1", spec:"This one is the sub-section or widget title"})
+        h2 
+            +fonts-description({tag: "H2", spec:"Next one is the item title inside widgets"})
+        h3 
+            +fonts-description({tag: "h3", spec:"This is a label or CTA text"})
+        
+        +fonts-description({tag: "Body", spec: "This is the body text which is used for most <br> of the design, like paragraphs, lists, etc."})

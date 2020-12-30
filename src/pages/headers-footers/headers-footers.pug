@@ -1,0 +1,15 @@
+include ..\..\components\logo\logo
+include ..\..\components\header\header
+include ..\..\components\footer\footer
+
+.headers-footers
+    aside.headers-footers__logo
+        +logo
+    section.headers-footers__header
+        +header({login: false, bold: true})
+    section.headers-footers__header_reg
+        +header({login: true, bold: true})
+    section.headers-footers__footer
+        +footer
+    section.headers-footers__footer-2
+        +footer-2

@@ -1,0 +1,8 @@
+//- checked: (boolean),
+//- value: количество лайков (number) 
+
+mixin like-button(options ={})
+    label.like-button-container
+        input(type="checkbox" class="like-button" checked=(options.checked ? options.checked: false)) 
+        .like-button__symbol
+        .like-button__value= (options.value ? options.value: 0)

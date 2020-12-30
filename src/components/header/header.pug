@@ -1,0 +1,61 @@
+//- options {
+        login: залогинен ли пользователь (true, false),
+        bold: первая ссылка полужирным(true, false)
+        code: код цвета
+//- }
+
+include ..\logo-color\logo-color
+include ..\button\button
+
+mixin header(options ={})
+    header
+        .header
+            .header__logo-color
+                +logo-color
+            nav.header__nav
+                ul
+                    if (options.bold) 
+                        b 
+                            li
+                                a(href="change-me.html") О нас
+                    if (!options.bold)
+                        li
+                            a(href="change-me.html") О нас
+                    li
+                        a(href="change-me.html") Услуги            
+                    .header__expand-more
+                    li
+                        a(href="change-me.html") Вакансии
+                    li
+                        a(href="change-me.html") Новости
+                    li
+                        a(href="change-me.html") Соглашения
+                    li 
+                        .header__expand-more
+                if options.login == true
+                    .header__name Юлий Цезарь
+                else 
+                    .header__button_empty
+                        +button({text: "войти", type:"_empty"})
+                    .header__button_register
+                        +button({text: "зарегистрироваться"})
+    
+        label.header__burger
+            input.burger__toggle(type="checkbox")
+            .burger__btn
+                span
+            ul.burger__menu 
+                li
+                    a.menu__item(href="change-me.html") О нас
+                li
+                    a.menu__item(href="change-me.html") Услуги
+                li
+                    a.menu__item(href="change-me.html") Вакансии
+                li
+                    a.menu__item(href="change-me.html") Новости
+                li
+                    a.menu__item(href="change-me.html") Соглашения
+                li
+                    a.menu__item(href="change-me.html") Войти
+                li
+                    a.menu__item(href="change-me.html") Зарегистрироваться
