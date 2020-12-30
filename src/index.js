@@ -1,5 +1,4 @@
 import './styl/main.styl'
-
 import './components/range-slider/range-slider.js'
 import "./components/rate-button/rate-button.js"
 import "./components/like-button/like-button.js"
