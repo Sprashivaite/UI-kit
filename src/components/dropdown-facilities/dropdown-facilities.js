@@ -16,9 +16,9 @@ $(document).ready(function () {
  
         $('.dropdown-facilities .dropdown-content__box-button').find('button').click(function () {
             let target = $(this).closest('.dropdown-facilities')
-            let bedrooms = target.find('.child').val();
-            let bed = target.find('.adult').val();
-            let bathrooms = target.find('.baby').val();
+            let bedrooms = target.find('.bedrooms').val();
+            let bed = target.find('.bed').val();
+            let bathrooms = target.find('.bathrooms').val();
             let summ = parseInt(bedrooms) + parseInt(bed) + parseInt(bathrooms);
             if(summ === 0){
                 target.find('.dropbtn__text').text('Удобства');

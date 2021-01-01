@@ -17,65 +17,64 @@ include ..\..\components\expandable-checkbox-list\expandable-checkbox-list
 include ..\..\components\like-button\like-button
 include ..\..\components\pagination\pagination
 
-.Form-Elements
-    section.Form-Elements__logo
+.form-elements
+    section.form-elements__logo
         +logo
 
-    section.Form-Elements__left-container
+    section.form-elements__left-container
 
-        section.Form-Elements__text-field_1
+        section.form-elements__text-field_1
             legend text field
                 .text-field__description default
             +text-field({text: "Email"})
 
-        section.Form-Elements__text-field_2
+        section.form-elements__text-field_2
             legend text field
                 .text-field__description Hover / Focus
             +text-field({text: "This is pretty awesome"})
 
-        section.Form-Elements__dropdown_field
+        section.form-elements__dropdown_field
             legend dropdown
                 .text-field__description default
             +dropdown-guests
 
-        section.Form-Elements__masked
+        section.form-elements__masked
             legend masked text field
-                .text-field__description default
             +text-field({text: "ДД.ММ.ГГГГ"})
 
-        section.Form-Elements__date-dropdown
+        section.form-elements__date-dropdown
             +data-dropdown({ firstLegend:"date Dropdown", secondLegend:"date Dropdown"})
 
-        section.Form-Elements__filter-dropdown
+        section.form-elements__filter-dropdown
             legend filter date dropdown
             +data-filter
 
-        section.Form-Elements__email
+        section.form-elements__email
             legend subscription text field
             +text-field({text: "Email", type: "email"})
 
-        section.Form-Elements__dropdown-1
+        section.form-elements__dropdown-1
             legend dropdown
                 .text-field__description default 
             +dropdown-facilities
-        section.Form-Elements__dropdown-expanded
+        section.form-elements__dropdown-expanded
             legend dropdown
                 .text-field__description expanded
             +dropdown-facilities
 
 
-        section.Form-Elements__expandable-checkbox-list
+        section.form-elements__expandable-checkbox-list
             +expandable-checkbox-list({title:"expandable-checkbox-list"})
-        section.Form-Elements__expandable-checkbox-list_2
+        section.form-elements__expandable-checkbox-list_2
             +expandable-checkbox-list({title:"expandable-checkbox-list",open: true})
             
-        section.Form-Elements__comfort
+        section.form-elements__comfort
             +comfort({img: "/assets/img/insert_emoticon.svg", title: "Комфорт", description: "Шумопоглощающие стены"})
-        section.Form-Elements__comfort_2
+        section.form-elements__comfort_2
             +comfort({img: "/assets/img/location-city.svg", title: "Удобство", description: "Окно в каждой из спален"})
 
-    section.Form-Elements__middle-container
-        section.Form-Elements__checkbox-buttons
+    section.form-elements__middle-container
+        section.form-elements__checkbox-buttons
             legend Checkbox Buttons
             ul
                 li
@@ -85,35 +84,33 @@ include ..\..\components\pagination\pagination
                 li
                     +checkbox({ name: "Можно пригласить гостей (до 10 человек)"})
 
-        section.Form-Elements__radio-button
+        section.form-elements__radio-button
             legend radio-buttons
             +radio-button
 
-        section.Form-Elements__toggle
+        section.form-elements__toggle
             legend toogle
-            .Form-Elements__toggles
+            .form-elements__toggles
                 +toggle({checked:true})
                 +toggle
 
-        section.Form-Elements__like-button
+        section.form-elements__like-button
             legend like-button
-            section.Form-Elements__like-buttons
+            section.form-elements__like-buttons
                 +like-button({value: 2})
                 +like-button({value: 12, checked: true})
 
-        section.Form-Elements__rate-button
+        section.form-elements__rate-button
             legend rate button
-            section.Form-Elements__rate-buttons
+            section.form-elements__rate-buttons
                 +rate-button({rate:"4"})
                 +rate-button({rate: "5"})
 
-        section.Form-Elements__dropdown-2
+        section.form-elements__dropdown-2
             legend dropdown
             +dropdown-guests
-            
-            
 
-        section.Form-Elements__rich-checkbox
+        section.form-elements__rich-checkbox
             legend Rich Checkbox Buttons
             ul
                 li
@@ -121,44 +118,45 @@ include ..\..\components\pagination\pagination
                 li
                     +checkbox({ name: "На 1 этаже вас встретит специалист и проводит до номера.", title:"Помощник для инвалидов"})
 
-        section.Form-Elements__comment
+        section.form-elements__comment
             +comment({name: "Мурад Сарафанов", data:"5 дней назад", img:"/assets/img/murad.jpg", like_value: 12,like_checked: true, text: "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены,действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей."})
 
-    section.Form-Elements__right-container
+    section.form-elements__right-container
 
-        section.Form-Elements__slider
+        section.form-elements__slider
             legend Range Slider
             +range-slider
 
-        section.Form-Elements__solid-button
+        section.form-elements__solid-button
             legend buttons
-            .Form-Elements__solid-button_1
-                +button({text: "click me"})
-            .Form-Elements__solid-button_2
-                +button({text: "click me"})
+            .solid-button__container
+                .form-elements__solid-button_1
+                    +button({text: "click me"})
+                .form-elements__solid-button_2
+                    +button({text: "click me"})
 
-        section.Form-Elements__empty-button
-            .Form-Elements__empty-button_1
+        section.form-elements__empty-button
+            .form-elements__empty-button_1
                 +button({type: "_empty", text: "click me"})
-            .Form-Elements__empty-button_2
+            .form-elements__empty-button_2
                 +button({type: "_empty", text: "click me"})
 
-        section.Form-Elements__button-name
+        section.form-elements__button-name
             .button__text_empty click me
             .button__text_empty click me
 
-        section.Form-Elements__long-button
+        section.form-elements__long-button
             +button({type: "_long", text: "перейти к оплате"})
 
-        section.Form-Elements__pagination
+        section.form-elements__pagination
             legend pagination
             +pagination
 
-        section.Form-Elements__dropdown-3
+        section.form-elements__dropdown-3
             legend dropdown
             +dropdown-guests
 
-        section.Form-Elements__bullet-list
+        section.form-elements__bullet-list
             legend Bullet list
             ul
                 li 

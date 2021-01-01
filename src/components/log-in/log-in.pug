@@ -11,7 +11,7 @@ mixin log-in
                     +text-field({text:"Пароль"})
                 .log-in__button-solid
                     +button({type:"_long", text:"войти"})
-            .log-in__text Нет аккаунта на Toxin?
-            .log-in__button-empty
-                form(action="registration.html")
+            form(action="registration.html")
+                .log-in__text Нет аккаунта на Toxin?
+                .log-in__button-empty
                     +button({type:"_empty", text:"создать"})

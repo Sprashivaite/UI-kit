@@ -1,50 +1,50 @@
 .checkbox
-  max-width: 280px
+  max-width 280px
   min-width 150px
   &__input
     display none
-    appearance: none
+    appearance none
     &:checked + .checkbox__box
-      border-color: #bc9cff
+      border-color #bc9cff
     &:checked + .checkbox__box::before
-      content: ''
-      position: absolute
-      margin-top: 5px;
-      left: 6px
-      width: 6px
-      height: 8px
-      border-width: 0 2px 2px 0
-      border-image: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%) 
-      border-color: transparent
-      border-image-slice: 1
-      border-style: solid
-      border-radius: 0
-      transform: rotate(45deg)
-      box-sizing: border-box
+      content ''
+      position absolute
+      margin-top 5px
+      left 6px
+      width 6px
+      height 8px
+      border-width 0 2px 2px 0
+      border-image linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%) 
+      border-color transparent
+      border-image-slice 1
+      border-style solid
+      border-radius 0
+      transform rotate(45deg)
+      box-sizing border-box
   &__label
-    display: block
-    color: rgba(31, 32, 65, 0.5)
-    cursor: pointer
+    display block
+    color rgba(31, 32, 65, 0.5)
+    cursor pointer
     b
       margin-left 11px
-      vertical-align: top;
+      vertical-align top
       + p
         margin-left 30px
   &__box
     display inline-block
     position relative
-    width: 20px
-    height: 20px
-    box-sizing: border-box
-    border: 1px solid rgba(31, 32, 65, 0.25)
-    border-radius: 4px
-    background-color: white
+    width 20px
+    height 20px
+    box-sizing border-box
+    border 1px solid rgba(31, 32, 65, 0.25)
+    border-radius 4px
+    background-color white
   &__text
     display inline-block
     vertical-align top
-    line-height: 18px
-    margin-left: 10px
-    width: 85%;
+    line-height 18px
+    margin-left 10px
+    width 85%
   &__rich
-    font-size: 12px
-    line-height: 14px;
+    font-size 12px
+    line-height 14px
