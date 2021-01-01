@@ -5,19 +5,26 @@
   margin 0 auto
 .landing-page__img
   position relative
-  background url(/assets/img/landing-page-img.png) 0 -69px/cover no-repeat
+  background url(/assets/img/landing-page.jpg) 0 -69px no-repeat
   max-width 1920px
   min-width 320px
   width 100%
   min-height 829px
   margin 0 auto
+  @media(min-width 1441px)
+    background-size cover
+    background-position bottom
+  @media(max-width 767px)
+    background none
 .landing-page__log-in
   padding-top: 5%;
   margin-left: 9.7%;
   height 23.375rem
   width 23.75rem
+  @media(max-width 767px) 
+      margin 20px auto
   @media(max-width 400px)
-    margin auto
+    // margin auto
 .landing-page__text
     z-index: 2;
     margin-top: 267px;
@@ -26,8 +33,10 @@
     text-align: end;
     float: right;
     margin-right: 134px;
-    @media(min-width 1700px)  
-      margin-top: 138px;
-      margin-right 60px
-    @media(max-width 600px)
+    // @media(min-width 1700px)  
+    //   margin-top: 138px;
+    //   margin-right 60px
+
+    @media(max-width 767px)
       margin-right: 40px;
+      margin-top 40px

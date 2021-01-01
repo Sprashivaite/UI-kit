@@ -7,7 +7,7 @@
   margin 0 auto
   &__img
     position relative
-    background url(/assets/img/sign-in-image.png) 0 -69px/cover no-repeat
+    background url(/assets/img/sign-in-image.jpg) 0 -69px no-repeat
     max-width 1920px
     min-width 320px
     min-height 684px
@@ -15,6 +15,11 @@
     display flex
     justify-content: center
     align-items: center
+    @media(min-width 1441px)
+      background-size cover
+      background-position bottom
+    @media(max-width 768px)
+      background none
 .registration-page__registration-form
   max-width 23.75rem
   width 100%
