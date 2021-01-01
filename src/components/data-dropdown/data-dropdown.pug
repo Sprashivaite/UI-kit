@@ -12,12 +12,12 @@ mixin data-dropdown(options = {})
             legend= options.firstLegend
             .text-field
                 input.text-field__border(class="datepicker-here" placeholder="ДД.ММ.ГГГГ" type="data" data-clear-button="true" data-range="true"  data-multiple-dates-separator=" - " id="data-dropdown-1")
-                .text-field__data
+                button.text-field__data expand_more
         .data-dropdown__container
             legend= options.secondLegend
             .text-field
                 input.text-field__border(placeholder="ДД.ММ.ГГГГ" type="data" id="data-dropdown-2")
-                .text-field__data
+                button.text-field__data expand_more
 
 mixin data-filter
     .text-field
