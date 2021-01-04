@@ -16,153 +16,160 @@ include ..\..\components\dropdown-facilities\dropdown-facilities
 include ..\..\components\expandable-checkbox-list\expandable-checkbox-list
 include ..\..\components\like-button\like-button
 include ..\..\components\pagination\pagination
+<!DOCTYPE html>
+html(lang="ru")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="initial-scale=1.0, width=device-width")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        title ui-kit
+    body                 
+        .form-elements
+            section.form-elements__logo
+                +logo
 
-.form-elements
-    section.form-elements__logo
-        +logo
+            section.form-elements__left-container
 
-    section.form-elements__left-container
+                section.form-elements__text-field_1
+                    legend text field
+                        .text-field__description default
+                    +text-field({text: "Email"})
 
-        section.form-elements__text-field_1
-            legend text field
-                .text-field__description default
-            +text-field({text: "Email"})
+                section.form-elements__text-field_2
+                    legend text field
+                        .text-field__description Hover / Focus
+                    +text-field({text: "This is pretty awesome"})
 
-        section.form-elements__text-field_2
-            legend text field
-                .text-field__description Hover / Focus
-            +text-field({text: "This is pretty awesome"})
+                section.form-elements__dropdown_field
+                    legend dropdown
+                        .text-field__description default
+                    +dropdown-guests
 
-        section.form-elements__dropdown_field
-            legend dropdown
-                .text-field__description default
-            +dropdown-guests
+                section.form-elements__masked
+                    legend masked text field
+                    +text-field({text: "ДД.ММ.ГГГГ"})
 
-        section.form-elements__masked
-            legend masked text field
-            +text-field({text: "ДД.ММ.ГГГГ"})
+                section.form-elements__date-dropdown
+                    +data-dropdown({ firstLegend:"date Dropdown", secondLegend:"date Dropdown"})
 
-        section.form-elements__date-dropdown
-            +data-dropdown({ firstLegend:"date Dropdown", secondLegend:"date Dropdown"})
+                section.form-elements__filter-dropdown
+                    legend filter date dropdown
+                    +data-filter
 
-        section.form-elements__filter-dropdown
-            legend filter date dropdown
-            +data-filter
+                section.form-elements__email
+                    legend subscription text field
+                    +text-field({text: "Email", type: "email"})
 
-        section.form-elements__email
-            legend subscription text field
-            +text-field({text: "Email", type: "email"})
-
-        section.form-elements__dropdown-1
-            legend dropdown
-                .text-field__description default 
-            +dropdown-facilities
-        section.form-elements__dropdown-expanded
-            legend dropdown
-                .text-field__description expanded
-            +dropdown-facilities
+                section.form-elements__dropdown-1
+                    legend dropdown
+                        .text-field__description default 
+                    +dropdown-facilities
+                section.form-elements__dropdown-expanded
+                    legend dropdown
+                        .text-field__description expanded
+                    +dropdown-facilities
 
 
-        section.form-elements__expandable-checkbox-list
-            +expandable-checkbox-list({title:"expandable-checkbox-list"})
-        section.form-elements__expandable-checkbox-list_2
-            +expandable-checkbox-list({title:"expandable-checkbox-list",open: true})
-            
-        section.form-elements__comfort
-            +comfort({img: "/assets/img/insert_emoticon.svg", title: "Комфорт", description: "Шумопоглощающие стены"})
-        section.form-elements__comfort_2
-            +comfort({img: "/assets/img/location-city.svg", title: "Удобство", description: "Окно в каждой из спален"})
+                section.form-elements__expandable-checkbox-list
+                    +expandable-checkbox-list({title:"expandable-checkbox-list"})
+                section.form-elements__expandable-checkbox-list_2
+                    +expandable-checkbox-list({title:"expandable-checkbox-list",open: true})
+                    
+                section.form-elements__comfort
+                    +comfort({img: "/assets/img/insert_emoticon.svg", title: "Комфорт", description: "Шумопоглощающие стены"})
+                section.form-elements__comfort_2
+                    +comfort({img: "/assets/img/location-city.svg", title: "Удобство", description: "Окно в каждой из спален"})
 
-    section.form-elements__middle-container
-        section.form-elements__checkbox-buttons
-            legend Checkbox Buttons
-            ul
-                li
-                    +checkbox({ name: "Можно курить"})
-                li
-                    +checkbox({ name: "Можно с питомцами"})
-                li
-                    +checkbox({ name: "Можно пригласить гостей (до 10 человек)"})
+            section.form-elements__middle-container
+                section.form-elements__checkbox-buttons
+                    legend Checkbox Buttons
+                    ul
+                        li
+                            +checkbox({ name: "Можно курить"})
+                        li
+                            +checkbox({ name: "Можно с питомцами"})
+                        li
+                            +checkbox({ name: "Можно пригласить гостей (до 10 человек)"})
 
-        section.form-elements__radio-button
-            legend radio-buttons
-            +radio-button
+                section.form-elements__radio-button
+                    legend radio-buttons
+                    +radio-button
 
-        section.form-elements__toggle
-            legend toogle
-            .form-elements__toggles
-                +toggle({checked:true})
-                +toggle
+                section.form-elements__toggle
+                    legend toogle
+                    .form-elements__toggles
+                        +toggle({checked:true})
+                        +toggle
 
-        section.form-elements__like-button
-            legend like-button
-            section.form-elements__like-buttons
-                +like-button({value: 2})
-                +like-button({value: 12, checked: true})
+                section.form-elements__like-button
+                    legend like-button
+                    section.form-elements__like-buttons
+                        +like-button({value: 2})
+                        +like-button({value: 12, checked: true})
 
-        section.form-elements__rate-button
-            legend rate button
-            section.form-elements__rate-buttons
-                +rate-button({rate:"4"})
-                +rate-button({rate: "5"})
+                section.form-elements__rate-button
+                    legend rate button
+                    section.form-elements__rate-buttons
+                        +rate-button({rate:"4"})
+                        +rate-button({rate: "5"})
 
-        section.form-elements__dropdown-2
-            legend dropdown
-            +dropdown-guests
+                section.form-elements__dropdown-2
+                    legend dropdown
+                    +dropdown-guests
 
-        section.form-elements__rich-checkbox
-            legend Rich Checkbox Buttons
-            ul
-                li
-                    +checkbox({ name: "Ширина коридоров в номере не менее 91 см.", title:"Широкий коридор"})
-                li
-                    +checkbox({ name: "На 1 этаже вас встретит специалист и проводит до номера.", title:"Помощник для инвалидов"})
+                section.form-elements__rich-checkbox
+                    legend Rich Checkbox Buttons
+                    ul
+                        li
+                            +checkbox({ name: "Ширина коридоров в номере не менее 91 см.", title:"Широкий коридор"})
+                        li
+                            +checkbox({ name: "На 1 этаже вас встретит специалист и проводит до номера.", title:"Помощник для инвалидов"})
 
-        section.form-elements__comment
-            +comment({name: "Мурад Сарафанов", data:"5 дней назад", img:"/assets/img/murad.jpg", like_value: 12,like_checked: true, text: "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены,действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей."})
+                section.form-elements__comment
+                    +comment({name: "Мурад Сарафанов", data:"5 дней назад", img:"/assets/img/murad.jpg", like_value: 12,like_checked: true, text: "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены,действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей."})
 
-    section.form-elements__right-container
+            section.form-elements__right-container
 
-        section.form-elements__slider
-            legend Range Slider
-            +range-slider
+                section.form-elements__slider
+                    legend Range Slider
+                    +range-slider
 
-        section.form-elements__solid-button
-            legend buttons
-            .solid-button__container
-                .form-elements__solid-button_1
-                    +button({text: "click me"})
-                .form-elements__solid-button_2
-                    +button({text: "click me"})
+                section.form-elements__solid-button
+                    legend buttons
+                    .solid-button__container
+                        .form-elements__solid-button_1
+                            +button({text: "click me"})
+                        .form-elements__solid-button_2
+                            +button({text: "click me"})
 
-        section.form-elements__empty-button
-            .form-elements__empty-button_1
-                +button({type: "_empty", text: "click me"})
-            .form-elements__empty-button_2
-                +button({type: "_empty", text: "click me"})
+                section.form-elements__empty-button
+                    .form-elements__empty-button_1
+                        +button({type: "_empty", text: "click me"})
+                    .form-elements__empty-button_2
+                        +button({type: "_empty", text: "click me"})
 
-        section.form-elements__button-name
-            .button__text_empty click me
-            .button__text_empty click me
+                section.form-elements__button-name
+                    .button__text_empty click me
+                    .button__text_empty click me
 
-        section.form-elements__long-button
-            +button({type: "_long", text: "перейти к оплате"})
+                section.form-elements__long-button
+                    +button({type: "_long", text: "перейти к оплате"})
 
-        section.form-elements__pagination
-            legend pagination
-            +pagination
+                section.form-elements__pagination
+                    legend pagination
+                    +pagination
 
-        section.form-elements__dropdown-3
-            legend dropdown
-            +dropdown-guests
+                section.form-elements__dropdown-3
+                    legend dropdown
+                    +dropdown-guests
 
-        section.form-elements__bullet-list
-            legend Bullet list
-            ul
-                li 
-                    +bullet-list({text: "Нельзя с питомцами"})
-                li
-                    +bullet-list({text: "Без вечеринок и мероприятий"})
-                li
-                    +bullet-list({text: "Время прибытия — после 13:00, а выезд до 12:00"})
+                section.form-elements__bullet-list
+                    legend Bullet list
+                    ul
+                        li 
+                            +bullet-list({text: "Нельзя с питомцами"})
+                        li
+                            +bullet-list({text: "Без вечеринок и мероприятий"})
+                        li
+                            +bullet-list({text: "Время прибытия — после 13:00, а выезд до 12:00"})
 
