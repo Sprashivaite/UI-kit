@@ -16,8 +16,6 @@
     margin: 0 auto
     display grid
     grid-template auto auto / auto auto
-    @media(min-width 1200px)
-      grid-template auto auto /auto auto
     @media(max-width 550px)
       grid-template auto auto auto / auto 
     img 
@@ -26,8 +24,8 @@
       @media(max-width 1200px)
         width 100%
     .room-details-page__big-image 
-      object-fit: cover;      
       height 100%
+      width 100%
       grid-row-start: span 2
       grid-column-start: span 1
       margin: 0 auto      
