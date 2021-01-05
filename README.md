@@ -1,10 +1,14 @@
 # FSD-frontend-education-program
 frontend-education-program with Webpack, Pug and Stylus
 
+## demo page
+
+demo page [GitHub](http://https://sprashivaite.github.io/UI-kit/dist/index.html)
+
 ### File structure
-```
-build
-```
+ 
+#### `build`
+ 
 Contains all webpack configs, they are imported in the webpack.config.js from the root directory
 
 #### `src`
