@@ -3,7 +3,7 @@ frontend-education-program with Webpack, Pug and Stylus
 
 ## demo page
 
-[demo page](https://sprashivaite.github.io/UI-kit/dist/index.html)
+[UI-kit demo page](https://sprashivaite.github.io/UI-kit-demo-page/)
 
 ### File structure
  
