@@ -13,7 +13,7 @@ const PATHS = {
     assets: 'assets/'
 };
 
-const PAGES_DIR = `${PATHS.src}\\pages`
+const PAGES_DIR = `${PATHS.src}/pages`
 const PAGES = fs.readdirSync(PAGES_DIR).filter(fileName => fileName)
 
 module.exports = {
@@ -126,7 +126,7 @@ module.exports = {
             outputPath: '/favicon',
         }),
         ...PAGES.map(page => new HtmlWebpackPlugin({
-            template: `${PAGES_DIR}\\${page}\\${page}.pug`,
+            template: `${PAGES_DIR}/${page}/${page}.pug`,
             filename: `${page}.html`,
           })),  
     ]
