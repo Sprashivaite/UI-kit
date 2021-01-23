@@ -1,5 +1,5 @@
-//- login: залогинен ли пользователь (true, false),
-//- bold: первая ссылка полужирным(true, false)
+//- login: залогинен ли пользователь (boolean),
+//- bold: первая ссылка полужирным(boolean)
 //- code: код цвета
 
 include ..\logo-color\logo-color
@@ -35,11 +35,10 @@ mixin header(options ={})
                 else 
                     .header__button_empty
                         form(action="sign-in.html")
-                            +button({text: "войти", type:"_empty"})
+                            +button({text: "войти", type:"empty"})
                     .header__button_register
                         form(action="registration.html")
                             +button({text: "зарегистрироваться"})
-    
         label.header__burger
             input.burger__toggle(type="checkbox")
             .burger__btn

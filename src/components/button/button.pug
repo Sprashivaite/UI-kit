@@ -1,11 +1,15 @@
-//- options.text = название кнопки
-//- options.type = тип кнопки: 
-//-                            "button" - по умолчанию. 
-//-                            "_empty" - кнопка с белым фоном.
-//-                            "_long" - длинная кнопка 1.
+//- text: название кнопки
+//- type: тип кнопки
+//-     "button" - по умолчанию. 
+//-     "empty" - кнопка с белым фоном.
+//-     "long" - длинная кнопка.
 
 mixin button(options = {})
-    button(class= "button" + (options.type ? options.type : "") )
-        div(class = ( options.type === "_empty" ? "button__text_empty": "button__text"))= options.text
-        if(options.type === "_long")
+    button(class= (
+        options.type === "empty" ? "button_empty" : 
+        options.type === "long" ? "button_long":
+        "button"
+        ))
+        div(class = ( options.type === "empty" ? "button__text_empty": "button__text"))= options.text
+        if(options.type === "long")
             span.material-icons arrow_forward
