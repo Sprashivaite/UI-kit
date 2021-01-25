@@ -7,22 +7,22 @@
 
 include ../rate-button/rate-button
 mixin room-card(options = {})
-    .room-card
-        figure.room-card__pictures
-            .room-card__picture_1(style= `background-image: url(${options.img_1})` )
+    .room-card.js-room-card
+        figure.room-card__pictures.js-room-card__pictures
+            .room-card__picture_1.js-room-card__picture_1(style= `background-image: url(${options.img_1})` )
             if(options.img_2)
-                .room-card__picture_2(style= `background-image: url(${options.img_2})` )
+                .room-card__picture_2.js-room-card__picture_2(style= `background-image: url(${options.img_2})` )
             if(options.img_3)
-                .room-card__picture_3(style= `background-image: url(${options.img_3})` )
+                .room-card__picture_3.js-room-card__picture_3(style= `background-image: url(${options.img_3})` )
             if(options.img_4)
-                .room-card__picture_4(style= `background-image: url(${options.img_4})` )
-        .room-card__buttons
+                .room-card__picture_4.js-room-card__picture_4(style= `background-image: url(${options.img_4})` )
+        .room-card__buttons.js-room-card__buttons
             .room-card__button-circle(style="background-color: white", data-target="true")
             .room-card__button-circle(data-target="false")
             .room-card__button-circle(data-target="false")
             .room-card__button-circle(data-target="false")
-        .room-card__button-left
-        .room-card__button-right
+        .room-card__button-left.js-room-card__button-left
+        .room-card__button-right.js-room-card__button-right
         .room-card__description
             h2.description__num= options.num
             h3.description__lux= (options.lux ? "люкс": "" ) 
