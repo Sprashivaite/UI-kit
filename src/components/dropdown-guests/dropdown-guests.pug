@@ -1,27 +1,27 @@
 mixin dropdown-guests
-    .dropdown
-        .dropdown__dropbtn
-            .dropbtn__text Сколько гостей
+    .dropdown.js-dropdown
+        .dropdown__dropbtn.js-dropdown__dropbtn
+            .dropbtn__text.js-dropbtn__text Сколько гостей
             i.material-icons expand_more
-        .dropdown-content
+        .dropdown-content.js-dropdown-content
             .dropdown-content__line
                 p взрослые
-                .dropdown-content__box-button
-                    button.minus -
+                .dropdown-content__box-button.js-dropdown-content__box-button
+                    button.minus.js-minus -
                     input.adult(type="text", value="0", disabled="", size="1")
-                    button.plus +
+                    button.plus.js-plus +
             .dropdown-content__line
                 p дети
-                .dropdown-content__box-button
-                    button.minus -
+                .dropdown-content__box-button.js-dropdown-content__box-button
+                    button.minus.js-minus -
                     input.child(type="text", value="0", disabled="", size="1")
-                    button.plus +
+                    button.plus.js-plus +
             .dropdown-content__line
                 p младенцы
-                .dropdown-content__box-button
-                    button.minus -
+                .dropdown-content__box-button.js-dropdown-content__box-button
+                    button.minus.js-minus -
                     input.baby(type="text", value="0", disabled="", size="1")
-                    button.plus +
+                    button.plus.js-plus +
             .dropdown__buttons-container
-                .clear очистить
-                .submit применить
+                .clear.js-clear очистить
+                .submit.js-submit применить
