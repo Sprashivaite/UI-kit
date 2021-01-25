@@ -4,12 +4,13 @@ include ..\dropdown-guests\dropdown-guests
 
 mixin search-rooms
     .search-rooms
-        h1.search-rooms__title Найдём номера под ваши&nbsp;пожелания
-        form(action="")
-            .search-rooms__com-data
-                +data-dropdown({firstLegend:"прибытие", secondLegend:"выезд"})
-            .search-rooms__guests
-                legend Гости
-                +dropdown-guests
-            .search-rooms__button
-                +button({type:"long", text:"подобрать номер"})
+        .search-rooms__container
+            h1.search-rooms__title Найдём номера под ваши&nbsp;пожелания
+            form(action="")
+                .search-rooms__com-data
+                    +data-dropdown({firstLegend:"прибытие", secondLegend:"выезд"})
+                .search-rooms__guests
+                    legend Гости
+                    +dropdown-guests
+                .search-rooms__button
+                    +button({type:"long", text:"подобрать номер"})
