@@ -5,6 +5,24 @@ frontend-education-program with Webpack, Pug and Stylus
 
 [UI-kit demo page](https://sprashivaite.github.io/UI-kit-demo-page/)
 
+## How to work
+#### Install dependencies
+```commandline
+npm install
+```
+
+#### Start dev server
+```commandline
+npm run dev
+```
+
+Visit http://localhost:8081/ to see all possible pages of the project, click any page and start working.
+
+#### On the production server create the bundle files
+```commandline
+npm run build
+```
+
 ### File structure
  
 #### `build`
@@ -34,19 +52,19 @@ src
 ```
 pages
 └─── index
-| |  index.pug
-| |  index.styl
+|   |  index.pug
+|   |  index.styl
 └─── cards
-| |  cards.pug
-| |  cards.styl
+|   |  cards.pug
+|   |  cards.styl
 └─── colors-type
-| |  colors-type.pug
-| |  colors-type.styl
+|   |  colors-type.pug
+|   |  colors-type.styl
 └─── landing-page
-| |  landing-page.pug
-| |  landing-page.styl
-| └─── img
-| | |  landing-page.jpg
+|   |  landing-page.pug
+|   |  landing-page.styl
+|   └─── img
+|   |   |  landing-page.jpg
 ```
 
 
@@ -55,36 +73,19 @@ pages
 ```
 components
 └─── comfort
-| |  comfort.pug
-| |  comfort.styl
-| └─── img
-| | |  cosiness.svg
-| | |  insert_emoticon.svg
-| | |  location-city.svg
+|   |  comfort.pug
+|   |  comfort.styl
+|   └─── img
+|   |   |  cosiness.svg
+|   |   |  insert_emoticon.svg
+|   |   |  location-city.svg
 └─── calendar
-| |  calendar.pug
-| |  calendar.js
-| |  calendar.styl
-| └─── img
-| | |  arrow-back.svg
-| | |  arrow-forward.svg
+|   |  calendar.pug
+|   |  calendar.js
+|   |  calendar.styl
+|   └─── img
+|   |   |  arrow-back.svg
+|   |   |  arrow-forward.svg
 ```
 
 
-## How to work
-#### Install dependencies
-```commandline
-npm install
-```
-
-#### Start dev server
-```commandline
-npm run dev
-```
-
-Visit http://localhost:8081/ to see all possible pages of the project, click any page and start working.
-
-#### On the production server create the bundle files
-```commandline
-npm run build
-```
