@@ -1,5 +1,5 @@
 $(() => {
-  $('.pagination').pagination({
+  $('.js-pagination').pagination({
     items: 15,
     itemsOnPage: 1,
     displayedPages: 3,
