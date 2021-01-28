@@ -1,4 +1,5 @@
 $(function() {
+    let $range = $(".js-range-slider-input");
     let $value = $(".js-range-slider__values");
     $range.ionRangeSlider({
         type: "double",
@@ -11,11 +12,13 @@ $(function() {
         prettify_enabled: true, 
         hide_min_max: true,
         force_edges: true,
-        onStart: function(data) {
-            $value.html(data.from + "₽ — " + data.to + "₽");
+        onStart: function() { 
+            $value.text($(".irs-from").text() + " - " + $(".irs-to").text());
         },
-        onChange: function(data) {
-            $value.html(data.from + "₽ — " + data.to + "₽");
+        onChange: function() {
+            $value.text($(".irs-from").text() + " - " + $(".irs-to").text());
         }
     }); 
+    $value.text($(".irs-from").text() + " - " + $(".irs-to").text());
+    $value.text($(".irs-from").text() + " - " + $(".irs-to").text());
 });
