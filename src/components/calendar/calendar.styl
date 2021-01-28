@@ -15,18 +15,18 @@
     font-weight: bold;
   .datepicker--nav-action svg
     opacity 0 
+  [data-action="next"]
+  [data-action="prev"]
+    width 40px
   [data-action="prev"]:after
     font-family "Material Icons"
     content: 'arrow_back' 
     font-size: 24px;
-    color: #BC9CFF;
-    margin-left: 25px;
+    color: #BC9CFF; 
   [data-action="next"]:after
-    font-family "Material Icons"
-    content: 'arrow_forward' 
-    font-size: 24px;
-    color: #BC9CFF;
-    margin-right: 26px; 
+    @extends [data-action="prev"]:after 
+    content: 'arrow_forward'  
+    margin-right: 20px;
   .datepicker--day-name
     color: #BC9CFF;
     font-weight: bold;
@@ -61,12 +61,8 @@
       position absolute
       margin-left 50%
     .-range-to-:after
-      content: ''
-      background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-      opacity: 0.25;
-      width 50%
-      height 100%
-      position absolute
+      @extends .-range-from-:after
+      margin-left 0
       margin-right 50%
     .-in-range-
       background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
@@ -83,9 +79,5 @@
       text-transform: uppercase;
       margin: 4px 93px 0 0;
     [data-action="apply"]
-      font-family: Montserrat;
-      color: #BC9CFF;
-      font-size: 12px;
-      font-weight: bold;
-      text-transform: uppercase;
+      @extends [data-action="clear"] 
       margin: 4px 12px 0 0;
