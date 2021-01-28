@@ -1,60 +1,62 @@
 .room-details-page
-  background-color: #FFFFFF;
-  min-height: calc(100vh - 372px);
+  background-color #FFFFFF
+  min-height calc(100vh - 372px)
   &__body
     position relative
-    min-height: 1423px
-    background: #fff;
+    min-height 1423px
+    background #fff
     max-width 1800px
-    margin: 0 auto
+    margin 0 auto
     @media(max-width 1080px)
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+      display flex
+      flex-direction column
+      align-items center
   &__images
-    max-width: 1440px
-    margin: 0 auto
+    max-width 1440px
+    margin 0 auto
     display grid
     grid-template auto auto / auto auto
     @media(max-width 550px)
       grid-template auto auto auto / auto 
     img 
-      object-fit: fill;
+      object-fit fill
       max-width 100%
       @media(max-width 1200px)
         width 100%
     .room-details-page__big-image 
       height 100%
       width 100%
-      grid-row-start: span 2
-      grid-column-start: span 1
-      margin: 0 auto      
+      grid-row-start span 2
+      grid-column-start span 1
+      margin 0 auto      
       @media(min-width 551px) and (max-width 1200px)
-        grid-column-start: span 2
+        grid-column-start span 2
         height auto
       @media(max-width 550px)
-        grid-column-start: span 1
-        grid-row-start: span 1
+        grid-column-start span 1
+        grid-row-start span 1
         height auto
   &__bottom-container
-    margin-left: 9.7%;
-    margin-top: 70px;
+    margin-left 9.7%
+    margin-top 70px
     position relative
     display inline-flex
-    flex-wrap: wrap
+    flex-wrap wrap
     max-width 50%
     @media(max-width 1080px)
       max-width 90%
-      margin: 70px 20px
+      margin 70px 20px
   &__about-the-room
-    margin-right: 15%;
+    margin-right 15%
     margin-bottom 13px
     > div
       margin-top 23px
+  &__diagram
+    margin-bottom 40px
   &__comments
     min-height 300px
     display inline-flex
-    flex-direction: column
+    flex-direction column
     width 712px
     h2 
       margin-bottom 21px
@@ -62,25 +64,25 @@
       margin-bottom 14px
     @media(max-width 800px)
       width 100%
-      margin-top: 20px
+      margin-top 20px
   &__rules
     width 240px
-    margin: 1% 14% 10% 3%;
+    margin 1% 14% 10% 3%
     h2 
-      margin-bottom:  17px
+      margin-bottom  17px
   &__cancel
     width 341px
-    margin-bottom: 10%;
-    margin-top: 1%;
+    margin-bottom 10%
+    margin-top 1%
     vertical-align top
     h2 
-      margin-bottom:  17px
+      margin-bottom  17px
 .room-details-page__reservation
-  display: inline-block;
-  vertical-align: top;
-  margin: 70px 20px 20px 60px;
-  max-width: 380px;
+  display inline-block
+  vertical-align top
+  margin 70px 20px 20px 60px
+  max-width 380px
   width 95%
-  height: 31.9375rem;
+  height 31.9375rem
   @media(max-width 1080px)
-    margin: 40px 20px 60px
+    margin 40px 20px 60px
