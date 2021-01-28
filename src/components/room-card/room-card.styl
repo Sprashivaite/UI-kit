@@ -42,19 +42,18 @@
     height 151px  
     top 0
     background linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 99.99%, rgba(255, 255, 255, 0) 100%) 
-    transition-property display
-    transition-delay 6s
-    transition-duration 6s
     &:after
-      content '' 
+      content 'expand_more' 
+      font-family "Material Icons"
+      color white
       position absolute 
-      background-image url(/assets/img/room-card-arrow.svg) 
+      font-size 22px
       background-size cover 
       width 8px 
       height 13px 
       top 68px 
       left 18px 
-      transform rotate(180deg) 
+      transform rotate(90deg)
   &__button-right
     display none
     position absolute 
@@ -65,15 +64,7 @@
     background linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 99.99%, rgba(255, 255, 255, 0) 100%) 
     transform matrix(-1, 0, 0, 1, 0, 0) 
     &:after
-      content '' 
-      position absolute 
-      background-image url(/assets/img/room-card-arrow.svg) 
-      background-size cover 
-      width 8px 
-      height 13px 
-      top 68px 
-      left 18px 
-      transform rotate(180deg) 
+      @extends .room-card__button-left:after  
   &__description
     position relative 
     width 85% 
