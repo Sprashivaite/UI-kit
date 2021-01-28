@@ -1,4 +1,4 @@
-$(document).ready(() => {
+$(document).ready( function () {
   $('.js-dropdown .js-minus').click(function () {
     const $input = $(this).parent().find('input');
     let count = parseInt($input.val()) - 1;
