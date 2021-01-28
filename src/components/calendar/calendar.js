@@ -1,6 +1,5 @@
-
-$(function() {
+$(function () {
   $('#my-datepicker').datepicker({
-      multipleDatesSeparator: "-"
-  })
+    multipleDatesSeparator: '-',
+  });
 });
