@@ -1,6 +1,5 @@
 $(function() {
-    let $range = $(".js-range-slider-input");
-    var $input = $(".js-range-slider__values");
+    let $value = $(".js-range-slider__values");
     $range.ionRangeSlider({
         type: "double",
         skin: "big",
@@ -13,29 +12,10 @@ $(function() {
         hide_min_max: true,
         force_edges: true,
         onStart: function(data) {
-            $input.html(data.from + "₽ — " + data.to + "₽");
+            $value.html(data.from + "₽ — " + data.to + "₽");
         },
         onChange: function(data) {
-            $input.html(data.from + "₽ — " + data.to + "₽");
+            $value.html(data.from + "₽ — " + data.to + "₽");
         }
     }); 
-    
-    
-    // var instance;
-    // instance = $range.data("ionRangeSlider");
-    
-    // $input.on("input", function() {
-    //     var val = $(this).prop("value");
-    
-    //     // validate
-    //     if (val < min) {
-    //         val = min;
-    //     } else if (val > max) {
-    //         val = max;
-    //     }
-    
-    //     instance.update({
-    //         from: val
-    //     });
-    // });
 });
