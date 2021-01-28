@@ -18,6 +18,7 @@ header
     margin-right 20px
     ul
       display flex
+      margin-top: 6px;    
       @media(max-width 950px)
         display none
     a
@@ -28,18 +29,18 @@ header
         border 1px solid $dark25
         border-radius 10%
   &__expand-more
-    display inline-block
-    background-image url('/assets/img/expand-more.svg')
-    background-repeat no-repeat
+    font-family "Material Icons"
+    display inline-block  
+    font-size 24px
     width 12px
-    height 16px
-    margin 0px 5px 0 8px
-    transform rotate(180deg)
+    height 16px 
     cursor pointer
+    padding-right 26px
+    color: rgba(31, 32, 65, 0.5);
   &__button_empty
     height 34px
-    width 5.4375rem    
-    margin-left 22px
+    width 87px    
+    margin-left 20px
     @media(max-width 600px)
       display none
   &__button_register
