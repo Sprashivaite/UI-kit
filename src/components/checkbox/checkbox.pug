@@ -2,7 +2,7 @@
 mixin checkbox(options = {})
     .checkbox
     label.checkbox__label
-        input.checkbox__input(type="checkbox" name= options.name)
+        input.checkbox__input.visually-hidden(type="checkbox" name= options.name)
         .checkbox__box 
         if(options.title )
             b= options.title 

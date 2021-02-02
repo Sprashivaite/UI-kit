@@ -1,11 +1,12 @@
 //- checked: (boolean),
 //- value: количество лайков (number) 
 mixin like-button(options ={})
-    label.like-button-container.js-like-button-container
-        input(type="checkbox" class="like-button js-like-button" checked=(
+    label.like-button.js-like-button
+        input.like-button__input.visually-hidden(type="checkbox" class="js-like-button__input" checked=(
         options.checked ? 
         options.checked: 
-        false)) 
+        false))  
+        .like-button__border
         span.like-button__symbol favorite_border
         span.like-button__symbol_checked favorite
         .like-button__value.js-like-button__value= (options.value ? options.value: 0)

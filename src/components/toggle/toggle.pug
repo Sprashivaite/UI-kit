@@ -1,5 +1,6 @@
 //- checked: boolean
 mixin toggle(options = {})
     label.toggle
-        input.toggle__input(type="checkbox" checked=(options.checked ? true: false) ) 
+        input.toggle__input.visually-hidden(type="checkbox" checked=(options.checked ? true: false) ) 
+        .toggle__button
         .toggle__label Получать спецпредложения
