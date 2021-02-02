@@ -1,10 +1,7 @@
 //- 
-    type: тип input("email"),
+    type: тип input("email", "data"),
     text:  текст внутри формы,
 //- 
 mixin text-field(options = {})
-    .text-field
-        input.text-field__border(type= options.type ? options.type : "text" placeholder= options.text)
-        if(options.type === "email")
-            button.text-field__arrow arrow_forward
-    
+    div(class= options.type ? 'text-field_' + options.type: 'text-field')
+        input.text-field__border(type= options.type? options.type: 'text' placeholder= options.text)

@@ -8,15 +8,12 @@ mixin data-dropdown(options = {})
     label.data-dropdown
         .data-dropdown__container
             legend= options.firstLegend
-            .text-field
-                input.text-field__border(class="datepicker-here" placeholder="ДД.ММ.ГГГГ" type="data" data-clear-button="true" data-range="true"  data-multiple-dates-separator=" - " id="data-dropdown-1" autocomplete="off")
-                button.text-field__data expand_more
+            .text-field_data
+                input.text-field__border(class="datepicker-here" placeholder="ДД.ММ.ГГГГ" type="data" data-clear-button="true" data-range="true"  data-multiple-dates-separator=" - " id="data-dropdown-1" autocomplete="off") 
         .data-dropdown__container
             legend= options.secondLegend
-            .text-field
-                input.text-field__border(class="datepicker-here" placeholder="ДД.ММ.ГГГГ" type="data" data-clear-button="true" data-range="true"  data-multiple-dates-separator=" - " id="data-dropdown-2" autocomplete="off")
-                button.text-field__data expand_more
+            .text-field_data
+                input.text-field__border(class="datepicker-here" placeholder="ДД.ММ.ГГГГ" type="data" data-clear-button="true" data-range="true"  data-multiple-dates-separator=" - " id="data-dropdown-2" autocomplete="off") 
 mixin data-filter
-    .text-field
-        input.text-field__border(class="datepicker-here" placeholder="ДД.ММ.ГГГГ" type="data" data-clear-button="true" data-range="true"  data-multiple-dates-separator=" - " data-date-format="d M")
-        button.text-field__data
+    .text-field_data
+        input.text-field__border(class="datepicker-here" placeholder="ДД.ММ.ГГГГ" type="data" data-clear-button="true" data-range="true"  data-multiple-dates-separator=" - " data-date-format="d M") 

@@ -18,24 +18,32 @@
       outline none
     &::placeholder
       color rgba(31, 32, 65, 0.25)
-  &__arrow
-    position absolute 
-    font-family 'Material Icons' 
-    font-size 24px
-    top 8px 
-    right 5px 
-    border none
-    color #BC9CFF
-    outline-color rgba(31,32,65,.25)
-    background-color transparent
-  &__data 
-    position absolute
-    font-family 'Material Icons'
-    font-size 24px
-    top 8px 
-    right 5px 
-    outline none
-    border none
-    color rgba(31,32,65,.5)
-    outline-color rgba(31,32,65,.25)
-    background-color transparent
+  &_email
+    @extends .text-field
+    &:after
+      content 'arrow_forward'
+      position absolute 
+      font-family 'Material Icons' 
+      font-size 24px
+      top 8px 
+      right 5px 
+      border none
+      color #BC9CFF
+      outline-color rgba(31,32,65,.25)
+      background-color transparent
+      cursor pointer
+  &_data 
+    @extends .text-field
+    &:after
+      content 'expand_more'
+      position absolute
+      font-family 'Material Icons'
+      font-size 24px
+      top 11px 
+      right 8px 
+      outline none
+      border none
+      color rgba(31,32,65,.5)
+      outline-color rgba(31,32,65,.25)
+      background-color transparent
+      cursor pointer
