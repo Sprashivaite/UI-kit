@@ -1,2 +1,3 @@
-mixin bullet-list(options={})
-    p.bullet-list=options.text
+mixin bullet-list(lists)
+    each list in lists
+        li.bullet-list= list
