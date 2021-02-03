@@ -10,3 +10,6 @@ $('#data-dropdown-2').datepicker({
     $('#data-dropdown-2').val(fd.split('-')[1]);
   },
 });
+$('#my-datepicker').datepicker({
+  multipleDatesSeparator: '-',
+});

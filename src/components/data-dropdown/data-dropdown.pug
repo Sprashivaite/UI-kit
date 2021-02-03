@@ -3,7 +3,6 @@
     secondLegend: название правого dropdown
 //- 
 include ..\text-field\text-field
-include ..\calendar\calendar
 mixin data-dropdown({firstLegend = "", secondLegend = ""})
     label.data-dropdown
         .data-dropdown__container
@@ -17,3 +16,6 @@ mixin data-dropdown({firstLegend = "", secondLegend = ""})
 mixin data-filter
     .text-field_data
         input.text-field__border(class="datepicker-here" placeholder="ДД.ММ.ГГГГ" type="data" data-clear-button="true" data-range="true"  data-multiple-dates-separator=" - " data-date-format="d M") 
+mixin data
+    .text-field
+        input.text-field__border(class="datepicker-here" value="ДД.ММ.ГГГГ" type="data" data-clear-button="true" id="#my-datepicker")

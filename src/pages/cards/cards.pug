@@ -1,11 +1,11 @@
 include ..\..\components\search-rooms\search-rooms
 include ..\..\components\registration\registration
 include ..\..\components\logo\logo
-include ..\..\components\rate-button\rate-button
-include ..\..\components\calendar\calendar 
+include ..\..\components\rate-button\rate-button 
 include ..\..\components\room-card\room-card
 include ..\..\components\reservation\reservation
 include ..\..\components\log-in\log-in 
+include ..\..\components\data-dropdown\data-dropdown
 <!DOCTYPE html>
 html(lang="ru")
     head
@@ -29,7 +29,7 @@ html(lang="ru")
                     +log-in   
             section.cards__right-container    
                 section.cards__calendar
-                    +calendar           
+                    div(class="datepicker-here" data-clear-button="true" data-range="true" data-multiple-dates-separator=" - " data-auto-Close="true")           
                 section.cards__room-card-1
                     +room-card({img_1: "/assets/img/room-888.jpg",img_2: "/assets/img/room-840.jpg",img_3: "/assets/img/room-888.jpg",img_4: "/assets/img/room-840.jpg", num:"888", lux: true, price: "9 990", rate:"5", reviews:"145"})
                 section.cards__room-card-2
