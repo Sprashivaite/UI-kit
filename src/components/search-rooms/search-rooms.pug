@@ -1,6 +1,6 @@
 include ..\button\button
 include ..\data-dropdown\data-dropdown 
-include ..\dropdown-guests\dropdown-guests
+include ..\dropdown\dropdown
 mixin search-rooms
     .search-rooms
         .search-rooms__container
@@ -10,6 +10,7 @@ mixin search-rooms
                     +data-dropdown({firstLegend:"прибытие", secondLegend:"выезд"})
                 .search-rooms__guests
                     legend Гости
-                    +dropdown-guests
+                    .dropdown-guests
+                        +dropdown({items: ["взрослые", "дети", "младенцы"], title: "Сколько гостей", buttons: true}) 
                 .search-rooms__button
                     +button({type:"long", text:"подобрать номер"})

@@ -11,8 +11,7 @@ include ..\..\components\radio-button\radio-button
 include ..\..\components\range-slider\range-slider
 include ..\..\components\toggle\toggle
 include ..\..\components\calendar\calendar
-include ..\..\components\dropdown-guests\dropdown-guests
-include ..\..\components\dropdown-facilities\dropdown-facilities
+include ..\..\components\dropdown\dropdown 
 include ..\..\components\expandable-checkbox-list\expandable-checkbox-list
 include ..\..\components\like-button\like-button
 include ..\..\components\pagination\pagination
@@ -39,7 +38,8 @@ html(lang="ru")
                 section.form-elements__dropdown_field
                     legend dropdown
                         .text-field__description default
-                    +dropdown-guests
+                    .dropdown-guests
+                        +dropdown({items: ["взрослые", "дети", "младенцы"], title: "Сколько гостей", buttons: true}) 
                 section.form-elements__masked
                     legend masked text field
                     +text-field({text: "ДД.ММ.ГГГГ"})
@@ -54,11 +54,13 @@ html(lang="ru")
                 section.form-elements__dropdown-1
                     legend dropdown
                         .text-field__description default 
-                    +dropdown-facilities
+                    .dropdown-facilities
+                        +dropdown({items: ["спальни", "кровати", "ванные комнаты"], title: "Удобства"})
                 section.form-elements__dropdown-expanded
                     legend dropdown
                         .text-field__description expanded
-                    +dropdown-facilities
+                    .dropdown-facilities
+                        +dropdown({items: ["спальни", "кровати", "ванные комнаты"], title: "Удобства"})
                 section.form-elements__expandable-checkbox-list
                     +expandable-checkbox-list({title:"expandable-checkbox-list", list: ["Завтрак", "Письменный стол", "Стул для кормления", "Кроватка", "Телевизор", "Шампунь"]})
                 section.form-elements__expandable-checkbox-list_2
@@ -93,7 +95,8 @@ html(lang="ru")
                         +rate-button({rate: "5"})
                 section.form-elements__dropdown-2
                     legend dropdown
-                    +dropdown-guests
+                    .dropdown-guests
+                        +dropdown({items: ["взрослые", "дети", "младенцы"], title: "Сколько гостей", buttons: true})
                 section.form-elements__rich-checkbox
                     legend Rich Checkbox Buttons
                     ul
@@ -127,7 +130,8 @@ html(lang="ru")
                     +pagination
                 section.form-elements__dropdown-3
                     legend dropdown
-                    +dropdown-guests
+                    .dropdown-guests
+                        +dropdown({items: ["взрослые", "дети", "младенцы"], title: "Сколько гостей", buttons: true})
                 section.form-elements__bullet-list
                     legend Bullet list
                     ul

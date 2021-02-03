@@ -1,6 +1,6 @@
 include ../button/button
 include ../data-dropdown/data-dropdown
-include ../dropdown-guests/dropdown-guests
+include ../dropdown/dropdown
 mixin reservation
     form.reservation(action="" method = "get")
         .reservation__container
@@ -14,7 +14,8 @@ mixin reservation
                 +data-dropdown({firstLegend:"прибытие", secondLegend:"выезд"})
             .reservation__guests
                 legend Гости
-                +dropdown-guests            
+                .dropdown-guests
+                    +dropdown({items: ["взрослые", "дети", "младенцы"], title: "Сколько гостей", buttons: true})   
             .reservation__count
                 .count__text
                     p 9 990₽ х 4 суток

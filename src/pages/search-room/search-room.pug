@@ -1,10 +1,9 @@
 include ..\..\components\header\header
 include ..\..\components\footer\footer
 include ..\..\components\calendar\calendar
-include ..\..\components\dropdown-guests\dropdown-guests
+include ..\..\components\dropdown\dropdown
 include ..\..\components\range-slider\range-slider
-include ..\..\components\checkbox\checkbox
-include ..\..\components\dropdown-facilities\dropdown-facilities
+include ..\..\components\checkbox\checkbox 
 include ..\..\components\expandable-checkbox-list\expandable-checkbox-list
 include ..\..\components\room-card\room-card
 include ..\..\components\pagination\pagination
@@ -26,7 +25,8 @@ html(lang="ru")
                         +data-filter
                     .options__dropdown-guests
                         legend гости
-                        +dropdown-guests
+                        .dropdown-guests
+                            +dropdown({items: ["взрослые", "дети", "младенцы"], title: "Сколько гостей", buttons: true}) 
                     .options__range-slider
                         legend.range-slider-name диапазон цены
                         +range-slider
@@ -42,7 +42,8 @@ html(lang="ru")
                         +checkbox({ name: "На 1 этаже вас встретит специалист и проводит до номера.", title:"Помощник для инвалидов"})
                     .options__dropdown-facilities
                         legend удобства номера
-                        +dropdown-facilities
+                        .dropdown-facilities
+                            +dropdown({items: ["спальни", "кровати", "ванные комнаты"], title: "Удобства"})
                     .options__checkbox-list
                         +expandable-checkbox-list({title:'дополнительные удобства'})
                 .search-rooms-page__rigth-container
