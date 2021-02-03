@@ -1,20 +1,19 @@
 //- login: залогинен ли пользователь (boolean),
-//- bold: первая ссылка полужирным(boolean)
-//- code: код цвета
+//- bold: первая ссылка полужирным(boolean) 
 include ..\logo-color\logo-color
 include ..\button\button
-mixin header(options ={})
+mixin header({bold = false, login = false})
     header
         .header
             .header__logo-color
                 +logo-color
             nav.header__nav
                 ul
-                    if (options.bold) 
+                    if (bold) 
                         b 
                             li
                                 a(href="change-me.html") О нас
-                    if (!options.bold)
+                    if (!bold)
                         li
                             a(href="change-me.html") О нас
                     li
@@ -28,7 +27,7 @@ mixin header(options ={})
                         a(href="change-me.html") Соглашения
                     li 
                         .header__expand-more expand_more
-                if options.login == true
+                if login == true
                     .header__name Юлий Цезарь
                 else 
                     .header__button_empty

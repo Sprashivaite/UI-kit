@@ -3,13 +3,13 @@
 
 include ..\checkbox\checkbox
 
-mixin expandable-checkbox-list(options={})
+mixin expandable-checkbox-list({title = "", opened = false})
     label.expandable-checkbox-list
-        h3.expandable-checkbox-list__text= options.title 
-        input.expandable-checkbox-list__button(type="checkbox" checked=(options.open ? options.open: false)) 
+        h3.expandable-checkbox-list__text= title 
+        input.expandable-checkbox-list__button(type="checkbox" checked=opened) 
         span expand_more
         .expandable-checkbox-list__list
-            ul
+            ul 
                 li
                     +checkbox({ name: "Завтрак"})
                 li

@@ -4,14 +4,14 @@
 //- 
 include ..\text-field\text-field
 include ..\calendar\calendar
-mixin data-dropdown(options = {})
+mixin data-dropdown({firstLegend = "", secondLegend = ""})
     label.data-dropdown
         .data-dropdown__container
-            legend= options.firstLegend
+            legend= firstLegend
             .text-field_data
                 input.text-field__border(class="datepicker-here" placeholder="ДД.ММ.ГГГГ" type="data" data-clear-button="true" data-range="true"  data-multiple-dates-separator=" - " id="data-dropdown-1" autocomplete="off") 
         .data-dropdown__container
-            legend= options.secondLegend
+            legend= secondLegend
             .text-field_data
                 input.text-field__border(class="datepicker-here" placeholder="ДД.ММ.ГГГГ" type="data" data-clear-button="true" data-range="true"  data-multiple-dates-separator=" - " id="data-dropdown-2" autocomplete="off") 
 mixin data-filter

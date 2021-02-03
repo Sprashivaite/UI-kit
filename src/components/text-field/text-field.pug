@@ -2,6 +2,6 @@
     type: тип input("email", "data"),
     text:  текст внутри формы,
 //- 
-mixin text-field(options = {})
-    div(class= options.type ? 'text-field_' + options.type: 'text-field')
-        input.text-field__border(type= options.type? options.type: 'text' placeholder= options.text)
+mixin text-field({type = null, text = ''})
+    div(class= type ? 'text-field_' + type: 'text-field')
+        input.text-field__border(type= type ? type: 'text' placeholder= text)

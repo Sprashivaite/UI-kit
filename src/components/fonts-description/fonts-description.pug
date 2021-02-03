@@ -1,4 +1,4 @@
 //- tag: тэг,
 //- spec: описание
-mixin fonts-description(options = {})
-    .fonts-description( tag=options.tag )!=options.spec
+mixin fonts-description({tag = "", spec = ""})
+    .fonts-description( tag=tag )!=spec

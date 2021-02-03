@@ -1,7 +1,9 @@
 //- img - ссылка на картинку
-mixin comfort(options = {})
+//- title - заголовок
+//- description - описание
+mixin comfort({img = "", title = "", description = ""})
     .comfort
-        img.comfort__img(src= options.img, alt="иконка")
+        img.comfort__img(src= img, alt="иконка")
         .comfort__text 
-            b= options.title
-            p= options.description
+            b= title
+            p= description

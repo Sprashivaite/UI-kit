@@ -5,14 +5,12 @@
 //- like_checked: поставлен лайк(boolean),
 //- text: комментарий
 include ../like-button/like-button
-mixin comment(options={})
+mixin comment({img = '', name = 'имя', data = 'дата', like_value = 0, like_checked = true, text = ""})
     .comment
         .comment__user
-            img(src=(options.img ? options.img: "") alt="аватарка")
-            b=(options.name ? options.name: "имя")
-            p=(options.data ? options.data: "дата") 
+            img(src=img alt="аватарка")
+            b=name 
+            p=data
         .comment__like
-            +like-button({value: options.like_value, checked: options.like_checked})    
-        .comment__text= (options.text ? options.text: "текст")
-        
-            
+            +like-button({value: like_value, checked: like_checked})    
+        .comment__text= text 

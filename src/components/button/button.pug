@@ -3,10 +3,10 @@
 //-     "button" - по умолчанию. 
 //-     "empty" - кнопка с белым фоном.
 //-     "long" - длинная кнопка.
-mixin button(options = {})
+mixin button({type = "button", text = ""})
     button(class= (
-        options.type === "empty" ? "button_empty" : 
-        options.type === "long" ? "button_long":
+        type === "empty" ? "button_empty" : 
+        type === "long" ? "button_long":
         "button"
         ))
-        div(class = ( options.type === "empty" ? "button__text_empty": "button__text"))= options.text 
+        div(class = ( type === "empty" ? "button__text_empty": "button__text"))= text 
