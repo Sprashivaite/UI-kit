@@ -1,24 +1,13 @@
 //- open: открытое/закрытое состояние (boolean),
 //- title: заголовок
-
 include ..\checkbox\checkbox
-
-mixin expandable-checkbox-list({title = "", opened = false})
+mixin expandable-checkbox-list({title = "", opened = false, list = []} = {})
     label.expandable-checkbox-list
         h3.expandable-checkbox-list__text= title 
         input.expandable-checkbox-list__button(type="checkbox" checked=opened) 
         span expand_more
         .expandable-checkbox-list__list
             ul 
-                li
-                    +checkbox({ name: "Завтрак"})
-                li
-                    +checkbox({ name: "Письменный стол"})
-                li
-                    +checkbox({ name: "Стул для кормления"})
-                li
-                    +checkbox({ name: "Кроватка"})
-                li
-                    +checkbox({ name: "Телевизор"})
-                li
-                    +checkbox({ name: "Шампунь"})
+                each item in list
+                    li
+                        +checkbox({ name: item})

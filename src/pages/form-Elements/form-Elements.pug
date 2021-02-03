@@ -60,9 +60,9 @@ html(lang="ru")
                         .text-field__description expanded
                     +dropdown-facilities
                 section.form-elements__expandable-checkbox-list
-                    +expandable-checkbox-list({title:"expandable-checkbox-list"})
+                    +expandable-checkbox-list({title:"expandable-checkbox-list", list: ["Завтрак", "Письменный стол", "Стул для кормления", "Кроватка", "Телевизор", "Шампунь"]})
                 section.form-elements__expandable-checkbox-list_2
-                    +expandable-checkbox-list({title:"expandable-checkbox-list",open: true})
+                    +expandable-checkbox-list({title:"expandable-checkbox-list",opened: true, list: ["Завтрак","Письменный стол",  "Стул для кормления", "Кроватка", "Телевизор", "Шампунь"]})
             section.form-elements__middle-container
                 section.form-elements__checkbox-buttons
                     legend Checkbox Buttons
@@ -79,7 +79,7 @@ html(lang="ru")
                 section.form-elements__toggle
                     legend toogle
                     .form-elements__toggles
-                        +toggle({checked:true})
+                        +toggle({checked:false})
                         +toggle
                 section.form-elements__like-button
                     legend like-button
