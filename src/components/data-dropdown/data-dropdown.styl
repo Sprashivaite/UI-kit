@@ -15,16 +15,16 @@
     font-weight: bold;
   .datepicker--nav-action svg
     opacity 0 
-  [data-action="next"]
-  [data-action="prev"]
+  [data-action='next']
+  [data-action='prev']
     width 40px
-  [data-action="prev"]:after
-    font-family "Material Icons"
+  [data-action='prev']:after
+    font-family 'Material Icons'
     content: 'arrow_back' 
     font-size: 24px;
     color: #BC9CFF; 
-  [data-action="next"]:after
-    @extends [data-action="prev"]:after 
+  [data-action='next']:after
+    @extends [data-action='prev']:after 
     content: 'arrow_forward'  
     margin-right: 20px;
   .datepicker--day-name
@@ -71,15 +71,15 @@
   .datepicker--buttons
     border-top: 0
     padding: 4px 0 10px;
-    [data-action="clear"]
+    [data-action='clear']
       font-family: Montserrat;
       color: #BC9CFF;
       font-size: 12px;
       font-weight: bold;
       text-transform: uppercase;
       margin: 4px 93px 0 0;
-    [data-action="apply"]
-      @extends [data-action="clear"] 
+    [data-action='apply']
+      @extends [data-action='clear'] 
       margin: 4px 12px 0 0;
 .data-dropdown
   display inline-flex;
