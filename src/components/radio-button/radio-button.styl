@@ -9,9 +9,6 @@
     margin-left 10px 
     &:hover
       color rgba(31, 32, 65, 0.75)
-    &:focus
-      color $dark100
-      outline none  
   &__circle 
     background #FFFFFF 
     border 1px solid rgba(31, 32, 65, 0.25) 
@@ -37,3 +34,7 @@
       top 4px
       background linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%) 
       border-radius 10px 
+  &__input:focus 
+    ~ .radio-button__label
+      color $dark100
+      outline none  

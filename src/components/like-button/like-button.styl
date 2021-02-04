@@ -13,10 +13,7 @@
     height 20px
     background rgba(31, 32, 65, 0.25)
     box-sizing border-box
-    border-radius 10px 
-    &:focus
-      background $dark100
-      outline none  
+    border-radius 10px
     &:after
       content ''
       position absolute
@@ -52,3 +49,7 @@
       display none
     ~ .like-button__symbol_checked 
       display block
+  &__input:focus
+    ~ .like-button__border
+      background $dark100
+      outline none  

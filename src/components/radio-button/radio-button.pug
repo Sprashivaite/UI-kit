@@ -1,5 +1,5 @@
 mixin radio-button({text = "", value = "", checked} = {})
     label.radio-button
-        input.radio-button__input(type="radio"  name="gender" value=value checked=checked tabindex = "-1")
+        input.radio-button__input(type="radio"  name="gender" value=value checked=checked)
         .radio-button__circle
-        .radio-button__label(tabindex = "0")= text
+        .radio-button__label= text

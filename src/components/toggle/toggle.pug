@@ -1,7 +1,7 @@
 //- checked: boolean
 //- name : имя
 mixin toggle({checked = false, name = "Получать спецпредложения"} = {})
-    label.toggle(tabindex = "0")
+    label.toggle
         input.toggle__input(type="checkbox" checked=checked ) 
         .toggle__button
         .toggle__label= name

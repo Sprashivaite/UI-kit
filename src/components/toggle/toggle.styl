@@ -4,9 +4,6 @@
   margin-right 8px
   cursor pointer 
   display inline-flex 
-  &:focus
-    color $dark100
-    outline none 
   &__label 
     min-width 222px
     margin-left 10px 
@@ -48,3 +45,7 @@
       background linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%) 
       border-radius 10px 
       transition-duration .3s 
+  &__input:focus
+    ~ .toggle__label
+      color $dark100
+      outline none 

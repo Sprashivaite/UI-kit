@@ -2,11 +2,11 @@
 mixin checkbox({name = "", title = false})
     .checkbox
     label.checkbox__label 
-        input.checkbox__input(type="checkbox" name= name tabindex = "-1")
+        input.checkbox__input(type="checkbox" name= name )
         .checkbox__box 
         if(title)
             b= title 
-        p.checkbox__text(class= (title ? "checkbox__rich": "") tabindex = "0")= name 
+        p.checkbox__text(class= (title ? "checkbox__rich": ""))= name 
 
 
 
