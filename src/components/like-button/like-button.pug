@@ -2,7 +2,7 @@
 //- value: количество лайков (number) 
 mixin like-button({checked = false, value = 0})
     label.like-button.js-like-button
-        input.like-button__input.visually-hidden(type="checkbox" class="js-like-button__input" checked=checked tabindex = "-1")  
+        input.like-button__input(type="checkbox" class="js-like-button__input" checked=checked tabindex = "-1")  
         .like-button__border(tabindex = "0")
         span.like-button__symbol favorite_border
         span.like-button__symbol_checked favorite
