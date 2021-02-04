@@ -3,9 +3,8 @@
 include ..\checkbox\checkbox
 mixin expandable-checkbox-list({title = "", opened = false, list = []} = {})
     label.expandable-checkbox-list
-        h3.expandable-checkbox-list__text= title 
-        input.expandable-checkbox-list__button(type="checkbox" checked=opened) 
-        span expand_more
+        input.expandable-checkbox-list__input(type="checkbox" checked=opened) 
+        h3.expandable-checkbox-list__text= title         
         .expandable-checkbox-list__list
             ul 
                 each item in list

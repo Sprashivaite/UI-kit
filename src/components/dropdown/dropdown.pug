@@ -1,15 +1,14 @@
 mixin dropdown({items = [], title = "", buttons = false} = {})
     .dropdown.js-dropdown
         .dropdown__dropbtn.js-dropdown__dropbtn(tabindex = "0")
-            .dropbtn__text.js-dropbtn__text= title
-            i.material-icons expand_more
+            .dropbtn__text.js-dropbtn__text= title 
         .dropdown-content.js-dropdown-content
             each item in items
                 .dropdown-content__line.js-dropdown-content__line
                     p= item
                     .dropdown-content__box-button.js-dropdown-content__box-button
                         button.minus.js-minus -
-                        input.item(type="text", value="0", disabled="")
+                        input.item(type="text", value="0", disabled)
                         button.plus.js-plus +
             if(buttons)
                 .dropdown__buttons-container
