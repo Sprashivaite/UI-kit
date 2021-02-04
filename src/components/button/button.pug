@@ -7,6 +7,5 @@ mixin button({type = "button", text = ""})
     button(class= (
         type === "empty" ? "button_empty" : 
         type === "long" ? "button_long":
-        "button"
-        ))
+        "button"))
         div(class = ( type === "empty" ? "button__text_empty": "button__text"))= text 
