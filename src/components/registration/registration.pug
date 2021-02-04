@@ -27,7 +27,7 @@ mixin registration
                     +toggle
                 .registration__button-solid
                     +button({type:"_long", text:"перейти к оплате"})
-            form(action="sign-in.html")
+            form.registration__sign-in-form(action="sign-in.html")
                 .registration__text Уже есть аккаунт на Toxin
                 .registration__button-empty                
                     +button({type:"_empty", text:"войти"})
