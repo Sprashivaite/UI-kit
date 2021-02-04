@@ -14,6 +14,9 @@
     background rgba(31, 32, 65, 0.25)
     box-sizing border-box
     border-radius 10px 
+    &:focus
+      background $dark100
+      outline none  
     &:after
       content ""
       position absolute
@@ -38,6 +41,9 @@
   &__input:checked 
     ~ .like-button__border
       background linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+      &:focus
+        background $dark100
+        outline none  
     ~ .like-button__value
       color #BC9CFF
     ~ .like-button__symbol

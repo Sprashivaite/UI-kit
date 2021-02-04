@@ -1,12 +1,12 @@
 //- title: заголовок полужирным. 
 mixin checkbox({name = "", title = false})
     .checkbox
-    label.checkbox__label
-        input.checkbox__input.visually-hidden(type="checkbox" name= name)
+    label.checkbox__label 
+        input.checkbox__input.visually-hidden(type="checkbox" name= name tabindex = "-1")
         .checkbox__box 
         if(title)
             b= title 
-        p.checkbox__text(class= (title ? "checkbox__rich": "") )= name 
+        p.checkbox__text(class= (title ? "checkbox__rich": "") tabindex = "0")= name 
 
 
 

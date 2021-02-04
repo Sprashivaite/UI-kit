@@ -1,10 +1,10 @@
 mixin radio-button({first = "Мужчина", second = "Женщина"} = {})
     .radio-buttons
         label.radio-button
-            input.radio-button__input.visually-hidden(type="radio"  name="fe__radio" value="m" checked="checked")
+            input.radio-button__input.visually-hidden(type="radio"  name="fe__radio" value="m" checked="checked" tabindex = "-1")
             .radio-button__circle
-            .radio-button__label= first
+            .radio-button__label(tabindex = "0")= first
         label.radio-button
-            input.radio-button__input.visually-hidden(type="radio"  name="fe__radio" value="w")
+            input.radio-button__input.visually-hidden(type="radio"  name="fe__radio" value="w" tabindex = "-1")
             .radio-button__circle
-            .radio-button__label= second
+            .radio-button__label(tabindex = "0")= second
