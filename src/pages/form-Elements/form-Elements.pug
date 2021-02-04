@@ -76,7 +76,9 @@ html(lang="ru")
                             +checkbox({ name: "Можно пригласить гостей (до 10 человек)"})
                 section.form-elements__radio-button
                     legend radio-buttons
-                    +radio-button
+                    .form-elements__buttons
+                        +radio-button({text: "Мужчина", value: "man", checked: true})
+                        +radio-button({text: "Женщина", value: "woman"})
                 section.form-elements__toggle
                     legend toogle
                     .form-elements__toggles
@@ -133,13 +135,7 @@ html(lang="ru")
                         +dropdown({items: ["взрослые", "дети", "младенцы"], title: "Сколько гостей", buttons: true})
                 section.form-elements__bullet-list
                     legend Bullet list
-                    ul
-                        li 
-                            +bullet-list({text: "Нельзя с питомцами"})
-                        li
-                            +bullet-list({text: "Без вечеринок и мероприятий"})
-                        li
-                            +bullet-list({text: "Время прибытия — после 13:00, а выезд до 12:00"})
+                    +bullet-list(["Нельзя с питомцами", "Без вечеринок и мероприятий", "Время прибытия — после 13:00, а выезд до 12:00"]) 
             section.form-elements__bottom-container
                 section.form-elements__comfort-container
                     .form-elements__comfort
