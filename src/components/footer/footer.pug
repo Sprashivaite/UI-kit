@@ -42,7 +42,8 @@ mixin footer
                 h3 Подписка
                 p Получайте специальные предложения и новости сервиса
                 form(action="#", method="post").footer__email
-                    +text-field({type: "email", text:"Email"})
+                    +text-field("email")
+                        input.text-field__input(type = "email" placeholder = "Email")
         .footer__bot
             .footer__bot-content
                 .footer__copyright Copyright &copy; 2018 Toxin отель. Все права зачищены. 

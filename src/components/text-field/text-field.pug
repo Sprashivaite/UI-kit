@@ -1,7 +1,6 @@
 //- 
-    type: тип input("email", "data"),
-    text:  текст внутри формы,
+    type: тип field("email", "dropdown")
 //- 
-mixin text-field({type = null, text = ''})
-    div(class= type ? 'text-field_' + type: 'text-field')
-        input.text-field__border(type= type ? type: 'text' placeholder= text)
+mixin text-field(type = null)
+    .js-text-field(class= type ? "text-field_" + type: "text-field")
+        block

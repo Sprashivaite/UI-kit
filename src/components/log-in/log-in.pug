@@ -6,9 +6,11 @@ mixin log-in
             h1.log-in__title Войти
             form(action="" method = "post")
                 .log-in__name
-                    +text-field({text:"Email"})
+                    +text-field
+                        input.text-field__input(type = "text" placeholder = "Email")
                 .log-in__pass
-                    +text-field({text:"Пароль"})
+                    +text-field
+                        input.text-field__input(type = "password" placeholder = "Пароль")
                 .log-in__button-solid
                     +button({type:"long", text:"войти"})
             form(action="registration.html")

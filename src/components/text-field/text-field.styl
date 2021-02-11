@@ -1,23 +1,14 @@
 .text-field
   position relative
   min-width 100px  
+  width 100% 
   height 44px
-  &__border
-    width 100% 
-    height 100% 
-    padding-left 14px     
-    box-sizing border-box
-    color rgba(31,32,65,.25) 
-    border-radius 4px 
-    border 1px solid rgba(31,32,65,.25) 
-    cursor pointer 
-    outline-color none 
-    &:hover, &:focus
-      color rgba(31, 32, 65, 0.75)
-      border 1px solid rgba(31,32,65,.5) 
-      outline none
-    &::placeholder
-      color rgba(31, 32, 65, 0.25)
+  border 1px solid rgba(31,32,65,.25) 
+  box-sizing border-box
+  cursor pointer 
+  border-radius 4px 
+  &:hover
+    border 1px solid rgba(31,32,65,.5)  
   &_email
     @extends .text-field
     &:after
@@ -25,14 +16,14 @@
       position absolute 
       font-family 'Material Icons' 
       font-size 24px
-      top 8px 
-      right 5px 
+      top 10px 
+      right 9px 
       border none
       color #BC9CFF
       outline-color rgba(31,32,65,.25)
       background-color transparent
       cursor pointer
-  &_data 
+  &_dropdown
     @extends .text-field
     &:after
       content 'expand_more'
@@ -47,3 +38,22 @@
       outline-color rgba(31,32,65,.25)
       background-color transparent
       cursor pointer
+  &__toggle
+    visually-hidden()
+  &__toggle:checked
+    + .text-field_dropdown:after
+      transform rotate(180deg)
+  &__input
+    width 82% 
+    height 100% 
+    padding-left 14px      
+    outline-color none 
+    border none
+    color rgba(31,32,65,.25) 
+    background-color: transparent
+    cursor pointer 
+    &:hover, &:focus 
+      color rgba(31, 32, 65, 0.75)
+      outline none
+    &::placeholder
+      color rgba(31, 32, 65, 0.25) 
