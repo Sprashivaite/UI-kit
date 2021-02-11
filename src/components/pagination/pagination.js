@@ -1,4 +1,4 @@
-$(() => {
+const initPagination = () => {
   $('.js-pagination').pagination({
     items: 15,
     itemsOnPage: 1,
@@ -8,4 +8,5 @@ $(() => {
     cssStyle: 'light-theme',
     nextText: 'arrow_forward',
   });
-});
+}
+export default initPagination;

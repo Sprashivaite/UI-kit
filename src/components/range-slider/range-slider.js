@@ -1,4 +1,4 @@
-$(function () {
+const initSlider = () => {
   const $range = $('.js-range-slider-input');
   const $value = $('.js-range-slider__values');
   $range.ionRangeSlider({
@@ -21,4 +21,5 @@ $(function () {
   });
   $value.text(`${$('.irs-from').text()} - ${$('.irs-to').text()}`);
   $value.text(`${$('.irs-from').text()} - ${$('.irs-to').text()}`);
-});
+};
+export default initSlider;

@@ -1,97 +1,105 @@
-function addDropdown(dropdown, text = false) {
-  dropdown.find(".js-dropdown .js-minus").click(function () {
-    const $input = $(this).parent().find("input");
-    let count = parseInt($input.val()) - 1;
-    count = count < 0 ? 0 : count;
-    $input.val(count);
-    $input.change();
-    return false;
-  });
-  dropdown.find(".js-dropdown .js-plus").click(function () {
-    const $input = $(this).parent().find("input");
-    $input.val(parseInt($input.val()) + 1);
-    $input.change();
-    return false;
-  });
-  const defoultText = dropdown.find(".js-dropdown .js-dropbtn__text").text();
-  function declOfNum(number, titles) {
-    cases = [2, 0, 1, 1, 1, 2];
-    return titles[
-      number % 100 > 4 && number % 100 < 20
-        ? 2
-        : cases[number % 10 < 5 ? number % 10 : 5]
-    ];
+class InitDropdown {
+  constructor(container, isGuests = false) {
+    this.container = container;
+    this.isGuests = isGuests;
   }
-  dropdown
-    .find(".js-dropdown .js-dropdown-content__box-button")
-    .find("button")
-    .click(function () {
-      const target = $(this).closest(".js-dropdown");
-      if (!text) {
-        const items = target.find(".item");
-        let sum = 0;
-        for (const item of items) {
-          sum += Number(item.value);
-        }
-        if (sum === 0) target.find(".js-dropbtn__text").text(defoultText);
-        else {
-          target
-            .find(".js-dropbtn__text")
-            .text(`${sum} ${declOfNum(sum, ["гость", "гостя", "гостей"])}`);
-          target.find(".clear").css("opacity", "1");
-        }
-      } 
-      if (text) {
-        const items = target.find(".js-dropdown-content__line");
-        let sum = 0;
-        let result = "";
-        items.each(function () {
-          let num = Number($(this).find(".item").val())
-          let text = $(this).find("p").text() 
-          if (+num > 0) {
-            result += `${num} ${text} `
-          } 
-          sum += num;
-        }
-        )
-        if (sum === 0) target.find(".js-dropbtn__text").text(defoultText);
-        else {
-          target
-            .find(".js-dropbtn__text")
-            .text(result);
-          target.find(".clear").css("opacity", "1");
-        }
-      }
 
-      target.find(".js-clear").click(() => {
-        target.find(".clear").css("opacity", "0");
-        target.find(".js-dropbtn__text").text(defoultText);
-        target.find(".item").val(0);
-      });
-      target.find(".js-submit").click(() => {
-        target
-          .find(".js-dropdown-content")
-          .removeClass("dropdown-content__show");
-      });
+  findElements() {
+    this.dropdown = this.container.querySelector('.dropdown');
+    this.menu = this.container.querySelector('.dropdown-content');
+    this.lines = this.container.querySelectorAll('.js-dropdown-content__line');
+    this.field = this.container.querySelector('.js-text-field');
+    this.title = this.container.querySelector('.js-dropdown__title');
+    this.values = this.container.querySelectorAll('.js-value');
+    this.clear = this.container.querySelector('.js-clear');
+    this.applyButton = this.container.querySelector('.js-apply');
+    this.defaultTitle = this.title.value;
+    return this;
+  }
+
+  static makeMinus(target) {
+    const inputValue = target;
+    inputValue.value = Math.max(Number(target.value) - 1, 0);
+  }
+
+  static makePlus(target) {
+    const inputValue = target;
+    inputValue.value = Number(target.value) + 1;
+  }
+
+  clearValues() {
+    this.title.value = this.defaultTitle;
+    this.values.forEach((element) => {
+      const inputValue = element;
+      inputValue.value = 0;
     });
+    this.hideClear();
+  }
 
-  dropdown.find(".js-dropdown .js-dropdown__dropbtn").click(function () {
-    if (
-      $(this).next(".js-dropdown-content").hasClass("dropdown-content__show")
-    ) {
-      $(this)
-        .next(".js-dropdown-content")
-        .removeClass("dropdown-content__show");
-      $(this).find("i").css("transform", "rotate(0deg)");
-    } else {
-      $(this).next(".js-dropdown-content").addClass("dropdown-content__show");
-      $(this).find("i").css("transform", "rotate(180deg)");
-    }
-  });
+  toggleMenu() {
+    this.menu.classList.toggle('dropdown-content__show');
+  }
+
+  showClear() {
+    this.clear.classList.add('clear__show');
+  }
+
+  hideClear() {
+    this.clear.classList.remove('clear__show');
+  }
+
+  changeTitleGuests() {
+    let sum = 0;
+    this.values.forEach((element) => {
+      sum += Number(element.value);
+    });
+    const lastNum = Number(Array.from(`${sum}`).slice(-1));
+    const lastTwoNums = Number(Array.from(`${sum}`).slice(-2).join(''));
+    let guests = 'гостей';
+    if (lastNum === 1) guests = 'гость';
+    if (lastNum === 2) guests = 'гостя';
+    if (lastTwoNums === 11 || lastTwoNums === 12) guests = 'гостей';
+    this.title.value = `${sum} ${guests}`;
+    if (sum === 0) this.clearValues();
+    if (sum > 0) this.showClear();
+  }
+
+  changeTitle() {
+    let sum = 0;
+    let result = '';
+    this.lines.forEach((element) => {
+      const num = Number(element.querySelector('.js-value').value);
+      const text = element.querySelector('.js-item').innerHTML;
+      if (num > 0) result += `${num} ${text} `;
+      sum += num;
+    });
+    if (sum === 0) this.clearValues();
+    else this.title.value = result;
+    if (sum > 0) this.showClear();
+  }
+
+  addHandler() {
+    if (this.isGuests) this.changeTitle = this.changeTitleGuests;
+    this.lines.forEach((element) => {
+      const plus = element.querySelector('.js-plus');
+      const minus = element.querySelector('.js-minus');
+      const value = element.querySelector('.js-value');
+      const handlerPlus = () => {
+        InitDropdown.makePlus(value);
+        this.changeTitle();
+      };
+      const handlerMinus = () => {
+        InitDropdown.makeMinus(value);
+        this.changeTitle();
+      };
+      plus.addEventListener('click', handlerPlus);
+      minus.addEventListener('click', handlerMinus);
+    });
+    const handlerClear = () => this.clearValues();
+    if (this.clear) this.clear.addEventListener('click', handlerClear);
+    const handlerApply = () => this.toggleMenu();
+    if (this.applyButton) this.applyButton.addEventListener('click', handlerApply);
+    this.field.addEventListener('click', handlerApply);
+  }
 }
-$(".dropdown-guests").each(function () {
-  addDropdown($(this));
-});
-$(".dropdown-facilities").each(function () {
-  addDropdown($(this), true);
-});
+export default InitDropdown;
