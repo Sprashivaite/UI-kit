@@ -31,6 +31,6 @@ html(lang="ru")
                 section.cards__calendar
                     div(class="datepicker-here" data-clear-button="true" data-range="true" data-multiple-dates-separator=" - " data-auto-Close="true")           
                 section.cards__room-card-1
-                    +room-card({img_1: "/assets/img/room-888.jpg",img_2: "/assets/img/room-840.jpg",img_3: "/assets/img/room-888.jpg",img_4: "/assets/img/room-840.jpg", num:"888", lux: true, price: "9 990", rate:"5", reviews:"145"})
+                    +room-card({images: ["/assets/img/room-888.jpg", "/assets/img/room-840.jpg", "/assets/img/room-350.jpg", "/assets/img/room-352.jpg"], num:"888", lux: true, price: "9 990", rate:"5", reviews:"145"})
                 section.cards__room-card-2
-                    +room-card({img_1: "/assets/img/room-840.jpg",img_2: "/assets/img/room-888.jpg", num:"840", lux: false, price: "9 990", rate:"4", reviews:"65"})
+                    +room-card({images: ["/assets/img/room-840.jpg", "/assets/img/room-888.jpg"], num:"840", lux: false, price: "9 990", rate:"4", reviews:"65"})

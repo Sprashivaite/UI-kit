@@ -1,21 +1,18 @@
-//- 
-    firstLegend: название левого dropdown,
-    secondLegend: название правого dropdown
-//- 
+//- data-double: дата с двумя полями для ввода. Нужна инициализация js.
+//-             dropdowns: массив, с названиями dropdown
+//- data-filter: поле с датой типа "1 Авг - 31 Дек"
+//- data-field: обычное поле с датой
 include ..\text-field\text-field
-mixin data-dropdown({firstLegend = "", secondLegend = ""})
-    label.data-dropdown
-        .data-dropdown__container
-            legend= firstLegend
-            .text-field_data
-                input.text-field__border(class="datepicker-here" placeholder="ДД.ММ.ГГГГ" type="data" data-clear-button="true" data-range="true"  data-multiple-dates-separator=" - " id="data-dropdown-1" autocomplete="off") 
-        .data-dropdown__container
-            legend= secondLegend
-            .text-field_data
-                input.text-field__border(class="datepicker-here" placeholder="ДД.ММ.ГГГГ" type="data" data-clear-button="true" data-range="true"  data-multiple-dates-separator=" - " id="data-dropdown-2" autocomplete="off") 
+mixin data-double({dropdowns = ["прибытие", "выезд"]})
+    .data-double.js-data-double
+        each dropdown, index in dropdowns
+            .data-double__container
+                legend= dropdown
+                +text-field("dropdown")
+                    input.text-field__input( placeholder="ДД.ММ.ГГГГ" class=("js-data-double-" + (index + 1)) )
 mixin data-filter
-    .text-field_data
-        input.text-field__border(class="datepicker-here" placeholder="ДД.ММ.ГГГГ" type="data" data-clear-button="true" data-range="true"  data-multiple-dates-separator=" - " data-date-format="d M") 
+    +text-field("dropdown")
+        input.text-field__input(class="datepicker-here" placeholder="ДД.ММ.ГГГГ" data-clear-button="true" data-range="true"  data-multiple-dates-separator=" - " data-date-format="d M") 
 mixin data-field
-    .text-field
-        input.text-field__border(class="datepicker-here" value="ДД.ММ.ГГГГ" type="data" data-clear-button="true" id="#my-datepicker")
+    +text-field
+        input.text-field__input(class="datepicker-here" data-multiple-dates-separator=" - " value="ДД.ММ.ГГГГ" data-clear-button="true" id="#my-datepicker")

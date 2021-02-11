@@ -11,7 +11,7 @@ mixin reservation
                     b 9 990₽ 
                     span в сутки
             .reservation__com-data
-                +data-dropdown({firstLegend:"прибытие", secondLegend:"выезд"})
+                +data-double({dropdowns: ["прибытие", "выезд"]})
             .reservation__guests
                 legend Гости
                 .dropdown-guests

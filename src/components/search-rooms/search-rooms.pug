@@ -7,7 +7,7 @@ mixin search-rooms
             h1.search-rooms__title Найдём номера под ваши пожелания
             form(action="")
                 .search-rooms__com-data
-                    +data-dropdown({firstLegend:"прибытие", secondLegend:"выезд"})
+                    +data-double({dropdowns: ["прибытие", "выезд"]})
                 .search-rooms__guests
                     legend Гости
                     .dropdown-guests

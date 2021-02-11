@@ -1,22 +1,17 @@
-//- img_(1...4): фото комнат
+//- images: url фото комнат
 //- rate: рейтинг
 //- lux: boolean
 //- num: номер комнаты
 //- price:  цена
 //- reviews: отзывы
 include ../rate-button/rate-button
-mixin room-card({img_1 = '', img_2 = false, img_3 = false, img_4 = false, num = 0, lux = false, price = 0, reviews = 0})
+mixin room-card({images = [], num = 0, lux = false, price = 0, reviews = 0, rate = 5})
     .room-card.js-room-card
         figure.room-card__pictures.js-room-card__pictures
-            .room-card__picture_1.js-room-card__picture_1(style= `background-image: url(${img_1})` )
-            if(img_2)
-                .room-card__picture_2.js-room-card__picture_2(style= `background-image: url(${img_2})` )
-            if(img_3)
-                .room-card__picture_3.js-room-card__picture_3(style= `background-image: url(${img_3})` )
-            if(img_4)
-                .room-card__picture_4.js-room-card__picture_4(style= `background-image: url(${img_4})` )
+            each img, index in images
+                .room-card__picture(class=("js-room-card__picture_" + (index + 1)) style= `background-image: url(${img})` hidden=(index !== 0 ? true: false))            
         .room-card__buttons.js-room-card__buttons
-            .room-card__button-circle(style="background-color: white", data-target="true")
+            .room-card__button-circle(data-target="true")
             .room-card__button-circle(data-target="false")
             .room-card__button-circle(data-target="false")
             .room-card__button-circle(data-target="false")
