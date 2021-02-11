@@ -29,11 +29,13 @@ html(lang="ru")
                 section.form-elements__text-field_1
                     legend text field
                         .text-field__description default
-                    +text-field({text: "Email"})
+                    +text-field 
+                        input.text-field__input(type = "text" placeholder = "Email")
                 section.form-elements__text-field_2
                     legend text field
                         .text-field__description Hover / Focus
-                    +text-field({text: "This is pretty awesome"})
+                    +text-field
+                        input.text-field__input(type = "text" placeholder = "This is pretty awesome")
                 section.form-elements__dropdown_field
                     legend dropdown
                         .text-field__description default
@@ -41,15 +43,17 @@ html(lang="ru")
                         +dropdown({items: ["взрослые", "дети", "младенцы"], title: "Сколько гостей", buttons: true}) 
                 section.form-elements__masked
                     legend masked text field
-                    +text-field({text: "ДД.ММ.ГГГГ"})
+                    +text-field
+                        input.text-field__input(type = "text" placeholder = "This is pretty awesome")
                 section.form-elements__date-dropdown
-                    +data-dropdown({ firstLegend:"date Dropdown", secondLegend:"date Dropdown"})
+                    +data-double({ dropdowns: ["date Dropdown", "date Dropdown"]})
                 section.form-elements__filter-dropdown
                     legend filter date dropdown
                     +data-filter
                 section.form-elements__email
                     legend subscription text field
-                    +text-field({text: "Email", type: "email"})
+                    +text-field("email")
+                        input.text-field__input(type = "text" placeholder = "Email")
                 section.form-elements__dropdown-1
                     legend dropdown
                         .text-field__description default 

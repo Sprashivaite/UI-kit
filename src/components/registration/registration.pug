@@ -9,20 +9,25 @@ mixin registration
             h1.registration__title Регистрация аккаунта
             form(action="" method = "post")
                 .registration__name
-                    +text-field({text: "Имя"})
+                    +text-field
+                        input.text-field__input(type = "text" placeholder = "Имя")
                 .registration__surname
-                    +text-field({text: "Фамилия"})
+                    +text-field 
+                        input.text-field__input(type = "text" placeholder = "Фамилия")
                 .registration__radio
-                    +radio-button
+                    +radio-button({text: "Мужчина", value: "man", checked: true})
+                    +radio-button({text: "Женщина", value: "woman"})
                 .registration__data
                     legend дата рождения
                     +data-field
                 .registration__log-in
                     legend данные для входа в сервис
                     .log-in__email
-                        +text-field({text: "Email"})
+                        +text-field 
+                            input.text-field__input(type = "text" placeholder = "Email")
                     .log-in__pass
-                        +text-field({text: "Пароль"})
+                        +text-field
+                            input.text-field__input(type = "password" placeholder = "Пароль")
                 .registration__toggle
                     +toggle
                 .registration__button-solid
