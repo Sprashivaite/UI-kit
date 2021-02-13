@@ -4,11 +4,11 @@ module.exports = {
     es2021: true,
   },
   extends: [
-    "eslint:recommended", 
-    "plugin:fsd/all",
-    "airbnb-base", 
-  ],  
-  plugins: ["fsd"],
-  rules: { 
-  }, 
+    'eslint:recommended',
+    'plugin:fsd/all',
+    'airbnb-base',
+  ],
+  plugins: ['fsd'],
+  rules: {
+  },
 };
