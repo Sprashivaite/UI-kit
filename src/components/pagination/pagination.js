@@ -1,5 +1,6 @@
-const initPagination = () => {
-  $('.js-pagination').pagination({
+const initPagination = (container) => {
+  const paginationElement = container.find('.js-pagination');
+  paginationElement.pagination({
     items: 15,
     itemsOnPage: 1,
     displayedPages: 3,

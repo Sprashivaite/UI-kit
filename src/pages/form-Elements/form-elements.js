@@ -5,27 +5,28 @@ import initPagination from '../../components/pagination/pagination';
 import InitDropdown from '../../components/dropdown/dropdown';
 import initDataDouble from '../../components/data-dropdown/data-dropdown';
 
+if (document.querySelector('.js-form-elements')) {
+  const likeButtons = document.querySelectorAll('.js-like-button');
+  likeButtons.forEach((button) => {
+    new ChangeLikeValue().findElements(button).addHandler();
+  });
 
-const likeButtons = document.querySelectorAll('.js-like-button');
-likeButtons.forEach((button) => {
-  new ChangeLikeValue().findElements(button).addHandler();
-});
-const rateButtons = document.querySelectorAll('.js-rate-button');
-rateButtons.forEach((button) => {
-  new ChangeRate().findElements(button).addHandler();
-});
-const guestsDropdowns = document.querySelectorAll('.dropdown-guests');
-guestsDropdowns.forEach((element) => {
-  new InitDropdown(element, true).findElements().addHandler();
-});
-const facilitiesDropdowns = document.querySelectorAll('.dropdown-facilities');
-facilitiesDropdowns.forEach((element) => {
-  new InitDropdown(element).findElements().addHandler();
-});
+  const rateButtons = document.querySelectorAll('.js-rate-button');
+  rateButtons.forEach((button) => {
+    new ChangeRate().findElements(button).addHandler();
+  });
 
+  const guestsDropdowns = document.querySelectorAll('.js-form-elements .dropdown-guests');
+  guestsDropdowns.forEach((element) => {
+    new InitDropdown(element, true).findElements().addHandler();
+  });
 
-initSlider();
-initPagination();
-initDataDouble($('.js-data-double'));
+  const facilitiesDropdowns = document.querySelectorAll('.js-form-elements .dropdown-facilities');
+  facilitiesDropdowns.forEach((element) => {
+    new InitDropdown(element).findElements().addHandler();
+  });
 
-
+  initSlider($('.js-form-elements__slider'));
+  initPagination($('.js-form-elements__pagination'));
+  initDataDouble($('.js-form-elements__date-dropdown'));
+}

@@ -1,6 +1,6 @@
-const initSlider = () => {
-  const $range = $('.js-range-slider-input');
-  const $value = $('.js-range-slider__values');
+const initSlider = (container) => {
+  const $range = container.find('.js-range-slider-input');
+  const $value = container.find('.js-range-slider__values');
   $range.ionRangeSlider({
     type: 'double',
     skin: 'big',
@@ -13,13 +13,13 @@ const initSlider = () => {
     hide_min_max: true,
     force_edges: true,
     onStart() {
-      $value.text(`${$('.irs-from').text()} - ${$('.irs-to').text()}`);
+      $value.text(`${container.find('.irs-from').text()} - ${container.find('.irs-to').text()}`);
     },
     onChange() {
-      $value.text(`${$('.irs-from').text()} - ${$('.irs-to').text()}`);
+      $value.text(`${container.find('.irs-from').text()} - ${container.find('.irs-to').text()}`);
     },
   });
-  $value.text(`${$('.irs-from').text()} - ${$('.irs-to').text()}`);
-  $value.text(`${$('.irs-from').text()} - ${$('.irs-to').text()}`);
+  $value.text(`${container.find('.irs-from').text()} - ${container.find('.irs-to').text()}`);
+  $value.text(`${container.find('.irs-from').text()} - ${container.find('.irs-to').text()}`);
 };
 export default initSlider;
