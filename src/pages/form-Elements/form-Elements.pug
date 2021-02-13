@@ -22,7 +22,7 @@ html(lang="ru")
         meta(http-equiv="X-UA-Compatible", content="ie=edge")
         title form-elements
     body                 
-        .form-elements
+        .form-elements.js-form-elements
             section.form-elements__logo
                 +logo
             section.form-elements__left-container
@@ -43,9 +43,8 @@ html(lang="ru")
                         +dropdown({items: ["взрослые", "дети", "младенцы"], title: "Сколько гостей", buttons: true}) 
                 section.form-elements__masked
                     legend masked text field
-                    +text-field
-                        input.text-field__input(type = "text" placeholder = "This is pretty awesome")
-                section.form-elements__date-dropdown
+                    +data-field 
+                section.form-elements__date-dropdown.js-form-elements__date-dropdown
                     +data-double({ dropdowns: ["date Dropdown", "date Dropdown"]})
                 section.form-elements__filter-dropdown
                     legend filter date dropdown
@@ -110,9 +109,9 @@ html(lang="ru")
                         li
                             +checkbox({ name: "На 1 этаже вас встретит специалист и проводит до номера.", title:"Помощник для инвалидов"})
             section.form-elements__right-container
-                section.form-elements__slider
+                section.form-elements__slider.js-form-elements__slider
                     legend Range Slider
-                    +range-slider
+                    +range-slider 
                 section.form-elements__solid-button
                     legend buttons
                     .solid-button__container
@@ -130,9 +129,9 @@ html(lang="ru")
                     .button__text_empty click me
                 section.form-elements__long-button
                     +button({type: "long", text: "перейти к оплате"})
-                section.form-elements__pagination
+                section.form-elements__pagination.js-form-elements__pagination
                     legend pagination
-                    +pagination
+                    +pagination 
                 section.form-elements__dropdown-3
                     legend dropdown
                     .dropdown-guests

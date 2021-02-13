@@ -13,7 +13,7 @@ html(lang="ru")
         meta(http-equiv="X-UA-Compatible", content="ie=edge")
         title room-details
     body 
-        .room-details-page
+        .room-details-page.js-room-details-page
             +header({login: false})
             main.room-details-page__body
                 section.room-details-page__images
@@ -40,6 +40,6 @@ html(lang="ru")
                     section.room-details-page__cancel
                         h2 Отмена
                         span Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.
-                section.room-details-page__reservation
+                section.room-details-page__reservation.js-room-details-page__reservation
                     +reservation
         +footer

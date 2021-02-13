@@ -14,16 +14,16 @@ html(lang="ru")
         meta(http-equiv="X-UA-Compatible", content="ie=edge")
         title cards
     body 
-        .cards
+        .cards.js-cards
             .cards__logo
                 +logo
             section.cards__left-container
-                section.cards__search-rooms
+                section.cards__search-rooms.js-cards__search-rooms
                     +search-rooms
                 section.cards__registration
                     +registration
             section.cards__middle-container        
-                section.cards__reservation
+                section.cards__reservation.js-cards__reservation
                     +reservation       
                 section.cards__log-in
                     +log-in   

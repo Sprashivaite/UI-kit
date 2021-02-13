@@ -15,18 +15,18 @@ html(lang="ru")
         meta(http-equiv="X-UA-Compatible", content="ie=edge")
         title search-room
     body 
-        .search-rooms-page
+        .search-rooms-page.js-search-rooms-page
             +header({login: false})
             main.search-rooms-body
                 section.search-rooms-page__options
                     .options__data-filter
                         legend даты пребывания в отеле
                         +data-filter
-                    .options__dropdown-guests
+                    .options__dropdown-guests.js-options__dropdown-guests
                         legend гости
                         .dropdown-guests
                             +dropdown({items: ["взрослые", "дети", "младенцы"], title: "Сколько гостей", buttons: true}) 
-                    .options__range-slider
+                    .options__range-slider.js-options__range-slider
                         legend.range-slider-name диапазон цены
                         +range-slider
                         .range-slider-descr Стоимость за сутки пребывания в номере
@@ -39,12 +39,12 @@ html(lang="ru")
                         legend доступность
                         +checkbox({ name: "Ширина коридоров в номере не менее 91 см.", title:"Широкий коридор"})
                         +checkbox({ name: "На 1 этаже вас встретит специалист и проводит до номера.", title:"Помощник для инвалидов"})
-                    .options__dropdown-facilities
+                    .options__dropdown-facilities.js-options__dropdown-facilities
                         legend удобства номера
                         .dropdown-facilities
                             +dropdown({items: ["спальни", "кровати", "ванные комнаты"], title: "Удобства"})
                     .options__checkbox-list
-                        +expandable-checkbox-list({title:'дополнительные удобства'})
+                        +expandable-checkbox-list({title:"дополнительные удобства", list: ["Завтрак", "Письменный стол", "Стул для кормления", "Кроватка", "Телевизор", "Шампунь"]})
                 .search-rooms-page__rigth-container
                     h1.search-rooms-page__title Номера, которые мы для вас подобрали
                     section.search-rooms-page__hotels
@@ -60,6 +60,6 @@ html(lang="ru")
                             +room-card({images: ["/assets/img/room-666.jpg"], num:"666", lux: false, price: "5 000", rate:"3", reviews:"25"})
                             +room-card({images: ["/assets/img/room-444.jpg"], num:"444", lux: false, price: "5 000", rate:"3", reviews:"15"})
                             +room-card({images: ["/assets/img/room-352.jpg"], num:"352", lux: false, price: "5 000", rate:"3", reviews:"55"})
-                    section.search-rooms-pagination
+                    section.search-rooms-pagination.js-search-rooms-pagination
                         +pagination
         +footer

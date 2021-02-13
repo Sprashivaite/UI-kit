@@ -9,10 +9,10 @@ html(lang="ru")
         meta(http-equiv="X-UA-Compatible", content="ie=edge")
         title landing-page
     body 
-        .landing-page
+        .landing-page.js-landing-page
             +header({login: false})
             main.landing-page__img
-                section.landing-page__log-in
+                section.landing-page__log-in.js-landing-page__log-in
                     +search-rooms
                 section.landing-page__text Лучшие номера для вашей работы, отдыха и просто вдохновения
         +footer
