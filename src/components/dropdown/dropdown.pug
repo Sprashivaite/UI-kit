@@ -8,9 +8,9 @@ mixin dropdown({items = [], title = "", buttons = false} = {})
                 .dropdown-content__line.js-dropdown-content__line
                     p.js-item= item
                     .dropdown-content__box-button.js-dropdown-content__box-button
-                        button.minus.js-minus -
+                        .minus.js-minus -
                         input.js-value(type="text", value="0", disabled)
-                        button.plus.js-plus +
+                        .plus.js-plus +
             if(buttons)
                 .dropdown__buttons-container
                     .clear.js-clear очистить
