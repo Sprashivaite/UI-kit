@@ -1,14 +1,15 @@
 include ../button/button
 include ../data-dropdown/data-dropdown
 include ../dropdown/dropdown
-mixin reservation
-    form.reservation(action="" method = "get")
+mixin reservation({num = 888, lux = true, cost = "9 990₽ ", days = "4", discount = "2 179₽ ", costResult = "39 960₽", resultService = "0₽", resultServices = "300₽", finalSum = "38 081₽"} = {})
+    form.reservation(action="" method = "post")
         .reservation__container
             .reservation__description
-                h1.description__num 888
-                h3.description__lux люкс
+                h1.description__num= num
+                if lux
+                    h3.description__lux люкс
                 .description__cost 
-                    b 9 990₽ 
+                    b= cost
                     span в сутки
             .reservation__com-data
                 +data-double({dropdowns: ["прибытие", "выезд"]})
@@ -18,15 +19,18 @@ mixin reservation
                     +dropdown({items: ["взрослые", "дети", "младенцы"], title: "Сколько гостей", buttons: true})   
             .reservation__count
                 .count__text
-                    p 9 990₽ х 4 суток
+                    p= cost
+                     | х 
+                     = days 
+                     | суток
                     p.count__inf Сбор за услуги: скидка 2 179₽
                     p.count__inf Сбор за дополнительные услуги 
                 .count__cost
-                    p 39 960₽
-                    p 0₽
-                    p 300₽
+                    p= costResult
+                    p= resultService
+                    p= resultServices
             .reservation__final
                 h2.final__text Итого
-                h2.final__sum  38 081₽
+                h2.final__sum= finalSum
             .reservation__button-solid
                 +button({type:"long", text:"забронировать"})
