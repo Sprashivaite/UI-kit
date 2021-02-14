@@ -10,7 +10,6 @@ const initDataDouble = function initDataDouble(container) {
       secondData.val(fd.split('-')[1]);
     },
     range: true,
-    clearButton: true,
     multipleDatesSeparator: ' - ',
   });
 };
