@@ -9,10 +9,10 @@ mixin data-double({dropdowns = ["прибытие", "выезд"]})
             .data-double__container
                 legend= dropdown
                 +text-field("dropdown")
-                    input.text-field__input( placeholder="ДД.ММ.ГГГГ" class=("js-data-double-" + (index + 1)) )
+                    input.text-field__input( placeholder="ДД.ММ.ГГГГ" class=("js-data-double-" + (index + 1)) readonly)
 mixin data-filter
     +text-field("dropdown")
-        input.text-field__input(class="datepicker-here" placeholder="ДД.ММ.ГГГГ" data-clear-button="true" data-range="true"  data-multiple-dates-separator=" - " data-date-format="d M") 
+        input.text-field__input(class="datepicker-here" placeholder="ДД.ММ.ГГГГ" data-clear-button="true" data-range="true"  data-multiple-dates-separator=" - " data-date-format="d M" readonly) 
 mixin data-field
     +text-field
-        input.text-field__input(class="datepicker-here" data-multiple-dates-separator=" - " value="ДД.ММ.ГГГГ" data-clear-button="true" id="#my-datepicker")
+        input.text-field__input(class="datepicker-here" data-multiple-dates-separator=" - " placeholder="ДД.ММ.ГГГГ" data-clear-button="true" id="#my-datepicker" readonly)
