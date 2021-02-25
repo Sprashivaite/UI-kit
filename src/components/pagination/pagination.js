@@ -9,5 +9,5 @@ const initPagination = (container) => {
     cssStyle: 'light-theme',
     nextText: 'arrow_forward',
   });
-}
+};
 export default initPagination;
