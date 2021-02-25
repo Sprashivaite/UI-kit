@@ -1,5 +1,5 @@
-mixin radio-button({text = "", value = "", checked} = {})
+mixin radio-button({text = "", value = "", checked, name = "gender"} = {})
     label.radio-button
-        input.radio-button__input(type="radio"  name="gender" value=value checked=checked)
+        input.radio-button__input(type="radio"  name=name value=value checked=checked)
         .radio-button__circle
         .radio-button__label= text
