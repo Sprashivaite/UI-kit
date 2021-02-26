@@ -49,15 +49,23 @@ class InitDropdown {
   }
 
   changeTitleGuests() {
-    let sum = 0;
-    this.values.forEach((element) => {
-      sum += Number(element.value);
-    });
+    const values = Array.from(this.values);
+    const sum = values.reduce((prevElement, current) => {
+      return prevElement + Number(current.value);
+    }, 0);
     const lastNum = Number(Array.from(`${sum}`).slice(-1));
     const lastTwoNums = Number(Array.from(`${sum}`).slice(-2).join(''));
-    let guests = 'гостей';
-    if (lastNum === 1) guests = 'гость';
-    if (lastNum === 2) guests = 'гостя';
+    let guests;
+    switch (lastNum) {
+      case 1:
+        guests = 'гость';
+        break;
+      case 2:
+        guests = 'гостя';
+        break;
+      default:
+        guests = 'гостей';
+    }
     if (lastTwoNums === 11 || lastTwoNums === 12) guests = 'гостей';
     this.title.value = `${sum} ${guests}`;
     if (sum === 0) this.clearValues();
@@ -65,15 +73,16 @@ class InitDropdown {
   }
 
   changeTitle() {
-    let sum = 0;
     let result = '';
     this.lines.forEach((element) => {
       const num = Number(element.querySelector('.js-value').value);
       const text = element.querySelector('.js-item').innerHTML;
-      if (num > 0) result += `${num} ${text} `;
-      sum += num;
+      if (num > 0) {
+        if(result) result += ', '
+        result += `${num} ${text}`; 
+      }
     });
-    if (sum === 0) this.clearValues();
+    if (!result) this.clearValues();
     else this.title.value = result;
     if (sum > 0) this.showClear();
   }
