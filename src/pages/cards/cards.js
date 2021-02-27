@@ -14,7 +14,7 @@ if (document.querySelector('.js-cards')) {
   });
   const guestsDropdowns = document.querySelectorAll('.js-cards .dropdown-guests');
   guestsDropdowns.forEach((element) => {
-    new InitDropdown(element, true).findElements().addHandler();
+    new InitDropdown(element, [['гостей', 'гость', 'гостя']]).findElements().addHandler();
   });
   initDataDouble($('.js-cards__search-rooms'));
   initDataDouble($('.js-cards__reservation'));

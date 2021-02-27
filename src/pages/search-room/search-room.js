@@ -17,8 +17,8 @@ if (document.querySelector('.js-search-rooms-page')) {
   initPagination($('.js-search-rooms-pagination'));
 
   const searchRoomsDropdown = document.querySelector('.js-options__dropdown-guests');
-  new InitDropdown(searchRoomsDropdown, true).findElements().addHandler();
+  new InitDropdown(searchRoomsDropdown, [['гостей', 'гость', 'гостя']]).findElements().addHandler();
 
   const facilitiesDropdown = document.querySelector('.js-options__dropdown-facilities');
-  new InitDropdown(facilitiesDropdown).findElements().addHandler();
+  new InitDropdown(facilitiesDropdown, [['спальнен', 'спальня', 'спальни'], ['кроватей', 'кровать', 'кровати'],  ['ванных комнат', 'ванная комната', 'ванные комнаты']]).findElements().addHandler();
 }

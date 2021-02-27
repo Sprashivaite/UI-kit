@@ -8,6 +8,6 @@ if (document.querySelector('.js-room-details-page')) {
     new ChangeLikeValue().findElements(button).addHandler();
   });
   const guestsDropdown = document.querySelector('.js-room-details-page__reservation .dropdown-guests');
-  new InitDropdown(guestsDropdown, true).findElements().addHandler();
+  new InitDropdown(guestsDropdown, [['гостей', 'гость', 'гостя']]).findElements().addHandler();
   initDataDouble($('.js-room-details-page__reservation')); 
 }

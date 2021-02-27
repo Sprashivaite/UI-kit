@@ -18,12 +18,12 @@ if (document.querySelector('.js-form-elements')) {
 
   const guestsDropdowns = document.querySelectorAll('.js-form-elements .dropdown-guests');
   guestsDropdowns.forEach((element) => {
-    new InitDropdown(element, true).findElements().addHandler();
+    new InitDropdown(element, [['гостей', 'гость', 'гостя']]).findElements().addHandler();
   });
 
   const facilitiesDropdowns = document.querySelectorAll('.js-form-elements .dropdown-facilities');
   facilitiesDropdowns.forEach((element) => {
-    new InitDropdown(element).findElements().addHandler();
+    new InitDropdown(element, [['спальнен', 'спальня', 'спальни'], ['кроватей', 'кровать', 'кровати'],  ['ванных комнат', 'ванная комната', 'ванные комнаты']]).findElements().addHandler();
   });
 
   initSlider($('.js-form-elements__slider'));

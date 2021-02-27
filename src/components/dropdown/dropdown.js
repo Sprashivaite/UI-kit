@@ -1,9 +1,8 @@
 class InitDropdown {
-  constructor(container, isGuests = false) {
+  constructor(container, names = []) {
     this.container = container;
-    this.isGuests = isGuests;
+    this.names = names;
   }
-
   findElements() {
     this.dropdown = this.container.querySelector('.dropdown');
     this.menu = this.container.querySelector('.dropdown-content');
@@ -29,11 +28,8 @@ class InitDropdown {
 
   clearValues() {
     this.title.value = this.defaultTitle;
-    this.values.forEach((element) => {
-      const inputValue = element;
-      inputValue.value = 0;
-    });
-    this.hideClear();
+    Array.from(this.values).map(element => element.value = 0);
+    if(this.clear) this.hideClear();
   }
 
   toggleMenu() {
@@ -47,59 +43,73 @@ class InitDropdown {
   hideClear() {
     this.clear.classList.remove('clear__show');
   }
+  declension(number, names) {
+    const [plural, nominative, genitive] = names
+    const lastNum = Number(Array.from(`${number}`).slice(-1));
+    const lastTwoNums = Number(Array.from(`${number}`).slice(-2).join(''));
+    let name;
+    switch (lastNum) {
+      case 1:
+        name = nominative;
+        break;
+      case 2:
+      case 3:
+      case 4:
+        name = genitive;
+        break;
+      default:
+        name = plural;
+    }
+    switch (lastTwoNums) {
+      case 11:
+      case 12:
+      case 13:
+      case 14:
+        name = plural;
+        break;
+    }
+    return name;
+  }
 
-  changeTitleGuests() {
+  changeSingleTitle() {
     const values = Array.from(this.values);
     const sum = values.reduce((prevElement, current) => {
       return prevElement + Number(current.value);
     }, 0);
-    const lastNum = Number(Array.from(`${sum}`).slice(-1));
-    const lastTwoNums = Number(Array.from(`${sum}`).slice(-2).join(''));
-    let guests;
-    switch (lastNum) {
-      case 1:
-        guests = 'гость';
-        break;
-      case 2:
-        guests = 'гостя';
-        break;
-      default:
-        guests = 'гостей';
-    }
-    if (lastTwoNums === 11 || lastTwoNums === 12) guests = 'гостей';
-    this.title.value = `${sum} ${guests}`;
     if (sum === 0) this.clearValues();
     if (sum > 0) this.showClear();
+    const textTitle = `${sum} ${this.declension(sum, this.names[0])}`
+    this.title.value = textTitle;
   }
 
-  changeTitle() {
+  changeMultipleTitle() {
     let result = '';
-    this.lines.forEach((element) => {
+    this.lines.forEach((element, index) => {
       const num = Number(element.querySelector('.js-value').value);
-      const text = element.querySelector('.js-item').innerHTML;
+      const text = this.declension(num, this.names[index]);
       if (num > 0) {
         if(result) result += ', '
         result += `${num} ${text}`; 
       }
-    });
+    }); 
     if (!result) this.clearValues();
     else this.title.value = result;
-    if (sum > 0) this.showClear();
   }
 
   addHandler() {
-    if (this.isGuests) this.changeTitle = this.changeTitleGuests;
-    this.lines.forEach((element) => {
+    this.lines.forEach((element, index) => {
       const plus = element.querySelector('.js-plus');
       const minus = element.querySelector('.js-minus');
       const value = element.querySelector('.js-value');
       const handlerPlus = () => {
         InitDropdown.makePlus(value);
-        this.changeTitle();
+        if(this.names.length === 1) this.changeSingleTitle()
+        else this.changeMultipleTitle()
       };
       const handlerMinus = () => {
         InitDropdown.makeMinus(value);
-        this.changeTitle();
+        if(this.names.length === 1) this.changeSingleTitle()
+        else this.changeMultipleTitle()
       };
       plus.addEventListener('click', handlerPlus);
       minus.addEventListener('click', handlerMinus);
