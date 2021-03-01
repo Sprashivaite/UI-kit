@@ -1,6 +1,9 @@
 .diagram
   min-width 200px
   display flex
+  width 100%
+  justify-content space-between
+  flex-wrap: wrap
   .diagram__circle
     margin-top 22px
     height 120px
@@ -57,9 +60,9 @@
       span 
         font-size 12px 
   .diagram__rating
-    margin-left 43px 
     margin-top 50px 
     position relative
+    padding-left 10px
     .rating_well
       &:before
         content ''
@@ -68,7 +71,7 @@
         width 10px 
         height 10px 
         border-radius 50%
-        left -14px 
+        left -4px 
         margin-top 6px 
     .rating_good
       &:before
