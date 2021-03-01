@@ -1,6 +1,17 @@
 .room-details-page
   background-color #FFFFFF
   min-height calc(100vh - 372px)
+  &__container
+    max-width 1160px
+    width 100%
+    margin 0 auto
+    display flex
+    flex-wrap: wrap
+    justify-content space-between
+    @media(min-width 1700px)
+      max-width 1440px
+    @media(max-width 1240px)
+      width 90%
   &__body
     position relative
     min-height 1423px
@@ -36,13 +47,12 @@
         grid-column-start span 1
         grid-row-start span 1
         height auto
-  &__bottom-container
-    margin-left 9.7%
+  &__bottom-container 
     margin-top 70px
     position relative
     display inline-flex
     flex-wrap wrap
-    max-width 50%
+    max-width 61%
     @media(max-width 1080px)
       max-width 90%
       margin 70px 20px
@@ -53,6 +63,8 @@
       margin-top 23px
   &__diagram
     margin-bottom 40px
+    max-width: 311px
+    width: 100%
   &__comments
     min-height 300px
     display inline-flex
@@ -61,7 +73,7 @@
     h2 
       margin-bottom 21px
     > div
-      margin-bottom 14px
+      margin-bottom 27px
     @media(max-width 800px)
       width 100%
       margin-top 20px
@@ -80,9 +92,9 @@
 .room-details-page__reservation
   display inline-block
   vertical-align top
-  margin 70px 20px 20px 60px
+  margin 70px 0 20px 
   max-width 380px
-  width 95%
+  width 100%
   height 31.9375rem
   @media(max-width 1080px)
-    margin 40px 20px 60px
+    margin 0 auto 80px

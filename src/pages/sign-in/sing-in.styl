@@ -1,26 +1,37 @@
 .sign-in
   background-color #FFFFFF 
   width 100%
-  min-width 320px
+  min-width 300px
   min-height calc(100vh - 372px) 
   margin 0 auto
-.sign-in__img
-  position relative
-  background url(/assets/img/sign-in-image.jpg) 0 -69px no-repeat
-  max-width 1920px
-  min-width 320px
-  min-height 702px
-  margin 0 auto
+  height 100%
   display flex
-  justify-content center
-  align-items center
-  @media(min-width 1441px)
-    background-size cover
-    background-position bottom
-  @media(max-width 767px)
-    background none
-.sign-in__log-in 
-  z-index 1
-  max-width 380px
-  width 100%
-  margin: 0 20px
+  flex-direction: column
+  &__container
+    max-width 1160px
+    width 100%
+    margin 0 auto
+    @media(min-width 1700px)
+      max-width 1500px
+    @media(max-width 1200px)
+      width 90%
+  &__img
+    position relative
+    background url(/assets/img/sign-in-image.jpg) 0 -69px no-repeat
+    max-width 1920px
+    min-width 320px
+    min-height 702px
+    margin 0 auto
+    display flex
+    flex 1 0 auto
+    width 100%
+    justify-content center
+    align-items center
+    @media(min-width 1441px)
+      background-size cover
+      background-position bottom
+  &__log-in 
+    z-index 1
+    max-width 380px
+    width 98%
+    margin: 0 auto

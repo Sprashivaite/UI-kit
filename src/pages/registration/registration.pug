@@ -10,8 +10,12 @@ html(lang="ru")
         title registration
     body 
         .registration-page
-            +header({login: false})
+            header
+                .registration-page__container
+                    +header({login: false})
             main.registration-page__img
                 section.registration-page__registration-form
                     +registration
-        +footer
+            footer 
+                .registration-page__container
+                    +footer

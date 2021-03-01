@@ -9,10 +9,14 @@ html(lang="ru")
         meta(http-equiv="X-UA-Compatible", content="ie=edge")
         title sign-in
     body 
-        .sign-in
-            +header({login: false})
+        .sign-in    
+            header
+                .sign-in__container
+                    +header({login: false})
             main.sign-in__img
                 section.sign-in__log-in 
                     +log-in
-        +footer
+            footer
+                .sign-in__container
+                    +footer
 

@@ -1,15 +1,34 @@
 .search-rooms-page
   background-color #FFFFFF 
   min-width 320px
-  min-height calc(100vh - 372px) 
   margin 0 auto
+  display flex
+  flex-direction: column
+  height 100%
+  &__container
+    max-width 1160px
+    width 98%
+    margin 0 auto
+    @media(min-width 1700px)
+      max-width: 1500px
+    @media(min-width 1000px) and (max-width 1200px)
+      max-width: 1000px
+    @media(max-width 999px)    
+      max-width 920px
+    @media(max-width 730px)
+      max-width 500px
+      width 95%
 .search-rooms-body
   position relative
-  min-height 1344px 
-  background #fff 
-  margin-top 1.4375rem 
-  margin 13px 0 0 9.8% 
+  background #fff
+  margin 23px auto 62px
   display flex 
+  justify-content: space-between
+  max-width 1160px
+  width 100%
+  flex 1 0 auto
+  @media(min-width 1700px)
+    max-width: 1500px
   @media(max-width 730px)
     flex-direction column 
     align-items center 
@@ -17,17 +36,19 @@
 .search-rooms-page__options   
   width 266px 
   display inline-flex 
-  flex-direction column 
-  margin-right 4.5% 
-  .options__data-filter
+  flex-direction column
+  @media(max-width 730px)
+    max-width 460px
+    width 90%
+    margin 0 20px
   .options__dropdown-guests
     margin-top 11px
   .options__range-slider
-    margin-top 19px
+    margin-top 23px
     legend
       position absolute
   .options__checkbox
-    margin-top 22px
+    margin-top 20px
     width 242px 
     legend
       margin-bottom 13px
@@ -48,8 +69,10 @@
   @media(max-width 730px)
     margin-top 180px
 .search-rooms-page__title 
-  padding-top 1rem
+  margin-top 7px
   margin-right auto
+  @media(max-width 999px)
+    text-align: center
 .search-rooms-page__hotels  
   margin-top 1.3rem 
   display inline-grid
@@ -58,12 +81,10 @@
   grid-column-gap 12px
   @media(min-width 1700px)
     grid-template repeat(3, 270px) / 270px 270px 270px 270px   
-  @media(min-width 1000px) and (max-width 1300px)
+  @media(min-width 900px) and (max-width 1200px)
     grid-template repeat(6, 270px) / 270px 270px
-  @media(max-width 999px) 
+  @media(max-width 899px) 
     grid-template repeat(12, 270px) / 270px
 .search-rooms-pagination 
   margin-top 1.8rem
   height 80px
-  @media (max-width 1020px) 
-    margin-left 0 

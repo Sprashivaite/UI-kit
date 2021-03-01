@@ -5,6 +5,17 @@
   min-width 320px
   min-height calc(100vh - 372px) 
   margin 0 auto
+  height 100%
+  display flex
+  flex-direction: column
+  &__container
+    max-width 1160px
+    width 100%
+    margin 0 auto
+    @media(min-width 1700px)
+      max-width 1500px
+    @media(max-width 1240px)
+      width 90%
   &__img
     position relative
     background url(/assets/img/sign-in-image.jpg) 0 -69px no-repeat
@@ -15,12 +26,12 @@
     display flex
     justify-content center
     align-items center
+    flex 1 0 auto
+    width 100%
     @media(min-width 1441px)
       background-size cover
       background-position bottom
-    @media(max-width 767px)
-      background none 
 .registration-page__registration-form
   max-width 23.75rem
-  width 100%
-  margin 0 20px
+  width 98%
+  margin: 20px auto

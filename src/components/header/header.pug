@@ -3,55 +3,54 @@
 include ..\logo-color\logo-color
 include ..\button\button
 mixin header({bold = false, login = false})
-    header
-        .header
-            .header__logo-color
-                +logo-color
-            nav.header__nav
-                ul
-                    if (bold) 
-                        b 
-                            li
-                                a(href="change-me.html") О нас
-                    if (!bold)
+    .header
+        .header__logo-color
+            +logo-color
+        nav.header__nav
+            ul
+                if (bold) 
+                    b 
                         li
                             a(href="change-me.html") О нас
+                if (!bold)
                     li
-                        a(href="change-me.html") Услуги            
+                        a(href="change-me.html") О нас
+                li
+                    a(href="change-me.html") Услуги            
+                .header__expand-more expand_more
+                li
+                    a(href="change-me.html") Вакансии
+                li
+                    a(href="change-me.html") Новости
+                li
+                    a(href="change-me.html") Соглашения
+                li 
                     .header__expand-more expand_more
-                    li
-                        a(href="change-me.html") Вакансии
-                    li
-                        a(href="change-me.html") Новости
-                    li
-                        a(href="change-me.html") Соглашения
-                    li 
-                        .header__expand-more expand_more
-                if login == true
-                    .header__name Юлий Цезарь
-                else 
-                    .header__button_empty
-                        form(action="sign-in.html")
-                            +button({text: "войти", type:"empty"})
-                    .header__button_register
-                        form(action="registration.html")
-                            +button({text: "зарегистрироваться"})
-        label.header__burger
-            input.burger__toggle(type="checkbox")
-            .burger__btn
-                span
-            ul.burger__menu 
-                li
-                    a.menu__item(href="change-me.html") О нас
-                li
-                    a.menu__item(href="change-me.html") Услуги
-                li
-                    a.menu__item(href="change-me.html") Вакансии
-                li
-                    a.menu__item(href="change-me.html") Новости
-                li
-                    a.menu__item(href="change-me.html") Соглашения
-                li
-                    a.menu__item(href="change-me.html") Войти
-                li
-                    a.menu__item(href="change-me.html") Зарегистрироваться
+            if login == true
+                .header__name Юлий Цезарь
+            else 
+                .header__button_empty
+                    form(action="sign-in.html")
+                        +button({text: "войти", type:"empty"})
+                .header__button_register
+                    form(action="registration.html")
+                        +button({text: "зарегистрироваться"})
+    label.header__burger
+        input.burger__toggle(type="checkbox")
+        .burger__btn
+            span
+        ul.burger__menu 
+            li
+                a.menu__item(href="change-me.html") О нас
+            li
+                a.menu__item(href="change-me.html") Услуги
+            li
+                a.menu__item(href="change-me.html") Вакансии
+            li
+                a.menu__item(href="change-me.html") Новости
+            li
+                a.menu__item(href="change-me.html") Соглашения
+            li
+                a.menu__item(href="change-me.html") Войти
+            li
+                a.menu__item(href="change-me.html") Зарегистрироваться

@@ -13,10 +13,16 @@ html(lang="ru")
             aside.headers-footers__logo
                 +logo
             section.headers-footers__header
-                +header({login: false, bold: true})
+                header 
+                    .headers-footers__container
+                        +header({login: false, bold: true})
             section.headers-footers__header_reg
-                +header({login: true, bold: true})
+                header 
+                    .headers-footers__container
+                        +header({login: true, bold: true})
             section.headers-footers__footer
-                +footer
+                footer 
+                    .headers-footers__container
+                        +footer
             section.headers-footers__footer-2
                 +footer-2

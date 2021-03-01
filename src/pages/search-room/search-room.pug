@@ -16,50 +16,55 @@ html(lang="ru")
         title search-room
     body 
         .search-rooms-page.js-search-rooms-page
-            +header({login: false})
-            main.search-rooms-body
-                section.search-rooms-page__options
-                    .options__data-filter
-                        legend даты пребывания в отеле
-                        +data-filter
-                    .options__dropdown-guests.js-options__dropdown-guests
-                        legend гости
-                        .dropdown-guests
-                            +dropdown({items: ["взрослые", "дети", "младенцы"], title: "Сколько гостей", buttons: true}) 
-                    .options__range-slider.js-options__range-slider
-                        legend.range-slider-name диапазон цены
-                        +range-slider
-                        .range-slider-descr Стоимость за сутки пребывания в номере
-                    .options__checkbox
-                        legend правила дома
-                        +checkbox({ name: "Можно курить"})
-                        +checkbox({ name: "Можно с питомцами"})
-                        +checkbox({ name: "Можно пригласить гостей (до 10 человек)"})
-                    .options__checkbox-2
-                        legend доступность
-                        +checkbox({ name: "Ширина коридоров в номере не менее 91 см.", title:"Широкий коридор"})
-                        +checkbox({ name: "На 1 этаже вас встретит специалист и проводит до номера.", title:"Помощник для инвалидов"})
-                    .options__dropdown-facilities.js-options__dropdown-facilities
-                        legend удобства номера
-                        .dropdown-facilities
-                            +dropdown({items: ["спальни", "кровати", "ванные комнаты"], title: "Удобства"})
-                    .options__checkbox-list
-                        +expandable-checkbox-list({title:"дополнительные удобства", list: ["Завтрак", "Письменный стол", "Стул для кормления", "Кроватка", "Телевизор", "Шампунь"]})
-                .search-rooms-page__rigth-container
-                    h1.search-rooms-page__title Номера, которые мы для вас подобрали
-                    section.search-rooms-page__hotels
-                            +room-card({images: ["/assets/img/room-888.jpg"], num:"888", lux: true, price: "9 990", rate:"5", reviews:"145"})
-                            +room-card({images: ["/assets/img/room-840.jpg"], num:"840", lux: false, price: "9 990", rate:"4", reviews:"65"})
-                            +room-card({images: ["/assets/img/room-980.jpg"], num:"980", lux: true, price: "8 500", rate:"3", reviews:"35"})
-                            +room-card({images: ["/assets/img/room-856.jpg"], num:"856", lux: false, price: "7 300", rate:"5", reviews:"19"})
-                            +room-card({images: ["/assets/img/room-740.jpg"], num:"740", lux: false, price: "6 000", rate:"4", reviews:"44"})
-                            +room-card({images: ["/assets/img/room-982.jpg"], num:"982", lux: false, price: "5 800", rate:"3", reviews:"56"})
-                            +room-card({images: ["/assets/img/room-678.jpg"], num:"678", lux: false, price: "5 000", rate:"5", reviews:"45"})
-                            +room-card({images: ["/assets/img/room-450.jpg"], num:"450", lux: false, price: "5 300", rate:"4", reviews:"39"})
-                            +room-card({images: ["/assets/img/room-350.jpg"], num:"350", lux: false, price: "5 000", rate:"3", reviews:"77"})
-                            +room-card({images: ["/assets/img/room-666.jpg"], num:"666", lux: false, price: "5 000", rate:"3", reviews:"25"})
-                            +room-card({images: ["/assets/img/room-444.jpg"], num:"444", lux: false, price: "5 000", rate:"3", reviews:"15"})
-                            +room-card({images: ["/assets/img/room-352.jpg"], num:"352", lux: false, price: "5 000", rate:"3", reviews:"55"})
-                    section.search-rooms-pagination.js-search-rooms-pagination
-                        +pagination
-        +footer
+            header
+                .search-rooms-page__container
+                    +header({login: false})
+            .search-rooms-page__container
+                main.search-rooms-body
+                    section.search-rooms-page__options
+                        .options__data-filter
+                            legend даты пребывания в отеле
+                            +data-filter
+                        .options__dropdown-guests.js-options__dropdown-guests
+                            legend гости
+                            .dropdown-guests
+                                +dropdown({items: ["взрослые", "дети", "младенцы"], title: "Сколько гостей", buttons: true}) 
+                        .options__range-slider.js-options__range-slider
+                            legend.range-slider-name диапазон цены
+                            +range-slider
+                            .range-slider-descr Стоимость за сутки пребывания в номере
+                        .options__checkbox
+                            legend правила дома
+                            +checkbox({ name: "Можно курить"})
+                            +checkbox({ name: "Можно с питомцами"})
+                            +checkbox({ name: "Можно пригласить гостей (до 10 человек)"})
+                        .options__checkbox-2
+                            legend доступность
+                            +checkbox({ name: "Ширина коридоров в номере не менее 91 см.", title:"Широкий коридор"})
+                            +checkbox({ name: "На 1 этаже вас встретит специалист и проводит до номера.", title:"Помощник для инвалидов"})
+                        .options__dropdown-facilities.js-options__dropdown-facilities
+                            legend удобства номера
+                            .dropdown-facilities
+                                +dropdown({items: ["спальни", "кровати", "ванные комнаты"], title: "Удобства"})
+                        .options__checkbox-list
+                            +expandable-checkbox-list({title:"дополнительные удобства", list: ["Завтрак", "Письменный стол", "Стул для кормления", "Кроватка", "Телевизор", "Шампунь"]})
+                    .search-rooms-page__rigth-container
+                        h1.search-rooms-page__title Номера, которые мы для вас подобрали
+                        section.search-rooms-page__hotels
+                                +room-card({images: ["/assets/img/room-888.jpg"], num:"888", lux: true, price: "9 990", rate:"5", reviews:"145"})
+                                +room-card({images: ["/assets/img/room-840.jpg"], num:"840", lux: false, price: "9 990", rate:"4", reviews:"65"})
+                                +room-card({images: ["/assets/img/room-980.jpg"], num:"980", lux: true, price: "8 500", rate:"3", reviews:"35"})
+                                +room-card({images: ["/assets/img/room-856.jpg"], num:"856", lux: false, price: "7 300", rate:"5", reviews:"19"})
+                                +room-card({images: ["/assets/img/room-740.jpg"], num:"740", lux: false, price: "6 000", rate:"4", reviews:"44"})
+                                +room-card({images: ["/assets/img/room-982.jpg"], num:"982", lux: false, price: "5 800", rate:"3", reviews:"56"})
+                                +room-card({images: ["/assets/img/room-678.jpg"], num:"678", lux: false, price: "5 000", rate:"5", reviews:"45"})
+                                +room-card({images: ["/assets/img/room-450.jpg"], num:"450", lux: false, price: "5 300", rate:"4", reviews:"39"})
+                                +room-card({images: ["/assets/img/room-350.jpg"], num:"350", lux: false, price: "5 000", rate:"3", reviews:"77"})
+                                +room-card({images: ["/assets/img/room-666.jpg"], num:"666", lux: false, price: "5 000", rate:"3", reviews:"25"})
+                                +room-card({images: ["/assets/img/room-444.jpg"], num:"444", lux: false, price: "5 000", rate:"3", reviews:"15"})
+                                +room-card({images: ["/assets/img/room-352.jpg"], num:"352", lux: false, price: "5 000", rate:"3", reviews:"55"})
+                        section.search-rooms-pagination.js-search-rooms-pagination
+                            +pagination
+            footer
+                .search-rooms-page__container
+                    +footer
