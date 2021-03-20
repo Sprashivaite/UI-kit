@@ -1,4 +1,4 @@
-class ChangeRate {
+class RateButton {
   findElements(parent) {
     this.stars = parent.querySelector('.js-rate-button__star').children;
     this.stars = Array.from(this.stars);
@@ -31,4 +31,4 @@ class ChangeRate {
     });
   }
 }
-export default ChangeRate;
+export default RateButton;

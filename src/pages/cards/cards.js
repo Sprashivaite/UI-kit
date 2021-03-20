@@ -1,7 +1,7 @@
 import ChangeRate from '../../components/rate-button/rate-button';
 import ChangePicture from '../../components/room-card/room-card';
 import initDataDouble from '../../components/data-dropdown/data-dropdown';
-import InitDropdown from '../../components/dropdown/dropdown';
+import Dropdown from '../../components/dropdown/dropdown';
 
 if (document.querySelector('.js-cards')) {
   const rateButtons = document.querySelectorAll('.js-rate-button');
@@ -14,7 +14,7 @@ if (document.querySelector('.js-cards')) {
   });
   const guestsDropdowns = document.querySelectorAll('.js-cards .dropdown-guests');
   guestsDropdowns.forEach((element) => {
-    new InitDropdown(element, [['гостей', 'гость', 'гостя']]).findElements().addHandler();
+    new Dropdown(element, [['гостей', 'гость', 'гостя']]).findElements().addHandler();
   });
   initDataDouble($('.js-cards__search-rooms'));
   initDataDouble($('.js-cards__reservation'));

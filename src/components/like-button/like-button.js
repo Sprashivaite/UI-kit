@@ -1,4 +1,4 @@
-class ChangeLikeValue {
+class LikeValue {
   findElements(button) {
     this.button = button;
     this.input = this.button.querySelector('.js-like-button__input');
@@ -23,4 +23,4 @@ class ChangeLikeValue {
     this.input.addEventListener('click', handler);
   }
 }
-export default ChangeLikeValue;
+export default LikeValue;

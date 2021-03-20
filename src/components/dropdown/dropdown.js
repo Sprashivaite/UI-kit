@@ -1,8 +1,9 @@
-class InitDropdown {
+class Dropdown {
   constructor(container, names = []) {
     this.container = container;
     this.names = names;
   }
+
   findElements() {
     this.dropdown = this.container.querySelector('.dropdown');
     this.menu = this.container.querySelector('.dropdown-content');
@@ -28,8 +29,8 @@ class InitDropdown {
 
   clearValues() {
     this.title.value = this.defaultTitle;
-    Array.from(this.values).map(element => element.value = 0);
-    if(this.clear) this.hideClear();
+    Array.from(this.values).map((element) => element.value = 0);
+    if (this.clear) this.hideClear();
   }
 
   toggleMenu() {
@@ -43,8 +44,9 @@ class InitDropdown {
   hideClear() {
     this.clear.classList.remove('clear__show');
   }
+
   declension(number, names) {
-    const [plural, nominative, genitive] = names
+    const [plural, nominative, genitive] = names;
     const lastNum = Number(Array.from(`${number}`).slice(-1));
     const lastTwoNums = Number(Array.from(`${number}`).slice(-2).join(''));
     let name;
@@ -73,12 +75,10 @@ class InitDropdown {
 
   changeSingleTitle() {
     const values = Array.from(this.values);
-    const sum = values.reduce((prevElement, current) => {
-      return prevElement + Number(current.value);
-    }, 0);
+    const sum = values.reduce((prevElement, current) => prevElement + Number(current.value), 0);
     if (sum === 0) this.clearValues();
     if (sum > 0) this.showClear();
-    const textTitle = `${sum} ${this.declension(sum, this.names[0])}`
+    const textTitle = `${sum} ${this.declension(sum, this.names[0])}`;
     this.title.value = textTitle;
   }
 
@@ -88,10 +88,10 @@ class InitDropdown {
       const num = Number(element.querySelector('.js-value').value);
       const text = this.declension(num, this.names[index]);
       if (num > 0) {
-        if(result) result += ', '
-        result += `${num} ${text}`; 
+        if (result) result += ', ';
+        result += `${num} ${text}`;
       }
-    }); 
+    });
     if (!result) this.clearValues();
     else this.title.value = result;
   }
@@ -102,14 +102,14 @@ class InitDropdown {
       const minus = element.querySelector('.js-minus');
       const value = element.querySelector('.js-value');
       const handlerPlus = () => {
-        InitDropdown.makePlus(value);
-        if(this.names.length === 1) this.changeSingleTitle()
-        else this.changeMultipleTitle()
+        Dropdown.makePlus(value);
+        if (this.names.length === 1) this.changeSingleTitle();
+        else this.changeMultipleTitle();
       };
       const handlerMinus = () => {
-        InitDropdown.makeMinus(value);
-        if(this.names.length === 1) this.changeSingleTitle()
-        else this.changeMultipleTitle()
+        Dropdown.makeMinus(value);
+        if (this.names.length === 1) this.changeSingleTitle();
+        else this.changeMultipleTitle();
       };
       plus.addEventListener('click', handlerPlus);
       minus.addEventListener('click', handlerMinus);
@@ -121,4 +121,4 @@ class InitDropdown {
     this.field.addEventListener('click', handlerApply);
   }
 }
-export default InitDropdown;
+export default Dropdown;
