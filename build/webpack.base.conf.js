@@ -5,7 +5,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
 const webpack = require('webpack')
 const fs = require('fs')
-
+const ghpages = require('gh-pages');
 
 const PATHS = {
     src: path.join(__dirname, '../src'),
@@ -27,7 +27,7 @@ module.exports = {
     output: {
         filename: `${PATHS.assets}js/[name].[hash].js`,
         path: PATHS.dist,
-        publicPath: '/'
+        // publicPath: '/'
     },
   optimization: {
     splitChunks: {
@@ -73,18 +73,20 @@ module.exports = {
                 test: /\.styl$/,
                 use: [
                     'style-loader',
-                    MiniCssExtractPlugin.loader,
+                    {loader: MiniCssExtractPlugin.loader,
+                        options: {publicPath: '../'}
+                        },
                     {
                         loader: 'css-loader',
-                        options: { sourceMap: true }
+                        options: { sourceMap: true, url: false }
                     },
                     {
                         loader: 'postcss-loader',
-                        options: { sourceMap: true, config: { path: `./postcss.config.js` } }
+                        options: { sourceMap: true, config: { path: `./postcss.config.js` }, url: false }
                       },
                     {
                         loader: 'stylus-loader',
-                        options: { sourceMap: true }
+                        options: { sourceMap: true, url: false }
                     }
                 ]
             },
@@ -92,14 +94,16 @@ module.exports = {
                 test: /\.css$/,
                 use: [
                     'style-loader',
-                    MiniCssExtractPlugin.loader,
+                    {loader: MiniCssExtractPlugin.loader,
+                    options: {publicPath: '../'}
+                    },
                     {
                         loader: 'css-loader',
-                        options: { sourceMap: true }
+                        options: { sourceMap: true, url: false}
                     },
                     {
                         loader: 'postcss-loader',
-                        options: { sourceMap: true, config: { path: `./postcss.config.js` } }
+                        options: { sourceMap: true,url: false, config: { path: `./postcss.config.js` } }
                       },
                 ]
             }
@@ -131,3 +135,4 @@ module.exports = {
           })),  
     ]
 };
+ghpages.publish('dist', function(err) {});
