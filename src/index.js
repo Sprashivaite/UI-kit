@@ -11,6 +11,8 @@ import './components/data-dropdown/original-files/datepicker';
 import './components/data-dropdown/original-files/datepicker.min.css';
 import './components/dropdown/dropdown';
 import './components/data-dropdown/data-dropdown';
+import './components/masked-input/original-files/masked-input';
+import './components/masked-input/masked-input';
 import './components/room-card/room-card';
 import './pages/form-elements/form-elements';
 import './pages/cards/cards';

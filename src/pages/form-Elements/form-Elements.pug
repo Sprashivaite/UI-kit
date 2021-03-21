@@ -14,6 +14,7 @@ include ..\..\components\dropdown\dropdown
 include ..\..\components\expandable-checkbox-list\expandable-checkbox-list
 include ..\..\components\like-button\like-button
 include ..\..\components\pagination\pagination
+include ..\..\components\masked-input\masked-input
 <!DOCTYPE html>
 html(lang="ru")
     head
@@ -43,7 +44,7 @@ html(lang="ru")
                         +dropdown({items: ["взрослые", "дети", "младенцы"], title: "Сколько гостей", buttons: true}) 
                 section.form-elements__masked
                     legend masked text field
-                    +data-field 
+                    +masked-input()
                 section.form-elements__date-dropdown.js-form-elements__date-dropdown
                     +data-double({ dropdowns: ["date Dropdown", "date Dropdown"]})
                 section.form-elements__filter-dropdown

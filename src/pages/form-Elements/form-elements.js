@@ -4,6 +4,7 @@ import initSlider from '../../components/range-slider/range-slider';
 import initPagination from '../../components/pagination/pagination';
 import Dropdown from '../../components/dropdown/dropdown';
 import initDataDouble from '../../components/data-dropdown/data-dropdown';
+import initMaskInput from '../../components/masked-input/masked-input';
 
 if (document.querySelector('.js-form-elements')) {
   const likeButtons = document.querySelectorAll('.js-like-button');
@@ -29,4 +30,5 @@ if (document.querySelector('.js-form-elements')) {
   initSlider($('.js-form-elements__slider'));
   initPagination($('.js-form-elements__pagination'));
   initDataDouble($('.js-form-elements__date-dropdown'));
+  initMaskInput($('.js-form-elements__masked-input'));
 }
