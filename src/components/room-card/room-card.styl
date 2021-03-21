@@ -24,6 +24,7 @@
     right 15px
     width 41.25px 
     height 10px     
+    cursor pointer 
     [data-target="true"]
       background-color: white
   &__button-circle
@@ -40,7 +41,8 @@
     width 42px 
     height 151px  
     top 0 
-    background linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 99.99%, rgba(255, 255, 255, 0) 100%) 
+    background linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 99.99%, rgba(255, 255, 255, 0) 100%)     
+    cursor pointer
     &:after
       content 'expand_more' 
       font-family 'Material Icons'
@@ -56,14 +58,9 @@
     &:hover
       display block
   &__button-right
-    display none
-    position absolute 
-    top 0
-    width 42px 
-    height 151px  
+    @extends .room-card__button-left
     right 0
-    background linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 99.99%, rgba(255, 255, 255, 0) 100%) 
-    transform matrix(-1, 0, 0, 1, 0, 0) 
+    transform matrix(-1, 0, 0, 1, 0, 0)
     &:after
       @extends .room-card__button-left:after  
     &:hover

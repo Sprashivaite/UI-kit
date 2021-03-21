@@ -15,7 +15,7 @@ class LikeValue {
   }
 
   addHandler() {
-    this.button.onmousedown = () => false;
+    this.button.onmousemove = () => false;
     const handler = () => {
       if (this.input.checked) this.add();
       if (!this.input.checked) this.delete();

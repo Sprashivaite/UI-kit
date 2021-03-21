@@ -11,13 +11,10 @@
   align-items center
   justify-content: center
   cursor pointer
-  &:active
+  &:active, &:focus, &:hover
     background linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%)
-    opacity 0.5
-  &:focus
-    outline none
-    background linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%)
-    opacity 0.5
+    opacity 0.5  
+    outline none 
   &__text
     font-weight bold
     font-size 0.75rem
