@@ -1172,6 +1172,17 @@ template {
   background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
   opacity: 0.5;
   outline: none;
+  transition: 0.3s;
+}
+.button:active .button__text,
+.button_long:active .button__text,
+.button_empty:active .button__text,
+.button_long_empty:active .button__text,
+.button:active .button__text_empty,
+.button_long:active .button__text_empty,
+.button_empty:active .button__text_empty,
+.button_long_empty:active .button__text_empty {
+  color: rgba(31,32,65,0.5);
 }
 .button__text,
 .button_long__text,
@@ -1266,7 +1277,8 @@ template {
   transform: rotate(45deg);
   box-sizing: border-box;
 }
-.checkbox__input:focus ~ .checkbox__text {
+.checkbox__input:focus,
+.checkbox__input:hover ~ .checkbox__text {
   outline: none;
   color: rgba(31,32,65,0.75);
 }
@@ -1818,6 +1830,9 @@ footer:after {
     grid-template: auto 1fr 1fr auto 1fr/1fr;
   }
 }
+.footer__top a:hover {
+  color: rgba(31,32,65,0.75);
+}
 @media (max-width: 1020px) {
   .footer__toxin {
     grid-row: 1/3;
@@ -1894,6 +1909,13 @@ footer:after {
   justify-content: space-between;
   width: 100%;
 }
+.footer__cc ul li {
+  opacity: 1;
+  transition: 0.3s;
+}
+.footer__cc ul li:hover {
+  opacity: 0.5;
+}
 .footer-2 {
   min-height: 130px;
   width: 380px;
@@ -1914,6 +1936,13 @@ footer:after {
   display: flex;
   justify-content: space-between;
   width: 100%;
+}
+.footer-2__cc ul li {
+  opacity: 1;
+  transition: 0.3s;
+}
+.footer-2__cc ul li:hover {
+  opacity: 0.5;
 }
 header {
   box-shadow: 0px 5px 20px rgba(31,32,65,0.05);
@@ -1949,6 +1978,9 @@ header {
   outline: none;
   border: 1px solid rgba(31,32,65,0.25);
   border-radius: 10%;
+}
+.header__nav a:hover {
+  color: rgba(31,32,65,0.75);
 }
 .header__expand-more {
   font-family: 'Material Icons';
@@ -2095,6 +2127,9 @@ header {
   box-sizing: border-box;
   border-radius: 10px;
 }
+.like-button__border:hover {
+  background: rgba(31,32,65,0.5);
+}
 .like-button__border:after {
   content: '';
   position: absolute;
@@ -2147,7 +2182,7 @@ header {
   display: block;
 }
 .like-button__input:focus ~ .like-button__border {
-  background: rgba(31,32,65,0.5);
+  background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
   outline: none;
 }
 .log-in {
@@ -2195,6 +2230,11 @@ header {
 }
 .logo-color {
   display: flex;
+  opacity: 1;
+  transition: 0.3s;
+}
+.logo-color:hover {
+  opacity: 0.5;
 }
 .logo-color__circle {
   position: relative;
@@ -2267,6 +2307,11 @@ header {
   width: 48px;
   height: 48px;
   position: relative;
+  opacity: 1;
+  transition: 0.3s;
+}
+.logo:hover {
+  opacity: 0.5;
 }
 .logo__circle {
   display: block;
@@ -2363,6 +2408,18 @@ header {
 .radio-button__circle:hover {
   border: 1px solid #bc9cff;
 }
+.radio-button__circle:before {
+  content: '';
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  left: 4px;
+  top: 4px;
+  background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+  border-radius: 10px;
+  opacity: 0;
+  transition: 0.3s;
+}
 .radio-button__input {
   position: absolute;
   width: 1px;
@@ -2380,14 +2437,7 @@ header {
   border: 1px solid #bc9cff;
 }
 .radio-button__input:checked ~ .radio-button__circle:before {
-  content: '';
-  position: absolute;
-  width: 12px;
-  height: 12px;
-  left: 4px;
-  top: 4px;
-  background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
-  border-radius: 10px;
+  opacity: 1;
 }
 .radio-button__input:focus ~ .radio-button__label {
   color: #1f2041;
@@ -2454,6 +2504,7 @@ header {
   -webkit-text-fill-color: rgba(0,0,0,0);
   cursor: pointer;
   float: left;
+  transition: 0.3s;
 }
 .registration {
   position: relative;
@@ -2657,7 +2708,7 @@ header {
 }
 .room-card figure:hover ~ .room-card__button-left,
 .room-card figure:hover ~ .room-card__button-right {
-  display: block;
+  opacity: 1;
 }
 .room-card__picture {
   height: 151px;
@@ -2687,13 +2738,14 @@ header {
 }
 .room-card__button-left,
 .room-card__button-right {
-  display: none;
+  opacity: 0;
   position: absolute;
   width: 42px;
   height: 151px;
   top: 0;
   background: linear-gradient(90deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0) 99.99%, rgba(255,255,255,0) 100%);
   cursor: pointer;
+  transition: 0.3s;
 }
 .room-card__button-left:after,
 .room-card__button-right:after {
@@ -2711,14 +2763,14 @@ header {
 }
 .room-card__button-left:hover,
 .room-card__button-right:hover {
-  display: block;
+  opacity: 1;
 }
 .room-card__button-right {
   right: 0;
   transform: matrix(-1, 0, 0, 1, 0, 0);
 }
 .room-card__button-right:hover {
-  display: block;
+  opacity: 1;
 }
 .room-card__description {
   position: relative;
@@ -2847,6 +2899,14 @@ header {
   cursor: pointer;
   top: 0;
   left: 0;
+  opacity: 1;
+  transition: 0.3s;
+}
+.text-field_email .text-field__button:hover,
+.text-field_email_email .text-field__button:hover,
+.text-field_dropdown_email .text-field__button:hover,
+.text-field_email_dropdown_email .text-field__button:hover {
+  opacity: 0.5;
 }
 .text-field_dropdown:after,
 .text-field_email_dropdown:after,
@@ -2936,6 +2996,9 @@ header {
 .toggle__label {
   min-width: 222px;
   margin-left: 10px;
+}
+.toggle__label:hover {
+  color: #1f2041;
 }
 .toggle__button {
   background: #fff;
