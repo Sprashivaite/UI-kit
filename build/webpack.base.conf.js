@@ -128,6 +128,8 @@ module.exports = {
         new FaviconsWebpackPlugin({
             logo: './src/favicon.svg',
             outputPath: '/assets/favicon',
+            publicPath: '',
+            prefix: 'assets/favicon',
         }),
         ...PAGES.map(page => new HtmlWebpackPlugin({
             template: `${PAGES_DIR}/${page}/${page}.pug`,
