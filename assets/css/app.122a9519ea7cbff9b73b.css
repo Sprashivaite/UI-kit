@@ -675,7 +675,6 @@ template {
   max-width: 1200px;
   width: 100%;
   margin: 0 auto;
-  padding: 0 20px;
 }
 @media (min-width: 1700px) {
   .landing-page__container {
@@ -964,7 +963,7 @@ template {
 @media (max-width: 730px) {
   .search-rooms-page__container {
     max-width: 500px;
-    width: 95%;
+    width: 90%;
   }
 }
 .search-rooms-body {
