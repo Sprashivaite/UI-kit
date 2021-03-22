@@ -9,12 +9,16 @@
   border none
   display flex
   align-items center
-  justify-content: center
+  justify-content center
   cursor pointer
   &:active, &:focus, &:hover
     background linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%)
     opacity 0.5  
     outline none 
+    transition: 0.3s
+  &:active
+    .button__text, .button__text_empty
+      color $dark50
   &__text
     font-weight bold
     font-size 0.75rem

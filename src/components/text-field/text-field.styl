@@ -28,9 +28,12 @@
         cursor pointer 
         top 0
         left 0
+        opacity 1
+        transition: 0.3s
+      &:hover
+        opacity 0.5
   &_dropdown
-    @extends .text-field
-    
+    @extends .text-field    
     &:after
       content 'expand_more'
       position absolute
