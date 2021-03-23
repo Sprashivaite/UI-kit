@@ -1,9 +1,8 @@
 //-  rate: количество звёзд (1...5)
 mixin rate-button({rate = 5})
     .rate-button.js-rate-button
-        .rate-button__star.js-rate-button__star
-            span=( rate == "5" || "4" || "3" || "2" || "1" ? "star": "star_border")
-            span=( rate == "5" || "4" || "3" || "2" ? "star": "star_border")
-            span=( rate == "5" || "4" || "3" ? "star": "star_border")
-            span=( rate == "5" || "4" ? "star": "star_border")
-            span=( rate == "5" ? "star": "star_border")
+        span=( rate == "5" || "4" || "3" || "2" || "1" ? "star": "star_border")
+        span=( rate == "5" || "4" || "3" || "2" ? "star": "star_border")
+        span=( rate == "5" || "4" || "3" ? "star": "star_border")
+        span=( rate == "5" || "4" ? "star": "star_border")
+        span=( rate == "5" ? "star": "star_border")
