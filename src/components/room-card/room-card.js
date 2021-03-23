@@ -1,4 +1,4 @@
-class ChangePicture {
+class RoomCard {
   findElements(card) {
     this.card = card;
     this.buttonPictures = Array.from(
@@ -70,4 +70,4 @@ class ChangePicture {
     this.rightArrow.addEventListener('click', handlerRightArrow);
   }
 }
-export default ChangePicture;
+export default RoomCard;

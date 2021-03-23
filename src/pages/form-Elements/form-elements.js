@@ -1,5 +1,5 @@
 import LikeValue from '../../components/like-button/like-button';
-import ChangeRate from '../../components/rate-button/rate-button';
+import RateButton from '../../components/rate-button/rate-button';
 import initSlider from '../../components/range-slider/range-slider';
 import initPagination from '../../components/pagination/pagination';
 import Dropdown from '../../components/dropdown/dropdown';
@@ -14,7 +14,7 @@ if (document.querySelector('.js-form-elements')) {
 
   const rateButtons = document.querySelectorAll('.js-rate-button');
   rateButtons.forEach((button) => {
-    new ChangeRate().findElements(button).addHandler();
+    new RateButton().findElements(button).addHandler();
   });
 
   const guestsDropdowns = document.querySelectorAll('.js-form-elements .dropdown-guests');

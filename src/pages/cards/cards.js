@@ -1,16 +1,16 @@
-import ChangeRate from '../../components/rate-button/rate-button';
-import ChangePicture from '../../components/room-card/room-card';
+import RateButton from '../../components/rate-button/rate-button';
+import RoomCard from '../../components/room-card/room-card';
 import initDataDouble from '../../components/data-dropdown/data-dropdown';
 import Dropdown from '../../components/dropdown/dropdown';
 
 if (document.querySelector('.js-cards')) {
   const rateButtons = document.querySelectorAll('.js-rate-button');
   rateButtons.forEach((button) => {
-    new ChangeRate().findElements(button).addHandler();
+    new RateButton().findElements(button).addHandler();
   });
   const cards = document.querySelectorAll('.js-room-card');
   cards.forEach((element) => {
-    new ChangePicture().findElements(element).addHandler();
+    new RoomCard().findElements(element).addHandler();
   });
   const guestsDropdowns = document.querySelectorAll('.js-cards .dropdown-guests');
   guestsDropdowns.forEach((element) => {
