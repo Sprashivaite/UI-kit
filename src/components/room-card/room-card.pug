@@ -9,7 +9,7 @@ mixin room-card({images = [], num = 0, lux = false, price = 0, reviews = 0, rate
     .room-card.js-room-card
         figure.room-card__pictures.js-room-card__pictures
             each img, index in images
-                .room-card__picture(class=("js-room-card__picture_" + (index + 1)) style= `background-image: url(${img})` hidden=(index !== 0 ? true: false))            
+                .room-card__picture(class=("js-room-card__picture_" + (index + 1)) style=`background-image: url(${img})`)
         .room-card__buttons.js-room-card__buttons
             .room-card__button-circle(data-target="true")
             .room-card__button-circle(data-target="false")

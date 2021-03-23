@@ -1,10 +1,12 @@
+/* eslint-disable no-param-reassign */
+/* eslint-disable no-return-assign */
 class RoomCard {
   findElements(card) {
     this.card = card;
     this.buttonPictures = Array.from(
       card.querySelector('.js-room-card__buttons').childNodes,
     );
-    this.contForPicture = Array.from(
+    this.pictures = Array.from(
       card.querySelector('.js-room-card__pictures').childNodes,
     );
     this.leftArrow = card.querySelector('.js-room-card__button-left');
@@ -20,9 +22,8 @@ class RoomCard {
         previousTarget = element.previousElementSibling;
       }
     });
-    if (previousTarget) {
-      previousTarget.dispatchEvent(click);
-    }
+    if (previousTarget) previousTarget.dispatchEvent(click);
+    else this.buttonPictures[3].dispatchEvent(click);
   }
 
   turnRight() {
@@ -33,9 +34,8 @@ class RoomCard {
         nextTarget = element.nextElementSibling;
       }
     });
-    if (nextTarget) {
-      nextTarget.dispatchEvent(click);
-    }
+    if (nextTarget) nextTarget.dispatchEvent(click);
+    else this.buttonPictures[0].dispatchEvent(click);
   }
 
   switchPicture(button) {
@@ -46,16 +46,13 @@ class RoomCard {
     });
     const circle = button;
     circle.dataset.target = true;
-    this.contForPicture.forEach((element) => {
-      const picture = element;
-      picture.hidden = true;
-    });
+    this.pictures.map((element) => element.classList.remove('room-card__picture_show'));
     if (this.card.querySelector(`.js-room-card__picture_${circle.num}`)) {
       this.card.querySelector(
         `.js-room-card__picture_${circle.num}`,
-      ).hidden = false;
+      ).classList.add('room-card__picture_show');
     } else {
-      this.card.querySelector('.js-room-card__picture_1').hidden = false;
+      this.card.querySelector('.js-room-card__picture_1').classList.add('room-card__picture_show');
     }
   }
 
