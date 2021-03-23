@@ -672,7 +672,7 @@ template {
   flex-direction: column;
 }
 .landing-page__container {
-  max-width: 1200px;
+  max-width: 1160px;
   width: 100%;
   margin: 0 auto;
 }
@@ -803,7 +803,7 @@ template {
 }
 @media (max-width: 1240px) {
   .room-details-page__container {
-    width: 90%;
+    width: 93%;
   }
 }
 .room-details-page__body {
@@ -910,6 +910,11 @@ template {
 .room-details-page__rules h2 {
   margin-bottom: 17px;
 }
+@media (max-width: 1250px) {
+  .room-details-page__rules {
+    margin-right: 4%;
+  }
+}
 .room-details-page__cancel {
   width: 341px;
   margin-bottom: 10%;
@@ -950,14 +955,9 @@ template {
     max-width: 1500px;
   }
 }
-@media (min-width: 1000px) and (max-width: 1200px) {
+@media (max-width: 1200px) {
   .search-rooms-page__container {
-    max-width: 1000px;
-  }
-}
-@media (max-width: 999px) {
-  .search-rooms-page__container {
-    max-width: 920px;
+    width: 90%;
   }
 }
 @media (max-width: 730px) {
@@ -984,8 +984,6 @@ template {
 @media (max-width: 730px) {
   .search-rooms-body {
     flex-direction: column;
-    align-items: center;
-    margin-left: 10px;
   }
 }
 .search-rooms-page__options {
@@ -995,9 +993,7 @@ template {
 }
 @media (max-width: 730px) {
   .search-rooms-page__options {
-    max-width: 460px;
-    width: 90%;
-    margin: 0 20px;
+    width: 100%;
   }
 }
 .search-rooms-page__options .options__dropdown-guests {
@@ -1011,7 +1007,6 @@ template {
 }
 .search-rooms-page__options .options__checkbox {
   margin-top: 20px;
-  width: 242px;
 }
 .search-rooms-page__options .options__checkbox legend {
   margin-bottom: 13px;
@@ -1035,6 +1030,7 @@ template {
   display: inline-flex;
   flex-direction: column;
   align-items: center;
+  margin-left: 20px;
 }
 @media (max-width: 730px) {
   .search-rooms-page__rigth-container {
@@ -2481,7 +2477,7 @@ header {
   outline: none;
 }
 .range-slider {
-  width: 266px;
+  min-width: 266px;
   position: relative;
   height: 60px;
 }
