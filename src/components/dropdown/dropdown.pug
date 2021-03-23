@@ -2,7 +2,7 @@ include ..\text-field\text-field
 mixin dropdown({items = [], title = "", buttons = false} = {})
     .dropdown.js-dropdown
         +text-field("dropdown")
-            input.dropdown__title.js-dropdown__title(value= title disabled)
+            .dropdown__title.js-dropdown__title= title
         .dropdown-content.js-dropdown-content
             each item in items
                 .dropdown-content__line.js-dropdown-content__line

@@ -1,3 +1,4 @@
+/* eslint-disable class-methods-use-this */
 class Dropdown {
   constructor(container, names = []) {
     this.container = container;
@@ -13,22 +14,22 @@ class Dropdown {
     this.values = this.container.querySelectorAll('.js-value');
     this.clear = this.container.querySelector('.js-clear');
     this.applyButton = this.container.querySelector('.js-apply');
-    this.defaultTitle = this.title.value;
+    this.defaultTitle = this.title.innerHTML;
     return this;
   }
 
-  static makeMinus(target) {
+  makeMinus(target) {
     const inputValue = target;
     inputValue.value = Math.max(Number(target.value) - 1, 0);
   }
 
-  static makePlus(target) {
+  makePlus(target) {
     const inputValue = target;
     inputValue.value = Number(target.value) + 1;
   }
 
   clearValues() {
-    this.title.value = this.defaultTitle;
+    this.title.innerHTML = this.defaultTitle;
     Array.from(this.values).map((element) => element.value = 0);
     if (this.clear) this.hideClear();
   }
@@ -48,7 +49,7 @@ class Dropdown {
   declension(number, names) {
     const [plural, nominative, genitive] = names;
     const lastNum = Number(Array.from(`${number}`).slice(-1));
-    const lastTwoNums = Number(Array.from(`${number}`).slice(-2).join(''));
+    const lastTwoNumbs = Number(Array.from(`${number}`).slice(-2).join(''));
     let name;
     switch (lastNum) {
       case 1:
@@ -62,7 +63,8 @@ class Dropdown {
       default:
         name = plural;
     }
-    switch (lastTwoNums) {
+    // eslint-disable-next-line default-case
+    switch (lastTwoNumbs) {
       case 11:
       case 12:
       case 13:
@@ -79,7 +81,7 @@ class Dropdown {
     if (sum === 0) this.clearValues();
     if (sum > 0) this.showClear();
     const textTitle = `${sum} ${this.declension(sum, this.names[0])}`;
-    this.title.value = textTitle;
+    this.title.innerHTML = textTitle;
   }
 
   changeMultipleTitle() {
@@ -93,21 +95,21 @@ class Dropdown {
       }
     });
     if (!result) this.clearValues();
-    else this.title.value = result;
+    else this.title.innerHTML = result;
   }
 
   addHandler() {
-    this.lines.forEach((element, index) => {
+    this.lines.forEach((element) => {
       const plus = element.querySelector('.js-plus');
       const minus = element.querySelector('.js-minus');
       const value = element.querySelector('.js-value');
       const handlerPlus = () => {
-        Dropdown.makePlus(value);
+        this.makePlus(value);
         if (this.names.length === 1) this.changeSingleTitle();
         else this.changeMultipleTitle();
       };
       const handlerMinus = () => {
-        Dropdown.makeMinus(value);
+        this.makeMinus(value);
         if (this.names.length === 1) this.changeSingleTitle();
         else this.changeMultipleTitle();
       };
