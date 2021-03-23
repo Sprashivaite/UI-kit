@@ -4,7 +4,7 @@
   height 20px 
   cursor pointer  
   display inline-flex
-  align-items: center 
+  align-items center 
   justify-content space-between
   font-size 10px 
   &__border
@@ -19,7 +19,7 @@
     &:after
       content ''
       position absolute
-      background: white
+      background white
       width 38px
       height 18px
       margin 1px 
@@ -31,7 +31,7 @@
     z-index 2
   &__value 
     color rgba(31, 32, 65, 0.25)
-    padding-right: 10px; 
+    padding-right 10px 
     z-index 2
   &__symbol_checked
     @extends .like-button__symbol
@@ -41,7 +41,7 @@
     visually-hidden()
   &__input:checked 
     ~ .like-button__border
-      background linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+      background linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%)
       &:focus
         background $dark100
         outline none  
@@ -53,5 +53,5 @@
       display block
   &__input:focus
     ~ .like-button__border
-      background linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+      background linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%)
       outline none  

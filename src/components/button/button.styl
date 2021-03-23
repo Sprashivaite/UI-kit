@@ -15,7 +15,7 @@
     background linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%)
     opacity 0.5  
     outline none 
-    transition: 0.3s
+    transition 0.3s
   &:active
     .button__text, .button__text_empty
       color $dark50
@@ -34,16 +34,16 @@
     @extend .button
     &:after
       content 'arrow_forward'
-      font-family: 'Material Icons'
-      font-size: 24px
-      right: 10px
+      font-family 'Material Icons'
+      font-size 24px
+      right 10px
       z-index 2
       color #fff
-      position: absolute
+      position absolute
   &_empty
     @extend .button
     &::after
-      content: ''
+      content ''
       position absolute
       right 2px
       bottom 2px
