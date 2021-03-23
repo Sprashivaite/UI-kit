@@ -30,7 +30,8 @@ mixin reservation({num = 888, lux = true, cost = "9 990₽ ", days = "4", discou
                     p= resultService
                     p= resultServices
             .reservation__final
-                h2.final__text Итого
-                h2.final__sum= finalSum
+                h2 Итого
+                .final__line
+                h2= finalSum
             .reservation__button-solid
                 +button({type:"long", text:"забронировать"})

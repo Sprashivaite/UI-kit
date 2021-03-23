@@ -69,23 +69,17 @@
         height 20px
         cursor pointer
   &__final
-    display inline-block
-    position relative
+    display flex
+    align-items baseline
+    flex-wrap nowrap
     width 100%
     margin-top 12px 
-    .final__text
-      display inline-block
-      &:after
-        content ''
-        position absolute
-        width 57%
-        height 1px
-        bottom 5px
-        display inline
-        border-bottom 1px dashed rgba(31, 32, 65, 0.25)      
-    .final__sum 
-      display inline-block
-      float right
+    .final__line
+      flex-grow 1
+      height 1px
+      bottom 5px 
+      border-bottom 1px dotted rgba(31, 32, 65, 0.25)
+      margin 0 4px
   &__button-solid
     margin-top 20px
     width 100%
