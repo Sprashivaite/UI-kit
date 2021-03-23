@@ -4,6 +4,7 @@ import initSlider from '../../components/range-slider/range-slider';
 import initPagination from '../../components/pagination/pagination';
 import Dropdown from '../../components/dropdown/dropdown';
 import initDataDouble from '../../components/data-dropdown/data-dropdown';
+import initDateFilter from '../../components/date-filter/date-filter';
 import initMaskInput from '../../components/masked-input/masked-input';
 
 if (document.querySelector('.js-form-elements')) {
@@ -30,5 +31,6 @@ if (document.querySelector('.js-form-elements')) {
   initSlider($('.js-form-elements__slider'));
   initPagination($('.js-form-elements__pagination'));
   initDataDouble($('.js-form-elements__date-dropdown'));
+  initDateFilter($('.js-form-elements__filter-dropdown'));
   initMaskInput($('.js-form-elements__masked-input'));
 }

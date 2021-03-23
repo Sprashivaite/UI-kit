@@ -7,6 +7,7 @@ include ..\..\components\expandable-checkbox-list\expandable-checkbox-list
 include ..\..\components\room-card\room-card
 include ..\..\components\pagination\pagination
 include ..\..\components\data-dropdown\data-dropdown
+include ..\..\components\date-filter\date-filter
 <!DOCTYPE html>
 html(lang="ru")
     head
@@ -22,9 +23,9 @@ html(lang="ru")
             .search-rooms-page__container
                 main.search-rooms-body
                     section.search-rooms-page__options
-                        .options__data-filter
+                        .options__date-filter.js-options__date-filter
                             legend даты пребывания в отеле
-                            +data-filter
+                            +date-filter
                         .options__dropdown-guests.js-options__dropdown-guests
                             legend гости
                             .dropdown-guests
