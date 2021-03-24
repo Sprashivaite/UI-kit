@@ -12,6 +12,7 @@ const initDataDouble = function initDataDouble(container) {
     range: true,
     multipleDatesSeparator: ' - ',
     minDate: new Date(),
+    autoClose: true,
   });
 };
 export default initDataDouble;

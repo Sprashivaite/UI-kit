@@ -7,6 +7,7 @@ const initDateFilter = function initDateFilter(container) {
     range: true,
     multipleDatesSeparator: ' - ',
     minDate: new Date(),
+    autoClose: true,
   });
 };
 export default initDateFilter;
