@@ -1,4 +1,4 @@
-import LikeValue from '../../components/like-button/like-button';
+import Like from '../../components/like-button/like-button';
 import RateButton from '../../components/rate-button/rate-button';
 import initSlider from '../../components/range-slider/range-slider';
 import initPagination from '../../components/pagination/pagination';
@@ -10,7 +10,7 @@ import initMaskInput from '../../components/masked-input/masked-input';
 if (document.querySelector('.js-form-elements')) {
   const likeButtons = document.querySelectorAll('.js-like-button');
   likeButtons.forEach((button) => {
-    new LikeValue().findElements(button).addHandler();
+    new Like().findElements(button).addHandler();
   });
 
   const rateButtons = document.querySelectorAll('.js-rate-button');
