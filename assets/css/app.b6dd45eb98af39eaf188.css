@@ -178,7 +178,7 @@ template {
 .index .index__block-pages {
   margin-top: 100px;
   width: 380px;
-  height: 358px;
+  min-height: 358px;
   background: #fff;
   border: 1px solid rgba(0,0,0,0.12);
   box-sizing: border-box;
@@ -228,7 +228,6 @@ template {
 }
 .cards {
   position: relative;
-  width: 1440px;
   min-height: 1350px;
   background: #f4f4f6;
 }
@@ -280,7 +279,6 @@ template {
 }
 .colors-type {
   position: relative;
-  width: 1440px;
   min-height: 900px;
   background: #fff;
   margin: 0 auto;
@@ -539,7 +537,7 @@ template {
   margin-left: 21px;
 }
 .form-elements__bottom-container {
-  margin-top: 200px;
+  margin-top: 82px;
   margin-left: 140px;
   display: flex;
 }
@@ -560,7 +558,6 @@ template {
 }
 .headers-footers {
   position: relative;
-  width: 1440px;
   min-height: 1350px;
   background: #f4f4f6;
   display: flex;
@@ -616,7 +613,7 @@ template {
 .index .index__block-pages {
   margin-top: 100px;
   width: 380px;
-  height: 358px;
+  min-height: 358px;
   background: #fff;
   border: 1px solid rgba(0,0,0,0.12);
   box-sizing: border-box;
@@ -937,6 +934,11 @@ template {
     margin: 0 auto 80px;
   }
 }
+@media (max-width: 440px) {
+  .room-details-page__reservation {
+    margin-bottom: 180px;
+  }
+}
 .search-rooms-page {
   background-color: #fff;
   min-width: 320px;
@@ -1034,7 +1036,7 @@ template {
 }
 @media (max-width: 730px) {
   .search-rooms-page__rigth-container {
-    margin-top: 180px;
+    margin-top: 80px;
   }
 }
 .search-rooms-page__title {
@@ -1165,8 +1167,7 @@ template {
 .button_long:hover,
 .button_empty:hover,
 .button_long_empty:hover {
-  background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
-  opacity: 0.5;
+  background: linear-gradient(180deg, rgba(188,156,255,0.5) 0%, rgba(139,164,249,0.5) 100%);
   outline: none;
   transition: 0.3s;
 }
@@ -1388,6 +1389,7 @@ template {
   height: 44px;
   margin-right: 13px;
   border-radius: 50%;
+  filter: drop-shadow(0px 10px 20px rgba(31,32,65,0.1));
 }
 .comment__like {
   float: left;
@@ -1402,11 +1404,11 @@ template {
 .datepicker-inline .datepicker {
   width: 100%;
 }
-.datepicker.-from-bottom-.-bottom-left-.active {
+.datepicker.-from-bottom- {
   width: 320px;
 }
 @media (max-width: 800px) {
-  .datepicker.-from-bottom-.-bottom-left-.active {
+  .datepicker.-from-bottom- {
     width: 290px;
   }
 }
@@ -1477,8 +1479,13 @@ template {
   color: #fff;
 }
 .datepicker .datepicker--cells-days .-range-from-,
-.datepicker .datepicker--cells-days .-range-to- {
+.datepicker .datepicker--cells-days .-range-to-,
+.datepicker .datepicker--cells-days .-selected-.datepicker--cell-year.-other-decade-,
+.datepicker .datepicker--cells-days .-selected-.datepicker--cell-day.-other-month-,
+.datepicker .datepicker--cells-days .datepicker--cell.-selected-.-current- {
   background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+  color: #fff;
+  border: none;
 }
 .datepicker .datepicker--cells-days .-range-from-:after,
 .datepicker .datepicker--cells-days .-range-to-:after {
@@ -1489,15 +1496,23 @@ template {
   height: 100%;
   position: absolute;
   margin-left: 50%;
+  z-index: -1;
 }
 .datepicker .datepicker--cells-days .-range-to-:after {
   margin-left: 0;
   margin-right: 50%;
+  z-index: -1;
 }
 .datepicker .datepicker--cells-days .-in-range- {
-  background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+  background: linear-gradient(180deg, rgba(188,156,255,0.25) 0%, rgba(139,164,249,0.25) 100%);
   border-radius: 0;
-  opacity: 0.25;
+}
+.datepicker .datepicker--cells-days .-in-range-.-current- {
+  background: linear-gradient(180deg, rgba(188,156,255,0.5) 0%, rgba(139,164,249,0.5) 100%);
+  color: rgba(31,32,65,0.5);
+}
+.datepicker .datepicker--cells-days .-focus-:hover {
+  background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
 }
 .datepicker .datepicker--buttons {
   border-top: 0;
@@ -1775,8 +1790,7 @@ template {
   width: 220px;
   background-color: #fff;
   z-index: 5;
-  margin-top: 9px;
-  position: absolute;
+  margin-top: 15px;
 }
 .expandable-checkbox-list__list li {
   margin-top: 4px;
@@ -1993,6 +2007,11 @@ header {
 .header__nav {
   display: inline-flex;
   align-items: center;
+}
+@media (max-width: 999px) {
+  .header__nav {
+    margin-right: 30px;
+  }
 }
 .header__nav ul {
   display: flex;
@@ -2273,65 +2292,7 @@ header {
   position: relative;
   width: 40px;
   height: 40px;
-  background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
   border-radius: 50%;
-}
-.logo-color__circle:after {
-  content: '';
-  position: absolute;
-  top: 2px;
-  left: 2px;
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  background: #fff;
-  z-index: 1;
-}
-.logo-color__part-left {
-  position: absolute;
-  width: 21px;
-  height: 26px;
-  border-radius: 43%;
-  left: 0px;
-  top: 15px;
-  clip: rect(0px, auto, 11.5px, 10px);
-  background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
-  z-index: 3;
-}
-.logo-color__part-left:after {
-  content: '';
-  position: absolute;
-  top: 2px;
-  left: -2px;
-  width: 21px;
-  height: 26px;
-  border-radius: 40%;
-  background: #fff;
-  z-index: 3;
-  clip: rect(0px, auto, 11.5px, 10px);
-}
-.logo-color__part-right {
-  position: absolute;
-  width: 21px;
-  height: 28px;
-  left: 18px;
-  top: 15px;
-  border-radius: 50%;
-  clip: rect(0px, 12px, 5.5px, 3px);
-  background: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
-  z-index: 3;
-}
-.logo-color__part-right:after {
-  content: '';
-  position: absolute;
-  width: 21px;
-  height: 28px;
-  left: 1px;
-  top: 2px;
-  border-radius: 50%;
-  clip: rect(0px, 12.5px, 5.5px, 3px);
-  background: #fff;
-  z-index: 3;
 }
 .logo-color__toxin {
   margin-left: 12px;
@@ -2631,6 +2592,7 @@ header {
 .reservation__description .description__num {
   color: #1f2041;
   display: inline-block;
+  padding-right: 8px;
 }
 .reservation__description .description__num:before {
   content: '№';
@@ -2755,11 +2717,13 @@ header {
   position: absolute;
   display: flex;
   justify-content: space-between;
-  top: 129px;
-  right: 15px;
-  width: 41.25px;
+  top: 121px;
+  right: 6px;
+  width: 60px;
   height: 10px;
   cursor: pointer;
+  z-index: 6;
+  padding: 10px;
 }
 .room-card__buttons [data-target="true"] {
   background-color: #fff;
@@ -2826,6 +2790,7 @@ header {
 .room-card__description .description__num {
   color: #1f2041;
   display: inline-block;
+  padding-right: 8px;
 }
 .room-card__description .description__num:before {
   content: '№';
@@ -2957,6 +2922,7 @@ header {
   outline-color: rgba(31,32,65,0.25);
   background-color: transparent;
   cursor: pointer;
+  pointer-events: none;
 }
 .text-field_dropdown .text-field__input,
 .text-field_email_dropdown .text-field__input,
@@ -3097,11 +3063,6 @@ html {
   background-color: #fff;
   line-height: 1.15;
   height: 100%;
-}
-@media (min-width: 1500px) {
-  html {
-    font-size: 18px;
-  }
 }
 body {
   background-color: #fff;
