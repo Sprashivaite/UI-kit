@@ -49,11 +49,16 @@
         color rgba(31, 32, 65, 0.5)
         width 30px
         height 30px
-        border 1px solid #e2e2e2
+        border 1px solid $dark50
         border-radius 22px
         cursor pointer
         text-align center
         line-height 29px
+      .minus
+        border 1px solid $dark25
+      .minus_border
+        @extend .dropdown-content__box-button .minus
+        border 1px solid $dark50
       .value
         border none
         text-align center

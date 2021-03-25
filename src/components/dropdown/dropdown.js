@@ -1,3 +1,5 @@
+/* eslint-disable no-param-reassign */
+/* eslint-disable no-return-assign */
 /* eslint-disable class-methods-use-this */
 class Dropdown {
   constructor(container, names = []) {
@@ -12,6 +14,7 @@ class Dropdown {
     this.field = this.container.querySelector('.js-text-field');
     this.title = this.container.querySelector('.js-dropdown__title');
     this.values = this.container.querySelectorAll('.js-value');
+    this.minuses = this.container.querySelectorAll('.js-minus');
     this.clear = this.container.querySelector('.js-clear');
     this.applyButton = this.container.querySelector('.js-apply');
     this.defaultTitle = this.title.innerHTML;
@@ -31,6 +34,7 @@ class Dropdown {
   clearValues() {
     this.title.innerHTML = this.defaultTitle;
     Array.from(this.values).map((element) => element.value = 0);
+    Array.from(this.minuses).map((element) => element.className = 'minus');
     if (this.clear) this.hideClear();
   }
 
@@ -107,11 +111,13 @@ class Dropdown {
         this.makePlus(value);
         if (this.names.length === 1) this.changeSingleTitle();
         else this.changeMultipleTitle();
+        minus.className = 'minus_border';
       };
       const handlerMinus = () => {
         this.makeMinus(value);
         if (this.names.length === 1) this.changeSingleTitle();
         else this.changeMultipleTitle();
+        if (Number(value.value) === 0) minus.className = 'minus';
       };
       plus.addEventListener('click', handlerPlus);
       minus.addEventListener('click', handlerMinus);
