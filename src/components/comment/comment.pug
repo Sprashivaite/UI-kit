@@ -11,6 +11,7 @@ mixin comment({img = "", name = "имя", data = "дата", like_value = 0, lik
             img(src=img alt="аватарка")
             b=name 
             p=data
-        .comment__like
-            +like-button({value: like_value, checked: like_checked})    
-        .comment__text= text 
+        .comment__text-container
+            .comment__like
+                +like-button({value: like_value, checked: like_checked})    
+            .comment__text= text 
