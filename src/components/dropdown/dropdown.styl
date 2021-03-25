@@ -8,68 +8,68 @@
   width 100%
   position relative 
   &__title 
-    width 82% 
-    height 100% 
+    height 80% 
     padding 10px 0 0 14px    
     border none
     color rgba(31,32,65,.75) 
     background-color transparent
     cursor pointer 
-.dropdown-content 
-  padding 0px 5px 3px 13px
-  box-shadow 0px 10px 20px rgba(31, 32, 65, 0.05)
-  border 1px solid rgba(31,32,65,.5)
-  display none
-  position absolute
-  width 100%
-  top 42px
-  z-index 3 
-  border-radius 2px
-  background-color #fff
-  &__show
-    display block
-    animation-name opacity
-    animation-duration 0.4s
-  &__line 
-    display flex
-    justify-content space-between
-    align-items center
-    margin-bottom 5px
-    margin-top 3px
-    p, input 
-      font-weight bold
-      font-size 12px
-      text-transform uppercase
-      color #1F2041  
-      background-color #fff
-  &__box-button 
-    display flex 
-    .minus, .plus 
-      font-size 18px
-      color rgba(31, 32, 65, 0.5)
-      width 30px
-      height 30px
-      border 1px solid #e2e2e2
-      border-radius 22px
-      cursor pointer
-      text-align center
-      line-height 29px
-    .value
-      border none
-      text-align center
-      width 29px
-.dropdown__buttons-container 
-  display flex
-  justify-content space-between
-  margin-top 18px
-  padding-bottom 5px
-  .clear, .submit 
-    text-transform uppercase
-    color #BC9CFF
-    font-size 12px
-    font-weight bold
-    cursor pointer
-  .clear
-    opacity 0
-  .clear__show
-    opacity 1
+    overflow hidden
+  .dropdown-content 
+    padding 0px 5px 3px 13px
+    box-shadow 0px 10px 20px rgba(31, 32, 65, 0.05)
+    border 1px solid rgba(31,32,65,.5)
+    display none
+    position absolute
+    width 100%
+    top 42px
+    z-index 3 
+    border-radius 2px
+    background-color #fff
+    &__show
+      display block
+      animation-name opacity
+      animation-duration 0.4s
+    &__line 
+      display flex
+      justify-content space-between
+      align-items center
+      margin-bottom 5px
+      margin-top 3px
+      p, input 
+        font-weight bold
+        font-size 12px
+        text-transform uppercase
+        color #1F2041  
+        background-color #fff
+    &__box-button 
+      display flex 
+      .minus, .plus 
+        font-size 18px
+        color rgba(31, 32, 65, 0.5)
+        width 30px
+        height 30px
+        border 1px solid #e2e2e2
+        border-radius 22px
+        cursor pointer
+        text-align center
+        line-height 29px
+      .value
+        border none
+        text-align center
+        width 29px
+    .dropdown__buttons-container 
+      display flex
+      justify-content space-between
+      margin-top 18px
+      padding-bottom 5px
+      .clear, .submit 
+        text-transform uppercase
+        color #BC9CFF
+        font-size 12px
+        font-weight bold
+        cursor pointer
+      .clear
+        opacity 0
+      .clear__show
+        opacity 1
