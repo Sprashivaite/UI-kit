@@ -14,9 +14,10 @@ html(lang="ru")
                 .landing-page__container
                     +header({login: false})
             main.landing-page__img
-                section.landing-page__log-in.js-landing-page__log-in
-                    +search-rooms
-                section.landing-page__text Лучшие номера для вашей работы, отдыха и просто вдохновения
+                .landing-page__container
+                    section.landing-page__log-in.js-landing-page__log-in
+                        +search-rooms
+                    section.landing-page__text Лучшие номера для вашей работы, отдыха и просто вдохновения
             footer 
                 .landing-page__container
                     +footer
