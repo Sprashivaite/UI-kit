@@ -27,8 +27,9 @@
       @extend .button__text
       color $purple
       z-index 3
-      &:active
+      &:active, &:focus
         color $dark50
+        outline none
   &_long
     @extend .button
     &:after
