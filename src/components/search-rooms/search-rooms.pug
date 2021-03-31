@@ -1,5 +1,5 @@
 include ..\button\button
-include ..\data-dropdown\data-dropdown 
+include ..\date-range\date-range 
 include ..\dropdown\dropdown
 mixin search-rooms
     .search-rooms
@@ -7,10 +7,10 @@ mixin search-rooms
             h1.search-rooms__title Найдём номера под ваши пожелания
             form(action="")
                 .search-rooms__com-data
-                    +data-double({dropdowns: ["прибытие", "выезд"]})
+                    +date-range({dropdowns: ["прибытие", "выезд"]})
                 .search-rooms__guests
                     legend Гости
                     .dropdown-guests
                         +dropdown({items: ["взрослые", "дети", "младенцы"], title: "Сколько гостей", buttons: true}) 
                 .search-rooms__button
-                    +button({type:"long", text:"подобрать номер"})
+                    +button({type:"arrow", text:"подобрать номер"})

@@ -1,6 +1,6 @@
 import Like from '../../components/like-button/like-button';
 import Dropdown from '../../components/dropdown/dropdown';
-import initDataDouble from '../../components/data-dropdown/data-dropdown';
+import initDataDouble from '../../components/date-range/date-range';
 
 if (document.querySelector('.js-room-details-page')) {
   const likeButtons = document.querySelectorAll('.js-like-button');

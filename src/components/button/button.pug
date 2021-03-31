@@ -1,11 +1,8 @@
 //- text: название кнопки
 //- type: тип кнопки
-//-     "button" - по умолчанию. 
 //-     "empty" - кнопка с белым фоном.
-//-     "long" - длинная кнопка.
-mixin button({type = "button", text = ""})
-    button(class= (
-        type === "empty" ? "button_empty" : 
-        type === "long" ? "button_long":
-        "button"))
-        div(class = ( type === "empty" ? "button__text_empty": "button__text"))= text 
+//-     "arrow" - кнопка со стрелкой.
+mixin button({type = "", text = ""} = {})
+    button.button(class = (type === "empty" ? "button_color_white"
+                  : type === "arrow" ? "button_arrow": ""))
+        div.button__text(class = (type === "empty" ? "button__text_color_purple": ""))= text 

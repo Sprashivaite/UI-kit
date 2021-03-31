@@ -8,10 +8,10 @@ include ../like-button/like-button
 mixin comment({img = "", name = "имя", data = "дата", like_value = 0, like_checked = true, text = ""})
     .comment
         .comment__user
-            img(src=img alt="аватарка")
-            b=name 
-            p=data
+            img(src=img alt="avatar")
+            b.comment__user-name=name 
+            p.comment__data=data
         .comment__text-container
             .comment__like
                 +like-button({value: like_value, checked: like_checked})    
-            .comment__text= text 
+            blockquote.comment__text= text 

@@ -1,14 +1,14 @@
 mixin diagram({num = 0, vote = "голосов", well = "Великолепно", good = "Хорошо", satisfactorily = "Удовлетворительно", disappointed = "Разочарован"})
     .diagram
         .diagram__circle
-            .circle__back
-            .circle__part-left
-            .circle__part-right-top
-            .circle__part-right-bot
-            h3.circle__text= num
-                span=vote
+            .diagram__circle-back
+            .diagram__circle-part-left
+            .diagram__circle-part-right-top
+            .diagram__circle-part-right-bot
+            h3.diagram__circle-num= num
+                span.diagram__circle-vote=vote
         .diagram__rating
-            p.rating_well= well
-            p.rating_good= good
-            p.rating_satisfactorily= satisfactorily 
-            p.rating_disappointed= disappointed
+            p.diagram__rating_well= well
+            p.diagram__rating_good= good
+            p.diagram__rating_satisfactorily= satisfactorily 
+            p.diagram__rating_disappointed= disappointed

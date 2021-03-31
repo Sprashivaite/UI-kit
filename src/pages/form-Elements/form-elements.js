@@ -3,7 +3,7 @@ import RateButton from '../../components/rate-button/rate-button';
 import initSlider from '../../components/range-slider/range-slider';
 import initPagination from '../../components/pagination/pagination';
 import Dropdown from '../../components/dropdown/dropdown';
-import initDataDouble from '../../components/data-dropdown/data-dropdown';
+import initDataDouble from '../../components/date-range/date-range';
 import initDateFilter from '../../components/date-filter/date-filter';
 import initMaskInput from '../../components/masked-input/masked-input';
 

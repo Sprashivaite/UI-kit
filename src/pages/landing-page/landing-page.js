@@ -1,4 +1,4 @@
-import initDataDouble from '../../components/data-dropdown/data-dropdown';
+import initDataDouble from '../../components/date-range/date-range';
 import Dropdown from '../../components/dropdown/dropdown';
 
 if (document.querySelector('.js-landing-page')) {

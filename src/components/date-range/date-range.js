@@ -1,6 +1,6 @@
 const initDataDouble = function initDataDouble(container) {
-  const firstData = container.find('.js-data-double-1');
-  const secondData = container.find('.js-data-double-2');
+  const firstData = container.find('.js-date-range-1');
+  const secondData = container.find('.js-date-range-2');
   const myDatepicker = firstData.datepicker().data('datepicker');
   const showHandler = () => myDatepicker.show();
   secondData.on('click', showHandler);

@@ -1,5 +1,5 @@
 include ../button/button
-include ../data-dropdown/data-dropdown
+include ../date-range/date-range
 include ../dropdown/dropdown
 mixin reservation({num = 888, lux = true, cost = "9 990₽ ", days = "4", discount = "2 179₽ ", costResult = "39 960₽", resultService = "0₽", resultServices = "300₽", finalSum = "38 081₽"} = {})
     form.reservation(action="" method = "post")
@@ -12,7 +12,7 @@ mixin reservation({num = 888, lux = true, cost = "9 990₽ ", days = "4", discou
                     b= cost
                     span в сутки
             .reservation__com-data
-                +data-double({dropdowns: ["прибытие", "выезд"]})
+                +date-range({dropdowns: ["прибытие", "выезд"]})
             .reservation__guests
                 legend Гости
                 .dropdown-guests
@@ -34,4 +34,4 @@ mixin reservation({num = 888, lux = true, cost = "9 990₽ ", days = "4", discou
                 .final__line
                 h2= finalSum
             .reservation__button-solid
-                +button({type:"long", text:"забронировать"})
+                +button({type:"arrow", text:"забронировать"})

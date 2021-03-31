@@ -1,34 +1,29 @@
 .color-cube
   line-height 0
-  &__cube_dark-100
+  &__coub
     display inline-block 
     width 70px
     height 70px
     border-radius 6px
-    background-color $dark100
-  &__cube_dark-75
-    @extends .color-cube__cube_dark-100
-    background-color $dark75
-  &__cube_dark-50
-    @extends .color-cube__cube_dark-100
-    background-color $dark50
-  &__cube_dark-25
-    @extends .color-cube__cube_dark-100
-    background-color $dark25
-  &__cube_dark-5
-    @extends .color-cube__cube_dark-100
-    background-color $dark5
-  &__cube_purple
-    @extends .color-cube__cube_dark-100
-    background-color $purple
-  &__cube_green
-    @extends .color-cube__cube_dark-100
-    background-color $green
+    &_color_dark-100
+      background-color $dark100
+    &_color_dark-75
+      background-color $dark75
+    &_color_dark-50
+      background-color $dark50
+    &_color_dark-25
+      background-color $dark25
+    &_color_dark-5
+      background-color $dark5
+    &_color_purple
+      background-color $purple
+    &_color_green
+      background-color $green
   &__title
     display inline-block 
     vertical-align top 
     margin-top 10px 
     margin-left 39px 
-    :last-child
-      font-weight normal
-      padding-top 4px
+  &__code    
+    font-weight normal
+    padding-top 4px

@@ -9,16 +9,17 @@
     height 120px
     position relative
     width 120px 
-    .circle__back
-        position absolute
-        top 4px 
-        left 4px 
-        z-index 3 
-        width 113px 
-        height 112px 
-        background white 
-        border-radius 50%
-    .circle__part-left
+  .diagram__circle
+    &-back
+      position absolute
+      top 4px 
+      left 4px 
+      z-index 3 
+      width 113px 
+      height 112px 
+      background white 
+      border-radius 50%
+    &-part-left
       position absolute
       z-index 2
       width 120px 
@@ -26,7 +27,7 @@
       clip rect(0,60px,121px,0px) 
       background-image linear-gradient(180deg, #FFE39C 0%, #FFBA9C 100%) 
       border-radius 50%
-    .circle__part-right-top
+    &-part-right-top
       position absolute
       left 1px 
       width 120px 
@@ -34,7 +35,7 @@
       clip rect(0,121px,60px,60px) 
       background #C4C4C4  
       border-radius 50% 
-    .circle__part-right-bot
+    &-part-right-bot
       position absolute
       left 1px  
       top 0px 
@@ -43,7 +44,7 @@
       clip rect(61px,121px,121px,60px)
       background-image linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%)
       border-radius 50% 
-    .circle__text
+    &-num
       position absolute
       z-index 4
       color #BC9CFF 
@@ -63,7 +64,8 @@
     margin-top 50px 
     position relative
     padding-left 10px
-    .rating_well
+  .diagram__rating
+    &_well
       &:before
         content ''
         position absolute
@@ -73,15 +75,15 @@
         border-radius 50%
         left -4px 
         margin-top 6px 
-    .rating_good
+    &_good
       &:before
-        @extends .rating_well:before
+        @extends .diagram__rating_well:before
         background linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%) 
-    .rating_satisfactorily
+    &_satisfactorily
       &:before
-        @extends .rating_well:before
+        @extends .diagram__rating_well:before
         background linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%) 
-    .rating_disappointed
+    &_disappointed
       &:before
-        @extends .rating_well:before
+        @extends .diagram__rating_well:before
         background linear-gradient(180deg, #919191 0%, #3D4975 100%) 

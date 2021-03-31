@@ -1,9 +1,9 @@
 //- color: цвет куба ("dark-100", "dark-75", "dark-50", "dark-25", "dark-5", "purple", "green"),
 //- name: название цвета,
 //- code: код цвета
-mixin color-cube({color = "dark-100", name = "", code = ""})
+mixin color-cube({color = "dark-100", name = "", code = ""} = {})
     .color-cube
-        div(class= "color-cube__cube_" + color )
+        div.color-cube__coub(class= "color-cube__coub_color_" + color )
         .color-cube__title
-            h2= name
-            h2= code
+            h2.color-cube__name= name
+            h2.color-cube__code= code

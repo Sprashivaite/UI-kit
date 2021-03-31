@@ -11,27 +11,19 @@
   align-items center
   justify-content center
   cursor pointer
-  &:active, &:focus, &:hover
+  &:focus, &:hover
     background linear-gradient(180deg, rgba(188, 156, 255, 0.5) 0%, rgba(139, 164, 249, 0.5) 100%)
     outline none 
     transition 0.3s
-  &:active
-    .button__text, .button__text_empty
-      color $dark50
   &__text
     font-weight bold
     font-size 0.75rem
     text-transform uppercase
     color #FFFFFF
-    &_empty
-      @extend .button__text
+    &_color_purple
       color $purple
       z-index 3
-      &:active, &:focus
-        color $dark50
-        outline none
-  &_long
-    @extend .button
+  &_arrow
     &:after
       content 'arrow_forward'
       font-family 'Material Icons'
@@ -40,9 +32,8 @@
       z-index 2
       color #fff
       position absolute
-  &_empty
-    @extend .button
-    &::after
+  &_color_white
+    &:after
       content ''
       position absolute
       right 2px

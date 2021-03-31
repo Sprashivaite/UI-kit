@@ -1,6 +1,6 @@
 //- type: тип field("email", "dropdown")
 mixin text-field(type = null)
-    .js-text-field(class= type ? "text-field_" + type: "text-field")
+    .text-field.js-text-field(class= type ? "text-field_" + type: "")
         if(type === "email") 
             button.text-field__button
         block

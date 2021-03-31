@@ -1,6 +1,6 @@
 include ..\..\components\logo\logo
 include ..\..\components\text-field\text-field
-include ..\..\components\data-dropdown\data-dropdown
+include ..\..\components\date-range\date-range
 include ..\..\components\date-filter\date-filter
 include ..\..\components\button\button
 include ..\..\components\bullet-list\bullet-list
@@ -9,6 +9,7 @@ include ..\..\components\comfort\comfort
 include ..\..\components\comment\comment
 include ..\..\components\rate-button\rate-button
 include ..\..\components\radio-button\radio-button
+include ..\..\components\link\link
 include ..\..\components\range-slider\range-slider
 include ..\..\components\toggle\toggle 
 include ..\..\components\dropdown\dropdown 
@@ -46,7 +47,7 @@ html(lang="ru")
                     legend masked text field
                     +masked-input()
                 section.form-elements__date-dropdown.js-form-elements__date-dropdown
-                    +data-double({ dropdowns: ["date Dropdown", "date Dropdown"]})
+                    +date-range({ dropdowns: ["date Dropdown", "date Dropdown"]})
                 section.form-elements__filter-dropdown.js-form-elements__filter-dropdown
                     legend filter date dropdown
                     +date-filter
@@ -126,10 +127,10 @@ html(lang="ru")
                     .form-elements__empty-button_2
                         +button({type: "empty", text: "click me"})
                 section.form-elements__button-name
-                    a.button__text_empty(href="#") click me
-                    a.button__text_empty(href="#") click me
-                section.form-elements__long-button
-                    +button({type: "long", text: "перейти к оплате"})
+                    +link({text: 'click me'})
+                    +link({text: 'click me'})
+                section.form-elements__arrow-button
+                    +button({type: "arrow", text: "перейти к оплате"})
                 section.form-elements__pagination.js-form-elements__pagination
                     legend pagination
                     +pagination 

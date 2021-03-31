@@ -2,7 +2,8 @@ include ../text-field/text-field
 include ../radio-button/radio-button
 include ../toggle/toggle
 include ../button/button
-include ../data-dropdown/data-dropdown
+include ../date-range/date-range
+include ../date-field/date-field
 mixin registration
     .registration
         .registration__container
@@ -19,7 +20,7 @@ mixin registration
                     +radio-button({text: "Женщина", value: "woman"})
                 .registration__data
                     legend дата рождения
-                    +data-field
+                    +date-field
                 .registration__log-in
                     legend данные для входа в сервис
                     .log-in__email
@@ -31,7 +32,7 @@ mixin registration
                 .registration__toggle
                     +toggle
                 .registration__button-solid
-                    +button({type:"_long", text:"перейти к оплате"})
+                    +button({type:"arrow", text:"перейти к оплате"})
             form.registration__sign-in-form(action="sign-in.html")
                 .registration__text Уже есть аккаунт на Toxin
                 .registration__button-empty                
