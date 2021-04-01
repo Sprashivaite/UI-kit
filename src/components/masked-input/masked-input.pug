@@ -4,5 +4,5 @@
 //- ? — необязательная часть маски
 include ..\text-field\text-field
 mixin masked-input({text = 'ДД.ММ.ГГГГ', mask='99.99.9999'} = {})
-  +text-field
-    input.text-field__input.js-form-elements__masked-input(placeholder=text data-format=text data-mask=mask)
+  .masked-input
+    input.masked-input__input.js-masked-input(placeholder=text data-format=text data-mask=mask)

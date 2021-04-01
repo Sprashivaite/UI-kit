@@ -1,5 +1,6 @@
 include ..\..\components\logo\logo
 include ..\..\components\text-field\text-field
+include ..\..\components\email-field\email-field
 include ..\..\components\date-range\date-range
 include ..\..\components\date-filter\date-filter
 include ..\..\components\button\button
@@ -32,13 +33,11 @@ html(lang="ru")
                 section.form-elements__text-field_1
                     legend text field
                         .text-field__description default
-                    +text-field 
-                        input.text-field__input(type = "text" placeholder = "Email")
+                    +text-field({placeholder: "Email"})
                 section.form-elements__text-field_2
                     legend text field
                         .text-field__description Hover / Focus
-                    +text-field
-                        input.text-field__input(type = "text" placeholder = "This is pretty awesome")
+                    +text-field({placeholder: "This is pretty awesome"})
                 section.form-elements__dropdown_field
                     legend dropdown
                     .dropdown-guests
@@ -53,8 +52,7 @@ html(lang="ru")
                     +date-filter
                 section.form-elements__email
                     legend subscription text field
-                    +text-field("email")
-                        input.text-field__input(type = "text" placeholder = "Email")
+                    +email-field
                 section.form-elements__dropdown-1
                     legend dropdown
                         .text-field__description default 
@@ -123,9 +121,9 @@ html(lang="ru")
                             +button({text: "click me"})
                 section.form-elements__empty-button
                     .form-elements__empty-button_1
-                        +button({type: "empty", text: "click me"})
+                        +button({background: "white", text: "click me"})
                     .form-elements__empty-button_2
-                        +button({type: "empty", text: "click me"})
+                        +button({background: "white", text: "click me"})
                 section.form-elements__button-name
                     +link({text: 'click me'})
                     +link({text: 'click me'})

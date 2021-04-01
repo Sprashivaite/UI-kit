@@ -4,36 +4,32 @@ include ../toggle/toggle
 include ../button/button
 include ../date-range/date-range
 include ../date-field/date-field
-mixin registration
+mixin registration({title = "Регистрация аккаунта", dateText = "дата рождения", data = "данные для входа в сервис", accountText = "Уже есть аккаунт на Toxin", action = ""} ={})
     .registration
         .registration__container
-            h1.registration__title Регистрация аккаунта
-            form(action="" method = "post")
+            h1.registration__title= title
+            form(action=action method = "post")
                 .registration__name
-                    +text-field
-                        input.text-field__input(type = "text" placeholder = "Имя")
+                    +text-field({placeholder: "Имя"})
                 .registration__surname
-                    +text-field 
-                        input.text-field__input(type = "text" placeholder = "Фамилия")
+                    +text-field({placeholder: "Фамилия"})
                 .registration__radio
                     +radio-button({text: "Мужчина", value: "man", checked: true})
                     +radio-button({text: "Женщина", value: "woman"})
                 .registration__data
-                    legend дата рождения
+                    legend= dateText
                     +date-field
                 .registration__log-in
-                    legend данные для входа в сервис
+                    legend= data
                     .log-in__email
-                        +text-field 
-                            input.text-field__input(type = "text" placeholder = "Email")
+                        +text-field({type:"email", placeholder: "Email"})
                     .log-in__pass
-                        +text-field
-                            input.text-field__input(type = "password" placeholder = "Пароль")
+                        +text-field({type: "password", placeholder: "Пароль"})
                 .registration__toggle
                     +toggle
                 .registration__button-solid
-                    +button({type:"arrow", text:"перейти к оплате"})
+                    +button({arrow: true, text:"перейти к оплате"})
             form.registration__sign-in-form(action="sign-in.html")
-                .registration__text Уже есть аккаунт на Toxin
+                .registration__text= accountText
                 .registration__button-empty                
-                    +button({type:"_empty", text:"войти"})
+                    +button({background: "white", text:"войти"})

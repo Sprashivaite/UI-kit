@@ -8,7 +8,7 @@ include ../like-button/like-button
 mixin comment({img = "", name = "имя", data = "дата", like_value = 0, like_checked = true, text = ""})
     .comment
         .comment__user
-            img(src=img alt="avatar")
+            img.comment__user-avatar(src=img alt="avatar")
             b.comment__user-name=name 
             p.comment__data=data
         .comment__text-container

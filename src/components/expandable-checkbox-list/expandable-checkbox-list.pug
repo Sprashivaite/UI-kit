@@ -5,8 +5,7 @@ mixin expandable-checkbox-list({title = "", opened = false, list = []} = {})
     label.expandable-checkbox-list
         input.expandable-checkbox-list__input(type="checkbox" checked=opened) 
         h3.expandable-checkbox-list__text= title         
-        .expandable-checkbox-list__list
-            ul 
-                each item in list
-                    li
-                        +checkbox({ name: item})
+        ul.expandable-checkbox-list__checkboxes
+            each item in list
+                li.expandable-checkbox-list__li
+                    +checkbox({ name: item})

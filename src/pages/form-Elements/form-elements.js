@@ -1,4 +1,4 @@
-import Like from '../../components/like-button/like-button';
+import LikeButton from '../../components/like-button/like-button';
 import RateButton from '../../components/rate-button/rate-button';
 import initSlider from '../../components/range-slider/range-slider';
 import initPagination from '../../components/pagination/pagination';
@@ -10,7 +10,7 @@ import initMaskInput from '../../components/masked-input/masked-input';
 if (document.querySelector('.js-form-elements')) {
   const likeButtons = document.querySelectorAll('.js-like-button');
   likeButtons.forEach((button) => {
-    new Like().findElements(button).addHandler();
+    new LikeButton().findElements(button).addHandler();
   });
 
   const rateButtons = document.querySelectorAll('.js-rate-button');
@@ -32,5 +32,5 @@ if (document.querySelector('.js-form-elements')) {
   initPagination($('.js-form-elements__pagination'));
   initDataDouble($('.js-form-elements__date-dropdown'));
   initDateFilter($('.js-form-elements__filter-dropdown'));
-  initMaskInput($('.js-form-elements__masked-input'));
+  initMaskInput($('.js-masked-input'));
 }

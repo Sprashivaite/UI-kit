@@ -5,7 +5,7 @@
 //- price:  цена
 //- reviews: отзывы
 include ../rate-button/rate-button
-mixin room-card({images = [], num = 0, lux = false, price = 0, reviews = 0, rate = 5})
+mixin room-card({images = [], num = 0, lux = false, luxText= "люкс", price = `${price} в сутки`, reviews = 0, rate = 5})
     .room-card.js-room-card
         figure.room-card__pictures.js-room-card__pictures
             each img, index in images
@@ -18,13 +18,9 @@ mixin room-card({images = [], num = 0, lux = false, price = 0, reviews = 0, rate
         .room-card__button-left.js-room-card__button-left 
         .room-card__button-right.js-room-card__button-right
         .room-card__description
-            h2.description__num= num
-            h3.description__lux= (lux ? "люкс": "" ) 
-            .description__cost 
-                b= price + "₽" + " "
-                span в сутки
-            .description__rating
+            h2.room-card__description-num= num
+            h3.room-card__description-lux= (lux ? luxText: "" ) 
+            .room-card__description-cost= price
+            .room-card__description-rating
                 +rate-button({rate: rate})
-            .description__reviews 
-                b= reviews + " "
-                span Отзывов
+            .room-card__description-reviews= reviews

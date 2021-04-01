@@ -1,6 +1,3 @@
-//- type: тип field("email", "dropdown")
-mixin text-field(type = null)
-    .text-field.js-text-field(class= type ? "text-field_" + type: "")
-        if(type === "email") 
-            button.text-field__button
-        block
+mixin text-field({type = "text", placeholder=""} = {})
+    .text-field.js-text-field
+        input.text-field__input(type=type placeholder= placeholder)

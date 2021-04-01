@@ -13,7 +13,7 @@
       width 91%
   &__description
     width 100%
-    .description__num
+    &-num
       color #1F2041 
       display inline-block
       padding-right 8px
@@ -22,17 +22,19 @@
         font-size 14px
         font-weight bold
         margin-right 5px
-    .description__lux
+    &-lux
       color #BC9CFF
       display inline-block
-    .description__cost
+    &-cost
       display inline-block
       float right
       margin-top 8px
-      >*
-        color rgba(31,32,65,.5) 
-      span
+      color rgba(31,32,65,.5) 
+      font-weight bold
+      &:after
+        content " в сутки"
         font-size 12px
+        font-weight normal
   &__com-data
     width 100%
     margin-top 10px 
@@ -42,17 +44,17 @@
   &__count
     width 100%
     margin-top 16px
-    .count__text
+    &-text
       width 67%
       display inline-block
       p
         margin-bottom 12px   
-    .count__cost
+    &-cost
       float right
       text-align right
       p
         margin-bottom 10px    
-    .count__inf
+    &-inf
       position relative
       &:after
         content 'i' 

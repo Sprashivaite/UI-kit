@@ -1,11 +1,11 @@
-import Like from '../../components/like-button/like-button';
+import LikeButton from '../../components/like-button/like-button';
 import Dropdown from '../../components/dropdown/dropdown';
 import initDataDouble from '../../components/date-range/date-range';
 
 if (document.querySelector('.js-room-details-page')) {
   const likeButtons = document.querySelectorAll('.js-like-button');
   likeButtons.forEach((button) => {
-    new Like().findElements(button).addHandler();
+    new LikeButton().findElements(button).addHandler();
   });
   const guestsDropdown = document.querySelector('.js-room-details-page__reservation .dropdown-guests');
   new Dropdown(guestsDropdown, [['гостей', 'гость', 'гостя']]).findElements().addHandler();

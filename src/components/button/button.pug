@@ -1,8 +1,6 @@
 //- text: название кнопки
-//- type: тип кнопки
-//-     "empty" - кнопка с белым фоном.
-//-     "arrow" - кнопка со стрелкой.
-mixin button({type = "", text = ""} = {})
-    button.button(class = (type === "empty" ? "button_color_white"
-                  : type === "arrow" ? "button_arrow": ""))
-        div.button__text(class = (type === "empty" ? "button__text_color_purple": ""))= text 
+//- background: "white" - кнопка с белым фоном.
+//- arrow: - кнопка со стрелкой.
+mixin button({background = "", text = "", arrow = false} = {})
+    button.button(class = `${background === "white" ? "button_color_white": ""} ${ arrow ? "button_arrow": ""}`)
+        div.button__text(class = (background === "white" ? "button__text_color_purple": ""))= text 

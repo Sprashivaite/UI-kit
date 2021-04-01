@@ -1,5 +1,5 @@
 const initPagination = (container) => {
-  const paginationElement = container.find('.js-pagination');
+  const paginationElement = container.find('.js-pagination__buttons');
   paginationElement.pagination({
     items: 15,
     itemsOnPage: 1,

@@ -1,5 +1,5 @@
 const initSlider = (container) => {
-  const $range = container.find('.js-range-slider-input');
+  const $range = container.find('.js-range-slider__input');
   const $value = container.find('.js-range-slider__values');
   $range.ionRangeSlider({
     type: 'double',

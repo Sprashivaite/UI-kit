@@ -1,5 +1,5 @@
-mixin logo
+mixin logo({href="index.html"} = {})
     .logo
-        a.logo__circle(href="index.html")
+        a.logo__circle(href=href)
         .logo__part-left
         .logo__part-right

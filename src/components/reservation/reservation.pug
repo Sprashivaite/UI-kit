@@ -1,37 +1,34 @@
 include ../button/button
 include ../date-range/date-range
 include ../dropdown/dropdown
-mixin reservation({num = 888, lux = true, cost = "9 990₽ ", days = "4", discount = "2 179₽ ", costResult = "39 960₽", resultService = "0₽", resultServices = "300₽", finalSum = "38 081₽"} = {})
+mixin reservation({num = 888, lux = true, luxText = "люкс", cost = "9 990₽", legendGuests = "Гости" , days = "4 суток", discount = "Сбор за услуги: скидка 2 179₽", additional = "Сбор за дополнительные услуги" ,costResult = "39 960₽", resultService = "0₽", resultServices = "300₽", finalTitle = "Итого", finalSum = "38 081₽"} = {})
     form.reservation(action="" method = "post")
         .reservation__container
             .reservation__description
-                h1.description__num= num
+                h1.reservation__description-num= num
                 if lux
-                    h3.description__lux люкс
-                .description__cost 
-                    b= cost
-                    span в сутки
+                    h3.reservation__description-lux= luxText
+                .reservation__description-cost= cost                     
             .reservation__com-data
                 +date-range({dropdowns: ["прибытие", "выезд"]})
             .reservation__guests
-                legend Гости
+                legend.reservation__guests-legend= legendGuests
                 .dropdown-guests
                     +dropdown({items: ["взрослые", "дети", "младенцы"], title: "Сколько гостей", buttons: true})   
             .reservation__count
-                .count__text
+                .reservation__count-text
                     p= cost
-                     | х 
-                     = days 
-                     | суток
-                    p.count__inf Сбор за услуги: скидка 2 179₽
-                    p.count__inf Сбор за дополнительные услуги 
-                .count__cost
+                     |  x 
+                     = days
+                    p.reservation__count-inf= discount
+                    p.reservation__count-inf= additional 
+                .reservation__count-cost
                     p= costResult
                     p= resultService
                     p= resultServices
             .reservation__final
-                h2 Итого
+                h2.reservation__final-title= finalTitle
                 .final__line
                 h2= finalSum
             .reservation__button-solid
-                +button({type:"arrow", text:"забронировать"})
+                +button({arrow: true, text:"забронировать"})

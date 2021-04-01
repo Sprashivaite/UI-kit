@@ -16,22 +16,27 @@
       text-transform none
       font-weight normal
       float right
-  &__list
+  &__checkboxes
     display none
     transition 0.6s
     width 220px
     background-color #fff
     z-index 5
     margin-top 15px
-    li
-      margin-top 4px
+  &__li
+    margin-top 4px
   &__input
     visually-hidden()
     &:checked
       ~ .expandable-checkbox-list__text:after
         transition 0.3s
         transform rotate(180deg)
-      ~ .expandable-checkbox-list__list
+      ~ .expandable-checkbox-list__checkboxes
         display block
-        transition 1s
-
+        animation-name opacity
+        animation-duration 0.6s
+@keyframes opacity
+  0% 
+      opacity 0  
+  100% 
+      opacity 1

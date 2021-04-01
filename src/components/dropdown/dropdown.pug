@@ -1,17 +1,17 @@
 include ..\text-field\text-field
 mixin dropdown({items = [], title = "", buttons = false} = {})
     .dropdown.js-dropdown
-        +text-field("dropdown")
+        .dropdown__field.js-dropdown__field
             .dropdown__title.js-dropdown__title= title
-        .dropdown-content.js-dropdown-content
+        .dropdown__menu.js-dropdown__menu
             each item in items
-                .dropdown-content__line.js-dropdown-content__line
-                    p.js-item= item
-                    .dropdown-content__box-button.js-dropdown-content__box-button
-                        .minus.js-minus -
-                        input.value.js-value(value="0", disabled)
-                        .plus.js-plus +
+                .dropdown__menu-line.js-dropdown__menu-line
+                    p.dropdown__menu-item.js-dropdown__menu-item= item
+                    .dropdown__menu-box-button.js-dropdown__menu-box-button
+                        .dropdown__menu-minus.js-dropdown__menu-minus -
+                        input.dropdown__menu-value.js-dropdown__menu-value(value="0", disabled)
+                        .dropdown__menu-plus.js-dropdown__menu-plus +
             if(buttons)
                 .dropdown__buttons-container
-                    .clear.js-clear очистить
-                    .submit.js-apply применить
+                    .dropdown__clear.js-dropdown__clear очистить
+                    .dropdown__apply.js-dropdown__apply применить
