@@ -1,6 +1,6 @@
 //- open: открытое/закрытое состояние (boolean),
 //- title: заголовок
-include ..\checkbox\checkbox
+include ../checkbox/checkbox
 mixin expandable-checkbox-list({title = "", opened = false, list = []} = {})
     label.expandable-checkbox-list
         input.expandable-checkbox-list__input(type="checkbox" checked=opened) 
