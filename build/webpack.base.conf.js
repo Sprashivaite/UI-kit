@@ -6,7 +6,7 @@ const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 const webpack = require('webpack');
 const fs = require('fs');
 const ghpages = require('gh-pages');
-
+ghpages.publish('dist', (err) => {});
 const PATHS = {
   src: path.join(__dirname, '../src'),
   dist: path.join(__dirname, '../dist'),
@@ -139,4 +139,3 @@ module.exports = {
     })),
   ],
 };
-ghpages.publish('dist', (err) => {});
