@@ -1,0 +1,149 @@
+include ..\..\components\logo\logo
+include ..\..\components\text-field\text-field
+include ..\..\components\email-field\email-field
+include ..\..\components\date-range\date-range
+include ..\..\components\date-filter\date-filter
+include ..\..\components\button\button
+include ..\..\components\bullet-list\bullet-list
+include ..\..\components\checkbox\checkbox
+include ..\..\components\comfort\comfort
+include ..\..\components\comment\comment
+include ..\..\components\rate-button\rate-button
+include ..\..\components\radio-button\radio-button
+include ..\..\components\link\link
+include ..\..\components\range-slider\range-slider
+include ..\..\components\toggle\toggle 
+include ..\..\components\dropdown\dropdown 
+include ..\..\components\expandable-checkbox-list\expandable-checkbox-list
+include ..\..\components\like-button\like-button
+include ..\..\components\pagination\pagination
+include ..\..\components\masked-input\masked-input
+<!DOCTYPE html>
+html(lang="ru")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="initial-scale=1.0, width=device-width")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        title form-elements
+    body                 
+        .form-elements.js-form-elements
+            section.form-elements__logo
+                +logo
+            section.form-elements__left-container
+                section.form-elements__text-field_1
+                    legend text field
+                        .text-field__description default
+                    +text-field({placeholder: "Email"})
+                section.form-elements__text-field_2
+                    legend text field
+                        .text-field__description Hover / Focus
+                    +text-field({placeholder: "This is pretty awesome"})
+                section.form-elements__dropdown_field
+                    legend dropdown
+                    .dropdown-guests
+                        +dropdown({items: ["взрослые", "дети", "младенцы"], title: "Сколько гостей", buttons: true}) 
+                section.form-elements__masked
+                    legend masked text field
+                    +masked-input()
+                section.form-elements__date-dropdown.js-form-elements__date-dropdown
+                    +date-range({ dropdowns: ["date Dropdown", "date Dropdown"]})
+                section.form-elements__filter-dropdown.js-form-elements__filter-dropdown
+                    legend filter date dropdown
+                    +date-filter
+                section.form-elements__email
+                    legend subscription text field
+                    +email-field
+                section.form-elements__dropdown-1
+                    legend dropdown
+                        .text-field__description default 
+                    .dropdown-facilities
+                        +dropdown({items: ["спальни", "кровати", "ванные комнаты"], title: "Удобства"})
+                section.form-elements__dropdown-expanded
+                    legend dropdown
+                        .text-field__description expanded
+                    .dropdown-facilities
+                        +dropdown({items: ["спальни", "кровати", "ванные комнаты"], title: "Удобства"})
+                section.form-elements__expandable-checkbox-list
+                    +expandable-checkbox-list({title:"expandable-checkbox-list", list: ["Завтрак", "Письменный стол", "Стул для кормления", "Кроватка", "Телевизор", "Шампунь"]})
+                section.form-elements__expandable-checkbox-list_2
+                    +expandable-checkbox-list({title:"expandable-checkbox-list",opened: true, list: ["Завтрак","Письменный стол",  "Стул для кормления", "Кроватка", "Телевизор", "Шампунь"]})
+            section.form-elements__middle-container
+                section.form-elements__checkbox-buttons
+                    legend Checkbox Buttons
+                    ul
+                        li
+                            +checkbox({ name: "Можно курить"})
+                        li
+                            +checkbox({ name: "Можно с питомцами"})
+                        li
+                            +checkbox({ name: "Можно пригласить гостей (до 10 человек)"})
+                section.form-elements__radio-button
+                    legend radio-buttons
+                    .form-elements__buttons
+                        +radio-button({text: "Мужчина", value: "man", checked: true})
+                        +radio-button({text: "Женщина", value: "woman"})
+                section.form-elements__toggle
+                    legend toogle
+                    .form-elements__toggles
+                        +toggle({checked:false})
+                        +toggle
+                section.form-elements__like-button
+                    legend like-button
+                    section.form-elements__like-buttons
+                        +like-button({value: 2})
+                        +like-button({value: 12, checked: true})
+                section.form-elements__rate-button
+                    legend rate button
+                    section.form-elements__rate-buttons
+                        +rate-button({rate:"4"})
+                        +rate-button({rate: "5"})
+                section.form-elements__dropdown-2
+                    legend dropdown
+                    .dropdown-guests
+                        +dropdown({items: ["взрослые", "дети", "младенцы"], title: "Сколько гостей", buttons: true})
+                section.form-elements__rich-checkbox
+                    legend Rich Checkbox Buttons
+                    ul
+                        li
+                            +checkbox({ name: "Ширина коридоров в номере не менее 91 см.", title:"Широкий коридор"})
+                        li
+                            +checkbox({ name: "На 1 этаже вас встретит специалист и проводит до номера.", title:"Помощник для инвалидов"})
+            section.form-elements__right-container
+                section.form-elements__slider.js-form-elements__slider
+                    legend Range Slider
+                    +range-slider 
+                section.form-elements__solid-button
+                    legend buttons
+                    .solid-button__container
+                        .form-elements__solid-button_1
+                            +button({text: "click me"})
+                        .form-elements__solid-button_2
+                            +button({text: "click me"})
+                section.form-elements__empty-button
+                    .form-elements__empty-button_1
+                        +button({background: "white", text: "click me"})
+                    .form-elements__empty-button_2
+                        +button({background: "white", text: "click me"})
+                section.form-elements__button-name
+                    +link({text: 'click me'})
+                    +link({text: 'click me'})
+                section.form-elements__arrow-button
+                    +button({type: "arrow", text: "перейти к оплате"})
+                section.form-elements__pagination.js-form-elements__pagination
+                    legend pagination
+                    +pagination 
+                section.form-elements__dropdown-3
+                    legend dropdown
+                    .dropdown-guests
+                        +dropdown({items: ["взрослые", "дети", "младенцы"], title: "Сколько гостей", buttons: true})
+                section.form-elements__bullet-list
+                    legend Bullet list
+                    +bullet-list(["Нельзя с питомцами", "Без вечеринок и мероприятий", "Время прибытия — после 13:00, а выезд до 12:00"]) 
+            section.form-elements__bottom-container
+                section.form-elements__comfort-container
+                    .form-elements__comfort
+                        +comfort({img: "./assets/img/insert_emoticon.svg", title: "Комфорт", description: "Шумопоглощающие стены"})
+                    .form-elements__comfort_2
+                        +comfort({img: "./assets/img/location-city.svg", title: "Удобство", description: "Окно в каждой из спален"})
+                section.form-elements__comment
+                    +comment({name: "Мурад Сарафанов", data:"5 дней назад", img:"./assets/img/murad.jpg", like_value: 12,like_checked: true, text: "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены,действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей."})
