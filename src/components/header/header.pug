@@ -37,12 +37,12 @@ mixin header(options = {})
             ul.header__ul
                 each item in navTitles
                     li
-                        a.header__nav-item(href=(href ? href: "change-me.html") class=`${(item.bold ? "header__nav-item_bold": "")} ${(item.dropdown ? "header__nav-item_dropdown": "")}`)=item.title
+                        a.header__nav-item(href=(href || "change-me.html") class=`${(item.bold ? "header__nav-item_bold": "")} ${(item.dropdown ? "header__nav-item_dropdown": "")}`)=item.title
                             if (item.dropdown)
                                 .header__nav-dropdown-content 
                                     each nav in item.dropdown
                                         .header__nav-item= nav
-            if login === true
+            if login
                 .header__name= name
             else 
                 .header__button_empty
@@ -77,4 +77,4 @@ mixin header(options = {})
                     href: "registration.html"
                 }
                 ]
-            })
+        })

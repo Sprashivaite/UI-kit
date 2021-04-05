@@ -7,7 +7,7 @@ if (document.querySelector('.js-room-details-page')) {
   likeButtons.forEach((button) => {
     new LikeButton().findElements(button).addHandler();
   });
-  const guestsDropdown = document.querySelector('.js-room-details-page__reservation .dropdown-guests');
+  const guestsDropdown = document.querySelector('.js-dropdown');
   new Dropdown(guestsDropdown, [['гостей', 'гость', 'гостя']]).findElements().addHandler();
   initDataDouble($('.js-room-details-page__reservation')); 
 }

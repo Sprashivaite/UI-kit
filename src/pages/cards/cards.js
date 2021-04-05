@@ -12,7 +12,7 @@ if (document.querySelector('.js-cards')) {
   cards.forEach((element) => {
     new RoomCard().findElements(element).addHandler();
   });
-  const guestsDropdowns = document.querySelectorAll('.js-cards .dropdown-guests');
+  const guestsDropdowns = document.querySelectorAll('.js-dropdown');
   guestsDropdowns.forEach((element) => {
     new Dropdown(element, [['гостей', 'гость', 'гостя']]).findElements().addHandler();
   });

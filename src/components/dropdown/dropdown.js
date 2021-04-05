@@ -8,7 +8,7 @@ class Dropdown {
   }
 
   findElements() {
-    this.dropdown = this.container.querySelector('.js-dropdown');
+    this.dropdown = this.container || this.container.querySelector('.js-dropdown');
     this.menu = this.container.querySelector('.js-dropdown__menu');
     this.lines = this.container.querySelectorAll('.js-dropdown__menu-line');
     this.field = this.container.querySelector('.js-dropdown__field');
@@ -33,8 +33,8 @@ class Dropdown {
 
   clearValues() {
     this.title.innerHTML = this.defaultTitle;
-    Array.from(this.values).map((element) => element.value = 0);
-    Array.from(this.minuses).map((element) => element.className = 'dropdown__menu-minus');
+    Array.from(this.values, (element) => element.value = 0);
+    Array.from(this.minuses, (element) => element.className = 'dropdown__menu-minus');
     if (this.clear) this.hideClear();
   }
 
@@ -80,7 +80,7 @@ class Dropdown {
   }
 
   changeSingleTitle() {
-    const values = Array.from(this.values);
+    const values = [...this.values];
     const sum = values.reduce((prevElement, current) => prevElement + Number(current.value), 0);
     if (sum === 0) this.clearValues();
     if (sum > 0) this.showClear();

@@ -1,7 +1,7 @@
 class RateButton {
   findElements(parent) {
     this.stars = parent.children;
-    this.stars = Array.from(this.stars);
+    this.stars = [...this.stars];
     return this;
   }
 

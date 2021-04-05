@@ -42,12 +42,19 @@ html(lang="ru")
                     section.form-elements__dropdown_field
                         legend.form-elements__legend dropdown
                         .form-elements__dropdown-guests.js-form-elements__dropdown-guests
-                            +dropdown({items: ["взрослые", "дети", "младенцы"], title: "Сколько гостей", buttons: true}) 
+                            +dropdown({
+                                items: [
+                                    "взрослые", 
+                                    "дети", 
+                                    "младенцы"], 
+                                title: "Сколько гостей", 
+                                buttons: true
+                            }) 
                     section.form-elements__masked
                         legend.form-elements__legend masked text field
                         +masked-input()
                     section.form-elements__date-dropdown.js-form-elements__date-dropdown
-                        +date-range({ dropdowns: ["date Dropdown", "date Dropdown"]})
+                        +date-range({dropdowns: ["date Dropdown", "date Dropdown"]})
                     section.form-elements__filter-dropdown.js-form-elements__filter-dropdown
                         legend.form-elements__legend filter date dropdown
                         +date-filter
@@ -58,16 +65,49 @@ html(lang="ru")
                         legend.form-elements__legend dropdown
                             .form-elements__description default 
                         .form-elements__dropdown-facilities.js-form-elements__dropdown-facilities
-                            +dropdown({items: ["спальни", "кровати", "ванные комнаты"], title: "Удобства"})
+                            +dropdown({
+                                items: [
+                                    "спальни", 
+                                    "кровати", 
+                                    "ванные комнаты"
+                                ], 
+                                title: "Удобства"
+                            })
                     section.form-elements__dropdown-expanded
                         legend.form-elements__legend dropdown
                             .form-elements__description expanded
                         .form-elements__dropdown-facilities.js-form-elements__dropdown-facilities
-                            +dropdown({items: ["спальни", "кровати", "ванные комнаты"], title: "Удобства"})
+                            +dropdown({
+                                items: [
+                                    "спальни",
+                                    "кровати", 
+                                    "ванные комнаты"
+                                ], 
+                                title: "Удобства"
+                            })
                     section.form-elements__expandable-checkbox-list
-                        +expandable-checkbox-list({title:"expandable-checkbox-list", list: ["Завтрак", "Письменный стол", "Стул для кормления", "Кроватка", "Телевизор", "Шампунь"]})
+                        +expandable-checkbox-list({
+                            title:"expandable-checkbox-list",
+                            list: [
+                                "Завтрак", 
+                                "Письменный стол", 
+                                "Стул для кормления", 
+                                "Кроватка", 
+                                "Телевизор", 
+                                "Шампунь"
+                                ]
+                            })
                     section.form-elements__expandable-checkbox-list-2
-                        +expandable-checkbox-list({title:"expandable-checkbox-list",opened: true, list: ["Завтрак","Письменный стол",  "Стул для кормления", "Кроватка", "Телевизор", "Шампунь"]})
+                        +expandable-checkbox-list({
+                            title:"expandable-checkbox-list",
+                            opened: true, 
+                            list: [
+                                "Завтрак","Письменный стол",  
+                                "Стул для кормления", 
+                                "Кроватка", 
+                                "Телевизор", 
+                                "Шампунь"
+                            ]})
                 section.form-elements__middle-container
                     section.form-elements__checkbox-buttons
                         legend.form-elements__legend Checkbox Buttons
@@ -101,14 +141,24 @@ html(lang="ru")
                     section.form-elements__dropdown-2
                         legend.form-elements__legend dropdown
                         .form-elements__dropdown-guests.js-form-elements__dropdown-guests
-                            +dropdown({items: ["взрослые", "дети", "младенцы"], title: "Сколько гостей", buttons: true})
+                            +dropdown({
+                                items: ["взрослые", "дети", "младенцы"], 
+                                title: "Сколько гостей", 
+                                buttons: true
+                            })
                     section.form-elements__rich-checkbox
                         legend.form-elements__legend Rich Checkbox Buttons
                         ul.form-elements__rich-checkbox-ul
                             li.form-elements__rich-checkbox-li
-                                +checkbox({ name: "Ширина коридоров в номере не менее 91 см.", title:"Широкий коридор"})
+                                +checkbox({ 
+                                    name: "Ширина коридоров в номере не менее 91 см.", 
+                                    title:"Широкий коридор"
+                                })
                             li.form-elements__rich-checkbox-li
-                                +checkbox({ name: "На 1 этаже вас встретит специалист и проводит до номера.", title:"Помощник для инвалидов"})
+                                +checkbox({ 
+                                    name: "На 1 этаже вас встретит специалист и проводит до номера.",
+                                    title:"Помощник для инвалидов"
+                                })
                 section.form-elements__right-container
                     section.form-elements__slider.js-form-elements__slider
                         legend.form-elements__legend Range Slider
@@ -136,16 +186,39 @@ html(lang="ru")
                     section.form-elements__dropdown-3
                         legend.form-elements__legend dropdown
                         .form-elements__dropdown-guests.js-form-elements__dropdown-guests
-                            +dropdown({items: ["взрослые", "дети", "младенцы"], title: "Сколько гостей", buttons: true})
+                            +dropdown({
+                                items: ["взрослые", "дети", "младенцы"], 
+                                title: "Сколько гостей",
+                                 buttons: true
+                            })
                     section.form-elements__bullet-list
                         legend.form-elements__legend Bullet list
                         .form-elements__bullet-list-ul
-                            +bullet-list(["Нельзя с питомцами", "Без вечеринок и мероприятий", "Время прибытия — после 13:00, а выезд до 12:00"]) 
+                            +bullet-list([
+                                "Нельзя с питомцами", 
+                                "Без вечеринок и мероприятий", 
+                                "Время прибытия — после 13:00, а выезд до 12:00"
+                            ]) 
             section.form-elements__bottom-container
                 section.form-elements__comfort-container
                     .form-elements__comfort
-                        +comfort({img: "./assets/img/insert_emoticon.svg", title: "Комфорт", description: "Шумопоглощающие стены"})
+                        +comfort({
+                            img: "./assets/img/insert_emoticon.svg", 
+                            title: "Комфорт", 
+                            description: "Шумопоглощающие стены"
+                        })
                     .form-elements__comfort-2
-                        +comfort({img: "./assets/img/location-city.svg", title: "Удобство", description: "Окно в каждой из спален"})
+                        +comfort({
+                            img: "./assets/img/location-city.svg", 
+                            title: "Удобство", 
+                            description: "Окно в каждой из спален"
+                        })
                 section.form-elements__comment
-                    +comment({name: "Мурад Сарафанов", data:"5 дней назад", img:"./assets/img/murad.jpg", like_value: 12,like_checked: true, text: "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены,действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей."})
+                    +comment({
+                        name: "Мурад Сарафанов", 
+                        data:"5 дней назад", 
+                        img:"./assets/img/murad.jpg", 
+                        like_value: 12,
+                        like_checked: true, 
+                        text: "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены,действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей."
+                    })

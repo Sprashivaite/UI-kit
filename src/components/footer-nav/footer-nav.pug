@@ -3,4 +3,4 @@ mixin footer-nav({title = 'title', items={}} = {})
   ul
     each item in items
       li
-          a(href=(item.href ? item.href: "change-me.html"))= item.nav
+          a(href=(item.href || "change-me.html"))= item.nav

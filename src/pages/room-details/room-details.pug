@@ -26,19 +26,48 @@ html(lang="ru")
                     .room-details-page__bottom-container
                         section.room-details-page__about-the-room
                             h2 Сведения о номере
-                            +comfort({img: "./assets/img/insert_emoticon.svg", title: "Комфорт", description: "Шумопоглощающие стены"})
-                            +comfort({img: "./assets/img/location-city.svg", title: "Удобство", description: "Окно в каждой из спален"})
-                            +comfort({img: "./assets/img/cosiness.svg", title: "Уют", description: "Номер оснащён камином"})
+                            +comfort({
+                                img: "./assets/img/insert_emoticon.svg", 
+                                title: "Комфорт", 
+                                description: "Шумопоглощающие стены"
+                            })
+                            +comfort({
+                                img: "./assets/img/location-city.svg", 
+                                title: "Удобство", 
+                                description: "Окно в каждой из спален"
+                            })
+                            +comfort({
+                                img: "./assets/img/cosiness.svg", 
+                                title: "Уют", 
+                                description: "Номер оснащён камином"
+                            })
                         section.room-details-page__diagram
                             h2 Впечатления от номера
                             +diagram({num: 260, vote: "голосов"})
                         section.room-details-page__comments
                             h2 Отзывы посетителей номера
-                            +comment({name: "Мурад Сарафанов", data:"5 дней назад", img:"./assets/img/murad.jpg", like_value: 12,like_checked: true, text: "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены,действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей."})
-                            +comment({name: "Патрисия Стёклышкова",data:"Неделю назад", img:"./assets/img/patrisia.jpg",like_value: 2,text: "Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент"})
+                            +comment({
+                                name: "Мурад Сарафанов", 
+                                data:"5 дней назад", 
+                                img:"./assets/img/murad.jpg", 
+                                like_value: 12,
+                                like_checked: true, 
+                                text: "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены,действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей."
+                            })
+                            +comment({
+                                name: "Патрисия Стёклышкова",
+                                data:"Неделю назад", 
+                                img:"./assets/img/patrisia.jpg",
+                                like_value: 2,
+                                text: "Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент"
+                            })
                         section.room-details-page__rules
                             h2 Правила
-                            +bullet-list(["Нельзя с питомцами", "Без вечеринок и мероприятий", "Время прибытия — после 13:00, а выезд до 12:00"]) 
+                            +bullet-list(
+                                [
+                                    "Нельзя с питомцами", "Без вечеринок и мероприятий", "Время прибытия — после 13:00, а выезд до 12:00"
+                                    ]
+                            ) 
                         section.room-details-page__cancel
                             h2 Отмена
                             span Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.

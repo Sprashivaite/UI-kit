@@ -4,6 +4,6 @@ mixin burger-menu({navigation = {}} = {})
       .burger-menu__btn
           span.burger-menu__stripes
       ul.burger-menu__menu 
-        each item in navigation
-          li
-              a.burger-menu__item(href=(item.href ? item.href: "change-me.html"))= item.title
+          each item in navigation
+              li.burger-menu__menu-li
+                  a.burger-menu__item(href=(item.href || "change-me.html"))= item.title

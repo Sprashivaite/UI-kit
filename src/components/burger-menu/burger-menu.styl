@@ -8,7 +8,7 @@
     opacity 0
     &:checked 
       ~ .burger-menu__btn 
-        span
+        .burger-menu__stripes
           transform rotate(45deg) 
           &::before 
             top 0
@@ -29,19 +29,19 @@
     height 26px
     cursor pointer
     z-index 1
-    > span,
-    > span::before,
-    > span::after 
+    > .burger-menu__stripes,
+    > .burger-menu__stripes::before,
+    > .burger-menu__stripes::after 
       display block
       position absolute
       width 100%
       height 2px
       background-color $dark50
       transition-duration .25s
-    > span::before 
+    > .burger-menu__stripes::before 
       content ''
       top -8px
-    > span::after 
+    > .burger-menu__stripes::after 
       content ''
       top 8px
   &__menu 
@@ -56,13 +56,13 @@
     padding 80px 0
     background-color #6FCF97
     transition-duration .25s
-    .burger-menu__item 
-      display block
-      padding 12px 24px
-      color #333
-      font-family Montserrat, Arial, sans-serif
-      font-size 20px
-      font-weight 600
-      transition-duration .25s
-      &:hover 
-        background-color #CFD8DC
+  &__item 
+    display block
+    padding 12px 24px
+    color #333
+    font-family Montserrat, Arial, sans-serif
+    font-size 20px
+    font-weight 600
+    transition-duration .25s
+    &:hover 
+      background-color #CFD8DC
