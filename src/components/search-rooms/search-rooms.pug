@@ -10,7 +10,6 @@ mixin search-rooms({ title = "Найдём номера под ваши поже
                     +date-range({dropdowns: ["прибытие", "выезд"]})
                 .search-rooms__guests
                     legend.search-rooms__guests-legend= guests
-                    .dropdown-guests
-                        +dropdown({items: ["взрослые", "дети", "младенцы"], title: "Сколько гостей", buttons: true}) 
+                    +dropdown({items: ["взрослые", "дети", "младенцы"], title: "Сколько гостей", buttons: true}) 
                 .search-rooms__button
                     +button({arrow: true, text:"подобрать номер"})

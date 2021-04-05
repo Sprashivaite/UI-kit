@@ -18,12 +18,12 @@ if (document.querySelector('.js-form-elements')) {
     new RateButton().findElements(button).addHandler();
   });
 
-  const guestsDropdowns = document.querySelectorAll('.js-form-elements .dropdown-guests');
+  const guestsDropdowns = document.querySelectorAll('.js-form-elements__dropdown-guests');
   guestsDropdowns.forEach((element) => {
     new Dropdown(element, [['гостей', 'гость', 'гостя']]).findElements().addHandler();
   });
 
-  const facilitiesDropdowns = document.querySelectorAll('.js-form-elements .dropdown-facilities');
+  const facilitiesDropdowns = document.querySelectorAll('.js-form-elements__dropdown-facilities');
   facilitiesDropdowns.forEach((element) => {
     new Dropdown(element, [['спальнен', 'спальня', 'спальни'], ['кроватей', 'кровать', 'кровати'],  ['ванных комнат', 'ванная комната', 'ванные комнаты']]).findElements().addHandler();
   });
@@ -32,5 +32,5 @@ if (document.querySelector('.js-form-elements')) {
   initPagination($('.js-form-elements__pagination'));
   initDataDouble($('.js-form-elements__date-dropdown'));
   initDateFilter($('.js-form-elements__filter-dropdown'));
-  initMaskInput($('.js-masked-input'));
+  initMaskInput($('.js-masked-input__input'));
 }

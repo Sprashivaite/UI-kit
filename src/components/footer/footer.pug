@@ -1,60 +1,45 @@
 include ../text-field/text-field
-mixin footer
+include ../footer-nav/footer-nav
+include ../social-networks/social-networks
+include ../email-field/email-field
+mixin footer({best = "Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»", subscribeTitle = "Подписка", subscribeText = "Получайте специальные предложения и новости сервиса", subscribeAction = "", copyright = "Copyright &copy; 2018 Toxin отель. Все права зачищены."} = {})
     .footer
         .footer__top
             .footer__toxin
                 .footer__logo-color
                     +logo-color
-                .footer__text 
-                    | Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»
+                .footer__text= best
             .footer__list
-                h3 навигация
-                ul
-                    li
-                        a(href="change-me.html") О нас
-                    li
-                        a(href="change-me.html") Новости
-                    li
-                        a(href="change-me.html") Служба поддержки
-                    li
-                        a(href="change-me.html") Услуги
+                +footer-nav({title: "навигация", items:[{nav: "О нас"}, {nav: "Новости"}, {nav: "Служба поддержки"}, {nav: "Услуги"}]})
             .footer__list
-                h3 о нас
-                ul
-                    li
-                        a(href="change-me.html") О сервисе
-                    li
-                        a(href="change-me.html") Наша команда
-                    li
-                        a(href="change-me.html") Вакансии
-                    li
-                        a(href="change-me.html") Инвесторы
+                +footer-nav({title: "о нас", items:[{nav: "О сервисе"}, {nav: "Наша команда"}, {nav: "Вакансии"}, {nav: "Инвесторы"}]})
             .footer__list
-                h3 Служба поддержки
-                ul
-                    li
-                        a(href="change-me.html") Соглашения
-                    li
-                        a(href="change-me.html") Сообщества
-                    li
-                        a(href="change-me.html") Связь с нами
+                +footer-nav({title: "Служба поддержки", items:[{nav: "Соглашения"}, {nav: "Сообщества"}, {nav: "Связь с нами"}]})
             .footer__subscribe
-                h3 Подписка
-                p Получайте специальные предложения и новости сервиса
-                form(action="#", method="post").footer__email
-                    +text-field("email")
-                        input.text-field__input(type = "email" placeholder = "Email")
+                h3= subscribeTitle
+                p= subscribeText
+                form(action=subscribeAction, method="post").footer__email
+                    +email-field
         .footer__bot
             .footer__bot-content
-                .footer__copyright Copyright &copy; 2018 Toxin отель. Все права зачищены. 
-                .footer__cc
-                    ul
-                        li
-                            a(href="https://twitter.com/", target="_blank", rel="noopener noreferrer")
-                                img(src="./assets/img/twitter.svg", alt="twitter")
-                        li
-                            a(href="https://www.facebook.com/", target="_blank", rel="noopener noreferrer")
-                                img(src="./assets/img/facebook.svg", alt="facebook")
-                        li
-                            a(href="https://www.instagram.com/", target="_blank", rel="noopener noreferrer")
-                                img(src="./assets/img/instagram.svg", alt="instagram")
+                .footer__copyright!= copyright 
+                .footer__social-networks
+                    +social-networks({
+                        items: [
+                            {
+                                href: "https://twitter.com/", 
+                                src: "./assets/img/twitter.svg", 
+                                alt: "twitter"
+                            }, 
+                            {
+                                href: "https://www.facebook.com/", 
+                                src: "./assets/img/facebook.svg", 
+                                alt: "facebook"
+                            }, 
+                            {
+                                href: "https://www.instagram.com/", 
+                                src: "./assets/img/instagram.svg", 
+                                alt: "instagram"
+                            }, 
+                            ]
+                        })

@@ -1,0 +1,6 @@
+mixin social-networks({items = {}}= {})
+    ul.social-networks
+      each item in items
+        li.social-networks__item
+            a.social-networks__link(href=item.href, target="_blank", rel="noopener noreferrer")
+                img.social-networks__img(src=item.src, alt=item.alt)

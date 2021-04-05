@@ -4,7 +4,7 @@
   width 100%
   justify-content space-between
   flex-wrap wrap
-  .diagram__circle
+  .diagram__circle-container
     margin-top 22px
     height 120px
     position relative
@@ -60,30 +60,29 @@
       left 5px 
       span 
         font-size 12px 
-  .diagram__rating
+  .diagram__rating-container
     margin-top 50px 
     position relative
     padding-left 10px
   .diagram__rating
-    &_well
+    &:before
+      content ''
+      position absolute
+      background $dark75
+      width 10px 
+      height 10px 
+      border-radius 50%
+      left -4px 
+      margin-top 6px     
+    &_color_orange
       &:before
-        content ''
-        position absolute
         background linear-gradient(180deg, #FFE39C 0%, #FFBA9C 100%) 
-        width 10px 
-        height 10px 
-        border-radius 50%
-        left -4px 
-        margin-top 6px 
-    &_good
+    &_color_green
       &:before
-        @extends .diagram__rating_well:before
         background linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%) 
-    &_satisfactorily
+    &_color_purple
       &:before
-        @extends .diagram__rating_well:before
         background linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%) 
-    &_disappointed
+    &_color_black
       &:before
-        @extends .diagram__rating_well:before
         background linear-gradient(180deg, #919191 0%, #3D4975 100%) 

@@ -10,25 +10,25 @@ mixin header(options = {})
             login = false, 
             name = "Юлий Цезарь", 
             navTitles = [
-                    {
-                        title: "О нас", 
-                        bold: bold
-                    },
-                    {
-                        title: "Услуги", 
-                        dropdown: ["item1", "item2", "item3"]
-                    },
-                    {
-                        title: "Вакансии"
-                    },
-                    {
-                        title: "Новости"
-                    },
-                    {
-                        title: "Соглашения", 
-                        dropdown: ["item1", "item2", "item3"]
-                    }
-                ]
+                {
+                    title: "О нас", 
+                    bold: bold
+                },
+                {
+                    title: "Услуги", 
+                    dropdown: ["item1", "item2", "item3"]
+                },
+                {
+                    title: "Вакансии"
+                },
+                {
+                    title: "Новости"
+                },
+                {
+                    title: "Соглашения", 
+                    dropdown: ["item1", "item2", "item3"]
+                }
+            ]
         } = options 
     .header
         .header__logo-color
@@ -51,28 +51,30 @@ mixin header(options = {})
                 .header__button_register
                     form(action="registration.html")
                         +button({text: "зарегистрироваться"})
-        +burger-menu({navigation: [
-            {
-                title: "О нас"
-            }, 
-            {
-                title: "Услуги"
-            }, 
-            {
-                title: "Вакансии"
-            }, 
-            {
-                title: "Новости"
-            }, 
-            {
-                title: "Соглашения"
-            }, 
-            {
-                title: "Войти", 
-                href: "sign-in.html"
-            }, 
-            {
-                title: "Зарегистрироваться", 
-                href: "registration.html"
-            }
-            ]})
+        +burger-menu({
+            navigation: [
+                {
+                    title: "О нас"
+                }, 
+                {
+                    title: "Услуги"
+                }, 
+                {
+                    title: "Вакансии"
+                }, 
+                {
+                    title: "Новости"
+                }, 
+                {
+                    title: "Соглашения"
+                }, 
+                {
+                    title: "Войти", 
+                    href: "sign-in.html"
+                }, 
+                {
+                    title: "Зарегистрироваться", 
+                    href: "registration.html"
+                }
+                ]
+            })

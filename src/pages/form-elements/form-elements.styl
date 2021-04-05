@@ -1,10 +1,9 @@
-
 .form-elements
   position relative
   width 1440px
   min-height 1853px
   background #FFFFFF
-  legend
+  &__legend
     width 100%
   &__logo
     margin-left 30px
@@ -13,16 +12,16 @@
     display inline-block
     margin-left 140px
     margin-top 57px
-  .text-field__description
+  &__description
     float right
     font-weight normal
     color $dark50
     text-transform uppercase
     font-size 12px
-  &__text-field_1
+  &__text-field-1
     width 320px
     min-height 67px
-  &__text-field_2
+  &__text-field-2
     margin-top 17px
     width 320px
     min-height 64.44px
@@ -51,7 +50,7 @@
     min-height 236px
   &__expandable-checkbox-list
     width 260px
-  &__expandable-checkbox-list_2
+  &__expandable-checkbox-list-2
     margin-top 42px
     width 260px
   &__middle-container
@@ -61,15 +60,15 @@
     vertical-align top
   &__checkbox-buttons
     width 250px
-    legend
+    .form-elements__legend
       margin-bottom 13px
-    li
+    &-li
       margin-bottom 4px
   &__radio-button
     margin-top 39px
     width 236px
     min-height 55px
-    legend
+    .form-elements__legend
       margin-bottom 11px
   &__radio-buttons
     display flex
@@ -87,7 +86,7 @@
     margin-top 37px
     width 281px
     min-height 60px
-    legend
+    .form-elements__legend
       margin-bottom 12px
   &__like-button
     margin-top 39px
@@ -111,9 +110,9 @@
     margin-top 99px  
     width 266px
     min-height 145px
-    legend
+    .form-elements__legend
       margin-bottom 12px
-    li
+    &-li
       margin-bottom 7px
   &__right-container
     display inline-block
@@ -123,20 +122,20 @@
   &__slider
     width 266px
     min-height 47.44px 
-    legend
+    .form-elements__legend
       position absolute
       width auto
   &__solid-button
     margin-top 31px
     width 221px
     min-height 80px
-    .solid-button__container
+    &-container
       display flex
       margin-top 11px
-    &_1
+    &-1
       width 99px
       height 44px
-    &_2
+    &-2
       margin-left 20px 
       width 99px
       height 44px
@@ -146,9 +145,9 @@
     justify-content space-between
     width 218px
     min-height 44px
-    &_1
+    &-1
       width 99px
-    &_2
+    &-2
       width 99px
   &__button-name
     margin-top 28px
@@ -162,7 +161,7 @@
     height 44px 
   &__pagination
     margin-top 37px
-    legend
+    .form-elements__legend
       margin-bottom 12px
   &__dropdown-3
     margin-top 257px
@@ -172,9 +171,9 @@
     margin-top 170px
     width 254px
     min-height 147px 
-    :nth-child(1)
+    .form-elements__legend
       margin-bottom 10px
-    ul
+    &-ul
       margin-left 21px
   &__bottom-container
     margin-top 82px
@@ -186,15 +185,8 @@
     margin-right 166px
   &__comfort 
     width 280px
-  &__comfort_2
+  &__comfort-2
     width 280px
   &__comment 
     width 711px 
     margin-top 28px
-
-
-
-
-
-
-
