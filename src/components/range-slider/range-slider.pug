@@ -1,4 +1,6 @@
-mixin range-slider
+mixin range-slider(caption = false)
     .range-slider
         .range-slider__values.js-range-slider__values
         input.range-slider__input.js-range-slider__input
+        if caption
+            .range-slider__caption= caption

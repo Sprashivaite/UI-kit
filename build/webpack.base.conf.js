@@ -6,6 +6,7 @@ const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 const webpack = require('webpack');
 const fs = require('fs');
 const ghpages = require('gh-pages');
+
 ghpages.publish('dist', (err) => {});
 const PATHS = {
   src: path.join(__dirname, '../src'),
@@ -128,7 +129,7 @@ module.exports = {
       { from: `${PATHS.src}/fonts`, to: `${PATHS.assets}fonts` },
     ]),
     new FaviconsWebpackPlugin({
-      logo: './src/favicon.svg',
+      logo: './src/favicon/favicon.svg',
       outputPath: '/assets/favicon',
       publicPath: '',
       prefix: 'assets/favicon',

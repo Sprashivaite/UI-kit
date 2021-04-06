@@ -1,0 +1,104 @@
+.datepicker-here 
+.datepicker-inline
+  .datepicker
+    width 100%
+.datepicker.-from-bottom-
+  width 320px
+  @media(max-width 800px)
+    width 290px
+.datepicker
+  .datepicker--nav
+    height 60px
+    border-bottom 0
+  .datepicker--content
+    padding 0
+    width 280px
+    margin 14px auto 4px
+  .datepicker--nav-title
+  .datepicker--nav-title i  
+    color #1F2041
+    font-size 19px
+    font-weight bold
+    &:hover
+      background none
+  .datepicker--nav-action svg
+    opacity 0 
+  [data-action='next']
+  [data-action='prev']
+    width 40px
+    &:hover
+      background none
+  [data-action='prev']:after
+    font-family 'Material Icons'
+    content 'arrow_back' 
+    font-size 24px
+    color #BC9CFF 
+  [data-action='next']:after
+    @extends [data-action='prev']:after 
+    content 'arrow_forward'  
+    margin-right 20px
+  .datepicker--day-name
+    color #BC9CFF
+    font-weight bold
+    font-size 12px
+    font-family Montserrat
+    text-transform none 
+  .datepicker--cells-days
+    padding 6px 0 0
+    .datepicker--cell-day
+      font-size 12px
+      color rgba(31, 32, 65, 0.5)
+      font-family Montserrat
+      border-radius 50%
+      width 40px
+      height 40px
+    .-other-month-
+      color rgba(31, 32, 65, 0.25)
+    .-current-
+      background linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%) 
+      color white
+    .-range-from-
+    .-range-to-
+    .-selected-.datepicker--cell-year.-other-decade-
+    .-selected-.datepicker--cell-day.-other-month-
+    .datepicker--cell.-selected-.-current-
+      background linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%)
+      color white
+      border none
+    .-range-from-:after
+      content ''
+      background linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%)
+      opacity 0.25
+      width 50%
+      height 100%
+      position absolute
+      margin-left 50%
+      z-index -1
+    .-range-to-:after
+      @extends .-range-from-:after
+      margin-left 0
+      margin-right 50%
+      z-index -1
+    .-in-range-
+      background linear-gradient(180deg, rgba(188, 156, 255, 0.25) 0%, rgba(139, 164, 249, 0.25) 100%)
+      border-radius 0
+    .-in-range-.-current-
+      background linear-gradient(180deg, rgba(188, 156, 255, 0.5) 0%, rgba(139, 164, 249, 0.5) 100%)
+      color $dark50
+    .-focus-:hover
+      background linear-gradient(180deg, rgb(188, 156, 255) 0%, rgb(139, 164, 249) 100%)
+  .datepicker--buttons
+    border-top 0
+    padding 4px 0 10px
+    [data-action='clear']
+      font-family Montserrat
+      color #BC9CFF
+      font-size 12px
+      font-weight bold
+      text-transform uppercase
+      margin 4px 93px 0 0
+      &:hover
+        background none
+    [data-action='apply']
+      @extends [data-action='clear'] 
+      margin 4px 12px 0 0

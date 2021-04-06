@@ -32,8 +32,7 @@ html(lang="ru")
                                 +dropdown({items: ["взрослые", "дети", "младенцы"], title: "Сколько гостей", buttons: true}) 
                         .options__range-slider.js-options__range-slider
                             legend.range-slider-name диапазон цены
-                            +range-slider
-                            .range-slider-descr Стоимость за сутки пребывания в номере
+                            +range-slider("Стоимость за сутки пребывания в номере")
                         .options__checkbox
                             legend правила дома
                             +checkbox({ name: "Можно курить"})
