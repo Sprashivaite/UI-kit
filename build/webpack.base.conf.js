@@ -2,7 +2,7 @@ const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
+// const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 const webpack = require('webpack');
 const fs = require('fs');
 const ghpages = require('gh-pages');
@@ -28,7 +28,6 @@ module.exports = {
   output: {
     filename: `${PATHS.assets}js/[name].[hash].js`,
     path: PATHS.dist,
-    // publicPath: '/'
   },
   optimization: {
     splitChunks: {
@@ -128,12 +127,12 @@ module.exports = {
       { from: `${PATHS.src}/**/*.{png,jpg,gif,svg}`, to: `${PATHS.assets}img/[name].[ext]` },
       { from: `${PATHS.src}/fonts`, to: `${PATHS.assets}fonts` },
     ]),
-    new FaviconsWebpackPlugin({
-      logo: './src/favicon/favicon.svg',
-      outputPath: '/assets/favicon',
-      publicPath: '',
-      prefix: 'assets/favicon',
-    }),
+    // new FaviconsWebpackPlugin({
+    //   logo: './src/favicon/favicon.svg',
+    //   outputPath: '/assets/favicon',
+    //   publicPath: '',
+    //   prefix: 'assets/favicon',
+    // }),
     ...PAGES.map((page) => new HtmlWebpackPlugin({
       template: `${PAGES_DIR}/${page}/${page}.pug`,
       filename: `${page}.html`,
