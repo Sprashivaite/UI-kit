@@ -4,7 +4,7 @@ import 'air-datepicker/dist/css/datepicker.min.css';
 const initDataDouble = function initDataDouble(container) {
   const firstData = container.find('.js-date-range-1');
   const secondData = container.find('.js-date-range-2');
-  
+
   const myDatepicker = firstData.datepicker().data('datepicker');
   const showHandler = () => myDatepicker.show();
 
@@ -17,12 +17,11 @@ const initDataDouble = function initDataDouble(container) {
     range: true,
     multipleDatesSeparator: ' - ',
     minDate: new Date(),
+    todayButton: true,
     clearButton: true,
   });
-  $('.js-date-range-1 .datepicker--buttons').append('<span class ="datepicker--button-apply" data-action="apply">Применить</span>')
-  const apply = $('.datepicker--button-apply')
-  const hideHandler = () => console.log();
-  console.log(apply)
-  apply.on('click', hideHandler);
+  const button = $('[data-action="today"]');
+  const hideHandler = () => myDatepicker.hide();
+  button.on('click', hideHandler);
 };
 export default initDataDouble;

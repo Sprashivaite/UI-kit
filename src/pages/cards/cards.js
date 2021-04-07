@@ -1,6 +1,8 @@
 import RateButton from '../../components/rate-button/rate-button';
 import RoomCard from '../../components/room-card/room-card';
 import initDataDouble from '../../components/date-range/date-range';
+import initDateField from '../../components/date-field/date-field';
+import initCalendar from '../../components/calendar/calendar';
 import Dropdown from '../../components/dropdown/dropdown';
 
 if (document.querySelector('.js-cards')) {
@@ -18,4 +20,6 @@ if (document.querySelector('.js-cards')) {
   });
   initDataDouble($('.js-cards__search-rooms'));
   initDataDouble($('.js-cards__reservation'));
+  initDateField($('.js-date-field'));
+  initCalendar($('.js-cards__calendar'));
 }

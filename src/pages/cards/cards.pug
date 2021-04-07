@@ -5,6 +5,7 @@ include ../../components/rate-button/rate-button
 include ../../components/room-card/room-card
 include ../../components/reservation/reservation
 include ../../components/log-in/log-in 
+include ../../components/calendar/calendar
 include ../../components/date-range/date-range
 <!DOCTYPE html>
 html(lang="ru")
@@ -31,8 +32,8 @@ html(lang="ru")
                     section.cards__log-in
                         +log-in   
                 section.cards__right-container    
-                    section.cards__calendar
-                        div(class="datepicker-here" data-clear-button="true" data-range="true" data-multiple-dates-separator=" - " data-auto-Close="true")           
+                    section.cards__calendar.js-cards__calendar
+                        +calendar
                     section.cards__room-card-1
                         +room-card({
                             images: [

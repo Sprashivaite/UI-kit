@@ -2,6 +2,8 @@
 .datepicker-inline
   .datepicker
     width 100%
+  .datepicker--buttons
+    flex-direction row
 .datepicker.-from-bottom-
   width 320px
   @media(max-width 800px)
@@ -89,16 +91,23 @@
       background linear-gradient(180deg, rgb(188, 156, 255) 0%, rgb(139, 164, 249) 100%)
   .datepicker--buttons
     border-top 0
-    padding 4px 0 10px
+    padding: 13px 0 5px 20px;
+    display flex
+    flex-direction: row-reverse
     [data-action='clear']
+      display block
       font-family Montserrat
       color #BC9CFF
       font-size 12px
       font-weight bold
       text-transform uppercase
-      margin 4px 93px 0 0
       &:hover
         background none
-    [data-action='apply']
+    [data-action='today']
       @extends [data-action='clear'] 
-      margin 4px 12px 0 0
+    [data-action='today']
+      font-size: 0
+      &:after
+        content "применить"
+        font-size: 12px
+        margin-left 45px

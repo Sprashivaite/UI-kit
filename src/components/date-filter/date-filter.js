@@ -1,3 +1,6 @@
+import 'air-datepicker';
+import 'air-datepicker/dist/css/datepicker.min.css';
+
 const initDateFilter = function initDateFilter(container) {
   const dateFilter = container.find('.js-date-filter__input');
   const myDatepicker = dateFilter.datepicker().data('datepicker');
@@ -7,6 +10,11 @@ const initDateFilter = function initDateFilter(container) {
     range: true,
     multipleDatesSeparator: ' - ',
     minDate: new Date(),
+    clearButton: true,
+    todayButton: true,
   });
+  const button = $('[data-action="today"]');
+  const hideHandler = () => myDatepicker.hide();
+  button.on('click', hideHandler);
 };
 export default initDateFilter;
