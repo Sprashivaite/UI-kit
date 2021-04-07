@@ -23,7 +23,7 @@ mixin header(options = {})
                     form(action="sign-in.html")
                         +button({text: "войти", background: "white"})
                 .header__button-register
-                    form(action="registration.html")
+                    form(action="registration-page.html")
                         +button({text: "зарегистрироваться"})
         +burger-menu({
             navigation: [
@@ -48,7 +48,7 @@ mixin header(options = {})
                 }, 
                 {
                     title: "Зарегистрироваться", 
-                    href: "registration.html"
+                    href: "registration-page.html"
                 }
             ]
         })
