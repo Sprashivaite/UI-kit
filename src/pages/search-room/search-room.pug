@@ -18,37 +18,41 @@ html(lang="ru")
         meta(name="keywords", content="search, room")
         title search-room
     body 
-        .search-rooms-page.js-search-rooms-page
+        .search-room.js-search-room
             header
-                .search-rooms-page__container
+                .search-room__container
                     +header({login: false})
-            .search-rooms-page__container
-                main.search-rooms-body
-                    section.search-rooms-page__options
-                        .options__date-filter.js-options__date-filter
-                            legend даты пребывания в отеле
+            .search-room__container
+                main.search-room__body
+                    section.search-room__options
+                        .search-room__options-date-filter.js-search-room__options-date-filter
+                            legend.search-room__options-date-filter-legend даты пребывания в отеле
                             +date-filter
-                        .options__dropdown-guests.js-options__dropdown-guests
-                            legend гости
-                            .dropdown-guests
-                                +dropdown({items: ["взрослые", "дети", "младенцы"], title: "Сколько гостей", buttons: true}) 
-                        .options__range-slider.js-options__range-slider
-                            legend.range-slider-name диапазон цены
+                        .search-room__options-dropdown-guests.js-search-room__options-dropdown-guests
+                            legend.search-room__options-dropdown-guests-legend гости
+                            +dropdown({items: ["взрослые", "дети", "младенцы"], title: "Сколько гостей", buttons: true}) 
+                        .search-room__options-range-slider.js-search-room__options-range-slider
+                            legend.search-room__options-range-slider-legend диапазон цены
                             +range-slider("Стоимость за сутки пребывания в номере")
-                        .options__checkbox
-                            legend правила дома
-                            +checkbox({ name: "Можно курить"})
-                            +checkbox({ name: "Можно с питомцами"})
-                            +checkbox({ name: "Можно пригласить гостей (до 10 человек)"})
-                        .options__checkbox-2
-                            legend доступность
-                            +checkbox({ name: "Ширина коридоров в номере не менее 91 см.", title:"Широкий коридор"})
-                            +checkbox({ 
+                        .search-room__options-checkbox
+                            legend.search-room__options-checkbox-legend правила дома
+                            .search-room__options-checkbox-item
+                                +checkbox({ name: "Можно курить"})
+                            .search-room__options-checkbox-item
+                                +checkbox({ name: "Можно с питомцами"})
+                            .search-room__options-checkbox-item
+                                +checkbox({ name: "Можно пригласить гостей (до 10 человек)"})
+                        .search-room__options-checkbox-2
+                            legend.search-room__options-checkbox-2-legend доступность
+                            .search-room__options-checkbox-2-item
+                                +checkbox({ name: "Ширина коридоров в номере не менее 91 см.", title:"Широкий коридор"})
+                            .search-room__options-checkbox-2-item
+                                +checkbox({ 
                                 name: "На 1 этаже вас встретит специалист и проводит до номера.",
                                 title:"Помощник для инвалидов"
                             })
-                        .options__dropdown-facilities.js-options__dropdown-facilities
-                            legend удобства номера
+                        .search-room__options-dropdown-facilities.js-search-room__options-dropdown-facilities
+                            legend.search-room__options-dropdown-facilities-legend удобства номера
                             .dropdown-facilities
                                 +dropdown({
                                     items: [
@@ -56,8 +60,9 @@ html(lang="ru")
                                         "кровати", 
                                         "ванные комнаты"
                                     ], 
-                                title: "Удобства"})
-                        .options__checkbox-list
+                                    title: "Удобства"
+                                })
+                        .search-room__options-checkbox-list
                             +expandable-checkbox-list({
                                 title:"дополнительные удобства", 
                                 list: [
@@ -67,10 +72,10 @@ html(lang="ru")
                                     "Телевизор", 
                                     "Шампунь"
                                     ]
-                                })
-                    .search-rooms-page__right-container
-                        h1.search-rooms-page__title Номера, которые мы для вас подобрали
-                        section.search-rooms-page__hotels
+                            })
+                    .search-room__right-container
+                        h1.search-room__title Номера, которые мы для вас подобрали
+                        section.search-room__hotels
                                 +room-card({
                                     images: [
                                         "./assets/img/room-888.jpg", 
@@ -176,8 +181,8 @@ html(lang="ru")
                                     rate:"3", 
                                     reviews:"55"
                                 })
-                        section.search-rooms-pagination.js-search-rooms-pagination
+                        section.search-room__pagination.js-search-room__pagination
                             +pagination
             footer
-                .search-rooms-page__container
+                .search-room__container
                     +footer

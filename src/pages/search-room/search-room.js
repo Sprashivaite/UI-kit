@@ -5,7 +5,7 @@ import initPagination from '../../components/pagination/pagination';
 import Dropdown from '../../components/dropdown/dropdown';
 import initDateFilter from '../../components/date-filter/date-filter';
 
-if (document.querySelector('.js-search-rooms-page')) {
+if (document.querySelector('.js-search-room')) {
   const rateButtons = document.querySelectorAll('.js-rate-button');
   rateButtons.forEach((button) => {
     new RateButton().findElements(button).addHandler();
@@ -14,13 +14,13 @@ if (document.querySelector('.js-search-rooms-page')) {
   cards.forEach((card) => {
     new RoomCard().findElements(card).addHandler();
   });
-  initSlider($('.js-options__range-slider'));
-  initPagination($('.js-search-rooms-pagination'));
-  initDateFilter($('.js-options__date-filter'));
+  initSlider($('.js-search-room__options-range-slider'));
+  initPagination($('.js-search-room__pagination'));
+  initDateFilter($('.js-search-room__options-date-filter'));
 
-  const searchRoomsDropdown = document.querySelector('.js-options__dropdown-guests');
-  new Dropdown(searchRoomsDropdown, [['гостей', 'гость', 'гостя']]).findElements().addHandler();
+  const searchroomDropdown = document.querySelector('.js-search-room__options-dropdown-guests');
+  new Dropdown(searchroomDropdown, [['гостей', 'гость', 'гостя']]).findElements().addHandler();
 
-  const facilitiesDropdown = document.querySelector('.js-options__dropdown-facilities');
+  const facilitiesDropdown = document.querySelector('.js-search-room__options-dropdown-facilities');
   new Dropdown(facilitiesDropdown, [['спальнен', 'спальня', 'спальни'], ['кроватей', 'кровать', 'кровати'], ['ванных комнат', 'ванная комната', 'ванные комнаты']]).findElements().addHandler();
 }

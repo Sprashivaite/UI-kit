@@ -1,7 +1,24 @@
 include ../button/button
 include ../date-range/date-range
 include ../dropdown/dropdown
-mixin reservation({num = 888, lux = true, luxText = "люкс", cost = "9 990₽", legendGuests = "Гости" , days = "4 суток", discount = "Сбор за услуги: скидка 2 179₽", additional = "Сбор за дополнительные услуги" ,costResult = "39 960₽", resultService = "0₽", resultServices = "300₽", finalTitle = "Итого", finalSum = "38 081₽"} = {})
+mixin reservation(options = {})
+    -
+        const {
+            num = 888, 
+            lux = true, 
+            luxText = "люкс", 
+            cost = "9 990₽", 
+            legendGuests = "Гости" , 
+            days = " x 4 суток", 
+            discount = "Сбор за услуги: скидка 2 179₽", 
+            additional = "Сбор за дополнительные услуги",
+            costResult = "39 960₽", 
+            resultService = "0₽", 
+            resultServices = "300₽", 
+            finalTitle = "Итого", 
+            finalSum = "38 081₽"
+        }
+         = options
     form.reservation(action="" method = "post")
         .reservation__container
             .reservation__description
@@ -16,15 +33,17 @@ mixin reservation({num = 888, lux = true, luxText = "люкс", cost = "9 990₽
                 +dropdown({items: ["взрослые", "дети", "младенцы"], title: "Сколько гостей", buttons: true})   
             .reservation__count
                 .reservation__count-text
-                    p= cost
-                     |  x 
-                     = days
-                    p.reservation__count-inf= discount
-                    p.reservation__count-inf= additional 
-                .reservation__count-cost
-                    p= costResult
-                    p= resultService
-                    p= resultServices
+                    span.reservation__count-text-cost= cost
+                        = days
+                    span.reservation__count-result= costResult
+                .reservation__count-levy
+                    span.reservation__count-inf= discount
+                    .reservation__count-inf-i
+                    span.reservation__count-result= resultService
+                .reservation__count-levy
+                    span.reservation__count-inf= additional 
+                    .reservation__count-inf-i
+                    span.reservation__count-result= resultServices
             .reservation__final
                 h2.reservation__final-title= finalTitle
                 .reservation__final-line
