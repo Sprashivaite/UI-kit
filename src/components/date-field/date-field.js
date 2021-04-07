@@ -6,9 +6,13 @@ const initDateField = function initDateField(container) {
   const myDatepicker = dateField.datepicker().data('datepicker');
   dateField.datepicker({
     maxDate: new Date(),
-    clearButton: true,    
+    clearButton: true,
     todayButton: true,
     inline: true,
+    view: 'years',
+    navTitles: {
+      days: 'MM <i>yyyy</i>',
+    },
   });
   const button = $('[data-action="today"]');
   const hideHandler = () => myDatepicker.hide();

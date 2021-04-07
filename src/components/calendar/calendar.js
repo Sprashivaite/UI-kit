@@ -8,6 +8,9 @@ const initCalendar = function initCalendar(container) {
     multipleDatesSeparator: ' - ',
     clearButton: true,
     todayButton: true,
+    navTitles: {
+        days: 'MM <i>yyyy</i>',
+    },
   });
 };
 export default initCalendar;
