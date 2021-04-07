@@ -1,3 +1,6 @@
+import 'ion-rangeslider';
+import '../../vendors/ion.rangeSlider/ion.rangeSlider.css';
+
 const initSlider = (container) => {
   const $range = container.find('.js-range-slider__input');
   const $value = container.find('.js-range-slider__values');

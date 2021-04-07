@@ -1,11 +1,4 @@
 import './styl/main.styl';
-import './vendors/ion.rangeSlider/ion.rangeSlider';
-import './vendors/ion.rangeSlider/ion.rangeSlider.css';
-import './vendors/simplePagination/jquery.simplePagination';
-import './vendors/simplePagination/simplePagination.css';
-import './vendors/datepicker/datepicker';
-import './vendors/datepicker/datepicker.min.css';
-import './vendors/masked-input/masked-input';
 import './pages/form-elements/form-elements';
 import './pages/cards/cards';
 import './pages/landing-page/landing-page';

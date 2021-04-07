@@ -1,3 +1,6 @@
+import '../../vendors/simplePagination/jquery.simplePagination';
+import '../../vendors/simplePagination/simplePagination.css';
+
 const initPagination = (container) => {
   const paginationElement = container.find('.js-pagination__buttons');
   paginationElement.pagination({
