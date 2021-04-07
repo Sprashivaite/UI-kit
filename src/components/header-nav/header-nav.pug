@@ -1,0 +1,39 @@
+mixin header-nav(navTitles =[])
+    -
+        navTitles = [
+            {
+                title: "О нас", 
+                bold: bold
+            },
+            {
+                title: "Услуги", 
+                href: "#",
+                dropdown: ["item1", "item2", "item3"]
+            },
+            {
+                title: "Вакансии"
+            },
+            {
+                title: "Новости"
+            },
+            {
+                title: "Соглашения", 
+                href: "#",
+                dropdown: ["item1", "item2", "item3"]
+            }
+        ]
+    ul.header-nav
+        each item in navTitles
+            li
+                a.header-nav__item(
+                    href=(item.href || "change-me.html") 
+                    class=`${(
+                        item.bold ? "header-nav__item_bold": ""
+                        )} ${(
+                        item.dropdown ? "header-nav__item_dropdown": ""
+                    )}`
+                )=item.title
+                    if (item.dropdown)
+                        .header-nav__dropdown-content 
+                            each nav in item.dropdown
+                                .header-nav__dropdown-content-item(href="change-me.html")= nav

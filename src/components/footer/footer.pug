@@ -69,8 +69,8 @@ mixin footer(options = {})
                     ]
                 })
             .footer__subscribe
-                h3= subscribeTitle
-                p= subscribeText
+                h3.footer__subscribe-title= subscribeTitle
+                p.footer__subscribe-text= subscribeText
                 form(action=subscribeAction, method="post").footer__email
                     +email-field
         .footer__bot

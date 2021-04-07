@@ -3,54 +3,19 @@
 include ../logo-color/logo-color
 include ../button/button
 include ../burger-menu/burger-menu
+include ../header-nav/header-nav
 mixin header(options = {})
     -
         const {
             bold = false, 
             login = false, 
             name = "Юлий Цезарь", 
-            navTitles = [
-                {
-                    title: "О нас", 
-                    bold: bold
-                },
-                {
-                    title: "Услуги", 
-                    href: "#",
-                    dropdown: ["item1", "item2", "item3"]
-                },
-                {
-                    title: "Вакансии"
-                },
-                {
-                    title: "Новости"
-                },
-                {
-                    title: "Соглашения", 
-                    href: "#",
-                    dropdown: ["item1", "item2", "item3"]
-                }
-            ]
         } = options 
     .header
         .header__logo-color
             +logo-color
         nav.header__nav
-            ul.header__ul
-                each item in navTitles
-                    li
-                        a.header__nav-item(
-                            href=(item.href || "change-me.html") 
-                            class=`${(
-                                    item.bold ? "header__nav-item_bold": ""
-                                )} ${(
-                                    item.dropdown ? "header__nav-item_dropdown": ""
-                            )}`
-                        )=item.title
-                            if (item.dropdown)
-                                .header__nav-dropdown-content 
-                                    each nav in item.dropdown
-                                        .header__nav-dropdown-content-item(href="change-me.html")= nav
+            +header-nav
             if login
                 .header__name= name
             else 

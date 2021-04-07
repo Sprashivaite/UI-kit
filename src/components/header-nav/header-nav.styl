@@ -1,0 +1,44 @@
+.header-nav
+  display flex  
+  @media(max-width 999px)
+    display none      
+  &__item
+    padding-right 20px
+    text-decoration none
+    &:focus
+      outline none
+      border 1px solid $dark25
+      border-radius 10%
+    &:hover
+      color $dark75
+    &_dropdown
+      padding-right 44px
+      position relative
+      &:hover 
+        .header-nav__dropdown-content
+          display block
+      &:after
+        position absolute
+        content: "expand_more"
+        font-family 'Material Icons'
+        display inline-block  
+        font-size 24px
+        width 12px
+        height 16px 
+        cursor pointer
+        color rgba(31, 32, 65, 0.5)
+    &_bold
+      font-weight bold      
+  &__dropdown-content 
+    border 1px solid $dark50
+    position absolute     
+    display none
+    min-width 100%
+    background-color white
+    top 18px
+    z-index 1
+    &-item
+      padding 5px 20px
+      margin 0
+      &:hover
+        color $dark100
