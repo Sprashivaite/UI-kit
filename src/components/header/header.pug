@@ -16,6 +16,7 @@ mixin header(options = {})
                 },
                 {
                     title: "Услуги", 
+                    href: "#",
                     dropdown: ["item1", "item2", "item3"]
                 },
                 {
@@ -26,6 +27,7 @@ mixin header(options = {})
                 },
                 {
                     title: "Соглашения", 
+                    href: "#",
                     dropdown: ["item1", "item2", "item3"]
                 }
             ]
@@ -37,18 +39,25 @@ mixin header(options = {})
             ul.header__ul
                 each item in navTitles
                     li
-                        a.header__nav-item(href=(href || "change-me.html") class=`${(item.bold ? "header__nav-item_bold": "")} ${(item.dropdown ? "header__nav-item_dropdown": "")}`)=item.title
+                        a.header__nav-item(
+                            href=(item.href || "change-me.html") 
+                            class=`${(
+                                    item.bold ? "header__nav-item_bold": ""
+                                )} ${(
+                                    item.dropdown ? "header__nav-item_dropdown": ""
+                            )}`
+                        )=item.title
                             if (item.dropdown)
                                 .header__nav-dropdown-content 
                                     each nav in item.dropdown
-                                        .header__nav-item= nav
+                                        .header__nav-dropdown-content-item(href="change-me.html")= nav
             if login
                 .header__name= name
             else 
-                .header__button_empty
+                .header__button-empty
                     form(action="sign-in.html")
                         +button({text: "войти", background: "white"})
-                .header__button_register
+                .header__button-register
                     form(action="registration.html")
                         +button({text: "зарегистрироваться"})
         +burger-menu({
@@ -76,5 +85,5 @@ mixin header(options = {})
                     title: "Зарегистрироваться", 
                     href: "registration.html"
                 }
-                ]
+            ]
         })

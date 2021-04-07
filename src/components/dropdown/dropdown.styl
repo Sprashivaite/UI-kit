@@ -1,8 +1,3 @@
-@keyframes opacity
-  0% 
-      opacity 0  
-  100% 
-      opacity 1
 .dropdown
   display flex  
   width 100%
@@ -84,8 +79,13 @@
       cursor pointer
       text-align center
       line-height 29px
+    &-plus 
+      &:after
+        content '+'      
     &-minus
       border 1px solid $dark25
+      &:after
+        content '-'
     &-minus_border
       @extend .dropdown__menu-minus
       border 1px solid $dark50
@@ -113,3 +113,8 @@
     opacity 1
     cursor pointer
     transition: 0.3s
+@keyframes opacity
+  0% 
+      opacity 0  
+  100% 
+      opacity 1
