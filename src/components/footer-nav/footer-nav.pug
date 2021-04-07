@@ -1,7 +1,7 @@
 mixin footer-nav({title = 'title', items={}} = {})
-  .footer-nav
-    h3.footer-nav__title=title
-    ul.footer-nav__ul
-      each item in items
-        li.footer-nav__li
-            a.footer-nav__a(href=(item.href || "change-me.html"))= item.nav
+    .footer-nav
+        h3.footer-nav__title=title
+        ul.footer-nav__ul
+            each item in items
+                li.footer-nav__li
+                    a.footer-nav__a(href=(item.href || "change-me.html"))= item.nav
