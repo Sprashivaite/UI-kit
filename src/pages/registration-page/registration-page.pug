@@ -11,13 +11,13 @@ html(lang="ru")
         meta(name="keywords", content="registration")
         title registration
     body 
-        .registration
+        .registration-page.js-registration-page
             header
-                .registration__container
+                .registration-page__container
                     +header({login: false})
-            main.registration__img
-                section.registration__registration-form
+            main.registration-page__img
+                section.registration-page__registration-form
                     +registration
             footer 
-                .registration__container
+                .registration-page__container
                     +footer
