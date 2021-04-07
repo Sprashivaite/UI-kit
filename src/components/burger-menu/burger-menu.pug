@@ -1,9 +1,9 @@
 mixin burger-menu({navigation = {}} = {})
-  label.burger-menu
-      input.burger-menu__toggle(type="checkbox")
-      .burger-menu__btn
-          span.burger-menu__stripes
-      ul.burger-menu__menu 
-          each item in navigation
-              li.burger-menu__menu-li
-                  a.burger-menu__item(href=(item.href || "change-me.html"))= item.title
+    label.burger-menu
+        input.burger-menu__toggle(type="checkbox")
+        .burger-menu__btn
+            span.burger-menu__stripes
+        ul.burger-menu__menu 
+            each item in navigation
+                li.burger-menu__menu-li
+                    a.burger-menu__item(href=(item.href || "change-me.html"))= item.title
