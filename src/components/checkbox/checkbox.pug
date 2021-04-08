@@ -1,12 +1,12 @@
 //- title: заголовок полужирным. 
-mixin checkbox({name = "", title = false} = {})
-    .checkbox
-        label.checkbox__label 
-            input.checkbox__input(type="checkbox" name= name )
-            .checkbox__box 
+mixin checkbox({name = "option", text = "", title = false} = {})
+    label.checkbox
+        input.checkbox__input(type="checkbox" name= name )
+        .checkbox__box 
+        .checkbox__text-container
             if(title)
                 b.checkbox__title= title 
-            p.checkbox__text(class= (title ? "checkbox__rich": ""))= name 
+            p.checkbox__text(class= (title ? "checkbox_size_small": ""))= text 
 
 
 
