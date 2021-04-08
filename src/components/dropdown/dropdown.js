@@ -1,5 +1,6 @@
 /* eslint-disable no-param-reassign */
 /* eslint-disable no-return-assign */
+
 /* eslint-disable class-methods-use-this */
 class Dropdown {
   constructor(container, names = []) {
@@ -102,6 +103,15 @@ class Dropdown {
     else this.title.innerHTML = result;
   }
 
+  documentHandlerClick(e) {
+    const { target } = e;
+    const menu = target === this.menu || this.menu.contains(target);
+    const field = target === this.field;
+    const menuIsActive = this.menu.classList.contains('dropdown__menu_show');
+    const isOutOfField = !menu && !field && menuIsActive;
+    if (isOutOfField) this.toggleMenu();
+  }
+
   addHandler() {
     this.dropdown.onmousedown = () => false;
     this.dropdown.onclick = () => false;
@@ -126,8 +136,13 @@ class Dropdown {
     });
     const handlerClear = () => this.clearValues();
     if (this.clear) this.clear.addEventListener('click', handlerClear);
-    const handlerApply = () => this.toggleMenu();
+    const handlerApply = (e) => {
+      e.stopPropagation();
+      this.toggleMenu();
+    };
     if (this.applyButton) this.applyButton.addEventListener('click', handlerApply);
+    const documentHandlerClick = (event) => this.documentHandlerClick(event);
+    document.addEventListener('click', documentHandlerClick);
     this.field.addEventListener('click', handlerApply);
   }
 }
