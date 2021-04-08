@@ -30,7 +30,7 @@ mixin header-nav(navTitles =[])
                     class=`${(
                         item.bold ? "header-nav__item_bold": ""
                         )} ${(
-                        item.dropdown ? "header-nav__item_dropdown": ""
+                        item.dropdown ? "header-nav__item_isDropdown": ""
                     )}`
                 )=item.title
                     if (item.dropdown)
