@@ -103,8 +103,8 @@ class Dropdown {
     else this.title.innerHTML = result;
   }
 
-  documentHandlerClick(e) {
-    const { target } = e;
+  documentHandlerClick(event) {
+    const { target } = event;
     const menu = target === this.menu || this.menu.contains(target);
     const field = target === this.field;
     const menuIsActive = this.menu.classList.contains('dropdown__menu_show');
