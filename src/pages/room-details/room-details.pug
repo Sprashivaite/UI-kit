@@ -77,8 +77,9 @@ html(lang="ru")
                             ) 
                         section.room-details__cancel
                             h2.room-details__cancel-title Отмена
-                            | Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.
+                            .room-details__cancel-text Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.
                     section.room-details__reservation.js-room-details__reservation
                         +reservation
-            .room-details__container
-                +footer
+            footer 
+                .room-details__container
+                    +footer
