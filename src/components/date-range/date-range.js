@@ -18,7 +18,25 @@ const initDataDouble = function initDataDouble(container) {
     todayButton: true,
     clearButton: true,
     navTitles: {
-        days: 'MM <i>yyyy</i>',
+      days: 'MM <i>yyyy</i>',
+    },
+    onShow(dp, animationCompleted) {
+      myDatepicker.$el.on('click.dd', () => {
+        if (animationCompleted) {
+          myDatepicker.hide();
+        }
+      });
+      secondData.on('click.dd', () => {
+        if (animationCompleted) {
+          myDatepicker.hide();
+        }
+      });
+    },
+    onHide(dp, animationCompleted) {
+      if (animationCompleted) {
+        myDatepicker.$el.off('.dd');
+        secondData.off('.dd');
+      }
     },
   });
   const button = $('[data-action="today"]');

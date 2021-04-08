@@ -13,6 +13,18 @@ const initDateField = function initDateField(container) {
     navTitles: {
       days: 'MM <i>yyyy</i>',
     },
+    onShow(dp, animationCompleted) {
+        myDatepicker.$el.on('click.dd', () => {
+          if (animationCompleted) {
+            myDatepicker.hide();
+          }
+        });
+      },
+      onHide(dp, animationCompleted) {
+        if (animationCompleted) {
+          myDatepicker.$el.off('.dd');
+        }
+      },
   });
   const button = $('[data-action="today"]');
   const hideHandler = () => myDatepicker.hide();
