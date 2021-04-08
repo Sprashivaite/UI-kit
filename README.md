@@ -23,6 +23,12 @@ Visit http://localhost:8081/ to see all possible pages of the project, click any
 npm run build
 ```
 
+### Plugins
+[Air-datepicker](https://github.com/t1m0n/air-datepicker)
+[Ion-rangeslider](http://ionden.com/a/plugins/ion.rangeSlider/)
+[Jquery.maskedinput](https://github.com/digitalBush/jquery.maskedinput)
+[SimplePagination](https://github.com/flaviusmatis/simplePagination.js)
+
 ### File structure
  
 #### `build`
