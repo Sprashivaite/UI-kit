@@ -7,10 +7,18 @@ class RateButton {
   initRateButton() {
     this.findElements();
     this.addHandler();
+    this.addRate();
   }
 
   findElements() {
     this.stars = [...this.container.children];
+  }
+
+  addRate() {
+    const value = this.container.dataset.rate;
+    for (let i = 0; i < value; i += 1) {
+      this.stars[i].innerHTML = 'star';
+    }
   }
 
   changeRate(element) {
