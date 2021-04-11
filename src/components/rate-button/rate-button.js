@@ -6,7 +6,7 @@ class RateButton {
   }
 
   changeRate(element) {
-    this.stars.map((el) => el.innerHTML = 'star_border');
+    this.stars.forEach((el) => el.innerHTML = 'star_border');
     const star = element;
     star.innerHTML = 'star';
     let prevStar = star;

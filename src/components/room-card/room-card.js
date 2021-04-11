@@ -46,7 +46,7 @@ class RoomCard {
     });
     const circle = button;
     circle.dataset.target = true;
-    this.pictures.map((element) => element.classList.remove('room-card__picture_show'));
+    this.pictures.forEach((element) => element.classList.remove('room-card__picture_show'));
     if (this.card.querySelector(`.js-room-card__picture_${circle.num}`)) {
       this.card.querySelector(
         `.js-room-card__picture_${circle.num}`,
