@@ -1,5 +1,5 @@
-import initDateField from '../../components/date-field/date-field';
+import DateField from '../../components/date-field/date-field';
 
 if (document.querySelector('.js-registration-page')) {
-    initDateField($('.js-date-field'));
+    const dateField = new DateField($('.js-date-field'));
 }

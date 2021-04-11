@@ -1,8 +1,15 @@
 import 'jquery.maskedinput/src/jquery.maskedinput';
 
-const initMaskInput = (target) => {
-  const mask = target.data('mask');
-  const text = target.data('format');
-  target.mask(mask, { placeholder: text });
-};
-export default initMaskInput;
+class MaskInput {
+  constructor($target){
+    this.initMaskInput($target)
+  }
+
+  initMaskInput($target) {
+    this.$target = $target;
+    const mask = this.$target.data('mask');
+    const text = this.$target.data('format');
+    this.$target.mask(mask, { placeholder: text });
+  }
+}
+export default MaskInput;

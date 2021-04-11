@@ -1,9 +1,17 @@
 class LikeButton {
+  constructor(button) {
+    this.initLikeButton(button)
+  }
+
+  initLikeButton(button) {
+    this.findElements(button);
+    this.addHandler();
+  }
+
   findElements(button) {
     this.button = button;
     this.input = this.button.querySelector('.js-like-button__input');
     this.value = this.button.querySelector('.js-like-button__value');
-    return this;
   }
 
   add() {
