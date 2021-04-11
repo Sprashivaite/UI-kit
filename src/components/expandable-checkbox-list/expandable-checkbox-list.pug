@@ -8,4 +8,4 @@ mixin expandable-checkbox-list({title = "", opened = false, list = []} = {})
         ul.expandable-checkbox-list__checkboxes
             each item in list
                 li.expandable-checkbox-list__li
-                    +checkbox({ name: item})
+                    +checkbox({ text: item})
