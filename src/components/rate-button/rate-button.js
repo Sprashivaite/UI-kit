@@ -1,8 +1,16 @@
 class RateButton {
-  findElements(parent) {
-    this.stars = parent.children;
-    this.stars = [...this.stars];
-    return this;
+  constructor(container) {
+    this.container = container;
+    this.initRateButton();
+  }
+
+  initRateButton() {
+    this.findElements();
+    this.addHandler();
+  }
+
+  findElements() {
+    this.stars = [...this.container.children];
   }
 
   changeRate(element) {
@@ -21,9 +29,7 @@ class RateButton {
     this.stars.onmousedown = () => false;
     this.stars.forEach((star) => {
       this.star = star;
-      const handler = () => {
-        this.changeRate(star);
-      };
+      const handler = () => this.changeRate(star);
       this.star.addEventListener('click', handler);
     });
   }

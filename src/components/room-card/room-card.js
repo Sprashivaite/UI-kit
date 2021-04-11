@@ -1,16 +1,24 @@
 /* eslint-disable no-param-reassign */
 /* eslint-disable no-return-assign */
 class RoomCard {
-  findElements(card) {
+  constructor(card) {
     this.card = card;
+    this.initRoomCard();
+  }
+
+  initRoomCard() {
+    this.findElements();
+  }
+
+  findElements() {
     this.buttonPictures = Array.from(
-      card.querySelector('.js-room-card__buttons').childNodes,
+      this.card.querySelector('.js-room-card__buttons').childNodes,
     );
     this.pictures = Array.from(
-      card.querySelector('.js-room-card__pictures').childNodes,
+      this.card.querySelector('.js-room-card__pictures').childNodes,
     );
-    this.leftArrow = card.querySelector('.js-room-card__button-left');
-    this.rightArrow = card.querySelector('.js-room-card__button-right');
+    this.leftArrow = this.card.querySelector('.js-room-card__button-left');
+    this.rightArrow = this.card.querySelector('.js-room-card__button-right');
     return this;
   }
 

@@ -1,11 +1,17 @@
+/* eslint-disable default-case */
 /* eslint-disable no-param-reassign */
 /* eslint-disable no-return-assign */
-
 /* eslint-disable class-methods-use-this */
 class Dropdown {
   constructor(container, names = []) {
     this.container = container;
     this.names = names;
+    this.initDropdown();
+  }
+
+  initDropdown() {
+    this.findElements();
+    this.addHandler();
   }
 
   findElements() {
@@ -19,7 +25,6 @@ class Dropdown {
     this.clear = this.container.querySelector('.js-dropdown__clear');
     this.applyButton = this.container.querySelector('.js-dropdown__apply');
     this.defaultTitle = this.title.innerHTML;
-    return this;
   }
 
   makeMinus(target) {
@@ -68,7 +73,6 @@ class Dropdown {
       default:
         name = plural;
     }
-    // eslint-disable-next-line default-case
     switch (lastTwoNumbs) {
       case 11:
       case 12:
@@ -136,8 +140,8 @@ class Dropdown {
     });
     const handlerClear = () => this.clearValues();
     if (this.clear) this.clear.addEventListener('click', handlerClear);
-    const handlerApply = (e) => {
-      e.stopPropagation();
+    const handlerApply = (event) => {
+      event.stopPropagation();
       this.toggleMenu();
     };
     if (this.applyButton) this.applyButton.addEventListener('click', handlerApply);
