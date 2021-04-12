@@ -17,7 +17,6 @@ include ../../components/dropdown/dropdown
 include ../../components/expandable-checkbox-list/expandable-checkbox-list
 include ../../components/like-button/like-button
 include ../../components/pagination/pagination
-include ../../components/masked-input/masked-input
 <!DOCTYPE html>
 html(lang="ru")
     head
@@ -52,9 +51,9 @@ html(lang="ru")
                                 title: "Сколько гостей", 
                                 buttons: true
                             }) 
-                    section.form-elements__masked
+                    section.form-elements__masked.js-form-elements__masked
                         legend.form-elements__legend masked text field
-                        +masked-input()
+                        +text-field({masked: true, placeholder: "ДД.ММ.ГГГГ", mask: "99.99.9999"})
                     section.form-elements__date-dropdown.js-form-elements__date-dropdown
                         +date-range({dropdowns: ["date Dropdown", "date Dropdown"]})
                     section.form-elements__filter-dropdown.js-form-elements__filter-dropdown

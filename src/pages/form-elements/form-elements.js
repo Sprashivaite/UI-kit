@@ -5,7 +5,7 @@ import Pagination from '../../components/pagination/pagination';
 import Dropdown from '../../components/dropdown/dropdown';
 import DateRange from '../../components/date-range/date-range';
 import DateFilter from '../../components/date-filter/date-filter';
-import MaskInput from '../../components/masked-input/masked-input';
+import MaskInput from '../../components/text-field/text-field';
 
 if (document.querySelector('.js-form-elements')) {
   const likeButtons = document.querySelectorAll('.js-like-button');
@@ -20,5 +20,5 @@ if (document.querySelector('.js-form-elements')) {
   new Pagination($('.js-form-elements__pagination'));
   new DateRange($('.js-form-elements__date-dropdown'));
   new DateFilter($('.js-form-elements__filter-dropdown'));
-  new MaskInput($('.js-masked-input__input'));
+  new MaskInput($('.js-form-elements__masked'));
 }
