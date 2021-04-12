@@ -11,7 +11,6 @@ if (document.querySelector('.js-search-room')) {
   const searchroomDropdown = document.querySelector('.js-search-room__options-dropdown-guests');
   const facilitiesDropdown = document.querySelector('.js-search-room__options-dropdown-facilities');
   rateButtons.forEach((button) => new RateButton(button));
-
   cards.forEach((card) => new RoomCard(card));
   new Slider($('.js-search-room__options-range-slider'));
   new Pagination($('.js-search-room__pagination'));

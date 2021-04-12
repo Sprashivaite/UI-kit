@@ -10,5 +10,6 @@ module.exports = {
   ],
   plugins: ['fsd'],
   rules: {
+    'no-new': false,
   },
 };
