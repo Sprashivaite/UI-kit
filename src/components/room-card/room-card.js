@@ -8,6 +8,7 @@ class RoomCard {
 
   initRoomCard() {
     this.findElements();
+    this.addHandler();
   }
 
   findElements() {
@@ -19,7 +20,6 @@ class RoomCard {
     );
     this.leftArrow = this.card.querySelector('.js-room-card__button-left');
     this.rightArrow = this.card.querySelector('.js-room-card__button-right');
-    return this;
   }
 
   turnLeft() {
