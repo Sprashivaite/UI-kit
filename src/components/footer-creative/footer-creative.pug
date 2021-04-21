@@ -1,27 +1,8 @@
 include ../social-networks/social-networks
-mixin footer-creative
+mixin footer-creative({copyright = "", socialNetworks = []} = {})
     .footer-creative
         .footer-creative__logo
             +logo-color
-        .footer-creative__text
-            | Copyright © 2018 Toxin отель. Все права защищены.
+        .footer-creative__text!=copyright            
         .footer-creative__social-networks
-            +social-networks({
-                items: [
-                    {
-                        href: "https://twitter.com/", 
-                        src: "./assets/img/twitter.svg", 
-                        alt: "twitter"
-                    }, 
-                    {
-                        href: "https://www.facebook.com/", 
-                        src: "./assets/img/facebook.svg", 
-                        alt: "facebook"
-                    }, 
-                    {
-                        href: "https://www.instagram.com/", 
-                        src: "./assets/img/instagram.svg", 
-                        alt: "instagram"
-                    }, 
-                    ]
-                })
+            +social-networks(socialNetworks)

@@ -1,27 +1,4 @@
-mixin header-nav(navTitles =[])
-    -
-        navTitles = [
-            {
-                title: "О нас", 
-                bold: bold
-            },
-            {
-                title: "Услуги", 
-                href: "#",
-                dropdown: ["item1", "item2", "item3"]
-            },
-            {
-                title: "Вакансии"
-            },
-            {
-                title: "Новости"
-            },
-            {
-                title: "Соглашения", 
-                href: "#",
-                dropdown: ["item1", "item2", "item3"]
-            }
-        ]
+mixin header-nav(navTitles = []) 
     ul.header-nav
         each item in navTitles
             li
