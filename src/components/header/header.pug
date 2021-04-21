@@ -10,45 +10,23 @@ mixin header(options = {})
             bold = false, 
             login = false, 
             name = "Юлий Цезарь", 
+            navTitles = [],
+            buttonTextSignIn = "",
+            buttonTextLogIn = "",
+            navBurger = [],
         } = options 
     .header
         .header__logo-color
             +logo-color
         nav.header__nav
-            +header-nav
+            +header-nav(navTitles)
             if login
                 .header__name= name
             else 
                 .header__button-empty
                     form(action="sign-in.html")
-                        +button({text: "войти", background: "white"})
+                        +button({text: buttonTextSignIn, background: "white"})
                 .header__button-register
                     form(action="registration-page.html")
-                        +button({text: "зарегистрироваться"})
-        +burger-menu({
-            navigation: [
-                {
-                    title: "О нас"
-                }, 
-                {
-                    title: "Услуги"
-                }, 
-                {
-                    title: "Вакансии"
-                }, 
-                {
-                    title: "Новости"
-                }, 
-                {
-                    title: "Соглашения"
-                }, 
-                {
-                    title: "Войти", 
-                    href: "sign-in.html"
-                }, 
-                {
-                    title: "Зарегистрироваться", 
-                    href: "registration-page.html"
-                }
-            ]
-        })
+                        +button({text: buttonTextLogIn})
+        +burger-menu(navTitles)

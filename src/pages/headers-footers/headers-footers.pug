@@ -2,6 +2,8 @@ include ../../components/logo/logo
 include ../../components/header/header
 include ../../components/footer/footer
 include ../../components/footer-creative/footer-creative
+-
+    const data = require("./headers-footers.json")
 <!DOCTYPE html>
 html(lang="ru")
     head
@@ -18,13 +20,13 @@ html(lang="ru")
             section.headers-footers__header
                 header 
                     .headers-footers__container
-                        +header({login: false, bold: true})
+                        +header(data.header)
             section.headers-footers__header_reg
                 header 
                     .headers-footers__container
-                        +header({login: true, bold: true})
+                        +header(data.headerLoggedIn)
             section.headers-footers__footer
                 .headers-footers__container
-                    +footer
+                    +footer(data.footer)
             section.headers-footers__footer-creative
-                +footer-creative
+                +footer-creative(data.footer)
