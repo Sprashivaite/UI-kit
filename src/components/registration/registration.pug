@@ -4,32 +4,50 @@ include ../toggle/toggle
 include ../button/button
 include ../date-range/date-range
 include ../date-field/date-field
-mixin registration({title = "Регистрация аккаунта", dateText = "дата рождения", data = "данные для входа в сервис", accountText = "Уже есть аккаунт на Toxin", action = ""} ={})
+mixin registration(options = {})
+    -
+        const {
+            title = "",             
+            data = "",             
+            actionForm = "",
+            textName = "",
+            textSurName = "",
+            radioMan = {},
+            radioWoman = {},
+            dateText = "", 
+            textEmail = {},
+            textPassword = {},
+            toggleName = "", 
+            buttonPay = {},
+            actionSignIn = "sign-in.html",
+            accountText = "", 
+            buttonLogIn = ""
+        } = options
     .registration
         .registration__container
             h1.registration__title= title
-            form(action=action method = "post")
+            form(action=actionForm method = "post")
                 .registration__name
-                    +text-field({placeholder: "Имя"})
+                    +text-field({placeholder: textName})
                 .registration__surname
-                    +text-field({placeholder: "Фамилия"})
+                    +text-field({placeholder: textSurName})
                 .registration__radio
-                    +radio-button({text: "Мужчина", value: "man", checked: true})
-                    +radio-button({text: "Женщина", value: "woman"})
+                    +radio-button(radioMan)
+                    +radio-button(radioWoman)
                 .registration__data
                     legend= dateText
                     +date-field
                 .registration__log-in
                     legend= data
                     .log-in__email
-                        +text-field({type:"email", placeholder: "Email"})
+                        +text-field(textEmail)
                     .log-in__pass
-                        +text-field({type: "password", placeholder: "Пароль"})
+                        +text-field(textPassword)
                 .registration__toggle
-                    +toggle
+                    +toggle({text: toggleName})
                 .registration__button-solid
-                    +button({arrow: true, text:"перейти к оплате"})
-            form.registration__sign-in-form(action="sign-in.html")
+                    +button(buttonPay)
+            form.registration__sign-in-form(action=actionSignIn)
                 .registration__text= accountText
                 .registration__button-empty                
-                    +button({background: "white", text:"войти"})
+                    +button(buttonLogIn)

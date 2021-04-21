@@ -1,19 +1,24 @@
 include ../button/button
 include ../date-range/date-range 
 include ../dropdown/dropdown
-mixin search-rooms({ title = "Найдём номера под ваши пожелания", guests = "Гости", action = "search-room.html" } = {})
+mixin search-rooms(options = {})
+    -
+        const { 
+            title = "", 
+            legendGuests = "", 
+            action = "search-room.html",
+            dateRange = ["title1", "title2"],
+            dropdown = "",
+            button = ""
+        } =  options
     .search-rooms
         .search-rooms__container
             h1.search-rooms__title= title
             form(action=action)
                 .search-rooms__com-data
-                    +date-range({dropdowns: ["прибытие", "выезд"]})
+                    +date-range({dropdowns: dateRange})
                 .search-rooms__guests
                     legend.search-rooms__guests-legend= guests
-                    +dropdown({
-                        items: ["взрослые", "дети", "младенцы"], 
-                        title: "Сколько гостей", 
-                        buttons: true
-                    }) 
+                    +dropdown(dropdown) 
                 .search-rooms__button
-                    +button({arrow: true, text:"подобрать номер"})
+                    +button(button)

@@ -33,7 +33,7 @@ html(lang="ru")
                             +dropdown({items: ["взрослые", "дети", "младенцы"], title: "Сколько гостей", buttons: true}) 
                         .search-room__options-range-slider.js-search-room__options-range-slider
                             legend.search-room__options-range-slider-legend диапазон цены
-                            +range-slider("Стоимость за сутки пребывания в номере")
+                            +range-slider({caption: "Стоимость за сутки пребывания в номере"})
                         .search-room__options-checkbox
                             legend.search-room__options-checkbox-legend правила дома
                             .search-room__options-checkbox-item
@@ -182,7 +182,7 @@ html(lang="ru")
                                     reviews:"55"
                                 })
                         section.search-room__pagination.js-search-room__pagination
-                            +pagination
+                            +pagination({caption: "1 – 12 из 100+ вариантов аренды"})
             footer
                 .search-room__container
                     +footer

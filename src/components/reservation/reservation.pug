@@ -4,33 +4,38 @@ include ../dropdown/dropdown
 mixin reservation(options = {})
     -
         const {
-            num = 888, 
+            actionForm = "",
+            num = "", 
             lux = true, 
-            luxText = "люкс", 
-            cost = "9 990₽", 
-            legendGuests = "Гости" , 
-            days = " x 4 суток", 
-            discount = "Сбор за услуги: скидка 2 179₽", 
-            additional = "Сбор за дополнительные услуги",
-            costResult = "39 960₽", 
-            resultService = "0₽", 
-            resultServices = "300₽", 
-            finalTitle = "Итого", 
-            finalSum = "38 081₽"
-        }
-         = options
-    form.reservation(action="" method = "post")
+            luxText = "", 
+            dateRange = [],
+            legendGuests = "" , 
+            dropdown = {},
+            cost = "", 
+            dayText = "",
+            days = "", 
+            discount = "", 
+            additional = "",
+            costResult = "", 
+            resultService = "", 
+            resultServices = "", 
+            finalTitle = "", 
+            finalSum = "",
+            buttonText = ""
+        } = options
+    form.reservation(action=actionForm method = "post")
         .reservation__container
             .reservation__description
                 h1.reservation__description-num= num
                 if lux
-                    h3.reservation__description-lux= luxText
-                .reservation__description-cost= cost                     
+                    span.reservation__description-lux= luxText
+                span.reservation__description-cost= cost          
+                    span.reservation__description-day= dayText          
             .reservation__com-data
-                +date-range({dropdowns: ["прибытие", "выезд"]})
+                +date-range({dropdowns: dateRange})
             .reservation__guests
                 legend.reservation__guests-legend= legendGuests
-                +dropdown({items: ["взрослые", "дети", "младенцы"], title: "Сколько гостей", buttons: true})   
+                +dropdown(dropdown)
             .reservation__count
                 .reservation__count-text
                     span.reservation__count-text-cost= cost
@@ -49,4 +54,4 @@ mixin reservation(options = {})
                 .reservation__final-line
                 h2= finalSum
             .reservation__button-solid
-                +button({arrow: true, text:"забронировать"})
+                +button({arrow: true, text:buttonText})

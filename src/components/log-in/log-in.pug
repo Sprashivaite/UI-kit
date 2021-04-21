@@ -1,17 +1,28 @@
 include ../text-field/text-field
 include ../button/button
-mixin log-in({title='Войти', accountText = 'Нет аккаунта на Toxin?'} = {})
+mixin log-in(options = {})
+    -
+        const {
+            title="", 
+            actionForm = "",
+            emailText = "",
+            passText = "",
+            buttonLogInText = "",
+            actionReg = "registration-page.html",
+            accountText = "",
+            buttonRegText = ""
+        } = options
     .log-in
         .log-in__container
             h1.log-in__title= title
-            form(action="" method = "post")
+            form(action=actionForm method = "post")
                 .log-in__name
-                    +text-field({type: "text", placeholder: "Email"})
+                    +text-field({type: "text", placeholder: emailText})
                 .log-in__pass
-                    +text-field({type: "password", placeholder: "Пароль"})
+                    +text-field({type: "password", placeholder: passText})
                 .log-in__button-solid
-                    +button({arrow: true, text:"войти"})
-            form(action="registration-page.html")
+                    +button({arrow: true, text:buttonLogInText})
+            form(action=actionReg)
                 .log-in__text= accountText
                 .log-in__button-empty
-                    +button({background: "white", text:"создать"})
+                    +button({background: "white", text:buttonRegText})
