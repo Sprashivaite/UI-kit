@@ -24,7 +24,6 @@ class DateField {
       clearButton: true,
       todayButton: true,
       inline: true,
-      view: 'years',
       navTitles: {
         days: 'MM <i>yyyy</i>',
       },
