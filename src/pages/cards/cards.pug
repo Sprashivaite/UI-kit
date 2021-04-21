@@ -7,6 +7,8 @@ include ../../components/reservation/reservation
 include ../../components/log-in/log-in 
 include ../../components/calendar/calendar
 include ../../components/date-range/date-range
+-
+    const data = require("./cards-data.json")
 <!DOCTYPE html>
 html(lang="ru")
     head
@@ -23,14 +25,14 @@ html(lang="ru")
             section.cards__main-container
                 section.cards__left-container
                     section.cards__search-rooms.js-cards__search-rooms
-                        +search-rooms
+                        +search-rooms(data.searchRooms)
                     section.cards__registration
-                        +registration
+                        +registration(data.registration)
                 section.cards__middle-container        
                     section.cards__reservation.js-cards__reservation
-                        +reservation       
+                        +reservation(data.reservation)       
                     section.cards__log-in
-                        +log-in   
+                        +log-in(data.logIn)
                 section.cards__right-container    
                     section.cards__calendar.js-cards__calendar
                         +calendar
@@ -44,9 +46,11 @@ html(lang="ru")
                             ], 
                             num:"888", 
                             lux: true, 
-                            price: "9 990", 
+                            price: data.roomCard.price,
+                            daysText: data.roomCard.daysText,
                             rate:"5", 
-                            reviews:"145"
+                            reviews:"145",
+                            reviewsText: data.roomCard.reviewsText
                         })
                     section.cards__room-card-2
                         +room-card({
@@ -58,7 +62,9 @@ html(lang="ru")
                             ], 
                             num:"840", 
                             lux: false, 
-                            price: "9 990", 
+                            price: data.roomCard.price,
+                            daysText: data.roomCard.daysText,
                             rate:"4", 
-                            reviews:"65"
+                            reviews:"65",
+                            reviewsText: data.roomCard.reviewsText
                         })

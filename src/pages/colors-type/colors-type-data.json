@@ -1,0 +1,60 @@
+{
+    "cubes": [
+        {
+            "color": "dark-100",
+            "text": "Dark Shade 100%",
+            "code": "#1F2041"
+        },
+        {
+            "color": "dark-75",
+            "text": "Dark Shade 75%",
+            "code": "#1F2041"
+        },
+        {
+            "color": "dark-50",
+            "text": "Dark Shade 50%",
+            "code": "#1F2041"
+        },
+        {
+            "color": "dark-25",
+            "text": "Dark Shade 25%",
+            "code": "#1F2041"
+        },
+        {
+            "color": "dark-5",
+            "text": "Dark Shade 5%",
+            "code": "#1F2041"
+        },
+        {
+            "color": "purple",
+            "text": "Purple",
+            "code": "#BC9CFF"
+        },
+        {
+            "color": "green",
+            "text": "Green",
+            "code": "#6FCF97"
+        }
+    ],
+    "fonts": [
+        {
+            "tag": "H1",
+            "spec": "This one is the sub-section or widget title",
+            "style": "fonts-description_tag_h1"
+        },
+        {
+            "tag": "H2",
+            "spec": "Next one is the item title inside widgets",
+            "style": "fonts-description_tag_h2"
+        },
+        {
+            "tag": "h3",
+            "spec": "This is a label or CTA text",
+            "style": "fonts-description_tag_h3"
+        },
+        {
+            "tag": "Body",
+            "spec": "This is the body text which is used for most <br> of the design, like paragraphs, lists, etc."
+        }
+    ]
+}
