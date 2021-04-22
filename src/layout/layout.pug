@@ -1,0 +1,17 @@
+include ../components/header/header
+include ../components/footer/footer
+<!DOCTYPE html>
+html(lang="ru")
+    head
+        block head
+            meta(charset="UTF-8")
+            meta(name="viewport", content="initial-scale=1.0, width=device-width")
+            meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    block variables 
+        - let mainClass = ""
+    body(class=mainClass)
+        header
+            +header(data.header)
+        block content
+        footer
+            +footer(data.footer)
