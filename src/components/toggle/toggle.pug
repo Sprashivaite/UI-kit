@@ -1,6 +1,4 @@
-//- checked: boolean
-//- name : имя
-mixin toggle({checked = false, name='', text = "Получать спецпредложения"} = {})
+mixin toggle({checked = false, name='', text = ""} = {})
     label.toggle
         input.toggle__input(type="checkbox" name=name checked=checked ) 
         .toggle__button

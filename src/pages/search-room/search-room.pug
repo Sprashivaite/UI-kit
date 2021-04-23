@@ -1,3 +1,4 @@
+extends ../../layout/layout
 include ../../components/header/header
 include ../../components/footer/footer 
 include ../../components/dropdown/dropdown
@@ -8,181 +9,52 @@ include ../../components/room-card/room-card
 include ../../components/pagination/pagination
 include ../../components/date-range/date-range
 include ../../components/date-filter/date-filter
-<!DOCTYPE html>
-html(lang="ru")
-    head
-        meta(charset="UTF-8")
-        meta(name="viewport", content="initial-scale=1.0, width=device-width")
-        meta(http-equiv="X-UA-Compatible", content="ie=edge")
-        meta(name="description", content="search room")
-        meta(name="keywords", content="search, room")
-        title search-room
-    body 
-        .search-room.js-search-room
-            header
-                .search-room__container
-                    +header({login: false})
-            .search-room__container
-                main.search-room__body
-                    section.search-room__options
-                        .search-room__options-date-filter.js-search-room__options-date-filter
-                            legend.search-room__options-date-filter-legend даты пребывания в отеле
-                            +date-filter
-                        .search-room__options-dropdown-guests.js-search-room__options-dropdown-guests
-                            legend.search-room__options-dropdown-guests-legend гости
-                            +dropdown({items: ["взрослые", "дети", "младенцы"], title: "Сколько гостей", buttons: true}) 
-                        .search-room__options-range-slider.js-search-room__options-range-slider
-                            legend.search-room__options-range-slider-legend диапазон цены
-                            +range-slider({caption: "Стоимость за сутки пребывания в номере"})
-                        .search-room__options-checkbox
-                            legend.search-room__options-checkbox-legend правила дома
-                            .search-room__options-checkbox-item
-                                +checkbox({ text: "Можно курить"})
-                            .search-room__options-checkbox-item
-                                +checkbox({ text: "Можно с питомцами"})
-                            .search-room__options-checkbox-item
-                                +checkbox({ text: "Можно пригласить гостей (до 10 человек)"})
-                        .search-room__options-checkbox-2
-                            legend.search-room__options-checkbox-2-legend доступность
-                            .search-room__options-checkbox-2-item
-                                +checkbox({ text: "Ширина коридоров в номере не менее 91 см.", title:"Широкий коридор"})
-                            .search-room__options-checkbox-2-item
-                                +checkbox({ 
-                                text: "На 1 этаже вас встретит специалист и проводит до номера.",
-                                title:"Помощник для инвалидов"
-                            })
-                        .search-room__options-dropdown-facilities.js-search-room__options-dropdown-facilities
-                            legend.search-room__options-dropdown-facilities-legend удобства номера
-                            .dropdown-facilities
-                                +dropdown({
-                                    items: [
-                                        "спальни", 
-                                        "кровати", 
-                                        "ванные комнаты"
-                                    ], 
-                                    title: "Удобства"
-                                })
-                        .search-room__options-checkbox-list
-                            +expandable-checkbox-list({
-                                title:"дополнительные удобства", 
-                                list: [
-                                    "Завтрак", "Письменный стол", 
-                                    "Стул для кормления", 
-                                    "Кроватка", 
-                                    "Телевизор", 
-                                    "Шампунь"
-                                    ]
-                            })
-                    .search-room__right-container
-                        h1.search-room__title Номера, которые мы для вас подобрали
-                        section.search-room__hotels
-                                +room-card({
-                                    images: [
-                                        "./assets/img/room-888.jpg", 
-                                        "./assets/img/room-840.jpg", 
-                                        "./assets/img/room-350.jpg", 
-                                        "./assets/img/room-352.jpg"], 
-                                    num:"888", 
-                                    lux: true, 
-                                    price: "9 990", 
-                                    rate:"5", 
-                                    reviews:"145"
-                                })
-                                +room-card({
-                                    images: [
-                                        "./assets/img/room-840.jpg", 
-                                        "./assets/img/room-888.jpg", 
-                                        "./assets/img/room-352.jpg", 
-                                        "./assets/img/room-350.jpg"
-                                        ], 
-                                    num:"840", 
-                                    lux: false, 
-                                    price: "9 990",
-                                    rate:"4", 
-                                    reviews:"65"
-                                })
-                                +room-card({
-                                    images: ["./assets/img/room-980.jpg"], 
-                                    num:"980", 
-                                    lux: true, 
-                                    price: "8 500", 
-                                    rate:"3", 
-                                    reviews:"35"
-                                })
-                                +room-card({
-                                    images: ["./assets/img/room-856.jpg"], 
-                                    num:"856", 
-                                    lux: false,
-                                    price: "7 300", 
-                                    rate:"5", 
-                                    reviews:"19"
-                                })
-                                +room-card({
-                                    images: ["./assets/img/room-740.jpg"], 
-                                    num:"740", 
-                                    lux: false, 
-                                    price: "6 000", 
-                                    rate:"4", 
-                                    reviews:"44"
-                                })
-                                +room-card({
-                                    images: ["./assets/img/room-982.jpg"], 
-                                    num:"982", 
-                                    lux: false, 
-                                    price: "5 800", 
-                                    rate:"3", 
-                                    reviews:"56"
-                                })
-                                +room-card({
-                                    images: ["./assets/img/room-678.jpg"], 
-                                    num:"678", 
-                                    lux: false, 
-                                    price: "5 000", 
-                                    rate:"5", 
-                                    reviews:"45"
-                                })
-                                +room-card({images: [
-                                    "./assets/img/room-450.jpg"], 
-                                    num:"450", 
-                                    lux: false, 
-                                    price: "5 300", 
-                                    rate:"4", 
-                                    reviews:"39"
-                                })
-                                +room-card({
-                                    images: ["./assets/img/room-350.jpg"], 
-                                    num:"350", 
-                                    lux: false, 
-                                    price: "5 000", 
-                                    rate:"3", 
-                                    reviews:"77"
-                                })
-                                +room-card({
-                                    images: ["./assets/img/room-666.jpg"], 
-                                    num:"666", 
-                                    lux: false, 
-                                    price: "5 000", 
-                                    rate:"3", 
-                                    reviews:"25"
-                                })
-                                +room-card({
-                                    images: ["./assets/img/room-444.jpg"], 
-                                    num:"444", 
-                                    lux: false, 
-                                    price: "5 000", 
-                                    rate:"3", 
-                                    reviews:"15"
-                                })
-                                +room-card({
-                                    images: ["./assets/img/room-352.jpg"], 
-                                    num:"352", 
-                                    lux: false, 
-                                    price: "5 000", 
-                                    rate:"3", 
-                                    reviews:"55"
-                                })
-                        section.search-room__pagination.js-search-room__pagination
-                            +pagination({caption: "1 – 12 из 100+ вариантов аренды"})
-            footer
-                .search-room__container
-                    +footer
+append head  
+    meta(name="description", content="search room")
+    meta(name="keywords", content="search, room")
+    title search-room
+block variables 
+    - 
+        mainClass = "search-room js-search-room" 
+        const data = require("../../layout/layout-data.json")
+        const pageData = require("./search-room-data.json")
+block content
+    .search-room__container
+        main.search-room__body
+            section.search-room__options
+                .search-room__options-date-filter.js-search-room__options-date-filter
+                    legend.search-room__options-date-filter-legend=pageData.dateFilterTitle
+                    +date-filter
+                .search-room__options-dropdown-guests.js-search-room__options-dropdown-guests
+                    legend.search-room__options-dropdown-guests-legend=pageData.dropdownTitle
+                    +dropdown(pageData.dropdownItems) 
+                .search-room__options-range-slider.js-search-room__options-range-slider
+                    legend.search-room__options-range-slider-legend=pageData.rangeSliderTitle
+                    +range-slider({caption: pageData.rangeSliderCaption})
+                .search-room__options-checkbox
+                    legend.search-room__options-checkbox-legend=pageData.checkboxRulesTitle 
+                    .search-room__options-checkbox-item
+                        +checkbox({ text: pageData.checkboxRulesItems[0]})
+                    .search-room__options-checkbox-item
+                        +checkbox({ text: pageData.checkboxRulesItems[1]})
+                    .search-room__options-checkbox-item
+                        +checkbox({ text: pageData.checkboxRulesItems[2]})
+                .search-room__options-checkbox-2
+                    legend.search-room__options-checkbox-2-legend=pageData.checkboxAvailabilityTitle
+                    .search-room__options-checkbox-2-item
+                        +checkbox(pageData.checkboxAvailabilityItems[0])
+                    .search-room__options-checkbox-2-item
+                        +checkbox(pageData.checkboxAvailabilityItems[1])
+                .search-room__options-dropdown-facilities.js-search-room__options-dropdown-facilities
+                    legend.search-room__options-dropdown-facilities-legend.pageData.dropdownFacilitiesTitle
+                    .dropdown-facilities
+                        +dropdown(pageData.dropdownFacilitiesItems)
+                .search-room__options-checkbox-list
+                    +expandable-checkbox-list(pageData.expandableCheckboxList)
+            .search-room__right-container
+                h1.search-room__title=pageData.searchRoomTitle
+                section.search-room__hotels
+                    each roomCard in pageData.roomCards
+                        +room-card(roomCard)
+                section.search-room__pagination.js-search-room__pagination
+                    +pagination({caption: pageData.paginationCaption})

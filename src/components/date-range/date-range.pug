@@ -1,6 +1,6 @@
 //- date-range: дата с двумя полями для ввода
 //-             dropdowns: массив, с названиями dropdown
-mixin date-range({dropdowns = ["прибытие", "выезд"]})
+mixin date-range(dropdowns = [])
     .date-range.js-date-range
         each dropdown, index in dropdowns
             .date-range__container

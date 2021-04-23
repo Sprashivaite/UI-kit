@@ -26,10 +26,9 @@ block content
             .room-details__bottom-container
                 section.room-details__about-the-room
                     h2.room-details__about-the-room-title=pageData.comfortTitle 
-                    .room-details__about-the-room-item 
-                        +comfort(pageData.comfort)
+                    +comfort(pageData.comfort)
                 section.room-details__diagram
-                    h2=pageData.diagramTitle 
+                    h2.room-details__diagram-title=pageData.diagramTitle 
                     +diagram(pageData.diagram)
                 section.room-details__comments
                     h2.room-details__comments-title=pageData.commentsTitle 
