@@ -18,7 +18,7 @@ mixin search-rooms(options = {})
                 .search-rooms__com-data
                     +date-range({dropdowns: dateRange})
                 .search-rooms__guests
-                    legend.search-rooms__guests-legend= guests
+                    legend.search-rooms__guests-legend=legendGuests
                     +dropdown(dropdown) 
                 .search-rooms__button
                     +button(button)
