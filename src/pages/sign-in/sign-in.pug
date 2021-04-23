@@ -8,7 +8,8 @@ block variables
     - 
         mainClass = "sign-in" 
         const data = require("../../layout/layout-data.json")
+        const pageData = require("./sign-in-data.json")
 block content  
     main.sign-in__img
         section.sign-in__log-in 
-            +log-in
+            +log-in(pageData.logIn)

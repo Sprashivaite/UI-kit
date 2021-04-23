@@ -1,3 +1,4 @@
+extends ../../layout/layout
 include ../../components/header/header
 include ../../components/footer/footer
 include ../../components/diagram/diagram
@@ -5,81 +6,42 @@ include ../../components/comfort/comfort
 include ../../components/reservation/reservation 
 include ../../components/comment/comment 
 include ../../components/bullet-list/bullet-list
-<!DOCTYPE html>
-html(lang="ru")
-    head
-        meta(charset="UTF-8")
-        meta(name="viewport", content="initial-scale=1.0, width=device-width")
-        meta(http-equiv="X-UA-Compatible", content="ie=edge")
-        meta(name="description", content="room details")
-        meta(name="keywords", content="room, details")
-        title room-details
-    body 
-        .room-details.js-room-details
-            header
-                .room-details__container
-                    +header({login: false})
-            main.room-details__body
-                section.room-details__images                
-                    img.room-details__big-image(src="./assets/img/room-details-big-picture.jpg", alt="Фото отеля")        
-                    img.room-details__small-image(src="./assets/img/room-details-small-picture-1.jpg", alt="Фото отеля")            
-                    img.room-details__small-image(src="./assets/img/room-details-small-picture-2.jpg", alt="Фото отеля")
-                .room-details__container
-                    .room-details__bottom-container
-                        section.room-details__about-the-room
-                            h2.room-details__about-the-room-title Сведения о номере
-                            .room-details__about-the-room-item 
-                                +comfort({
-                                    img: "./assets/img/insert-emoticon.svg", 
-                                    title: "Комфорт", 
-                                    description: "Шумопоглощающие стены"
-                                })
-                            .room-details__about-the-room-item 
-                                +comfort({
-                                    img: "./assets/img/location-city.svg", 
-                                    title: "Удобство", 
-                                    description: "Окно в каждой из спален"
-                                })
-                            .room-details__about-the-room-item 
-                                +comfort({
-                                    img: "./assets/img/cosiness.svg", 
-                                    title: "Уют", 
-                                    description: "Номер оснащён камином"
-                                })
-                        section.room-details__diagram
-                            h2 Впечатления от номера
-                            +diagram({num: 260, vote: "голосов"})
-                        section.room-details__comments
-                            h2.room-details__comments-title Отзывы посетителей номера
-                            .room-details__comments-item
-                                +comment({
-                                    name: "Мурад Сарафанов", 
-                                    data:"5 дней назад", 
-                                    img:"./assets/img/murad.jpg", 
-                                    like_value: 12,
-                                    like_checked: true, 
-                                    text: "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены,действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей."
-                                })
-                            .room-details__comments-item
-                                +comment({
-                                    name: "Патрисия Стёклышкова",
-                                    data:"Неделю назад", 
-                                    img:"./assets/img/patrisia.jpg",
-                                    like_value: 2,
-                                    text: "Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент"
-                                })
-                        section.room-details__rules
-                            h2.room-details__rules-title Правила
-                            +bullet-list(
-                                [
-                                    "Нельзя с питомцами", "Без вечеринок и мероприятий", "Время прибытия — после 13:00, а выезд до 12:00"
-                                    ]
-                            ) 
-                        section.room-details__cancel
-                            h2.room-details__cancel-title Отмена
-                            .room-details__cancel-text Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.
-                    section.room-details__reservation.js-room-details__reservation
-                        +reservation
-            footer 
-                .room-details__container
-                    +footer
+
+append head 
+    meta(name="description", content="room details")
+    meta(name="keywords", content="room, details")
+    title room-details
+block variables 
+    - 
+        mainClass = "room-details js-room-details" 
+        const data = require("../../layout/layout-data.json")
+        const pageData = require("./room-details-data.json")
+block content  
+    main.room-details__body
+        section.room-details__images                
+            img.room-details__big-image(src="./assets/img/room-details-big-picture.jpg", alt="hotel photo")        
+            img.room-details__small-image(src="./assets/img/room-details-small-picture-1.jpg", alt="hotel photo")            
+            img.room-details__small-image(src="./assets/img/room-details-small-picture-2.jpg", alt="hotel photo")
+        .room-details__container
+            .room-details__bottom-container
+                section.room-details__about-the-room
+                    h2.room-details__about-the-room-title=pageData.comfortTitle 
+                    .room-details__about-the-room-item 
+                        +comfort(pageData.comfort)
+                section.room-details__diagram
+                    h2=pageData.diagramTitle 
+                    +diagram(pageData.diagram)
+                section.room-details__comments
+                    h2.room-details__comments-title=pageData.commentsTitle 
+                    .room-details__comments-item
+                        +comment(pageData.comments[0])
+                    .room-details__comments-item
+                        +comment(pageData.comments[1])
+                section.room-details__rules
+                    h2.room-details__rules-title=pageData.rulesTitle
+                    +bullet-list(pageData.bulletList) 
+                section.room-details__cancel
+                    h2.room-details__cancel-title=pageData.cancel.title
+                    .room-details__cancel-text=pageData.cancel.text
+            section.room-details__reservation.js-room-details__reservation
+                +reservation(pageData.reservation)

@@ -1,0 +1,10 @@
+{
+    "logIn": {
+        "title":"Войти", 
+        "emailText": "Email",
+        "passText": "Пароль",
+        "buttonLogInText": "войти",
+        "buttonRegText": "создать",
+        "accountText": "Нет аккаунта на Toxin?"
+    }
+}

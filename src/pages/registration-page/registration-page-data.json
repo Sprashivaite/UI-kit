@@ -1,0 +1,39 @@
+{
+    "registration": {
+        "title": "Регистрация аккаунта",
+        "actionForm": "",
+        "textName": "Имя",
+        "textSurName": "Фамилия",
+        "radioMan": {
+            "text": "Мужчина", 
+            "value": "man", 
+            "checked": true, 
+            "name": "gender"
+        },
+        "radioWoman": {
+            "text": "Женщина", 
+            "value": "woman", 
+            "name": "gender"
+        },        
+        "dateText": "дата рождения", 
+        "data": "данные для входа в сервис", 
+        "textEmail": {
+            "type":"email", 
+            "placeholder": "Email"
+        },
+        "textPassword": {
+            "type": "password", 
+            "placeholder": "Пароль"
+        },
+        "toggleName": "Получать спецпредложения",
+        "buttonPay": {
+            "arrow": true, 
+            "text":"перейти к оплате"
+        },
+        "accountText": "Уже есть аккаунт на Toxin",
+        "buttonLogIn": {
+            "background": "white",
+            "text":"войти"
+        }
+    }
+}

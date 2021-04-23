@@ -1,25 +1,17 @@
-include ../../components/header/header
-include ../../components/footer/footer
+extends ../../layout/layout
 include ../../components/search-rooms/search-rooms
-<!DOCTYPE html>
-html(lang="ru")
-    head
-        meta(charset="UTF-8")
-        meta(name="viewport", content="initial-scale=1.0, width=device-width")
-        meta(http-equiv="X-UA-Compatible", content="ie=edge")
-        meta(name="description", content="landing page")
-        meta(name="keywords", content="landing")
-        title landing-page
-    body 
-        .landing-page.js-landing-page
-            header
-                .landing-page__container
-                    +header({login: false})
-            main.landing-page__img
-                .landing-page__container
-                    section.landing-page__log-in.js-landing-page__log-in
-                        +search-rooms
-                    section.landing-page__text Лучшие номера для вашей работы, отдыха и просто вдохновения
-            footer 
-                .landing-page__container
-                    +footer
+append head 
+    meta(name="description", content="landing page")
+    meta(name="keywords", content="landing")
+    title landing-page
+block variables 
+    - 
+        mainClass = "landing-page js-landing-page" 
+        const data = require("../../layout/layout-data.json")
+        const pageData = require("./landing-page-data.json")
+block content   
+    main.landing-page__img
+        .landing-page__container
+            section.landing-page__log-in.js-landing-page__log-in
+                +search-rooms(pageData.searchRooms)
+            section.landing-page__text=pageData.landingText
