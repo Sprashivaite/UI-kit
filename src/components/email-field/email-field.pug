@@ -1,6 +1,4 @@
-include ../text-field/text-field
-mixin email-field({placeholder = "Email"} ={})
+mixin email-field({placeholder = "Email", name = ""} ={})
     .email-field
-        .email-field__text-field 
-            +text-field({type: "email", placeholder:placeholder})
+        input.email-field__input(type="email",  placeholder=placeholder,  name=name)
         button.email-field__button
