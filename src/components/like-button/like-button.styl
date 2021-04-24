@@ -11,11 +11,11 @@
     position absolute
     width 40px  
     height 20px
-    background rgba(31, 32, 65, 0.25)
+    background $dark25
     box-sizing border-box
     border-radius 10px
     &:hover
-      background rgba(31, 32, 65, 0.5)
+      background $dark50
     &:after
       content ''
       position absolute
@@ -27,31 +27,31 @@
   &__symbol
     font-family 'Material icons' 
     padding-left 5px  
-    color rgba(31, 32, 65, 0.25)
+    color $dark25
     z-index 2
   &__value 
-    color rgba(31, 32, 65, 0.25)
+    color $dark25
     padding-right 10px 
     z-index 2
   &__symbol_checked
     @extends .like-button__symbol
     display none
-    color #BC9CFF 
+    color $purple 
   &__input
     visually-hidden()
   &__input:checked 
     ~ .like-button__border
-      background linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%)
+      background linear-gradient(180deg, $purple 0%, $blue 100%)
       &:focus
         background $dark100
         outline none  
     ~ .like-button__value
-      color #BC9CFF
+      color $purple
     ~ .like-button__symbol
       display none
     ~ .like-button__symbol_checked 
       display block
   &__input:focus
     ~ .like-button__border
-      background linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%)
+      background linear-gradient(180deg, $purple 0%, $blue 100%)
       outline none  

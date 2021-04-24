@@ -5,7 +5,7 @@
   &__input  
     visually-hidden()
     &:checked + .checkbox__box
-      border-color #bc9cff
+      border-color $purple
     &:checked + .checkbox__box::before
       content ''
       position absolute
@@ -14,7 +14,7 @@
       width 6px
       height 8px
       border-width 0 2px 2px 0
-      border-image linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%) 
+      border-image linear-gradient(180deg, $purple 0%, $blue 100%) 
       border-color transparent
       border-image-slice 1
       border-style solid
@@ -33,7 +33,7 @@
     position relative
     width 20px
     height 20px
-    border 1px solid rgba(31, 32, 65, 0.25)
+    border 1px solid $dark25
     border-radius 4px
     background-color white
     flex-shrink 0

@@ -5,20 +5,20 @@
   margin-right 8px
   cursor pointer   
   &__label 
-    color rgba(31, 32, 65, 0.5) 
+    color $dark50 
     margin-left 10px     
     &:hover
-      color rgba(31, 32, 65, 0.75)      
+      color $dark75      
   &__circle 
     background #FFFFFF 
-    border 1px solid rgba(31, 32, 65, 0.25) 
+    border 1px solid $dark25 
     box-sizing border-box 
     border-radius 10px 
     width 20px 
     height 20px  
     cursor pointer    
     &:hover
-      border 1px solid #BC9CFF  
+      border 1px solid $purple  
     &:before
       content ''
       position absolute
@@ -26,16 +26,16 @@
       height 12px 
       left 4px 
       top 4px
-      background linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%) 
+      background linear-gradient(180deg, $purple 0%, $blue 100%) 
       border-radius 10px   
       opacity 0
       transition 0.3s
   &__input
     visually-hidden()    
   &__input:checked ~ .radio-button__label
-    color rgba(31, 32, 65, 0.75)     
+    color $dark75     
   &__input:checked ~ .radio-button__circle
-    border 1px solid #BC9CFF     
+    border 1px solid $purple     
     &:before
       opacity 1    
   &__input:focus     

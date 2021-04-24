@@ -11,13 +11,13 @@
       color $dark100
   &__button 
     background #FFFFFF 
-    border 1px solid rgba(31, 32, 65, 0.25) 
+    border 1px solid $dark25 
     box-sizing border-box 
     border-radius 10px 
     width 40px 
     height 20px 
     &:hover
-      border 1px solid #BC9CFF 
+      border 1px solid $purple 
     &:before
       content ''
       position absolute
@@ -25,14 +25,14 @@
       height 12px 
       margin-left 3px
       margin-top 3px
-      background rgba(31, 32, 65, 0.25) 
+      background $dark25 
       border-radius 10px 
       transition-duration .3s
   &__input
     visually-hidden()  
   &__input:checked ~ .toggle__button
     background #FFFFFF 
-    border 1px solid #BC9CFF 
+    border 1px solid $purple 
     box-sizing border-box 
     border-radius 10px 
     width 40px 
@@ -44,7 +44,7 @@
       height 12px 
       margin-left 22px
       margin-top 3px
-      background linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%) 
+      background linear-gradient(180deg, $purple 0%, $blue 100%) 
       border-radius 10px 
       transition-duration .3s 
   &__input:focus
