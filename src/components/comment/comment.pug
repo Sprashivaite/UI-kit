@@ -1,15 +1,9 @@
-//- img: аватарка,
-//- name: имя,
-//- data: дата,
-//- like_value: количество лайков,
-//- like_checked: поставлен лайк(boolean),
-//- text: комментарий
 include ../like-button/like-button
-mixin comment({img = "", name = "", data = "", like_value = 0, like_checked = true, text = ""} = {})
+mixin comment({img = "", userName = "", data = "", like_value = 0, like_checked = true, text = ""} = {})
     .comment
         .comment__user
             img.comment__user-avatar(src=img alt="avatar")
-            b.comment__user-name=name 
+            b.comment__user-name=userName 
             p.comment__data=data
         .comment__text-container
             .comment__like

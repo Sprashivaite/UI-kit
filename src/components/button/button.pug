@@ -1,6 +1,3 @@
-//- text: название кнопки
-//- background: "white" - кнопка с белым фоном.
-//- arrow: - кнопка со стрелкой.
 mixin button({background = "", text = "", arrow = false} = {})
     button.button(class = `${background === "white" ? "button_color_white": ""} ${ arrow ? "button_arrow": ""}`)
         div.button__text(class = (background === "white" ? "button__text_color_purple": ""))= text 

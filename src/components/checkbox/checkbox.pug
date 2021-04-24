@@ -1,7 +1,6 @@
-//- title: заголовок полужирным. 
-mixin checkbox({name = "", text = "", title = false} = {})
+mixin checkbox({name = "", text = "", title = false, checked = false} = {})
     label.checkbox
-        input.checkbox__input(type="checkbox" name= name )
+        input.checkbox__input(type="checkbox" name= name checked=checked)
         .checkbox__box 
         .checkbox__text-container
             if(title)
