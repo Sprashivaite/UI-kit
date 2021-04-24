@@ -7,12 +7,12 @@
     min-width 100px  
     width 100% 
     height 44px
-    border 1px solid rgba(31,32,65,.25) 
+    border 1px solid $dark25
     box-sizing border-box  
     border-radius 4px 
     cursor pointer
     &:hover
-      border 1px solid rgba(31,32,65,.5)  
+      border 1px solid $dark50 
     &:after
       content 'expand_more'
       position absolute
@@ -22,8 +22,8 @@
       right 8px 
       outline none
       border none
-      color rgba(31,32,65,.5)
-      outline-color rgba(31,32,65,.25)
+      color $dark50
+      outline-color $dark25
       background-color transparent
       cursor pointer
       pointer-events none
@@ -32,14 +32,14 @@
     width 90%
     padding 10px 0 0 14px    
     border none
-    color rgba(31,32,65,.75) 
+    color $dark75
     background-color transparent
     cursor pointer 
     overflow hidden
   &__menu 
     padding 0px 5px 3px 13px
     box-shadow 0px 10px 20px $dark5
-    border 1px solid rgba(31,32,65,.5)
+    border 1px solid $dark50
     display none
     position absolute
     width 100%
