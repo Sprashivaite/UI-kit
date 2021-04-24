@@ -5,5 +5,4 @@ import './pages/cards/cards';
 import './pages/registration-page/registration-page';
 import './pages/landing-page/landing-page';
 import './pages/search-room/search-room';
-import './pages/room-details/room-details';
-// import './pages/colors-type/colors-type-data.json'
+import './pages/room-details/room-details'; 
