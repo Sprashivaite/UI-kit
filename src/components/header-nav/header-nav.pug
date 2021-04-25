@@ -3,13 +3,13 @@ mixin header-nav(navTitles = [])
         each item in navTitles
             li
                 a.header-nav__item(
-                    href=(item.href || "change-me.html") 
+                    href=(item.href || "change-me.html"), 
                     class=`${(
                         item.bold ? "header-nav__item_bold": ""
                         )} ${(
                         item.dropdown ? "header-nav__item_with-dropdown": ""
                     )}`
-                )=item.title
+                )= item.title
                     if (item.dropdown)
                         .header-nav__dropdown-content 
                             each nav in item.dropdown

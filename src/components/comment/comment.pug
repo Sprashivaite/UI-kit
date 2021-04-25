@@ -1,10 +1,19 @@
 include ../like-button/like-button
-mixin comment({img = "", userName = "", data = "", like_value = 0, like_checked = true, text = ""} = {})
+mixin comment(options = {})
+    -
+        const {
+            img = "", 
+            userName = "", 
+            data = "", 
+            like_value = 0, 
+            like_checked = true, 
+            text = ""
+        } = options
     .comment
         .comment__user
-            img.comment__user-avatar(src=img alt="avatar")
-            b.comment__user-name=userName 
-            p.comment__data=data
+            img.comment__user-avatar(src=img, alt="avatar")
+            b.comment__user-name= userName 
+            p.comment__data= data
         .comment__text-container
             .comment__like
                 +like-button({value: like_value, checked: like_checked})    

@@ -1,4 +1,13 @@
-mixin diagram({num = 0, vote = "", well = "", good = "", satisfactorily = "", disappointed = ""} = {})
+mixin diagram(options = {})
+    -
+        const {
+            num = 0, 
+            vote = "", 
+            well = "", 
+            good = "", 
+            satisfactorily = "", 
+            disappointed = ""
+        } = options
     .diagram
         .diagram__circle-container
             .diagram__circle-back
@@ -6,7 +15,7 @@ mixin diagram({num = 0, vote = "", well = "", good = "", satisfactorily = "", di
             .diagram__circle-part-right-top
             .diagram__circle-part-right-bot
             h3.diagram__circle-num= num
-                span.diagram__circle-vote=vote
+                span.diagram__circle-vote= vote
         .diagram__rating-container
             p.diagram__rating.diagram__rating_color_orange= well
             p.diagram__rating.diagram__rating_color_green= good

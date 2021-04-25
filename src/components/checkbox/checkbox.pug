@@ -1,11 +1,11 @@
 mixin checkbox({name = "", text = "", title = false, checked = false} = {})
     label.checkbox
-        input.checkbox__input(type="checkbox" name= name checked=checked)
+        input.checkbox__input(type="checkbox", name= name, checked=checked)
         .checkbox__box 
         .checkbox__text-container
             if(title)
                 b.checkbox__title= title 
-            p.checkbox__text(class= (title ? "checkbox_size_small": ""))= text 
+            p.checkbox__text(class= (title ? "checkbox__text_size_small": ""))= text 
 
 
 

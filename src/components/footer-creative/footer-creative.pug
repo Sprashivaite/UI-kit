@@ -3,6 +3,6 @@ mixin footer-creative({copyright = "", socialNetworks = []} = {})
     .footer-creative
         .footer-creative__logo
             +logo-color
-        .footer-creative__text!=copyright            
+        .footer-creative__text!= copyright            
         .footer-creative__social-networks
             +social-networks(socialNetworks)

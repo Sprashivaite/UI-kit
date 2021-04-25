@@ -15,7 +15,7 @@ mixin log-in(options = {})
     .log-in
         .log-in__container
             h1.log-in__title= title
-            form(action=actionForm method = "post")
+            form(action=actionForm, method="post")
                 .log-in__name
                     +text-field({type: "text", placeholder: emailText})
                 .log-in__pass

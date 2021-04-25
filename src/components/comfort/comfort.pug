@@ -1,7 +1,7 @@
-mixin comfort(comforts =[])
+mixin comfort(comforts = [])
     each comfort in comforts 
         .comfort
-            img.comfort__img(src= comfort.img, alt="icon")
+            img.comfort__img(src=comfort.img, alt="icon")
             .comfort__text 
                 b.comfort__title= comfort.title
                 p.comfort__description= comfort.description

@@ -20,8 +20,8 @@ html(lang="ru")
                 section.colors-type__cubes
                     each cube in data.cubes
                         .colors-type__cubes-item 
-                            +color-cube({} = cube)
+                            +color-cube(cube)
                 section.colors-type__fonts
                     each font in data.fonts
                         .colors-type__fonts-item
-                            +fonts-description({} = font)
+                            +fonts-description(font)

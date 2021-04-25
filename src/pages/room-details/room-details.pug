@@ -25,22 +25,22 @@ block content
         .room-details__container
             .room-details__bottom-container
                 section.room-details__about-the-room
-                    h2.room-details__about-the-room-title=pageData.comfortTitle 
+                    h2.room-details__about-the-room-title= pageData.comfortTitle 
                     +comfort(pageData.comfort)
                 section.room-details__diagram
-                    h2.room-details__diagram-title=pageData.diagramTitle 
+                    h2.room-details__diagram-title= pageData.diagramTitle 
                     +diagram(pageData.diagram)
                 section.room-details__comments
-                    h2.room-details__comments-title=pageData.commentsTitle 
+                    h2.room-details__comments-title= pageData.commentsTitle 
                     .room-details__comments-item
                         +comment(pageData.comments[0])
                     .room-details__comments-item
                         +comment(pageData.comments[1])
                 section.room-details__rules
-                    h2.room-details__rules-title=pageData.rulesTitle
+                    h2.room-details__rules-title= pageData.rulesTitle
                     +bullet-list(pageData.bulletList) 
                 section.room-details__cancel
-                    h2.room-details__cancel-title=pageData.cancel.title
-                    .room-details__cancel-text=pageData.cancel.text
+                    h2.room-details__cancel-title= pageData.cancel.title
+                    .room-details__cancel-text= pageData.cancel.text
             section.room-details__reservation.js-room-details__reservation
                 +reservation(pageData.reservation)

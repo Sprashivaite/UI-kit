@@ -23,16 +23,16 @@ block content
         main.search-room__body
             section.search-room__options
                 .search-room__options-date-filter.js-search-room__options-date-filter
-                    legend.search-room__options-date-filter-legend=pageData.dateFilterTitle
+                    legend.search-room__options-date-filter-legend= pageData.dateFilterTitle
                     +date-filter
                 .search-room__options-dropdown-guests.js-search-room__options-dropdown-guests
-                    legend.search-room__options-dropdown-guests-legend=pageData.dropdownTitle
+                    legend.search-room__options-dropdown-guests-legend= pageData.dropdownTitle
                     +dropdown(pageData.dropdownItems) 
                 .search-room__options-range-slider.js-search-room__options-range-slider
-                    legend.search-room__options-range-slider-legend=pageData.rangeSliderTitle
+                    legend.search-room__options-range-slider-legend= pageData.rangeSliderTitle
                     +range-slider({caption: pageData.rangeSliderCaption})
                 .search-room__options-checkbox
-                    legend.search-room__options-checkbox-legend=pageData.checkboxRulesTitle 
+                    legend.search-room__options-checkbox-legend= pageData.checkboxRulesTitle 
                     .search-room__options-checkbox-item
                         +checkbox({ text: pageData.checkboxRulesItems[0]})
                     .search-room__options-checkbox-item
@@ -40,19 +40,19 @@ block content
                     .search-room__options-checkbox-item
                         +checkbox({ text: pageData.checkboxRulesItems[2]})
                 .search-room__options-checkbox-2
-                    legend.search-room__options-checkbox-2-legend=pageData.checkboxAvailabilityTitle
+                    legend.search-room__options-checkbox-2-legend= pageData.checkboxAvailabilityTitle
                     .search-room__options-checkbox-2-item
                         +checkbox(pageData.checkboxAvailabilityItems[0])
                     .search-room__options-checkbox-2-item
                         +checkbox(pageData.checkboxAvailabilityItems[1])
                 .search-room__options-dropdown-facilities.js-search-room__options-dropdown-facilities
-                    legend.search-room__options-dropdown-facilities-legend=pageData.dropdownFacilitiesTitle
+                    legend.search-room__options-dropdown-facilities-legend= pageData.dropdownFacilitiesTitle
                     .dropdown-facilities
                         +dropdown(pageData.dropdownFacilitiesItems)
                 .search-room__options-checkbox-list
                     +expandable-checkbox-list(pageData.expandableCheckboxList)
             .search-room__right-container
-                h1.search-room__title=pageData.searchRoomTitle
+                h1.search-room__title= pageData.searchRoomTitle
                 section.search-room__hotels
                     each roomCard in pageData.roomCards
                         +room-card(roomCard)
