@@ -16,8 +16,8 @@ if (document.querySelector('.js-form-elements')) {
   rateButtons.forEach((button) => new RateButton(button));
   guestsDropdowns.forEach((element) => new Dropdown(element, [['гостей', 'гость', 'гостя']]));
   facilitiesDropdowns.forEach((element) => new Dropdown(element, [['спальнен', 'спальня', 'спальни'], ['кроватей', 'кровать', 'кровати'], ['ванных комнат', 'ванная комната', 'ванные комнаты']]));
-  new Slider($('.js-form-elements__slider'));
-  new Pagination($('.js-form-elements__pagination'));
+  new Slider({$container: $('.js-form-elements__slider')});
+  new Pagination({$container: $('.js-form-elements__pagination')});
   new DateRange($('.js-form-elements__date-dropdown'));
   new DateFilter($('.js-form-elements__filter-dropdown'));
   new MaskInput($('.js-form-elements__masked'));

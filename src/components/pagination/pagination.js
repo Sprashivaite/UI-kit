@@ -2,21 +2,21 @@ import '../../vendors/simplePagination/jquery.simplePagination';
 import '../../vendors/simplePagination/simplePagination.css';
 
 class Pagination {
-  constructor($container) {
+  constructor({$container, items = 15, displayedPages = 3}) {
     this.$container = $container;
-    this.initPagination();
+    this.initPagination(items, displayedPages);
   }
 
   findElement() {
     this.$paginationElement = this.$container.find('.js-pagination__buttons');
   }
 
-  initPagination() {
+  initPagination(items, displayedPages) {
     this.findElement();
     this.$paginationElement.pagination({
-      items: 15,
+      items: items,
       itemsOnPage: 1,
-      displayedPages: 3,
+      displayedPages: displayedPages,
       edges: 1,
       prevText: false,
       cssStyle: 'light-theme',

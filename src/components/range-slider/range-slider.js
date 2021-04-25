@@ -2,9 +2,9 @@ import 'ion-rangeslider';
 import '../../vendors/ion.rangeSlider/ion.rangeSlider.css';
 
 class Slider {
-  constructor($container) {
+  constructor({$container , min = 0, max = 15000, values = [5000, 10000] }) {
     this.$container = $container;
-    this.initSlider();
+    this.initSlider(min, max, values);
   }
 
   findElements() {
@@ -18,16 +18,16 @@ class Slider {
     this.$value.text(`${fromValue} - ${toValue}`);
   }
 
-  initSlider() {
+  initSlider(min, max, values) {
     this.findElements();
     const calcFromToValue = this.calcFromToValue.bind(this);
     this.$range.ionRangeSlider({
       type: 'double',
       skin: 'big',
-      min: 0,
-      max: 15000,
-      from: 5000,
-      to: 10000,
+      min: min,
+      max: max,
+      from: values[0],
+      to: values[1],
       postfix: '₽',
       prettify_enabled: true,
       hide_min_max: true,
