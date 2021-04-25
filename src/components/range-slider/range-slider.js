@@ -1,7 +1,7 @@
 import 'ion-rangeslider';
 import '../../vendors/ion.rangeSlider/ion.rangeSlider.css';
 
-class Slider {
+class RangeSlider {
   constructor({$container , min = 0, max = 15000, values = [5000, 10000] }) {
     this.$container = $container;
     this.initSlider(min, max, values);
@@ -42,4 +42,4 @@ class Slider {
     calcFromToValue();
   }
 }
-export default Slider;
+export default RangeSlider;

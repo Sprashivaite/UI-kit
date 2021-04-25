@@ -1,6 +1,6 @@
 import 'jquery.maskedinput/src/jquery.maskedinput';
 
-class MaskInput {
+class TextFieldMask {
   constructor($container) {
     this.$target = $container.find('.js-text-field__input_masked');
     this.initMaskInput();
@@ -12,4 +12,4 @@ class MaskInput {
     this.$target.mask(mask, { placeholder: text });
   }
 }
-export default MaskInput;
+export default TextFieldMask;

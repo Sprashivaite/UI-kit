@@ -1,6 +1,6 @@
 import RateButton from '../../components/rate-button/rate-button';
 import RoomCard from '../../components/room-card/room-card';
-import Slider from '../../components/range-slider/range-slider';
+import RangeSlider from '../../components/range-slider/range-slider';
 import Pagination from '../../components/pagination/pagination';
 import Dropdown from '../../components/dropdown/dropdown';
 import DateFilter from '../../components/date-filter/date-filter';
@@ -12,7 +12,7 @@ if (document.querySelector('.js-search-room')) {
   const facilitiesDropdown = document.querySelector('.js-search-room__options-dropdown-facilities');
   rateButtons.forEach((button) => new RateButton(button));
   cards.forEach((card) => new RoomCard(card));
-  new Slider({$container: $('.js-search-room__options-range-slider')});
+  new RangeSlider({$container: $('.js-search-room__options-range-slider')});
   new Pagination({$container: $('.js-search-room__pagination')});
   new DateFilter($('.js-search-room__options-date-filter'));
   new Dropdown(searchroomDropdown, [['гостей', 'гость', 'гостя']]);
