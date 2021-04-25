@@ -25,18 +25,24 @@
       margin 1px 
       border-radius 10px
   &__symbol
-    font-family 'Material icons' 
-    padding-left 5px  
-    color $dark25
-    z-index 2
+    &:after
+      content 'favorite_border'
+      position absolute 
+      font-family 'Material icons' 
+      padding-left 5px  
+      color $dark25
+      z-index 2
+      top 0
   &__value 
     color $dark25
     padding-right 10px 
     z-index 2
   &__symbol_checked
-    @extends .like-button__symbol
     display none
-    color $purple 
+    &:after
+      @extends .like-button__symbol:after
+      content 'favorite'
+      color $purple 
   &__input
     visually-hidden()
   &__input:checked 

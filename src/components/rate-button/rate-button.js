@@ -17,18 +17,17 @@ class RateButton {
   addRate() {
     const value = this.container.dataset.rate;
     for (let i = 0; i < value; i += 1) {
-      this.stars[i].innerHTML = 'star';
+      this.stars[i].classList.add('rate-button__item_checked');;
     }
   }
 
   changeRate(element) {
-    this.stars.forEach((el) => el.innerHTML = 'star_border');
+    this.stars.forEach((el) => el.classList.remove('rate-button__item_checked'));
     const star = element;
-    star.innerHTML = 'star';
-    let prevStar = star;
-    while (prevStar.previousElementSibling) {
-      prevStar.innerHTML = 'star';
-      prevStar.previousElementSibling.innerHTML = 'star';
+    star.classList.add('rate-button__item_checked');
+    let prevStar = star.previousElementSibling;
+    while (prevStar) {
+      prevStar.classList.add('rate-button__item_checked');
       prevStar = prevStar.previousElementSibling;
     }
   }
