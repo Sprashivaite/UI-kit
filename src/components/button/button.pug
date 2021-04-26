@@ -1,8 +1,8 @@
 mixin button({background = "", text = "", arrow = false} = {})
     button.button(class=`        
-        ${background === "white" ? "button_color_white": ""} 
-        ${ arrow ? "button_arrow": ""}
+            ${background === "transparent" ? "button_color_transparent": ""} 
+            ${ arrow ? "button_arrow": ""}
         `)
         div.button__text(class=
-            (background === "white" ? "button__text_color_purple": "")
+            (background === "transparent" ? "button__text_color_solid": "")
             )= text 

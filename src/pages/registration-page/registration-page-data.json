@@ -32,7 +32,7 @@
         },
         "accountText": "Уже есть аккаунт на Toxin",
         "buttonLogIn": {
-            "background": "white",
+            "background": "transparent",
             "text":"войти"
         }
     }
