@@ -1,8 +1,7 @@
 mixin button({background = "", text = "", arrow = false} = {})
-    button.button(class=`        
-            ${background === "transparent" ? "button_color_transparent": ""} 
-            ${ arrow ? "button_arrow": ""}
-        `)
-        div.button__text(class=
-            (background === "transparent" ? "button__text_color_solid": "")
-            )= text 
+    -
+        const transparent = (background === "transparent" ? "button_color_transparent": "");
+        const buttonArrow = (arrow ? "button_with-arrow": "");
+        const textColor = (background === "transparent" ? "button__text_color_solid": "");
+    button.button(class=`${transparent} ${buttonArrow}`)
+        div.button__text(class=textColor)= text 
