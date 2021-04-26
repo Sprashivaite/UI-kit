@@ -1,27 +1,27 @@
 class RateButton {
   constructor(container) {
     this.container = container;
-    this.initRateButton();
+    this._initRateButton();
   }
 
-  initRateButton() {
-    this.findElements();
-    this.addHandler();
-    this.addRate();
+  _initRateButton() {
+    this._findElements();
+    this._addHandler();
+    this._addRate();
   }
 
-  findElements() {
+  _findElements() {
     this.stars = [...this.container.children];
   }
 
-  addRate() {
+  _addRate() {
     const value = this.container.dataset.rate;
     for (let i = 0; i < value; i += 1) {
-      this.stars[i].classList.add('rate-button__item_checked');;
+      this.stars[i].classList.add('rate-button__item_checked');
     }
   }
 
-  changeRate(element) {
+  _changeRate(element) {
     this.stars.forEach((el) => el.classList.remove('rate-button__item_checked'));
     const star = element;
     star.classList.add('rate-button__item_checked');
@@ -32,10 +32,10 @@ class RateButton {
     }
   }
 
-  addHandler() {
+  _addHandler() {
     this.stars.onmousedown = () => false;
     this.stars.forEach((star) => {
-      const handler = () => this.changeRate(star);
+      const handler = () => this._changeRate(star);
       star.addEventListener('click', handler);
     });
   }

@@ -6,15 +6,15 @@ class Dropdown {
   constructor(container, names = []) {
     this.container = container;
     this.names = names;
-    this.initDropdown();
+    this._initDropdown();
   }
 
-  initDropdown() {
-    this.findElements();
-    this.addHandler();
+  _initDropdown() {
+    this._findElements();
+    this._addHandler();
   }
 
-  findElements() {
+  _findElements() {
     this.dropdown = this.container || this.container.querySelector('.js-dropdown');
     this.menu = this.container.querySelector('.js-dropdown__menu');
     this.lines = this.container.querySelectorAll('.js-dropdown__menu-line');
@@ -27,36 +27,36 @@ class Dropdown {
     this.defaultTitle = this.title.innerHTML;
   }
 
-  makeMinus(target) {
+  _makeMinus(target) {
     const inputValue = target;
     inputValue.value = Math.max(Number(target.value) - 1, 0);
   }
 
-  makePlus(target) {
+  _makePlus(target) {
     const inputValue = target;
     inputValue.value = Number(target.value) + 1;
   }
 
-  clearValues() {
+  _clearValues() {
     this.title.innerHTML = this.defaultTitle;
     Array.from(this.values, (element) => element.value = 0);
     Array.from(this.minuses, (element) => element.className = 'dropdown__menu-minus');
-    if (this.clear) this.hideClear();
+    if (this.clear) this._hideClear();
   }
 
-  toggleMenu() {
+  _toggleMenu() {
     this.menu.classList.toggle('dropdown__menu_show');
   }
 
-  showClear() {
+  _showClear() {
     this.clear.classList.add('dropdown__clear_show');
   }
 
-  hideClear() {
+  _hideClear() {
     this.clear.classList.remove('dropdown__clear_show');
   }
 
-  declension(number, names) {
+  _declension(number, names) {
     const [plural, nominative, genitive] = names;
     const lastNum = Number(Array.from(`${number}`).slice(-1));
     const lastTwoNumbs = Number(Array.from(`${number}`).slice(-2).join(''));
@@ -84,39 +84,39 @@ class Dropdown {
     return name;
   }
 
-  changeSingleTitle() {
+  _changeSingleTitle() {
     const values = [...this.values];
     const sum = values.reduce((prevElement, current) => prevElement + Number(current.value), 0);
-    if (sum === 0) this.clearValues();
-    if (sum > 0) this.showClear();
-    const textTitle = `${sum} ${this.declension(sum, this.names[0])}`;
+    if (sum === 0) this._clearValues();
+    if (sum > 0) this._showClear();
+    const textTitle = `${sum} ${this._declension(sum, this.names[0])}`;
     this.title.innerHTML = textTitle;
   }
 
-  changeMultipleTitle() {
+  _changeMultipleTitle() {
     let result = '';
     this.lines.forEach((element, index) => {
       const num = Number(element.querySelector('.js-dropdown__menu-value').value);
-      const text = this.declension(num, this.names[index]);
+      const text = this._declension(num, this.names[index]);
       if (num > 0) {
         if (result) result += ', ';
         result += `${num} ${text}`;
       }
     });
-    if (!result) this.clearValues();
+    if (!result) this._clearValues();
     else this.title.innerHTML = result;
   }
 
-  documentHandlerClick(event) {
+  _documentHandlerClick(event) {
     const { target } = event;
     const menu = target === this.menu || this.menu.contains(target);
     const field = target === this.field;
     const menuIsActive = this.menu.classList.contains('dropdown__menu_show');
     const isOutOfField = !menu && !field && menuIsActive;
-    if (isOutOfField) this.toggleMenu();
+    if (isOutOfField) this._toggleMenu();
   }
 
-  addHandler() {
+  _addHandler() {
     this.dropdown.onmousedown = () => false;
     this.dropdown.onclick = () => false;
     this.lines.forEach((element) => {
@@ -124,29 +124,29 @@ class Dropdown {
       const minus = element.querySelector('.js-dropdown__menu-minus');
       const value = element.querySelector('.js-dropdown__menu-value');
       const handlerPlus = () => {
-        this.makePlus(value);
-        if (this.names.length === 1) this.changeSingleTitle();
-        else this.changeMultipleTitle();
+        this._makePlus(value);
+        if (this.names.length === 1) this._changeSingleTitle();
+        else this._changeMultipleTitle();
         minus.className = 'dropdown__menu-minus_border';
       };
       const handlerMinus = () => {
-        this.makeMinus(value);
-        if (this.names.length === 1) this.changeSingleTitle();
-        else this.changeMultipleTitle();
+        this._makeMinus(value);
+        if (this.names.length === 1) this._changeSingleTitle();
+        else this._changeMultipleTitle();
         if (Number(value.value) === 0) minus.className = 'dropdown__menu-minus';
       };
       plus.addEventListener('click', handlerPlus);
       minus.addEventListener('click', handlerMinus);
     });
-    const handlerClear = () => this.clearValues();
+    const handlerClear = () => this._clearValues();
     if (this.clear) this.clear.addEventListener('click', handlerClear);
     const handlerApply = (event) => {
       event.stopPropagation();
-      this.toggleMenu();
+      this._toggleMenu();
     };
     if (this.applyButton) this.applyButton.addEventListener('click', handlerApply);
-    const documentHandlerClick = (event) => this.documentHandlerClick(event);
-    document.addEventListener('click', documentHandlerClick);
+    const _documentHandlerClick = (event) => this._documentHandlerClick(event);
+    document.addEventListener('click', _documentHandlerClick);
     this.field.addEventListener('click', handlerApply);
   }
 }

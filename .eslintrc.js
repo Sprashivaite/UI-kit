@@ -11,5 +11,6 @@ module.exports = {
   plugins: ['fsd'],
   rules: {
     'no-new': 'off',
+    'no-underscore-dangle': 'off',
   },
 };

@@ -4,20 +4,20 @@ import 'air-datepicker/dist/css/datepicker.min.css';
 class DateRange {
   constructor($container) {
     this.$container = $container;
-    this.initDateRange();
+    this._initDateRange();
   }
 
-  findInputs() {
+  _findInputs() {
     this.firstData = this.$container.find('.js-date-range-1');
     this.secondData = this.$container.find('.js-date-range-2');
   }
 
-  findButton() {
+  _findButton() {
     this.$button = $('[data-action="today"]');
   }
 
-  initDateRange() {
-    this.findInputs();
+  _initDateRange() {
+    this._findInputs();
     this.myDatepicker = this.firstData.datepicker().data('datepicker');
     const { myDatepicker, firstData, secondData } = this;
     firstData.datepicker({
@@ -47,11 +47,11 @@ class DateRange {
         }
       },
     });
-    this.addHandlers();
+    this._addHandlers();
   }
 
-  addHandlers() {
-    this.findButton();
+  _addHandlers() {
+    this._findButton();
     const hideHandler = () => this.myDatepicker.hide();
     const showHandler = () => this.myDatepicker.show();
     this.$button.on('click', hideHandler);

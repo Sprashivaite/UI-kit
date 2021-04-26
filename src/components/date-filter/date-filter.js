@@ -7,7 +7,7 @@ class DateFilter {
     this.initDateFilter();
   }
 
-  findInput() {
+  _findInput() {
     this.$dateFilter = this.$container.find('.js-date-filter__input');
   }
 
@@ -16,7 +16,7 @@ class DateFilter {
   }
 
   initDateFilter() {
-    this.findInput();
+    this._findInput();
     this.myDatepicker = this.$dateFilter.datepicker().data('datepicker');
     const { myDatepicker } = this;
     const weekLater = new Date(new Date().setDate(new Date().getDate() + 7));

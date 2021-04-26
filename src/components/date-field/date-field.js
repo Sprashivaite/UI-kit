@@ -4,19 +4,19 @@ import 'air-datepicker/dist/css/datepicker.min.css';
 class DateField {
   constructor($container) {
     this.$container = $container;
-    this.initDateField();
+    this._initDateField();
   }
 
-  findInput() {
+  _findInput() {
     this.$dateField = this.$container.find('.js-date-field__input');
   }
 
-  findButton() {
+  _findButton() {
     this.$button = $('[data-action="today"]');
   }
 
-  initDateField() {
-    this.findInput();
+  _initDateField() {
+    this._findInput();
     this.myDatepicker = this.$dateField.datepicker().data('datepicker');
     const { myDatepicker } = this;
     this.$dateField.datepicker({
@@ -37,11 +37,11 @@ class DateField {
         if (animationCompleted) myDatepicker.$el.off('.dd');
       },
     });
-    this.findButton();
-    this.addHandlers();
+    this._findButton();
+    this._addHandlers();
   }
 
-  addHandlers() {
+  _addHandlers() {
     const hideHandler = () => this.myDatepicker.hide();
     this.$button.on('click', hideHandler);
   }

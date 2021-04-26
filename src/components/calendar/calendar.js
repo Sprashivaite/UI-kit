@@ -4,15 +4,15 @@ import 'air-datepicker/dist/css/datepicker.min.css';
 class Calendar {
   constructor($container) {
     this.$container = $container;
-    this.initCalendar();
+    this._initCalendar();
   }
 
-  findElements() {
+  _findElements() {
     this.$calendar = this.$container.find('.js-calendar');
   }
 
-  initCalendar() {
-    this.findElements();
+  _initCalendar() {
+    this._findElements();
     this.$calendar.datepicker({
       range: true,
       multipleDatesSeparator: ' - ',

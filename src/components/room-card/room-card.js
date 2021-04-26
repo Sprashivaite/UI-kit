@@ -3,15 +3,15 @@
 class RoomCard {
   constructor(card) {
     this.card = card;
-    this.initRoomCard();
+    this._initRoomCard();
   }
 
-  initRoomCard() {
-    this.findElements();
-    this.addHandler();
+  _initRoomCard() {
+    this._findElements();
+    this._addHandler();
   }
 
-  findElements() {
+  _findElements() {
     this.buttonPictures = Array.from(
       this.card.querySelector('.js-room-card__buttons').childNodes,
     );
@@ -22,7 +22,7 @@ class RoomCard {
     this.rightArrow = this.card.querySelector('.js-room-card__button-right');
   }
 
-  turnLeft() {
+  _turnLeft() {
     const click = new Event('click');
     let previousTarget;
     this.buttonPictures.forEach((element) => {
@@ -34,7 +34,7 @@ class RoomCard {
     else this.buttonPictures[3].dispatchEvent(click);
   }
 
-  turnRight() {
+  _turnRight() {
     const click = new Event('click');
     let nextTarget;
     this.buttonPictures.forEach((element) => {
@@ -46,7 +46,7 @@ class RoomCard {
     else this.buttonPictures[0].dispatchEvent(click);
   }
 
-  switchPicture(button) {
+  _switchPicture(button) {
     this.buttonPictures.forEach((element, index) => {
       const circle = element;
       circle.num = index + 1;
@@ -64,14 +64,14 @@ class RoomCard {
     }
   }
 
-  addHandler() {
+  _addHandler() {
     this.buttonPictures.forEach((element) => {
-      const handlerCircle = () => this.switchPicture(element);
+      const handlerCircle = () => this._switchPicture(element);
       element.addEventListener('click', handlerCircle);
     });
-    const handlerLeftArrow = () => this.turnLeft();
+    const handlerLeftArrow = () => this._turnLeft();
     this.leftArrow.addEventListener('click', handlerLeftArrow);
-    const handlerRightArrow = () => this.turnRight();
+    const handlerRightArrow = () => this._turnRight();
     this.rightArrow.addEventListener('click', handlerRightArrow);
   }
 }
