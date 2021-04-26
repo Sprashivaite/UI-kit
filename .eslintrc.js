@@ -5,11 +5,11 @@ module.exports = {
   },
   extends: [
     'eslint:recommended',
-    // 'plugin:fsd/all',
+    'plugin:fsd/all',
     'airbnb-base',
   ],
   plugins: ['fsd'],
   rules: {
-    'no-new': false,
+    'no-new': 'off',
   },
 };
