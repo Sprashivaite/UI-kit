@@ -35,9 +35,8 @@ class RateButton {
   addHandler() {
     this.stars.onmousedown = () => false;
     this.stars.forEach((star) => {
-      this.star = star;
       const handler = () => this.changeRate(star);
-      this.star.addEventListener('click', handler);
+      star.addEventListener('click', handler);
     });
   }
 }
