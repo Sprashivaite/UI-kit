@@ -1,7 +1,7 @@
 .header-nav
-  display flex  
-  @media(max-width 999px)
-    display none      
+  display flex
+  @media (max-width 999px)
+    display none
   &__item
     padding-right 20px
     text-decoration none
@@ -14,24 +14,24 @@
     &_with-dropdown
       padding-right 44px
       position relative
-      &:hover 
+      &:hover
         .header-nav__dropdown-content
           display block
-      &:after
+      &::after
         position absolute
-        content: "expand_more"
+        content "expand_more"
         font-family 'Material Icons'
-        display inline-block  
+        display inline-block
         font-size 24px
         width 12px
-        height 16px 
+        height 16px
         cursor pointer
         color $dark50
     &_bold
-      font-weight bold      
-  &__dropdown-content 
+      font-weight bold
+  &__dropdown-content
     border 1px solid $dark50
-    position absolute     
+    position absolute
     display none
     min-width 100%
     background-color white

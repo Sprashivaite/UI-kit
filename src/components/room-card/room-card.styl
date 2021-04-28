@@ -3,24 +3,24 @@
   width 100%
   min-width 150px
   min-height 257px
-  background #FFFFFF
-  box-shadow 0px 10px 20px $dark5
+  background #fff
+  box-shadow 0 10px 20px $dark5
   border-radius 4px
   &__pictures
     margin 0
     padding 0
     overflow hidden
-    height 151px 
+    height 151px
     width 100%
-    &:hover 
+    &:hover
       ~ .room-card__button-left
       ~ .room-card__button-right
         opacity 1
-  &__picture    
+  &__picture
     opacity 0
     position absolute
-    height 152px 
-    width 100% 
+    height 152px
+    width 100%
     transition 0.3s
     &_show
       opacity 1
@@ -32,88 +32,90 @@
     justify-content space-between
     top 120px
     right 6px
-    width 60px 
-    height 10px     
-    cursor pointer 
+    width 60px
+    height 10px
+    cursor pointer
     z-index 6
     padding 10px
     [data-target="true"]
       background-color white
   &__button-circle
-    height 7.49px 
-    width 7.5px 
-    border-radius 50% 
+    height 7.49px
+    width 7.5px
+    border-radius 50%
     border 1px solid white
-    box-sizing border-box 
-    filter drop-shadow(0px 5px 5px $dark25) 
-    cursor pointer 
+    box-sizing border-box
+    filter drop-shadow(0 5px 5px $dark25) 
+    cursor pointer
   &__button-left
     opacity 0
-    position absolute 
-    width 42px 
-    height 151px  
-    top 0 
-    background linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 99.99%, rgba(255, 255, 255, 0) 100%)     
+    position absolute
+    width 42px
+    height 151px
+    top 0
+    background linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 99.99%, rgba(255, 255, 255, 0) 100%)
     cursor pointer
     transition 0.3s
-    &:after
+    &::after
       content 'expand_more' 
       font-family 'Material Icons'
       color white
-      position absolute 
+      position absolute
       font-size 22px
-      background-size cover 
-      width 8px 
-      height 13px 
-      top 68px 
-      left 18px 
+      background-size cover
+      width 8px
+      height 13px
+      top 68px
+      left 18px
       transform rotate(90deg)
     &:hover
       opacity 1
   &__button-right
-    @extends .room-card__button-left
+    @extend .room-card__button-left
+
     right 0
     transform matrix(-1, 0, 0, 1, 0, 0)
-    &:after
-      @extends .room-card__button-left:after  
+    &::after
+      @extend .room-card__button-left:after
+
     &:hover
       opacity 1
   &__description
-    position relative 
-    width 85% 
-    margin 19px 20px 0 
-    &:after
+    position relative
+    width 85%
+    margin 19px 20px 0
+    &::after
       content ''
       position absolute
-      top 31px 
+      top 31px
       left 0
-      width 230px 
-      height 1px 
+      width 230px
+      height 1px
       border-bottom 1px solid $dark10
     &-num
-      color #1F2041 
+      color $dark100
       display inline-block
       padding-right 8px
-      &:before
+      &::before
         content '№'
         font-size 14px
         font-weight bold
         margin-right 5px
     &-lux
       color $purple
-      display inline-block      
+      display inline-block
     &-cost
       display inline-block
       float right
       margin-top 3px
       color $dark50
       font-weight bold
-      font-size 14px 
+      font-size 14px
     &-days
-      font-size 12px        
+      font-size 12px
       font-weight normal
     &-rating
-      margin-top 20px 
+      margin-top 20px
     &-reviews
       text-align right
       color $dark50

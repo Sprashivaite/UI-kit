@@ -4,8 +4,8 @@
 @import '../components/*'
 @import '../vendors/*'
 *
-  box-sizing border-box    
-html 
+  box-sizing border-box
+html
   font-family Montserrat, Arial, sans-serif
   font-style normal
   font-weight normal
@@ -20,22 +20,22 @@ body
   height 100%
   font-size 14px
   line-height 22px
-h1 
+h1
   font-family Montserrat, Arial, sans-serif
   font-style normal
   font-weight bold
   font-size 24px
   line-height 30px
   color $dark100
-  margin 0px
-h2 
+  margin 0
+h2
   font-family Montserrat, Arial, sans-serif
   font-style normal
   font-weight bold
   font-size 19px
   line-height 24px
   color $dark100
-  margin 0px
+  margin 0
 h3
   font-family Montserrat, Arial, sans-serif
   font-style normal
@@ -44,7 +44,7 @@ h3
   line-height 15px
   text-transform uppercase
   color $dark100
-  margin 0px
+  margin 0
 legend
   font-family Montserrat, Arial, sans-serif
   font-style normal
@@ -56,7 +56,7 @@ legend
   padding 0
 header
   position relative
-footer 
+footer
   position relative
   flex-shrink 0
 b
@@ -64,6 +64,9 @@ b
 a
   color $dark50
   font-size 14px
+  text-decoration none
+  &:focus
+    outline 1px solid $dark25
 p
   margin 0
 li
@@ -75,8 +78,3 @@ blockquote
 label
   margin 0
   padding 0
-
-a
-  text-decoration none
-  &:focus
-    outline 1px solid $dark25

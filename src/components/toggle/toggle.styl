@@ -2,52 +2,52 @@
   position relative
   width 100%
   margin-right 8px
-  cursor pointer 
-  display inline-flex 
-  &__label 
+  cursor pointer
+  display inline-flex
+  &__label
     min-width 222px
-    margin-left 10px 
+    margin-left 10px
     &:hover
       color $dark100
-  &__button 
-    background #FFFFFF 
-    border 1px solid $dark25 
-    box-sizing border-box 
-    border-radius 10px 
-    width 40px 
-    height 20px 
+  &__button
+    background #fff
+    border 1px solid $dark25
+    box-sizing border-box
+    border-radius 10px
+    width 40px
+    height 20px
     &:hover
-      border 1px solid $purple 
-    &:before
+      border 1px solid $purple
+    &::before
       content ''
       position absolute
-      width 12px 
-      height 12px 
+      width 12px
+      height 12px
       margin-left 3px
       margin-top 3px
-      background $dark25 
-      border-radius 10px 
-      transition-duration .3s
+      background $dark25
+      border-radius 10px
+      transition-duration 0.3s
   &__input
-    visually-hidden()  
+    visually-hidden()
   &__input:checked ~ .toggle__button
-    background #FFFFFF 
-    border 1px solid $purple 
-    box-sizing border-box 
-    border-radius 10px 
-    width 40px 
-    height 20px 
-    &:before
+    background #fff
+    border 1px solid $purple
+    box-sizing border-box
+    border-radius 10px
+    width 40px
+    height 20px
+    &::before
       content ''
       position absolute
-      width 12px 
-      height 12px 
+      width 12px
+      height 12px
       margin-left 22px
       margin-top 3px
-      background linear-gradient(180deg, $purple 0%, $blue 100%) 
-      border-radius 10px 
-      transition-duration .3s 
+      background linear-gradient(180deg, $purple 0%, $blue 100%)
+      border-radius 10px
+      transition-duration 0.3s
   &__input:focus
     ~ .toggle__label
       color $dark100
-      outline none 
+      outline none

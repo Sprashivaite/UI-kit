@@ -5,14 +5,14 @@
   &__text
     width 100%
     display inline-block
-    &:after
-      content 'expand_more' 
+    &::after
+      content 'expand_more'
       font-family 'Material Icons'
       font-size 24px
       color $dark50
       transition 0.3s
-      transform rotate(0deg) 
-      vertical-align middle 
+      transform rotate(0deg)
+      vertical-align middle
       text-transform none
       font-weight normal
       float right
@@ -28,7 +28,7 @@
   &__input
     visually-hidden()
     &:checked
-      ~ .expandable-checkbox-list__text:after
+      ~ .expandable-checkbox-list__text::after
         transition 0.3s
         transform rotate(180deg)
       ~ .expandable-checkbox-list__checkboxes
@@ -36,7 +36,7 @@
         animation-name opacity
         animation-duration 0.6s
 @keyframes opacity
-  0% 
-      opacity 0  
-  100% 
-      opacity 1
+  0%
+    opacity 0
+  100%
+    opacity 1

@@ -2,24 +2,24 @@
   display none
   position fixed
   z-index 10
-  @media(max-width 1000px)
+  @media (max-width 1000px)
     display block
-  &__toggle 
+  &__toggle
     opacity 0
-    &:checked 
-      ~ .burger-menu__btn 
+    &:checked
+      ~ .burger-menu__btn
         .burger-menu__stripes
           transform rotate(45deg) 
-          &::before 
+          &::before
             top 0
             transform rotate(0deg)
-          &::after 
+          &::after
             top 0
             transform rotate(90deg)
-      ~ .burger-menu__menu 
+      ~ .burger-menu__menu
         visibility visible
         left 0
-  &__btn 
+  &__btn
     display flex
     align-items center
     position fixed
@@ -29,22 +29,22 @@
     height 26px
     cursor pointer
     z-index 1
-    > .burger-menu__stripes,
-    > .burger-menu__stripes::before,
-    > .burger-menu__stripes::after 
+    > .burger-menu__stripes
+    > .burger-menu__stripes::before
+    > .burger-menu__stripes::after
       display block
       position absolute
       width 100%
       height 2px
       background-color $dark50
-      transition-duration .25s
-    > .burger-menu__stripes::before 
+      transition-duration 0.25s
+    > .burger-menu__stripes::before
       content ''
       top -8px
-    > .burger-menu__stripes::after 
+    > .burger-menu__stripes::after
       content ''
       top 8px
-  &__menu 
+  &__menu
     display block
     position fixed
     visibility hidden
@@ -55,14 +55,14 @@
     margin 0
     padding 80px 0
     background-color $green
-    transition-duration .25s
-  &__item 
+    transition-duration 0.25s
+  &__item
     display block
     padding 12px 24px
     color #333
     font-family Montserrat, Arial, sans-serif
     font-size 20px
     font-weight 600
-    transition-duration .25s
-    &:hover 
-      background-color #CFD8DC
+    transition-duration 0.25s
+    &:hover
+      background-color #cfd8dc

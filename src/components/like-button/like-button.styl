@@ -1,63 +1,64 @@
 .like-button
   position relative
-  width 40px  
-  height 20px 
-  cursor pointer  
+  width 40px
+  height 20px
+  cursor pointer
   display inline-flex
-  align-items center 
+  align-items center
   justify-content space-between
-  font-size 10px 
+  font-size 10px
   &__border
     position absolute
-    width 40px  
+    width 40px
     height 20px
     background $dark25
     box-sizing border-box
     border-radius 10px
     &:hover
       background $dark50
-    &:after
+    &::after
       content ''
       position absolute
       background white
       width 38px
       height 18px
-      margin 1px 
+      margin 1px
       border-radius 10px
   &__symbol
-    &:after
+    &::after
       content 'favorite_border'
-      position absolute 
-      font-family 'Material icons' 
-      padding-left 5px  
+      position absolute
+      font-family 'Material icons'
+      padding-left 5px
       color $dark25
       z-index 2
       top 0
-  &__value 
+  &__value
     color $dark25
-    padding-right 10px 
+    padding-right 10px
     z-index 2
   &__symbol_checked
     display none
-    &:after
-      @extends .like-button__symbol:after
+    &::after
+      @extend .like-button__symbol:after
+
       content 'favorite'
-      color $purple 
+      color $purple
   &__input
     visually-hidden()
-  &__input:checked 
+  &__input:focus
+    ~ .like-button__border
+      background linear-gradient(180deg, $purple 0%, $blue 100%)
+      outline none
+  &__input:checked
     ~ .like-button__border
       background linear-gradient(180deg, $purple 0%, $blue 100%)
       &:focus
         background $dark100
-        outline none  
+        outline none
     ~ .like-button__value
       color $purple
     ~ .like-button__symbol
       display none
-    ~ .like-button__symbol_checked 
+    ~ .like-button__symbol_checked
       display block
-  &__input:focus
-    ~ .like-button__border
-      background linear-gradient(180deg, $purple 0%, $blue 100%)
-      outline none  

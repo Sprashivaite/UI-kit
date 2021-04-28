@@ -2,7 +2,7 @@
   max-width 280px
   display flex
   cursor pointer
-  &__input  
+  &__input
     visually-hidden()
     &:checked + .checkbox__box
       border-color $purple
@@ -21,14 +21,15 @@
       border-radius 0
       transform rotate(45deg)
       box-sizing border-box
-    &:focus, &:hover ~ .checkbox__text
+    &:focus
+    &:hover ~ .checkbox__text
       outline none
       color $dark75
   &__title
     line-height 22px
-      + .checkbox__text
-        line-height 16px
-        padding-top 3px
+    + .checkbox__text
+      line-height 16px
+      padding-top 3px
   &__box
     position relative
     width 20px
