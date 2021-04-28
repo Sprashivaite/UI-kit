@@ -38,7 +38,7 @@
     "headerLoggedIn": {
         "bold": true,
         "login": true,
-        "name": "Юлий Цезарь",
+        "userName": "Юлий Цезарь",
         "navTitles": [
             {
                 "title": "О нас",

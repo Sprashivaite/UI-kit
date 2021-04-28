@@ -7,7 +7,7 @@ mixin header(options = {})
         const {
             bold = false, 
             login = false, 
-            name = "", 
+            userName = "", 
             navTitles = [],
             buttonTextSignIn = "",
             buttonTextLogIn = "",
@@ -19,7 +19,7 @@ mixin header(options = {})
         nav.header__nav
             +header-nav(navTitles)
             if login
-                .header__name= name
+                .header__name= userName
             else 
                 .header__button-empty
                     form(action="sign-in.html")
