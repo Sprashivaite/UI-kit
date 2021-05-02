@@ -26,7 +26,7 @@ mixin registration(options = {})
     .registration
         .registration__container
             h1.registration__title= title
-            form(action=actionForm method = "post")
+            form(action=actionForm, method = "post")
                 .registration__name
                     +text-field({placeholder: textName})
                 .registration__surname
