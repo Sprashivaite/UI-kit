@@ -1,7 +1,7 @@
 {
     "header": {
-        "bold": false,
-        "login": false,
+        "isBold": false,
+        "logged": false,
         "navTitles": [
             {
                 "title": "О нас"

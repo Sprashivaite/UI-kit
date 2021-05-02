@@ -6,10 +6,10 @@
     "dropdown": {
         "items": ["взрослые", "дети", "младенцы"], 
         "title": "Сколько гостей", 
-        "buttons": true
+        "hasButtons": true
     },
     "button": {
-        "arrow": true, "text":"подобрать номер"
+        "hasArrow": true, "text":"подобрать номер"
     }
     },
     "registration": {
@@ -40,7 +40,7 @@
         },
         "toggleName": "Получать спецпредложения",
         "buttonPay": {
-            "arrow": true, 
+            "hasArrow": true, 
             "text":"перейти к оплате"
         },
         "accountText": "Уже есть аккаунт на Toxin",
@@ -59,14 +59,14 @@
     },
     "reservation": {
         "num": 888, 
-        "lux": true, 
+        "isLux": true, 
         "luxText": "люкс", 
         "dateRange": ["прибытие", "выезд"],
         "legendGuests": "Гости", 
         "dropdown": {
             "items": ["взрослые", "дети", "младенцы"], 
             "title": "Сколько гостей", 
-            "buttons": true
+            "hasButtons": true
         },
         "cost": "9 990₽", 
         "dayText": " в сутки",

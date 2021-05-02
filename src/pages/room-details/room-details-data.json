@@ -1,14 +1,14 @@
 {
     "reservation": {
         "num": 888, 
-        "lux": true, 
+        "isLux": true, 
         "luxText": "люкс", 
         "dateRange": ["прибытие", "выезд"],
         "legendGuests": "Гости", 
         "dropdown": {
             "items": ["взрослые", "дети", "младенцы"], 
             "title": "Сколько гостей", 
-            "buttons": true
+            "hasButtons": true
         },
         "cost": "9 990₽", 
         "dayText": " в сутки",

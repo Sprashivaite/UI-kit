@@ -4,7 +4,7 @@ mixin room-card(options = {})
         const {
             images = [], 
             num = 0, 
-            lux = false, 
+            isLux = false, 
             luxText = "", 
             price = "", 
             daysText = "",
@@ -25,7 +25,7 @@ mixin room-card(options = {})
         .room-card__button-right.js-room-card__button-right
         .room-card__description
             h2.room-card__description-num= num
-            h3.room-card__description-lux= (lux ? luxText: "" ) 
+            h3.room-card__description-lux= (isLux ? luxText: "" ) 
             span.room-card__description-cost!= price
                 span.room-card__description-days= daysText
             .room-card__description-rating

@@ -1,4 +1,4 @@
-mixin dropdown({items = [], title = "", buttons = false} = {})
+mixin dropdown({items = [], title = "", hasButtons = false} = {})
     .dropdown.js-dropdown
         .dropdown__field.js-dropdown__field
             .dropdown__title.js-dropdown__title= title
@@ -10,7 +10,7 @@ mixin dropdown({items = [], title = "", buttons = false} = {})
                         .dropdown__menu-minus.js-dropdown__menu-minus
                         input.dropdown__menu-value.js-dropdown__menu-value(value="0", disabled)
                         .dropdown__menu-plus.js-dropdown__menu-plus
-            if(buttons)
+            if(hasButtons)
                 .dropdown__buttons-container
                     .dropdown__clear.js-dropdown__clear 
                     .dropdown__apply.js-dropdown__apply 

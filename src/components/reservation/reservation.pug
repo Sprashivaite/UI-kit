@@ -6,7 +6,7 @@ mixin reservation(options = {})
         const {
             actionForm = "",
             num = "", 
-            lux = true, 
+            isLux = true, 
             luxText = "", 
             dateRange = [],
             legendGuests = "" , 
@@ -27,7 +27,7 @@ mixin reservation(options = {})
         .reservation__container
             .reservation__description
                 h1.reservation__description-num= num
-                if lux
+                if isLux
                     span.reservation__description-lux= luxText
                 span.reservation__description-cost= cost          
                     span.reservation__description-day= dayText          
@@ -54,4 +54,4 @@ mixin reservation(options = {})
                 .reservation__final-line
                 h2= finalSum
             .reservation__button-solid
-                +button({arrow: true, text:buttonText})
+                +button({hasArrow: true, text:buttonText})

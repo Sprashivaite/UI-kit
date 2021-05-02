@@ -1,7 +1,7 @@
-mixin button({background = "", text = "", arrow = false} = {})
+mixin button({background = "", text = "", hasArrow = false} = {})
     -
         const transparent = (background === "transparent" ? "button_color_transparent": "");
-        const buttonArrow = (arrow ? "button_with-arrow": "");
+        const buttonArrow = (hasArrow ? "button_with-arrow": "");
         const textColor = (background === "transparent" ? "button__text_color_solid": "");
         
     button.button(class=`${transparent} ${buttonArrow}`)

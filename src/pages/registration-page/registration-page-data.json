@@ -27,7 +27,7 @@
         },
         "toggleName": "Получать спецпредложения",
         "buttonPay": {
-            "arrow": true, 
+            "hasArrow": true, 
             "text":"перейти к оплате"
         },
         "accountText": "Уже есть аккаунт на Toxin",

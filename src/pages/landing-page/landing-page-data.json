@@ -6,10 +6,10 @@
         "dropdown": {
             "items": ["взрослые", "дети", "младенцы"], 
             "title": "Сколько гостей", 
-            "buttons": true
+            "hasButtons": true
         },
         "button": {
-            "arrow": true, "text":"подобрать номер"
+            "hasArrow": true, "text":"подобрать номер"
         }
     },
     "landingText": "Лучшие номера для вашей работы, отдыха и просто вдохновения "

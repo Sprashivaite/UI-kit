@@ -1,11 +1,11 @@
 {
     "header": {
-        "bold": true,
-        "login": false,
+        "isBold": true,
+        "logged": false,
         "navTitles": [
             {
                 "title": "О нас",
-                "bold": "bold"
+                "isBold": true
             },
             {
                 "title": "Услуги",
@@ -36,13 +36,13 @@
         "buttonTextLogIn": "зарегистрироваться"
     },
     "headerLoggedIn": {
-        "bold": true,
-        "login": true,
+        "isBold": true,
+        "logged": true,
         "userName": "Юлий Цезарь",
         "navTitles": [
             {
                 "title": "О нас",
-                "bold": "bold"
+                "isBold": true
             },
             {
                 "title": "Услуги",

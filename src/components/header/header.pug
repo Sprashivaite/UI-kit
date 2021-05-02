@@ -5,8 +5,8 @@ include ../header-nav/header-nav
 mixin header(options = {})
     -
         const {
-            bold = false, 
-            login = false, 
+            isBold = false, 
+            logged = false, 
             userName = "", 
             navTitles = [],
             buttonTextSignIn = "",
@@ -18,7 +18,7 @@ mixin header(options = {})
             +logo-color
         nav.header__nav
             +header-nav(navTitles)
-            if login
+            if logged
                 .header__name= userName
             else 
                 .header__button-empty

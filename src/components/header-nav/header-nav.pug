@@ -2,7 +2,7 @@ mixin header-nav(navTitles = [])
     ul.header-nav
         each item in navTitles
             -
-                const fontBold = (item.bold ? "header-nav__item_bold": "")
+                const fontBold = (item.isBold ? "header-nav__item_bold": "")
                 const isDropdown = (item.dropdown ? "header-nav__item_with-dropdown": "")
             li
                 a.header-nav__item(

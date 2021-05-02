@@ -21,7 +21,7 @@ mixin log-in(options = {})
                 .log-in__pass
                     +text-field({type: "password", placeholder: passText})
                 .log-in__button-solid
-                    +button({arrow: true, text:buttonLogInText})
+                    +button({hasArrow: true, text:buttonLogInText})
             form(action=actionReg)
                 .log-in__text= accountText
                 .log-in__button-empty
