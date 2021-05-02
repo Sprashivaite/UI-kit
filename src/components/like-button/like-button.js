@@ -18,7 +18,7 @@ class LikeButton {
     this.value.innerHTML = Number(this.value.innerHTML) + 1;
   }
 
-  delete() {
+  _delete() {
     this.value.innerHTML = Number(this.value.innerHTML) - 1;
   }
 
@@ -26,7 +26,7 @@ class LikeButton {
     this.button.onmousemove = () => false;
     const handler = () => {
       if (this.input.checked) this._add();
-      if (!this.input.checked) this.delete();
+      if (!this.input.checked) this._delete();
     };
     this.input.addEventListener('click', handler);
   }

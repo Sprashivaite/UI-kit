@@ -27,12 +27,12 @@ class Dropdown {
     this.defaultTitle = this.title.innerHTML;
   }
 
-  _makeMinus(target) {
+  _decrease(target) {
     const inputValue = target;
     inputValue.value = Math.max(Number(target.value) - 1, 0);
   }
 
-  _makePlus(target) {
+  _increase(target) {
     const inputValue = target;
     inputValue.value = Number(target.value) + 1;
   }
@@ -56,7 +56,7 @@ class Dropdown {
     this.clear.classList.remove('dropdown__clear_show');
   }
 
-  _declension(number, names) {
+  _makeDeclination(number, names) {
     const [plural, nominative, genitive] = names;
     const lastNum = Number(Array.from(`${number}`).slice(-1));
     const lastTwoNumbs = Number(Array.from(`${number}`).slice(-2).join(''));
@@ -89,7 +89,7 @@ class Dropdown {
     const sum = values.reduce((prevElement, current) => prevElement + Number(current.value), 0);
     if (sum === 0) this._clearValues();
     if (sum > 0) this._showClear();
-    const textTitle = `${sum} ${this._declension(sum, this.names[0])}`;
+    const textTitle = `${sum} ${this._makeDeclination(sum, this.names[0])}`;
     this.title.innerHTML = textTitle;
   }
 
@@ -97,7 +97,7 @@ class Dropdown {
     let result = '';
     this.lines.forEach((element, index) => {
       const num = Number(element.querySelector('.js-dropdown__menu-value').value);
-      const text = this._declension(num, this.names[index]);
+      const text = this._makeDeclination(num, this.names[index]);
       if (num > 0) {
         if (result) result += ', ';
         result += `${num} ${text}`;
@@ -107,7 +107,7 @@ class Dropdown {
     else this.title.innerHTML = result;
   }
 
-  _documentHandlerClick(event) {
+  _makeClickHandler(event) {
     const { target } = event;
     const menu = target === this.menu || this.menu.contains(target);
     const field = target === this.field;
@@ -124,13 +124,13 @@ class Dropdown {
       const minus = element.querySelector('.js-dropdown__menu-minus');
       const value = element.querySelector('.js-dropdown__menu-value');
       const handlerPlus = () => {
-        this._makePlus(value);
+        this._increase(value);
         if (this.names.length === 1) this._changeSingleTitle();
         else this._changeMultipleTitle();
         minus.className = 'dropdown__menu-minus_border';
       };
       const handlerMinus = () => {
-        this._makeMinus(value);
+        this._decrease(value);
         if (this.names.length === 1) this._changeSingleTitle();
         else this._changeMultipleTitle();
         if (Number(value.value) === 0) minus.className = 'dropdown__menu-minus';
@@ -145,7 +145,7 @@ class Dropdown {
       this._toggleMenu();
     };
     if (this.applyButton) this.applyButton.addEventListener('click', handlerApply);
-    const _documentHandlerClick = (event) => this._documentHandlerClick(event);
+    const _documentHandlerClick = (event) => this._makeClickHandler(event);
     document.addEventListener('click', _documentHandlerClick);
     this.field.addEventListener('click', handlerApply);
   }
