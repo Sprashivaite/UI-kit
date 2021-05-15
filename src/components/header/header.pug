@@ -10,8 +10,7 @@ mixin header(options = {})
             userName = "", 
             navTitles = [],
             buttonTextSignIn = "",
-            buttonTextLogIn = "",
-            navBurger = [],
+            buttonTextLogIn = ""
         } = options 
     .header
         .header__logo-color
@@ -23,8 +22,8 @@ mixin header(options = {})
             else 
                 .header__button-empty
                     form(action="sign-in.html")
-                        +button({text: buttonTextSignIn, background: "transparent"})
+                        +button({text: buttonTextSignIn, background: "transparent", isHeader: true})
                 .header__button-register
                     form(action="registration-page.html")
-                        +button({text: buttonTextLogIn})
+                        +button({text: buttonTextLogIn, isHeader: true})
         +burger-menu(navTitles)
