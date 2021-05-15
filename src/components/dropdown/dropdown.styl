@@ -97,23 +97,11 @@
     justify-content space-between
     margin-top 18px
     padding-bottom 5px
-  &__clear
-  &__apply
-    text-transform uppercase
-    color $purple
-    font-size 12px
-    font-weight bold
-    cursor pointer
-  &__clear
+  .js-dropdown__clear 
+    visibility hidden
     opacity 0
-    cursor default
-    transition 0.3s
-    &::after
-      content "очистить"
-  &__apply
-    &::after
-      content "применить"
-  &__clear_show
+  .js-dropdown__clear_show
+    visibility visible  
     opacity 1
     cursor pointer
     transition 0.3s
