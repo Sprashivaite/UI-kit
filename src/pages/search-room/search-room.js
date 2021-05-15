@@ -12,9 +12,9 @@ if (document.querySelector('.js-search-room')) {
   const facilitiesDropdown = document.querySelector('.js-search-room__options-dropdown-facilities');
   rateButtons.forEach((button) => new RateButton(button));
   cards.forEach((card) => new RoomCard(card));
-  new RangeSlider({$container: $('.js-search-room__options-range-slider')});
-  new Pagination({$container: $('.js-search-room__pagination')});
+  new RangeSlider({ $container: $('.js-search-room__options-range-slider') });
+  new Pagination({ $container: $('.js-search-room__pagination') });
   new DateFilter($('.js-search-room__options-date-filter'));
-  new Dropdown(searchroomDropdown, [['гостей', 'гость', 'гостя']]);
-  new Dropdown(facilitiesDropdown, [['спальнен', 'спальня', 'спальни'], ['кроватей', 'кровать', 'кровати'], ['ванных комнат', 'ванная комната', 'ванные комнаты']]);
+  new Dropdown({ container: searchroomDropdown, names: [['гостей', 'гость', 'гостя']] });
+  new Dropdown({ container: facilitiesDropdown, names: [['спальнен', 'спальня', 'спальни'], ['кроватей', 'кровать', 'кровати'], ['ванных комнат', 'ванная комната', 'ванные комнаты']], values:[2, 2, 0] });
 }

@@ -6,6 +6,6 @@ if (document.querySelector('.js-room-details')) {
   const likeButtons = document.querySelectorAll('.js-like-button');
   const guestsDropdown = document.querySelector('.js-dropdown');
   likeButtons.forEach((button) => new LikeButton(button));  
-  new Dropdown(guestsDropdown, [['гостей', 'гость', 'гостя']]);
+  new Dropdown({ container: guestsDropdown, names: [['гостей', 'гость', 'гостя']]});
   new DateRange($('.js-room-details__reservation')); 
 }

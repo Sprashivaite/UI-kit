@@ -14,10 +14,10 @@ if (document.querySelector('.js-form-elements')) {
   const facilitiesDropdowns = document.querySelectorAll('.js-form-elements__dropdown-facilities');
   likeButtons.forEach((button) => new LikeButton(button));
   rateButtons.forEach((button) => new RateButton(button));
-  guestsDropdowns.forEach((element) => new Dropdown(element, [['гостей', 'гость', 'гостя']]));
-  facilitiesDropdowns.forEach((element) => new Dropdown(element, [['спальнен', 'спальня', 'спальни'], ['кроватей', 'кровать', 'кровати'], ['ванных комнат', 'ванная комната', 'ванные комнаты']]));
-  new RangeSlider({$container: $('.js-form-elements__slider')});
-  new Pagination({$container: $('.js-form-elements__pagination')});
+  guestsDropdowns.forEach((element) => new Dropdown({ container: element, names: [['гостей', 'гость', 'гостя']] }));
+  facilitiesDropdowns.forEach((element) => new Dropdown({ container: element, names: [['спальнен', 'спальня', 'спальни'], ['кроватей', 'кровать', 'кровати'], ['ванных комнат', 'ванная комната', 'ванные комнаты']], values: [2, 2, 0] }));
+  new RangeSlider({ $container: $('.js-form-elements__slider') });
+  new Pagination({ $container: $('.js-form-elements__pagination') });
   new DateRange($('.js-form-elements__date-dropdown'));
   new DateFilter($('.js-form-elements__filter-dropdown'));
   new TextFieldMask($('.js-form-elements__masked'));
