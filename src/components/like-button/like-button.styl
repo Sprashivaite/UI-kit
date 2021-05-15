@@ -36,14 +36,7 @@
   &__value
     color $dark25
     padding-right 10px
-    z-index 2
-  &__symbol_checked
-    display none
-    &::after
-      @extend .like-button__symbol::after
-
-      content 'favorite'
-      color $purple
+    z-index 2 
   &__input
     visually-hidden()
   &__input:focus
@@ -59,6 +52,6 @@
     ~ .like-button__value
       color $purple
     ~ .like-button__symbol
-      display none
-    ~ .like-button__symbol_checked
-      display block
+      &::after
+        content 'favorite'
+        color $purple
