@@ -66,13 +66,10 @@ class RoomCard {
 
   _addHandler() {
     this.buttonPictures.forEach((element) => {
-      const handlerCircle = () => this._switchPicture(element);
-      element.addEventListener('click', handlerCircle);
+      element.addEventListener('click', this._switchPicture.bind(this, element));
     });
-    const handlerLeftArrow = () => this._turnLeft();
-    this.leftArrow.addEventListener('click', handlerLeftArrow);
-    const handlerRightArrow = () => this._turnRight();
-    this.rightArrow.addEventListener('click', handlerRightArrow);
+    this.leftArrow.addEventListener('click', this._turnLeft.bind(this));
+    this.rightArrow.addEventListener('click', this._turnRight.bind(this));
   }
 }
 export default RoomCard;

@@ -34,8 +34,7 @@ class RateButton {
 
   _addHandler() {
     this.stars.forEach((star) => {
-      const handler = () => this._changeRate(star);
-      star.addEventListener('click', handler);
+      star.addEventListener('click', this._changeRate.bind(this, star));
     });
   }
 }

@@ -93,7 +93,8 @@ class Dropdown {
     if (this.clear) this._hideClear();
   }
 
-  _toggleMenu() {
+  _toggleMenu(event) {
+    event.stopPropagation();
     this.menu.classList.toggle('dropdown__menu_show');
   }
 
@@ -134,7 +135,7 @@ class Dropdown {
     const field = target === this.field;
     const menuIsActive = this.menu.classList.contains('dropdown__menu_show');
     const isOutOfField = !menu && !field && menuIsActive;
-    if (isOutOfField) this._toggleMenu();
+    if (isOutOfField) this._toggleMenu(event);
   }
 
   _addHandler() {
@@ -159,16 +160,10 @@ class Dropdown {
       plus.addEventListener('click', handlerPlus);
       minus.addEventListener('click', handlerMinus);
     });
-    const handlerClear = () => this._clearValues();
-    if (this.clear) this.clear.addEventListener('click', handlerClear);
-    const handlerApply = (event) => {
-      event.stopPropagation();
-      this._toggleMenu();
-    };
-    if (this.applyButton) this.applyButton.addEventListener('click', handlerApply);
-    const _documentHandlerClick = (event) => this._makeClickHandler(event);
-    document.addEventListener('click', _documentHandlerClick);
-    this.field.addEventListener('click', handlerApply);
+    if (this.clear) this.clear.addEventListener('click', this._clearValues.bind(this));
+    if (this.applyButton) this.applyButton.addEventListener('click', this._toggleMenu.bind(this));
+    document.addEventListener('click', this._makeClickHandler.bind(this));
+    this.field.addEventListener('click', this._toggleMenu.bind(this));
   }
 }
 export default Dropdown;
