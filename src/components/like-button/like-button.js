@@ -1,6 +1,6 @@
 class LikeButton {
   constructor(button) {
-    this._initLikeButton(button)
+    this._initLikeButton(button);
   }
 
   _initLikeButton(button) {
@@ -15,11 +15,11 @@ class LikeButton {
   }
 
   _add() {
-    this.value.innerHTML = Number(this.value.innerHTML) + 1;
+    this.value.textContent = Number(this.value.innerHTML) + 1;
   }
 
   _delete() {
-    this.value.innerHTML = Number(this.value.innerHTML) - 1;
+    this.value.textContent = Number(this.value.innerHTML) - 1;
   }
 
   _addHandler() {
