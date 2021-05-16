@@ -6,18 +6,18 @@ mixin diagram(options = {})
             well = "", 
             good = "", 
             satisfactorily = "", 
-            disappointed = ""
+            disappointed = "",
+            width = 140,
+            height = 140
         } = options
     .diagram
         .diagram__circle-container
-            .diagram__circle-back
-            .diagram__circle-part-left
-            .diagram__circle-part-right-top
-            .diagram__circle-part-right-bot
+            canvas.js-diagram(width=width height=height)
             h3.diagram__circle-num= num
                 span.diagram__circle-vote= vote
         .diagram__rating-container 
-            p.diagram__rating.diagram__rating_color_orange= well
-            p.diagram__rating.diagram__rating_color_green= good
-            p.diagram__rating.diagram__rating_color_purple= satisfactorily 
-            p.diagram__rating.diagram__rating_color_black= disappointed
+            ul.diagram__rating-list
+                li.diagram__rating.diagram__rating_color_orange= well
+                li.diagram__rating.diagram__rating_color_green= good
+                li.diagram__rating.diagram__rating_color_purple= satisfactorily 
+                li.diagram__rating.diagram__rating_color_black= disappointed
