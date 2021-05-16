@@ -26,7 +26,7 @@ class DateFilter {
       minDate: new Date(),
       clearButton: true,
       todayButton: true,
-      dateFormat: "d M",
+      dateFormat: 'd M',
       navTitles: {
         days: 'MM <i>yyyy</i>',
       },

@@ -12,6 +12,7 @@ module.exports = {
       {
         ignoreFontFamilies: ["Material Icons"]
       }
-    ]
+    ],
+    "stylus/no-eol-whitespace": null
   },
 };

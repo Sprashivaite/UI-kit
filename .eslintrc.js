@@ -13,4 +13,7 @@ module.exports = {
     'no-new': 'off',
     'no-underscore-dangle': 'off',
   },
+  globals: {
+    $: true,
+  },
 };
