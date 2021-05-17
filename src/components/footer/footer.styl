@@ -4,10 +4,7 @@
   color $dark50
   background #fff
   margin 0 auto
-  box-sizing border-box
   max-width 1160px
-  @media (max-width 1200px)
-    width 90%
   &::before
     content ''
     position absolute
@@ -15,6 +12,8 @@
     width 99%
     top 0
     left 0
+  @media (max-width 1200px)
+    width 90%
   &__top
     min-width 280px
     min-height 246px

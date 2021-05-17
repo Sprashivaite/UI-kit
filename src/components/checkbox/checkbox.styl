@@ -21,13 +21,12 @@
       border-radius 0
       transform rotate(45deg)
       box-sizing border-box
-    &:focus
-    &:hover ~ .checkbox__text
-      outline none
-      color $dark75
+    &:focus 
+      ~ .checkbox__text-container
+        color $dark100
   &__title
     line-height 22px
-    + .checkbox__text
+    .checkbox__text
       line-height 16px
       padding-top 3px
   &__box
@@ -41,6 +40,8 @@
   &__text-container
     margin-left 10px
     line-height 18px
+    &:hover
+      color $dark100
   &__text
     line-height 18px
     &_size_small

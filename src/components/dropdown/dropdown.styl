@@ -20,8 +20,6 @@
       font-size 24px
       top 11px
       right 8px
-      outline none
-      border none
       color $dark50
       outline-color $dark25
       background-color transparent
@@ -31,22 +29,21 @@
     height 80%
     width 90%
     padding 10px 0 0 14px
-    border none
     color $dark75
     background-color transparent
     cursor pointer
     overflow hidden
   &__menu
+    display none
+    position absolute
     padding 0 5px 3px 13px
     box-shadow 0 10px 20px $dark5
     border 1px solid $dark50
-    display none
-    position absolute
     width 100%
     top 42px
-    z-index 3
     border-radius 2px
     background-color #fff
+    z-index 3
     &_show
       display block
       animation-name opacity

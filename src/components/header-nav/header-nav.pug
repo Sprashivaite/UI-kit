@@ -2,14 +2,15 @@ mixin header-nav(navTitles = [])
     ul.header-nav
         each item in navTitles
             -
-                const fontBold = (item.isBold ? "header-nav__item_bold": "")
-                const isDropdown = (item.dropdown ? "header-nav__item_with-dropdown": "")
+                const {isBold, dropdown, href, title} = item
+                const fontBold = (isBold ? "header-nav__item_bold": "")
+                const isDropdown = (dropdown ? "header-nav__item_with-dropdown": "")
             li
                 a.header-nav__item(
-                    href=(item.href || "change-me.html"), 
+                    href=(href || "change-me.html"), 
                     class=`${fontBold} ${isDropdown}`
-                )= item.title
-                    if (item.dropdown)
+                )= title
+                    if (dropdown)
                         .header-nav__dropdown-content 
-                            each nav in item.dropdown
+                            each nav in dropdown
                                 .header-nav__dropdown-content-item(href="change-me.html")= nav

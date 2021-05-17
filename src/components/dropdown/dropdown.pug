@@ -7,7 +7,7 @@ mixin dropdown({items = [], title = "", hasButtons = false} = {})
         .dropdown__menu.js-dropdown__menu
             each item in items
                 .dropdown__menu-line.js-dropdown__menu-line
-                    p.dropdown__menu-item.js-dropdown__menu-item= item
+                    .dropdown__menu-item.js-dropdown__menu-item= item
                     .dropdown__menu-box-button.js-dropdown__menu-box-button
                         .dropdown__menu-minus.js-dropdown__menu-minus
                         input.dropdown__menu-value.js-dropdown__menu-value(value="0", disabled)

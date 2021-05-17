@@ -3,5 +3,6 @@ mixin footer-nav({title = "", items= []} = {})
         h3.footer-nav__title= title
         ul.footer-nav__ul
             each item in items
+                -  const {href, nav} = item
                 li.footer-nav__li
-                    a.footer-nav__a(href=(item.href || "change-me.html"))= item.nav
+                    a.footer-nav__a(href=(href || "change-me.html"))= nav
