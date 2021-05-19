@@ -4,22 +4,21 @@ import 'air-datepicker/dist/css/datepicker.min.css';
 class DateFilter {
   constructor($container) {
     this.$container = $container;
-    this.initDateFilter();
+    this._initDateFilter();
   }
 
   _findInput() {
     this.$dateFilter = this.$container.find('.js-date-filter__input');
   }
 
-  findButton() {
+  _findButton() {
     this.$button = $('[data-action="today"]');
   }
 
-  initDateFilter() {
+  _initDateFilter() {
     this._findInput();
     this.myDatepicker = this.$dateFilter.datepicker().data('datepicker');
     const { myDatepicker } = this;
-    const weekLater = new Date(new Date().setDate(new Date().getDate() + 7));
     this.$dateFilter.datepicker({
       range: true,
       multipleDatesSeparator: ' - ',
@@ -42,12 +41,24 @@ class DateFilter {
         }
       },
     });
-    myDatepicker.selectDate([new Date(), weekLater]);
-    this.addHandlers();
+    this._addHandlers();
+    this._setDate();
   }
 
-  addHandlers() {
-    this.findButton();
+  _setDate() {
+    const { myDatepicker } = this;
+    const weekLater = new Date(new Date().setDate(new Date().getDate() + 7));
+    const startDate = this.$dateFilter.data('start');
+    const endDate = this.$dateFilter.data('end');
+    if (startDate && endDate) {
+      myDatepicker.selectDate([new Date(startDate), new Date(endDate)]);
+    } else {
+      myDatepicker.selectDate([new Date(), weekLater]);
+    }
+  }
+
+  _addHandlers() {
+    this._findButton();
     const hideDatepicker = () => this.myDatepicker.hide();
     this.$button.on('click', hideDatepicker);
   }

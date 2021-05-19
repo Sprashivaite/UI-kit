@@ -1,7 +1,9 @@
-mixin date-filter
+mixin date-filter({start = null, end = null} = {})
     .date-filter
         input.date-filter__input.js-date-filter__input(
             class="datepicker-here", 
             placeholder="ДД мес - ДД мес",  
+            data-start=start,
+            data-end=end,
             readonly
         ) 
