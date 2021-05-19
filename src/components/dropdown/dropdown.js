@@ -48,7 +48,7 @@ class Dropdown {
 
   _initDropdown(values) {
     this._findElements();
-    this._addHandler();
+    this._addHandlers();
     this._assignValues(values);
   }
 
@@ -129,7 +129,7 @@ class Dropdown {
     else this.title.textContent = result;
   }
 
-  _makeClickHandler(event) {
+  _handleDocumentClick(event) {
     const { target } = event;
     const menu = target === this.menu || this.menu.contains(target);
     const field = target === this.field;
@@ -138,31 +138,33 @@ class Dropdown {
     if (isOutOfField) this._toggleMenu(event);
   }
 
-  _addHandler() {
+  _addHandlers() {
     this.dropdown.onmousedown = () => false;
     this.dropdown.onclick = () => false;
+
     this.lines.forEach((element) => {
       const plus = element.querySelector('.js-dropdown__menu-plus');
       const minus = element.querySelector('.js-dropdown__menu-minus');
       const value = element.querySelector('.js-dropdown__menu-value');
-      const handlerPlus = () => {
+      const handleMenuPlusClick = () => {
         Dropdown.increase(value);
         if (this.names.length === 1) this._changeSingleTitle();
         else this._changeMultipleTitle();
         minus.className = 'dropdown__menu-minus_border';
       };
-      const handlerMinus = () => {
+      const handleMenuMinusClick = () => {
         Dropdown.decrease(value);
         if (this.names.length === 1) this._changeSingleTitle();
         else this._changeMultipleTitle();
         if (Number(value.value) === 0) minus.className = 'dropdown__menu-minus';
       };
-      plus.addEventListener('click', handlerPlus);
-      minus.addEventListener('click', handlerMinus);
+      plus.addEventListener('click', handleMenuPlusClick);
+      minus.addEventListener('click', handleMenuMinusClick);
     });
+
     if (this.clear) this.clear.addEventListener('click', this._clearValues.bind(this));
     if (this.applyButton) this.applyButton.addEventListener('click', this._toggleMenu.bind(this));
-    document.addEventListener('click', this._makeClickHandler.bind(this));
+    document.addEventListener('click', this._handleDocumentClick.bind(this));
     this.field.addEventListener('click', this._toggleMenu.bind(this));
   }
 }

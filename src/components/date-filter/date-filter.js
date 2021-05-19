@@ -31,10 +31,10 @@ class DateFilter {
         days: 'MM <i>yyyy</i>',
       },
       onShow(dp, animationCompleted) {
-        const addHandlerHide = () => {
+        const hideDatepicker = () => {
           if (animationCompleted) myDatepicker.hide();
         };
-        myDatepicker.$el.on('click.dd', addHandlerHide);
+        myDatepicker.$el.on('click.dd', hideDatepicker);
       },
       onHide(dp, animationCompleted) {
         if (animationCompleted) {
@@ -48,8 +48,8 @@ class DateFilter {
 
   addHandlers() {
     this.findButton();
-    const hideHandler = () => this.myDatepicker.hide();
-    this.$button.on('click', hideHandler);
+    const hideDatepicker = () => this.myDatepicker.hide();
+    this.$button.on('click', hideDatepicker);
   }
 }
 export default DateFilter;

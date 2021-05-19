@@ -34,11 +34,11 @@ class DateRange {
         days: 'MM <i>yyyy</i>',
       },
       onShow(dp, animationCompleted) {
-        const addHandlerHide = () => {
+        const hideDatepicker = () => {
           if (animationCompleted) myDatepicker.hide();
         };
-        myDatepicker.$el.on('click.dd', addHandlerHide);
-        secondData.on('click.dd', addHandlerHide);
+        myDatepicker.$el.on('click.dd', hideDatepicker);
+        secondData.on('click.dd', hideDatepicker);
       },
       onHide(dp, animationCompleted) {
         if (animationCompleted) {
@@ -52,9 +52,9 @@ class DateRange {
 
   _addHandlers() {
     this._findButton();
-    const hideHandler = () => this.myDatepicker.hide();
+    const hideDatepicker = () => this.myDatepicker.hide();
     const showHandler = () => this.myDatepicker.show();
-    this.$button.on('click', hideHandler);
+    this.$button.on('click', hideDatepicker);
     this.secondData.on('click', showHandler);
   }
 }
