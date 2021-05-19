@@ -1,5 +1,3 @@
-/* eslint-disable no-param-reassign */
-/* eslint-disable no-return-assign */
 class RoomCard {
   constructor(card) {
     this.card = card;
