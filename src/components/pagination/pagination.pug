@@ -1,4 +1,9 @@
-mixin pagination({caption = ""} = {})
+mixin pagination({current, items, total, caption = {}} = {})
+    - const captionTotal = total > 100 ? "100+": total
     .pagination
-        .pagination__buttons.js-pagination__buttons
-        .pagination__caption= caption
+        .pagination__buttons.js-pagination__buttons(
+            data-current=current,
+            data-items=items,
+            data-total=total,
+            )
+        .pagination__caption= `${current} – ${items} ${caption.of} ${captionTotal} ${caption.variants}`

@@ -183,7 +183,15 @@ html(lang="ru")
                         +button({hasArrow: true, text: "перейти к оплате"})
                     section.form-elements__pagination.js-form-elements__pagination
                         legend.form-elements__legend pagination
-                        +pagination({caption: "1 – 12 из 100+ вариантов аренды"})
+                        +pagination({
+                            caption: {
+                                "of": "из", 
+                                "variants": "вариантов аренды"
+                            },
+                            current: 1, 
+                            items: 12, 
+                            total: 180
+                        })
                     section.form-elements__dropdown-3
                         legend.form-elements__legend dropdown
                         .form-elements__dropdown-guests.js-form-elements__dropdown-guests

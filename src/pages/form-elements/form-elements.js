@@ -17,7 +17,7 @@ if (document.querySelector('.js-form-elements')) {
   guestsDropdowns.forEach((element) => new Dropdown({ container: element, names: [['гостей', 'гость', 'гостя']] }));
   facilitiesDropdowns.forEach((element) => new Dropdown({ container: element, names: [['спальнен', 'спальня', 'спальни'], ['кроватей', 'кровать', 'кровати'], ['ванных комнат', 'ванная комната', 'ванные комнаты']], values: [2, 2, 0] }));
   new RangeSlider({ $container: $('.js-form-elements__slider') });
-  new Pagination({ $container: $('.js-form-elements__pagination') });
+  new Pagination($('.js-form-elements__pagination'));
   new DateRange($('.js-form-elements__date-dropdown'));
   new DateFilter($('.js-form-elements__filter-dropdown'));
   new TextFieldMask($('.js-form-elements__masked'));
