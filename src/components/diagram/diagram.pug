@@ -1,14 +1,10 @@
 mixin diagram(options = {})
     -
         const {
-            num = "0", 
             vote = "", 
-            well = "", 
-            good = "", 
-            satisfactorily = "", 
-            disappointed = "",
             width = 140,
-            height = 140
+            height = 140,
+            ratingList = [],
         } = options
     .diagram
         .diagram__circle-container
@@ -17,7 +13,6 @@ mixin diagram(options = {})
                 span.diagram__circle-vote= vote
         .diagram__rating-container 
             ul.diagram__rating-list
-                li.diagram__rating.diagram__rating_color_orange= well
-                li.diagram__rating.diagram__rating_color_green= good
-                li.diagram__rating.diagram__rating_color_purple= satisfactorily 
-                li.diagram__rating.diagram__rating_color_black= disappointed
+                each item in ratingList
+                    - const {color, text} = item
+                    li.diagram__rating(class=`diagram__rating_color_${color}`)= text

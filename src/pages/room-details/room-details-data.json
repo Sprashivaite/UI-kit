@@ -43,10 +43,12 @@
   "diagramTitle": "Впечатления от номера",
   "diagram": {
     "vote": "голосов",
-    "well": "Великолепно",
-    "good": "Хорошо",
-    "satisfactorily": "Удовлетворительно",
-    "disappointed": "Разочарован"
+    "ratingList": [
+      {"color": "orange", "text": "Великолепно"},
+      {"color": "green", "text": "Хорошо"},
+      {"color": "purple", "text": "Удовлетворительно"},
+      {"color": "black", "text": "Разочарован"}
+    ]
   },
   "diagramCanvas": {
     "colors": [
