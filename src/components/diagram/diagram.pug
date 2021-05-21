@@ -13,7 +13,7 @@ mixin diagram(options = {})
     .diagram
         .diagram__circle-container
             canvas.js-diagram(width=width height=height)
-            h3.diagram__circle-num= num
+            h3.diagram__circle-num.js-diagram__circle-num
                 span.diagram__circle-vote= vote
         .diagram__rating-container 
             ul.diagram__rating-list

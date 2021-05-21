@@ -19,6 +19,7 @@ class Diagram {
     this.colors = [];
 
     this._createColorsArray(this.setup);
+    this._addSumValues()
     new Chart(this.chart, {
       type: 'doughnut',
       data: {
@@ -52,6 +53,12 @@ class Diagram {
       if (el[1]) gradientOne.addColorStop(1, el[1]);
       this.colors.push(gradientOne);
     });
+  }
+
+  _addSumValues() {
+    const sum = this.dataset.reduce((prev, current) => prev + current);
+    const circleNum = this.chart.parentNode.querySelector('.js-diagram__circle-num');
+    circleNum.insertAdjacentText('afterbegin', sum);
   }
 }
 
