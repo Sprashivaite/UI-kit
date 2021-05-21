@@ -19,7 +19,7 @@ class Diagram {
     this.colors = [];
 
     this._createColorsArray(this.setup);
-    this._addSumValues()
+    this._addSumValues();
     new Chart(this.chart, {
       type: 'doughnut',
       data: {
