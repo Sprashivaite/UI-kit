@@ -1,4 +1,4 @@
-import 'inputmask/dist/jquery.inputmask.js';
+import 'inputmask/dist/jquery.inputmask';
 
 class TextFieldMask {
   constructor($container) {
