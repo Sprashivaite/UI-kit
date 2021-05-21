@@ -36,7 +36,7 @@ mixin registration(options = {})
                     +radio-button(radioWoman)
                 .registration__data
                     legend= dateText
-                    +date-field
+                    +text-field({masked: true, placeholder: "ДД.ММ.ГГГГ", date: true})
                 .registration__log-in
                     legend= data
                     .log-in__email

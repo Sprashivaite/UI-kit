@@ -20,5 +20,5 @@ if (document.querySelector('.js-form-elements')) {
   new Pagination($('.js-form-elements__pagination'));
   new DateRange($('.js-form-elements__date-dropdown'));
   new DateFilter($('.js-form-elements__filter-dropdown'));
-  new TextFieldMask($('.js-form-elements__masked'));
+  new TextFieldMask($('.js-text-field__input_masked'));
 }
