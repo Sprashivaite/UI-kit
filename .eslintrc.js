@@ -12,6 +12,7 @@ module.exports = {
   rules: {
     'no-new': 'off',
     'no-underscore-dangle': 'off',
+    'import/no-extraneous-dependencies': off,
   },
   globals: {
     $: true,
