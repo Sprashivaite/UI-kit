@@ -1,89 +1,101 @@
 {
-    "searchRooms": {
+  "searchRooms": {
     "title": "Найдём номера под ваши пожелания",
     "legendGuests": "Гости",
     "dateRange": ["прибытие", "выезд"],
     "dropdown": {
-        "items": ["взрослые", "дети", "младенцы"], 
-        "title": "Сколько гостей", 
-        "hasButtons": true
+      "items": [
+        { "name": "взрослые"},
+        { "name": "дети"},
+        { "name": "младенцы" }
+      ],
+      "title": "Сколько гостей",
+      "hasButtons": true
     },
     "button": {
-        "hasArrow": true, "text":"подобрать номер"
+      "hasArrow": true,
+      "text": "подобрать номер"
     }
+  },
+  "registration": {
+    "title": "Регистрация аккаунта",
+    "actionForm": "",
+    "textName": "Имя",
+    "textSurName": "Фамилия",
+    "radioMan": {
+      "text": "Мужчина",
+      "value": "man",
+      "checked": true,
+      "name": "gender"
     },
-    "registration": {
-        "title": "Регистрация аккаунта",
-        "actionForm": "",
-        "textName": "Имя",
-        "textSurName": "Фамилия",
-        "radioMan": {
-            "text": "Мужчина", 
-            "value": "man", 
-            "checked": true, 
-            "name": "gender"
-        },
-        "radioWoman": {
-            "text": "Женщина", 
-            "value": "woman", 
-            "name": "gender"
-        },        
-        "dateText": "дата рождения", 
-        "data": "данные для входа в сервис", 
-        "textEmail": {
-            "type":"email", 
-            "placeholder": "Email"
-        },
-        "textPassword": {
-            "type": "password", 
-            "placeholder": "Пароль"
-        },
-        "toggleName": "Получать спецпредложения",
-        "buttonPay": {
-            "hasArrow": true, 
-            "text":"перейти к оплате"
-        },
-        "accountText": "Уже есть аккаунт на Toxin",
-        "buttonLogIn": {
-            "background": "transparent",
-             "text":"войти"
-        }
+    "radioWoman": {
+      "text": "Женщина",
+      "value": "woman",
+      "name": "gender"
     },
-    "logIn": {
-        "title":"Войти", 
-        "emailText": "Email",
-        "passText": "Пароль",
-        "buttonLogInText": "войти",
-        "buttonRegText": "создать",
-        "accountText": "Нет аккаунта на Toxin?"
+    "dateText": "дата рождения",
+    "data": "данные для входа в сервис",
+    "textEmail": {
+      "type": "email",
+      "placeholder": "Email"
     },
-    "reservation": {
-        "num": 888, 
-        "isLux": true, 
-        "luxText": "люкс", 
-        "dateRange": ["прибытие", "выезд"],
-        "legendGuests": "Гости", 
-        "dropdown": {
-            "items": ["взрослые", "дети", "младенцы"], 
-            "title": "Сколько гостей", 
-            "hasButtons": true
-        },
-        "cost": "9 990₽", 
-        "dayText": " в сутки",
-        "days": " x 4 суток", 
-        "discount": "Сбор за услуги: скидка 2 179₽", 
-        "additional": "Сбор за дополнительные услуги",
-        "costResult": "39 960₽", 
-        "resultService": "0₽", 
-        "resultServices": "300₽", 
-        "finalTitle": "Итого", 
-        "finalSum": "38 081₽",
-        "buttonText": "забронировать"
+    "textPassword": {
+      "type": "password",
+      "placeholder": "Пароль"
     },
-    "roomCard": {
-        "luxText": "люкс", 
-        "price": "9 990₽",
-        "daysText": " в сутки",
-        "reviewsText": " Отзывов"
+    "toggleName": "Получать спецпредложения",
+    "buttonPay": {
+      "hasArrow": true,
+      "text": "перейти к оплате"
+    },
+    "accountText": "Уже есть аккаунт на Toxin",
+    "buttonLogIn": {
+      "background": "transparent",
+      "text": "войти"
     }
+  },
+  "logIn": {
+    "title": "Войти",
+    "emailText": "Email",
+    "passText": "Пароль",
+    "buttonLogInText": "войти",
+    "buttonRegText": "создать",
+    "accountText": "Нет аккаунта на Toxin?"
+  },
+  "reservation": {
+    "num": 888,
+    "isLux": true,
+    "luxText": "люкс",
+    "dateRange": [
+      { "name": "прибытие", "date": "2022-08-19" },
+      { "name": "выезд", "date": "2022-08-23" }
+    ],
+    "legendGuests": "Гости",
+    "dropdown": {
+      "items": [
+        { "name": "взрослые", "value": 2 },
+        { "name": "дети", "value": 1 },
+        { "name": "младенцы" }
+      ],
+      "title": "Сколько гостей",
+      "hasButtons": true
+    },
+    "cost": "9 990₽",
+    "dayText": " в сутки",
+    "days": " x 4 суток",
+    "discount": "Сбор за услуги: скидка 2 179₽",
+    "additional": "Сбор за дополнительные услуги",
+    "costResult": "39 960₽",
+    "resultService": "0₽",
+    "resultServices": "300₽",
+    "finalTitle": "Итого",
+    "finalSum": "38 081₽",
+    "buttonText": "забронировать"
+  },
+  "roomCard": {
+    "luxText": "люкс",
+    "price": "9 990₽",
+    "daysText": " в сутки",
+    "reviewsText": " Отзывов"
+  }
 }

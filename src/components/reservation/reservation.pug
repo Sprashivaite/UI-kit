@@ -32,7 +32,7 @@ mixin reservation(options = {})
                 span.reservation__description-cost= cost          
                     span.reservation__description-day= dayText          
             .reservation__com-data
-                +date-range({dropdowns: dateRange})
+                +date-range(dateRange)
             .reservation__guests
                 legend.reservation__guests-legend= legendGuests
                 +dropdown(dropdown)

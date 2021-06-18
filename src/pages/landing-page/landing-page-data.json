@@ -1,16 +1,21 @@
 {
-    "searchRooms": {
-        "title": "Найдём номера под ваши пожелания",
-        "legendGuests": "Гости",
-        "dateRange": ["прибытие", "выезд"],
-        "dropdown": {
-            "items": ["взрослые", "дети", "младенцы"], 
-            "title": "Сколько гостей", 
-            "hasButtons": true
-        },
-        "button": {
-            "hasArrow": true, "text":"подобрать номер"
-        }
+  "searchRooms": {
+    "title": "Найдём номера под ваши пожелания",
+    "legendGuests": "Гости",
+    "dateRange": ["прибытие", "выезд"],
+    "dropdown": {
+      "items": [
+        { "name": "взрослые" },
+        { "name": "дети" },
+        { "name": "младенцы" }
+      ],
+      "title": "Сколько гостей",
+      "hasButtons": true
     },
-    "landingText": "Лучшие номера для вашей работы, отдыха и просто вдохновения "
+    "button": {
+      "hasArrow": true,
+      "text": "подобрать номер"
+    }
+  },
+  "landingText": "Лучшие номера для вашей работы, отдыха и просто вдохновения "
 }

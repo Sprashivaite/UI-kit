@@ -46,10 +46,10 @@ class DateFilter {
   }
 
   _setDate() {
-    const { myDatepicker } = this;
+    const { myDatepicker, $dateFilter } = this;
     const weekLater = new Date(new Date().setDate(new Date().getDate() + 7));
-    const startDate = this.$dateFilter.data('start');
-    const endDate = this.$dateFilter.data('end');
+    const startDate = $dateFilter.data('start');
+    const endDate = $dateFilter.data('end');
     if (startDate && endDate) {
       myDatepicker.selectDate([new Date(startDate), new Date(endDate)]);
     } else {

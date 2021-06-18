@@ -48,6 +48,17 @@ class DateRange {
       },
     });
     this._addHandlers();
+    this._setDate();
+  }
+
+  _setDate() {
+    const { myDatepicker, firstData } = this;
+    const startDate = firstData.data('start');
+    const endDate = firstData.data('end');
+    let firstValue, secondValue
+    if (startDate) firstValue = new Date(startDate )
+    if (endDate) secondValue= new Date(endDate)
+      myDatepicker.selectDate([firstValue, secondValue]);
   }
 
   _addHandlers() {

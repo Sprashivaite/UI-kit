@@ -1,9 +1,8 @@
 class Dropdown {
-  constructor({ container, names = [], values = [0, 0, 0] } = {}) {
+  constructor({ container, names = []} = {}) {
     this.container = container;
     this.names = names;
-    this.values = values;
-    this._initDropdown(values);
+    this._initDropdown();
   }
 
   static decrease(target) {
@@ -46,10 +45,10 @@ class Dropdown {
     return name;
   }
 
-  _initDropdown(values) {
+  _initDropdown() {
     this._findElements();
     this._addHandlers();
-    this._assignValues(values);
+    this._assignValues();
   }
 
   _findElements() {
@@ -65,8 +64,9 @@ class Dropdown {
     this.defaultTitle = this.title.innerHTML;
   }
 
-  _assignValues(values) {
+  _assignValues() {
     const menuValues = [...this.menuValues];
+    const values = menuValues.map(el => el.value)
     menuValues.forEach((element, index) => {
       const menuValue = element;
       menuValue.value = values[index] ? values[index] : 0;

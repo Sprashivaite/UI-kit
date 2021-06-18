@@ -3,10 +3,17 @@
     "num": 888,
     "isLux": true,
     "luxText": "люкс",
-    "dateRange": ["прибытие", "выезд"],
+    "dateRange": [
+      { "name": "прибытие", "date": "2022-08-19" },
+      { "name": "выезд", "date": "2022-08-23" }
+    ],
     "legendGuests": "Гости",
     "dropdown": {
-      "items": ["взрослые", "дети", "младенцы"],
+      "items": [
+        { "name": "взрослые", "value": 2 },
+        { "name": "дети", "value": 1 },
+        { "name": "младенцы" }
+      ],
       "title": "Сколько гостей",
       "hasButtons": true
     },

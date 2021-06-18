@@ -7,7 +7,7 @@ mixin search-rooms(options = {})
             title = "", 
             legendGuests = "", 
             action = "search-room.html",
-            dateRange = ["title1", "title2"],
+            dateRange = [],
             dropdown = "",
             button = ""
         } =  options
@@ -16,7 +16,7 @@ mixin search-rooms(options = {})
             h1.search-rooms__title= title
             form(action=action)
                 .search-rooms__com-data
-                    +date-range({dropdowns: dateRange})
+                    +date-range(dateRange)
                 .search-rooms__guests
                     legend.search-rooms__guests-legend= legendGuests
                     +dropdown(dropdown) 

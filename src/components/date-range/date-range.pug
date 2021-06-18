@@ -1,18 +1,20 @@
-mixin date-range({dropdowns = ["", ""]} = {})
+mixin date-range(dropdowns = [])
     .date-range.js-date-range
         .date-range__container
-            legend.date-range__legend= dropdowns[0]
+            legend.date-range__legend= dropdowns[0].name
             .date-range__field
                 input.date-range__input(
                     placeholder="ДД.ММ.ГГГГ", 
                     class=("js-date-range__input_first"), 
+                    data-start= dropdowns[0].date
+                    data-end=dropdowns[1].date
                     readonly
                 )
         .date-range__container
-            legend.date-range__legend= dropdowns[1]
+            legend.date-range__legend= dropdowns[1].name
             .date-range__field
                 input.date-range__input(
                     placeholder="ДД.ММ.ГГГГ", 
-                    class=("js-date-range__input_second"), 
+                    class=("js-date-range__input_second"),
                     readonly
                 )

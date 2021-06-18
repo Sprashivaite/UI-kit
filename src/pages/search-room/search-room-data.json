@@ -2,7 +2,11 @@
   "dateFilterTitle": "даты пребывания в отеле",
   "dropdownTitle": "гости",
   "dropdownItems": {
-    "items": ["взрослые", "дети", "младенцы"],
+    "items": [
+      { "name": "взрослые", "value": 3 },
+      { "name": "дети" },
+      { "name": "младенцы", "value": 1 }
+    ],
     "title": "Сколько гостей",
     "hasButtons": true
   },
@@ -27,7 +31,11 @@
   ],
   "dropdownFacilitiesTitle": "удобства номера",
   "dropdownFacilitiesItems": {
-    "items": ["спальни", "кровати", "ванные комнаты"],
+    "items": [
+      { "name": "спальни", "value": 2 },
+      { "name": "кровати", "value": 2 },
+      { "name": "ванные комнаты" }
+    ],
     "title": "Удобства"
   },
   "expandableCheckboxList": {

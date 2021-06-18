@@ -21,10 +21,10 @@ include ../../components/pagination/pagination
 html(lang="ru")
     head
         meta(charset="UTF-8")
-        meta(name="viewport", content="initial-scale=1.0, width=device-width")
-        meta(http-equiv="X-UA-Compatible", content="ie=edge")
-        meta(name="description", content="form-elements")
-        meta(name="keywords", content="form, elements")
+        meta(name="viewport" content="initial-scale=1.0, width=device-width")
+        meta(http-equiv="X-UA-Compatible" content="ie=edge")
+        meta(name="description" content="form-elements")
+        meta(name="keywords" content="form, elements")
         title form-elements
     body                 
         .form-elements.js-form-elements
@@ -45,9 +45,10 @@ html(lang="ru")
                         .form-elements__dropdown-guests.js-form-elements__dropdown-guests
                             +dropdown({
                                 items: [
-                                    "взрослые", 
-                                    "дети", 
-                                    "младенцы"], 
+                                    {name:"взрослые"}, 
+                                    {name:"дети"}, 
+                                    {name:"младенцы"}
+                                    ], 
                                 title: "Сколько гостей", 
                                 hasButtons: true
                             }) 
@@ -55,10 +56,10 @@ html(lang="ru")
                         legend.form-elements__legend masked text field
                         +text-field({masked: true, placeholder: "ДД.ММ.ГГГГ", date: true})
                     section.form-elements__date-dropdown.js-form-elements__date-dropdown
-                        +date-range({dropdowns: ["date Dropdown", "date Dropdown"]})
+                        +date-range([{name:"date Dropdown"}, {name:"date Dropdown"}])
                     section.form-elements__filter-dropdown.js-form-elements__filter-dropdown
                         legend.form-elements__legend filter date dropdown
-                        +date-filter
+                        +date-filter({start: "2023-08-19", end: "2023-08-23"})
                     section.form-elements__email
                         legend.form-elements__legend subscription text field
                         +email-field
@@ -68,9 +69,9 @@ html(lang="ru")
                         .form-elements__dropdown-facilities.js-form-elements__dropdown-facilities
                             +dropdown({
                                 items: [
-                                    "спальни", 
-                                    "кровати", 
-                                    "ванные комнаты"
+                                    {name:"спальни", value: 2}, 
+                                    {name:"кровати", value: 2}, 
+                                    {name:"ванные комнаты"}
                                 ], 
                                 title: "Удобства"
                             })
@@ -80,9 +81,9 @@ html(lang="ru")
                         .form-elements__dropdown-facilities.js-form-elements__dropdown-facilities
                             +dropdown({
                                 items: [
-                                    "спальни",
-                                    "кровати", 
-                                    "ванные комнаты"
+                                    {name:"спальни", value: 2},
+                                    {name:"кровати", value: 2}, 
+                                    {name:"ванные комнаты"}
                                 ], 
                                 title: "Удобства"
                             })
@@ -143,7 +144,7 @@ html(lang="ru")
                         legend.form-elements__legend dropdown
                         .form-elements__dropdown-guests.js-form-elements__dropdown-guests
                             +dropdown({
-                                items: ["взрослые", "дети", "младенцы"], 
+                                items: [{name:"взрослые"}, {name:"дети"}, {name:"младенцы"}], 
                                 title: "Сколько гостей", 
                                 hasButtons: true
                             })
@@ -196,7 +197,7 @@ html(lang="ru")
                         legend.form-elements__legend dropdown
                         .form-elements__dropdown-guests.js-form-elements__dropdown-guests
                             +dropdown({
-                                items: ["взрослые", "дети", "младенцы"], 
+                                items: [{name:"взрослые", value: 2}, {name:"дети", value: 1}, {name:"младенцы"}], 
                                 title: "Сколько гостей",
                                 hasButtons: true
                             })

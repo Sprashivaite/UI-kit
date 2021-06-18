@@ -12,6 +12,7 @@ class Calendar {
   }
 
   _initCalendar() {
+    
     this._findElements();
     this.$calendar.datepicker({
       range: true,
@@ -22,6 +23,18 @@ class Calendar {
         days: 'MM <i>yyyy</i>',
       },
     });
+    this._setDate()
+  }
+
+  _setDate() {
+    this.myDatepicker = this.$calendar.datepicker().data('datepicker');
+    const { myDatepicker, $calendar } = this;
+    const startDate = $calendar.data('start');
+    const endDate = $calendar.data('end');
+    let firstValue, secondValue
+    if (startDate) { firstValue = new Date(startDate )}
+    if (endDate) {secondValue= new Date(endDate) }
+      myDatepicker.selectDate([firstValue, secondValue]);
   }
 }
 export default Calendar;

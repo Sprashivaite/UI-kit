@@ -24,7 +24,7 @@ block content
             section.search-room__options
                 .search-room__options-date-filter.js-search-room__options-date-filter
                     legend.search-room__options-date-filter-legend= pageData.dateFilterTitle
-                    +date-filter
+                    +date-filter({start: "2023-08-19", end: "2023-08-23"})
                 .search-room__options-dropdown-guests.js-search-room__options-dropdown-guests
                     legend.search-room__options-dropdown-guests-legend= pageData.dropdownTitle
                     +dropdown(pageData.dropdownItems) 

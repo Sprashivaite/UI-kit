@@ -1,2 +1,2 @@
-mixin calendar
-    .calendar.js-calendar
+mixin calendar(date = {})
+    .calendar.js-calendar(data-start=date.start, data-end=date.end)
