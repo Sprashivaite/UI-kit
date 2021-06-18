@@ -5,18 +5,17 @@
   &__item
     padding-right 20px
     text-decoration none
+    color $dark50
+    cursor pointer
     &:focus
       outline none
-      border 1px solid $dark25
+      color $dark75
       border-radius 10%
     &:hover
       color $dark75
     &_with-dropdown
       padding-right 44px
       position relative
-      &:hover
-        .header-nav__dropdown-content
-          display block
       &::after
         position absolute
         content "expand_more"
@@ -29,6 +28,11 @@
         color $dark50
     &_bold
       font-weight bold
+  &__dropdown-input
+    visually-hidden()
+    &:checked
+      ~ .header-nav__dropdown-content
+        display block
   &__dropdown-content
     border 1px solid $dark50
     position absolute

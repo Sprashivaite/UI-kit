@@ -5,12 +5,14 @@ mixin header-nav(navTitles = [])
                 const {isBold, dropdown, href, title} = item
                 const fontBold = (isBold ? "header-nav__item_bold": "")
                 const isDropdown = (dropdown ? "header-nav__item_with-dropdown": "")
+                const tag = dropdown ? "label": "a"
             li
-                a.header-nav__item(
+                #{tag}.header-nav__item(
                     href=(href || "change-me.html"), 
                     class=`${fontBold} ${isDropdown}`
                 )= title
-                    if (dropdown)
+                    if (dropdown)                        
+                        input.header-nav__dropdown-input(type="checkbox")
                         .header-nav__dropdown-content 
                             each nav in dropdown
                                 .header-nav__dropdown-content-item(href="change-me.html")= nav
