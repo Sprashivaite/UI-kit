@@ -8,8 +8,8 @@ class DateRange {
   }
 
   _findInputs() {
-    this.firstData = this.$container.find('.js-date-range-1');
-    this.secondData = this.$container.find('.js-date-range-2');
+    this.firstData = this.$container.find('.js-date-range__input_first');
+    this.secondData = this.$container.find('.js-date-range__input_second');
   }
 
   _findButton() {

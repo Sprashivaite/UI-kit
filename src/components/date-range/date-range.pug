@@ -1,11 +1,18 @@
 mixin date-range({dropdowns = ["", ""]} = {})
     .date-range.js-date-range
-        each dropdown, index in dropdowns
-            .date-range__container
-                legend.date-range__legend= dropdown
-                .date-range__field
-                    input.date-range__input(
-                        placeholder="ДД.ММ.ГГГГ", 
-                        class=("js-date-range-" + (index + 1)), 
-                        readonly
-                    )
+        .date-range__container
+            legend.date-range__legend= dropdowns[0]
+            .date-range__field
+                input.date-range__input(
+                    placeholder="ДД.ММ.ГГГГ", 
+                    class=("js-date-range__input_first"), 
+                    readonly
+                )
+        .date-range__container
+            legend.date-range__legend= dropdowns[1]
+            .date-range__field
+                input.date-range__input(
+                    placeholder="ДД.ММ.ГГГГ", 
+                    class=("js-date-range__input_second"), 
+                    readonly
+                )
