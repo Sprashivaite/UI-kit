@@ -28,25 +28,13 @@
     position relative
     padding-left 10px
     margin-left 6px
-  &__rating
-    &::before
-      content ''
-      position absolute
-      background $dark75
-      width 10px
-      height 10px
-      border-radius 50%
-      left -4px
-      margin-top 6px
-    &_color_orange
-      &::before
-        background linear-gradient(180deg, $lightOrange 0%, $orange 100%)
-    &_color_green
-      &::before
-        background linear-gradient(180deg, $green 0%, $turquoise 100%)
-    &_color_purple
-      &::before
-        background linear-gradient(180deg, $purple 0%, $blue 100%)
-    &_color_black
-      &::before
-        background linear-gradient(180deg, $grey 0%, $darkBlue 100%)
+  &__rating-item
+    display flex
+    margin-top 1px  
+    align-items center
+  &__rating-circle
+    background $dark75
+    width 10px
+    height 10px
+    border-radius 50%
+    margin-right 4px

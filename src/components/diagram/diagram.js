@@ -1,21 +1,14 @@
 import 'chart.js/dist/chart';
 
 class Diagram {
-  constructor({
-    element, dataset, colors, labels,
-  }) {
-    this._init({
-      element, dataset, colors, labels,
-    });
+  constructor({element, data}) {
+    this._init({element, data});
   }
 
-  _init({
-    element, dataset, colors, labels,
-  }) {
+  _init({element, data}) {
     this.chart = element;
-    this.dataset = dataset;
-    this.setup = colors;
-    this.labels = labels;
+    this.dataset = data.map(el => el.amount);    
+    this.setup = data.map(el => [el.primary, el.secondary]);  
     this.colors = [];
 
     this._createColorsArray(this.setup);
@@ -23,7 +16,6 @@ class Diagram {
     new Chart(this.chart, {
       type: 'doughnut',
       data: {
-        labels: this.labels,
         datasets: [
           {
             backgroundColor: this.colors,

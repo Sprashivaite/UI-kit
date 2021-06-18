@@ -4,15 +4,21 @@ mixin diagram(options = {})
             vote = "", 
             width = 140,
             height = 140,
-            ratingList = [],
+            data = [],
         } = options
     .diagram
         .diagram__circle-container
-            canvas.js-diagram(width=width height=height)
+            canvas.js-diagram(
+                width=width, 
+                height=height,
+                )
             h3.diagram__circle-num.js-diagram__circle-num
                 span.diagram__circle-vote= vote
-        .diagram__rating-container 
-            ul.diagram__rating-list
-                each item in ratingList
-                    - const {color, text} = item
-                    li.diagram__rating(class=`diagram__rating_color_${color}`)= text
+        .diagram__rating-container             
+            each item in data
+                - const {color, text, primary, secondary} = item
+                .diagram__rating-item
+                    .diagram__rating-circle(
+                        style=`background: linear-gradient(180deg, ${primary} 0%, ${secondary} 100%)`
+                    )
+                    .diagram__rating-text= text
