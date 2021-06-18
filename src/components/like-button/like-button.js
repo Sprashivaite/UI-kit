@@ -23,7 +23,6 @@ class LikeButton {
   }
 
   _addHandler() {
-    this.button.onmousemove = () => false;
     const handleLikeButtonClick = () => {
       if (this.input.checked) this._add();
       if (!this.input.checked) this._delete();

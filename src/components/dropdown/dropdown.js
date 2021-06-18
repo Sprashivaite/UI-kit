@@ -139,9 +139,6 @@ class Dropdown {
   }
 
   _addHandlers() {
-    this.dropdown.onmousedown = () => false;
-    this.dropdown.onclick = () => false;
-
     this.lines.forEach((element) => {
       const plus = element.querySelector('.js-dropdown__menu-plus');
       const minus = element.querySelector('.js-dropdown__menu-minus');
