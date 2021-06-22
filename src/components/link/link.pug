@@ -1,5 +1,5 @@
-mixin link({link= '', text = "", isButton = true} = {})
+mixin link({link= '', text = "", isButton = true, type = ""} = {})
     -
         const tag = isButton ? "button": "a"
     .link        
-        #{tag}.link__text(href=link)= text
+        #{tag}.link__text(href=link, type=type)= text
