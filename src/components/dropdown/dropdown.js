@@ -7,7 +7,7 @@ class Dropdown {
 
   static decrease(target) {
     const inputValue = target;
-    inputValue.value = Math.max(Number(target.value) - 1, 0);
+    inputValue.value = Math.max(Number(target.valueAsNumber) - 1, 0);
   }
 
   static increase(target) {
@@ -52,7 +52,7 @@ class Dropdown {
   }
 
   _findElements() {
-    this.dropdown = this.container || this.container.querySelector('.js-dropdown');
+    this.dropdown = this.container.querySelector('.js-dropdown');
     this.menu = this.container.querySelector('.js-dropdown__menu');
     this.lines = this.container.querySelectorAll('.js-dropdown__menu-line');
     this.field = this.container.querySelector('.js-dropdown__field');
@@ -75,7 +75,7 @@ class Dropdown {
       (prevElement, current) => prevElement + Number(current.value), 0,
     );
     if (this.names.length === 1 && aboveZero > 0) this._changeSingleTitle();
-    if (this.names.length > 1 && aboveZero > 0) this._changeMultipleTitle();
+    if (this.names.length > 1 && aboveZero > 0) this._changeTitle();
   }
 
   _clearValues() {
@@ -99,34 +99,34 @@ class Dropdown {
   }
 
   _showClear() {
-    this.clear.classList.add('js-dropdown__clear_show');
+    if (this.clear) this.clear.classList.add('js-dropdown__clear_show');
   }
 
   _hideClear() {
     this.clear.classList.remove('js-dropdown__clear_show');
   }
 
-  _changeSingleTitle() {
-    const values = [...this.menuValues];
-    const sum = values.reduce((prevElement, current) => prevElement + Number(current.value), 0);
-    if (sum === 0) this._clearValues();
-    if (sum > 0) this._showClear();
-    const textTitle = `${sum} ${Dropdown.makeDeclination(sum, this.names[0])}`;
-    this.title.textContent = textTitle;
-  }
-
-  _changeMultipleTitle() {
-    let result = '';
+  _changeTitle() {
+    const title = [];
     this.lines.forEach((element, index) => {
       const num = Number(element.querySelector('.js-dropdown__menu-value').value);
-      const text = Dropdown.makeDeclination(num, this.names[index]);
-      if (num > 0) {
-        if (result) result += ', ';
-        result += `${num} ${text}`;
+      if (num === 0) return;
+      if (this.names[index]) {
+        const text = Dropdown.makeDeclination(num, this.names[index]);
+        title.push({ value: num, name: text });
+      } else {
+        if (!title[0]) title[0] = { value: 0 };
+        title[0].value += num;
+        const text = Dropdown.makeDeclination(title[0].value, this.names[0]);
+        title[0].name = text;
       }
     });
-    if (!result) this._clearValues();
-    else this.title.textContent = result;
+    const result = title.map((element) => ` ${element.value} ${element.name}`);
+    if (result.length === 0) this._clearValues();
+    else {
+      this.title.textContent = result;
+      this._showClear();
+    }
   }
 
   _handleDocumentClick(event) {
@@ -145,14 +145,12 @@ class Dropdown {
       const value = element.querySelector('.js-dropdown__menu-value');
       const handleMenuPlusClick = () => {
         Dropdown.increase(value);
-        if (this.names.length === 1) this._changeSingleTitle();
-        else this._changeMultipleTitle();
+        this._changeTitle();
         minus.className = 'dropdown__menu-minus_border';
       };
       const handleMenuMinusClick = () => {
         Dropdown.decrease(value);
-        if (this.names.length === 1) this._changeSingleTitle();
-        else this._changeMultipleTitle();
+        this._changeTitle();
         if (Number(value.value) === 0) minus.className = 'dropdown__menu-minus';
       };
       plus.addEventListener('click', handleMenuPlusClick);

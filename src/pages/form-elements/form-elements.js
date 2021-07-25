@@ -15,8 +15,8 @@ if (document.querySelector('.js-form-elements')) {
   const facilitiesDropdowns = document.querySelectorAll('.js-form-elements__dropdown-facilities');
   likeButtons.forEach((button) => new LikeButton(button));
   rateButtons.forEach((button) => new RateButton(button));
-  guestsDropdowns.forEach((element) => new Dropdown({ container: element, names: [['гостей', 'гость', 'гостя']] }));
-  facilitiesDropdowns.forEach((element) => new Dropdown({ container: element, names: [['спальнен', 'спальня', 'спальни'], ['кроватей', 'кровать', 'кровати'], ['ванных комнат', 'ванная комната', 'ванные комнаты']], values: [2, 2, 0] }));
+  guestsDropdowns.forEach((element) => new Dropdown({ container: element, names: [['гостей', 'гость', 'гостя'], null, ['младенцев', 'младенец', 'младенца']] }));
+  facilitiesDropdowns.forEach((element) => new Dropdown({ container: element, names: [['спальнен', 'спальня', 'спальни'], ['кроватей', 'кровать', 'кровати'], ['ванных комнат', 'ванная комната', 'ванные комнаты']] }));
   new ExpandableCheckboxList($('.js-form-elements__expandable-checkbox-list'));
   new ExpandableCheckboxList($('.js-form-elements__expandable-checkbox-list-2'));
   new RangeSlider({ $container: $('.js-form-elements__slider') });

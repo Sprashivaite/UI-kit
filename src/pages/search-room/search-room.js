@@ -15,6 +15,6 @@ if (document.querySelector('.js-search-room')) {
   new RangeSlider({ $container: $('.js-search-room__options-range-slider') });
   new Pagination($('.js-search-room__pagination'));
   new DateFilter($('.js-search-room__options-date-filter'));
-  new Dropdown({ container: searchRoomDropdown, names: [['гостей', 'гость', 'гостя'], ['детей', 'ребенок', 'ребенка'], ['младенцев', 'младенец', 'младенца']] });
+  new Dropdown({ container: searchRoomDropdown, names: [['гостей', 'гость', 'гостя'], null, ['младенцев', 'младенец', 'младенца']] });
   new Dropdown({ container: facilitiesDropdown, names: [['спальнен', 'спальня', 'спальни'], ['кроватей', 'кровать', 'кровати'], ['ванных комнат', 'ванная комната', 'ванные комнаты']], values: [2, 2, 0] });
 }
