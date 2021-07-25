@@ -17,11 +17,11 @@ block variables
         const data = require("../../layout/layout-data.json")
         const pageData = require("./room-details-data.json")
 block content  
+    section.room-details__images                
+        img.room-details__big-image(src="./assets/img/room-details-big-picture.jpg", alt="hotel photo")        
+        img.room-details__small-image(src="./assets/img/room-details-small-picture-1.jpg", alt="hotel photo")            
+        img.room-details__small-image(src="./assets/img/room-details-small-picture-2.jpg", alt="hotel photo")
     main.room-details__body
-        section.room-details__images                
-            img.room-details__big-image(src="./assets/img/room-details-big-picture.jpg", alt="hotel photo")        
-            img.room-details__small-image(src="./assets/img/room-details-small-picture-1.jpg", alt="hotel photo")            
-            img.room-details__small-image(src="./assets/img/room-details-small-picture-2.jpg", alt="hotel photo")
         .room-details__container
             .room-details__bottom-container
                 section.room-details__about-the-room
