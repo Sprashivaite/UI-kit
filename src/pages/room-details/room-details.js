@@ -13,6 +13,5 @@ if (document.querySelector('.js-room-details')) {
   likeButtons.forEach((button) => new LikeButton(button));
   new Dropdown({ container: guestsDropdown, names: [['гостей', 'гость', 'гостя']] });
   new DateRange($('.js-room-details__reservation'));
-  
   new Diagram({ element: diagram, data: jsonData.diagram.data });
 }

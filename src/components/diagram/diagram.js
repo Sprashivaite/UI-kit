@@ -1,14 +1,14 @@
 import 'chart.js/dist/chart';
 
 class Diagram {
-  constructor({element, data}) {
-    this._init({element, data});
+  constructor({ element, data }) {
+    this._init({ element, data });
   }
 
-  _init({element, data}) {
+  _init({ element, data }) {
     this.chart = element;
-    this.dataset = data.map(el => el.amount);    
-    this.setup = data.map(el => [el.primary, el.secondary]);  
+    this.dataset = data.map((el) => el.amount);
+    this.setup = data.map((el) => [el.primary, el.secondary]);
     this.colors = [];
 
     this._createColorsArray(this.setup);

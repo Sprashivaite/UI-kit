@@ -55,10 +55,11 @@ class DateRange {
     const { myDatepicker, firstData } = this;
     const startDate = firstData.data('start');
     const endDate = firstData.data('end');
-    let firstValue, secondValue
-    if (startDate) firstValue = new Date(startDate )
-    if (endDate) secondValue= new Date(endDate)
-      myDatepicker.selectDate([firstValue, secondValue]);
+    let firstValue;
+    let secondValue;
+    if (startDate) firstValue = new Date(startDate);
+    if (endDate) secondValue = new Date(endDate);
+    myDatepicker.selectDate([firstValue, secondValue]);
   }
 
   _addHandlers() {

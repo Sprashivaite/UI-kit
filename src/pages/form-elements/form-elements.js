@@ -6,6 +6,7 @@ import Dropdown from '../../components/dropdown/dropdown';
 import DateRange from '../../components/date-range/date-range';
 import DateFilter from '../../components/date-filter/date-filter';
 import TextFieldMask from '../../components/text-field/text-field';
+import ExpandableCheckboxList from '../../components/expandable-checkbox-list/expandable-checkbox-list';
 
 if (document.querySelector('.js-form-elements')) {
   const likeButtons = document.querySelectorAll('.js-like-button');
@@ -16,6 +17,8 @@ if (document.querySelector('.js-form-elements')) {
   rateButtons.forEach((button) => new RateButton(button));
   guestsDropdowns.forEach((element) => new Dropdown({ container: element, names: [['гостей', 'гость', 'гостя']] }));
   facilitiesDropdowns.forEach((element) => new Dropdown({ container: element, names: [['спальнен', 'спальня', 'спальни'], ['кроватей', 'кровать', 'кровати'], ['ванных комнат', 'ванная комната', 'ванные комнаты']], values: [2, 2, 0] }));
+  new ExpandableCheckboxList($('.js-form-elements__expandable-checkbox-list'));
+  new ExpandableCheckboxList($('.js-form-elements__expandable-checkbox-list-2'));
   new RangeSlider({ $container: $('.js-form-elements__slider') });
   new Pagination($('.js-form-elements__pagination'));
   new DateRange($('.js-form-elements__date-dropdown'));
