@@ -2,7 +2,7 @@
   "searchRooms": {
     "title": "Найдём номера под ваши пожелания",
     "legendGuests": "Гости",
-    "dateRange": ["прибытие", "выезд"],
+    "dateRange": [{ "name": "прибытие" }, { "name": "выезд" }],
     "dropdown": {
       "items": [
         { "name": "взрослые" },

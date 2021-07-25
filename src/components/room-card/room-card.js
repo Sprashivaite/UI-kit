@@ -7,6 +7,7 @@ class RoomCard {
   _initRoomCard() {
     this._findElements();
     this._addHandler();
+    this.pictures[0].classList.add('room-card__picture_show');
   }
 
   _findElements() {
