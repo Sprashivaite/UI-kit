@@ -1,8 +1,9 @@
 include ../checkbox/checkbox
-mixin expandable-checkbox-list({title = "", opened = false, list = []} = {})
-    label.expandable-checkbox-list
-        input.expandable-checkbox-list__input(type="checkbox", checked=opened) 
-        h3.expandable-checkbox-list__text= title         
+mixin expandable-checkbox-list({title = "", isOpened = false, list = []} = {})
+    - const opened = isOpened ? "expandable-checkbox-list_isOpened": "";
+    
+    .expandable-checkbox-list(class=`${opened}`)
+        h3.expandable-checkbox-list__title= title
         ul.expandable-checkbox-list__checkboxes
             each item in list
                 li.expandable-checkbox-list__li

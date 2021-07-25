@@ -3,9 +3,13 @@
   min-width 220px
   cursor pointer
  
-  &__text
+  &__title
     width 100%
     display inline-block
+    font-weight 700
+    font-size 12px
+    text-transform uppercase
+    color $dark-100
    
     &::after
       content 'expand_more'
@@ -18,7 +22,7 @@
       text-transform none
       font-weight normal
       float right
- 
+
   &__checkboxes
     display none
     transition 0.6s
@@ -29,20 +33,17 @@
  
   &__li
     margin-bottom 10px
- 
-  &__input
-    visually-hidden()
-  
-    &:checked
-      ~ .expandable-checkbox-list__text::after
-        transition 0.3s
-        transform rotate(180deg)
-    
-      ~ .expandable-checkbox-list__checkboxes
-        display block
-        animation-name opacity
-        animation-duration 0.6s
 
+  &_isOpened
+    .expandable-checkbox-list__title::after
+      transition 0.3s
+      transform rotate(180deg)
+   
+    .expandable-checkbox-list__checkboxes
+      display block
+      animation-name opacity
+      animation-duration 0.6s
+ 
 @keyframes opacity
   0%
     opacity 0
