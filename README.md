@@ -6,6 +6,10 @@ Frontend-education-program with Webpack, Pug and Stylus.
 [UI-kit demo page](https://sprashivaite.github.io/UI-kit/index.html)
 
 ## How to work
+#### Clone repo
+```commandline
+git clone https://github.com/Sprashivaite/UI-kit.git
+```
 #### Install dependencies
 ```commandline
 npm install
