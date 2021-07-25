@@ -120,10 +120,11 @@ html(lang="ru")
                                 +checkbox({ text: "Можно с питомцами"})
                             li.form-elements__checkbox-buttons-li
                                 +checkbox({ text: "Можно пригласить гостей (до 10 человек)"})
-                    section.form-elements__radio-button
+                    section.form-elements__radio-buttons
                         legend.form-elements__legend radio-buttons
-                        .form-elements__buttons
+                        .form-elements__radio-button
                             +radio-button({text: "Мужчина", value: "man", checked: true, name: "gender"})
+                        .form-elements__radio-button
                             +radio-button({text: "Женщина", value: "woman", name: "gender"})
                     section.form-elements__toggle
                         legend.form-elements__legend toggle

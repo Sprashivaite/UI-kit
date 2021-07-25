@@ -30,9 +30,11 @@ mixin registration(options = {})
                     +text-field({placeholder: textName})
                 .registration__surname
                     +text-field({placeholder: textSurName})
-                .registration__radio
-                    +radio-button(radioMan)
-                    +radio-button(radioWoman)
+                .registration__radio-buttons
+                    .registration__radio-button
+                        +radio-button(radioMan)
+                    .registration__radio-button
+                        +radio-button(radioWoman)
                 .registration__data
                     legend= dateText
                     +text-field({masked: true, placeholder: "ДД.ММ.ГГГГ", date: true})
