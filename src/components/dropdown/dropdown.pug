@@ -14,7 +14,7 @@ mixin dropdown({items = [], title = "", hasButtons = false} = {})
                         .dropdown__menu-plus.js-dropdown__menu-plus
             if(hasButtons)
                 .dropdown__buttons-container
-                    .js-dropdown__clear 
+                    .dropdown__clear.js-dropdown__clear 
                         +link({text: "очистить", type: "button"})
-                    .js-dropdown__apply 
+                    .dropdown__apply.js-dropdown__apply 
                         +link({text: "применить", type: "button"})

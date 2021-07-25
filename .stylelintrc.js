@@ -4,8 +4,6 @@ module.exports = {
     'stylelint-plugin-stylus/standard',
   ],
   rules: {
-    "rule-empty-line-before": "never",
-    "stylus/at-rule-empty-line-before": "never",
     "no-descending-specificity": null,
     "font-family-no-missing-generic-family-keyword": [
       true,
@@ -13,6 +11,8 @@ module.exports = {
         ignoreFontFamilies: ["Material Icons"]
       }
     ],
-    "stylus/no-eol-whitespace": null
+    "stylus/no-eol-whitespace": null,
+    "indentation": 2,
+    "string-quotes": "single",
   },
 };

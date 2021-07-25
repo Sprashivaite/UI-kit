@@ -3,6 +3,7 @@
   width 100%
   position relative
   user-select none
+
   &__field
     position relative
     min-width 100px
@@ -12,8 +13,10 @@
     box-sizing border-box
     border-radius 4px
     cursor pointer
+
     &:hover
       border 1px solid $dark50
+
     &::after
       content 'expand_more'
       position absolute
@@ -25,6 +28,7 @@
       outline-color $dark25
       background-color transparent
       cursor pointer
+
   &__title
     height 80%
     width 90%
@@ -35,6 +39,7 @@
     overflow hidden
     text-overflow ellipsis
     white-space nowrap
+
   &__menu
     display none
     position absolute
@@ -46,66 +51,83 @@
     border-radius 2px
     background-color #fff
     z-index 3
-    &_show
-      display block
-      animation-name opacity
-      animation-duration 0.4s
-    &-line
-      display flex
-      justify-content space-between
-      align-items center
-      margin-bottom 5px
-      margin-top 7px
-    &-box-button
-      display flex
-    &-item
-    &-value
-      font-weight bold
-      font-size 12px
-      text-transform uppercase
-      color $dark100
-      background-color #fff
-    &-value
-      border none
-      text-align center
-      width 29px
-    &-minus
-    &-plus
-      font-size 18px
-      color $dark50
-      width 30px
-      height 30px
-      border 1px solid $dark50
-      border-radius 22px
-      cursor pointer
-      text-align center
-      line-height 29px
-    &-plus
-      &::after
-        content '+'
-    &-minus
-      border 1px solid $dark25
-      &::after
-        content '-'
-    &-minus_border
-      @extend .dropdown__menu-minus
 
-      border 1px solid $dark50
+  &__menu_show
+    display block
+    animation-name opacity
+    animation-duration 0.4s
+
+  &__menu-line
+    display flex
+    justify-content space-between
+    align-items center
+    margin-bottom 5px
+    margin-top 7px
+
+  &__menu-box-button
+    display flex
+
+  &__menu-item
+  &__menu-value
+    font-weight bold
+    font-size 12px
+    text-transform uppercase
+    color $dark100
+    background-color #fff
+
+  &__menu-value
+    border none
+    text-align center
+    width 29px
+
+  &__menu-minus
+ 
+  &__menu-plus
+    font-size 18px
+    color $dark50
+    width 30px
+    height 30px
+    border 1px solid $dark50
+    border-radius 22px
+    cursor pointer
+    text-align center
+    line-height 29px
+  
+  &__menu-plus
+    &::after
+      content '+'
+ 
+  &__menu-minus
+    border 1px solid $dark25
+  
+    &::after
+      content '-'
+ 
+  &__menu-minus_border
+    @extend .dropdown__menu-minus
+
+    border 1px solid $dark50
+ 
   &__buttons-container
     display flex
     justify-content space-between
     margin-top 18px
     padding-bottom 5px
-  .js-dropdown__clear 
+ 
+  &__clear 
     visibility hidden
     opacity 0
+
+  &__clear_show
   .js-dropdown__clear_show
     visibility visible
     opacity 1
     cursor pointer
     transition 0.3s
+
 @keyframes opacity
   0%
     opacity 0
+  
   100%
     opacity 1

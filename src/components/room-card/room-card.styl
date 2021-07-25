@@ -6,26 +6,29 @@
   background #fff
   box-shadow 0 10px 20px $dark5
   border-radius 4px
+ 
   &__pictures
     margin 0
     padding 0
     overflow hidden
     height 151px
     width 100%
+   
     &:hover
       ~ .room-card__button-left
       ~ .room-card__button-right
         opacity 1
+ 
   &__picture
     opacity 0
     position absolute
     height 152px
     width 100%
     transition 0.3s
-    &_show
-      opacity 1
-  .js-room-card__picture_1
+ 
+  &__picture_show
     opacity 1
+    
   &__buttons
     position absolute
     display flex
@@ -37,8 +40,10 @@
     cursor pointer
     z-index 6
     padding 10px
-    [data-target="true"]
+   
+    [data-target='true']
       background-color white
+
   &__button-circle
     height 7.49px
     width 7.5px
@@ -47,6 +52,7 @@
     box-sizing border-box
     filter drop-shadow(0 5px 5px $dark25)
     cursor pointer
+
   &__button-left
     opacity 0
     position absolute
@@ -56,6 +62,7 @@
     background linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 99.99%, rgba(255, 255, 255, 0) 100%)
     cursor pointer
     transition 0.3s
+  
     &::after
       content 'expand_more'
       font-family 'Material Icons'
@@ -68,21 +75,27 @@
       top 68px
       left 18px
       transform rotate(90deg)
+  
     &:hover
       opacity 1
+
   &__button-right
     @extend .room-card__button-left
 
     right 0
     transform matrix(-1, 0, 0, 1, 0, 0)
+  
     &::after
       @extend .room-card__button-left::after
+  
     &:hover
       opacity 1
+ 
   &__description
     position relative
     width 85%
     margin 19px 20px 0
+  
     &::after
       content ''
       position absolute
@@ -91,34 +104,42 @@
       width 230px
       height 1px
       border-bottom 1px solid $dark10
-    &-num
-      color $dark100
-      display inline-block
-      padding-right 8px
-      &::before
-        content '№'
-        font-size 14px
-        font-weight bold
-        margin-right 5px
-    &-lux
-      color $purple
-      display inline-block
-    &-cost
-      display inline-block
-      float right
-      margin-top 3px
-      color $dark50
-      font-weight bold
+ 
+  &__description-num
+    color $dark100
+    display inline-block
+    padding-right 8px
+
+    &::before
+      content '№'
       font-size 14px
-    &-days
-      font-size 12px
-      font-weight normal
-    &-rating
-      margin-top 20px
-    &-reviews
-      text-align right
-      color $dark50
       font-weight bold
-      font-size 14px
-    &-reviews-text
-      font-weight normal
+      margin-right 5px
+
+  &__description-lux
+    color $purple
+    display inline-block
+
+  &__description-cost
+    display inline-block
+    float right
+    margin-top 3px
+    color $dark50
+    font-weight bold
+    font-size 14px
+
+  &__description-days
+    font-size 12px
+    font-weight normal
+
+  &__description-rating
+    margin-top 20px
+
+  &__description-reviews
+    text-align right
+    color $dark50
+    font-weight bold
+    font-size 14px
+
+  &__description-reviews-text
+    font-weight normal

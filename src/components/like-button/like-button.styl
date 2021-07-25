@@ -8,6 +8,7 @@
   justify-content space-between
   font-size 10px
   user-select none
+ 
   &__border
     position absolute
     width 40px
@@ -15,6 +16,7 @@
     background $dark25
     box-sizing border-box
     border-radius 10px
+  
     &::after
       content ''
       position absolute
@@ -23,6 +25,7 @@
       height 18px
       margin 1px
       border-radius 10px
+ 
   &__symbol
     &::after
       content 'favorite_border'
@@ -32,25 +35,32 @@
       color $dark25
       z-index 2
       top -1px
+ 
   &__value
     color $dark25
     padding-right 10px
-    z-index 2 
+    z-index 2
     pointer-events none
+ 
   &__input
     visually-hidden()
+ 
   &__input:focus
     ~ .like-button__border
       background linear-gradient(180deg, $purple 0%, $blue 100%)
       outline none
+ 
   &__input:checked
     ~ .like-button__border
       background linear-gradient(180deg, $purple 0%, $blue 100%)
+   
       &:focus
         background $dark100
         outline none
+  
     ~ .like-button__value
       color $purple
+ 
     ~ .like-button__symbol
       &::after
         content 'favorite'

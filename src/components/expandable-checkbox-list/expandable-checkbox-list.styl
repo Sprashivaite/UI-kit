@@ -2,9 +2,11 @@
   width 100%
   min-width 220px
   cursor pointer
+ 
   &__text
     width 100%
     display inline-block
+   
     &::after
       content 'expand_more'
       font-family 'Material Icons'
@@ -16,6 +18,7 @@
       text-transform none
       font-weight normal
       float right
+ 
   &__checkboxes
     display none
     transition 0.6s
@@ -23,20 +26,26 @@
     background-color #fff
     z-index 5
     padding-top 14px
+ 
   &__li
     margin-bottom 10px
+ 
   &__input
     visually-hidden()
+  
     &:checked
       ~ .expandable-checkbox-list__text::after
         transition 0.3s
         transform rotate(180deg)
+    
       ~ .expandable-checkbox-list__checkboxes
         display block
         animation-name opacity
         animation-duration 0.6s
+
 @keyframes opacity
   0%
     opacity 0
+ 
   100%
     opacity 1

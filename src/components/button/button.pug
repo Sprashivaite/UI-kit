@@ -3,7 +3,7 @@ mixin button({background = "", text = "", hasArrow = false, isHeader = false} = 
         const transparent = (background === "transparent" ? "button_color_transparent": "");
         const buttonArrow = (hasArrow ? "button_with-arrow": "");
         const textColor = (background === "transparent" ? "button__text_color_solid": "");
-        const header = (isHeader ? "button_header": "");
+        const header = (isHeader ? "button_isHeader": "");
                 
     button.button(class=`${transparent} ${buttonArrow} ${header}`)
         div.button__text(class=textColor)= text 

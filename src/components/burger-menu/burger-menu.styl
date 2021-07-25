@@ -2,24 +2,31 @@
   display none
   position fixed
   z-index 10
+
   @media (max-width 1000px)
     display block
+
   &__toggle
     opacity 0
+
     &:checked
-      ~ .burger-menu__btn
+      ~ .burger-menu__button
         .burger-menu__stripes
           transform rotate(45deg)
+
           &::before
             top 0
             transform rotate(0deg)
+
           &::after
             top 0
             transform rotate(90deg)
+
       ~ .burger-menu__menu
         visibility visible
         left 0
-  &__btn
+
+  &__button
     display flex
     align-items center
     position fixed
@@ -29,6 +36,7 @@
     height 26px
     cursor pointer
     z-index 1
+
     .burger-menu__stripes
     .burger-menu__stripes::before
     .burger-menu__stripes::after
@@ -38,12 +46,15 @@
       height 2px
       background-color $dark50
       transition-duration 0.25s
+
     .burger-menu__stripes::before
       content ''
       top -8px
+
     .burger-menu__stripes::after
       content ''
       top 8px
+
   &__menu
     display block
     position fixed
@@ -56,6 +67,7 @@
     padding 80px 0
     background-color $green
     transition-duration 0.25s
+
   &__item
     display block
     padding 12px 24px
@@ -63,5 +75,6 @@
     font-size 20px
     font-weight 600
     transition-duration 0.25s
+
     &:hover
       background-color #cfd8dc

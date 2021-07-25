@@ -1,42 +1,53 @@
 .header-nav
   display flex
+  
   @media (max-width 999px)
     display none
+ 
   &__li
     cursor pointer
+ 
   &__item
     padding-right 21px
     text-decoration none
     color $dark50
     cursor pointer
+  
     &:focus
       outline none
       color $dark75
       border-radius 10%
+  
     &:hover
       color $dark75
-    &_with-dropdown
-      padding 0 44px 0 0
-      position relative
-      outline none
-      background transparent
-      border none
-      &::after
-        position absolute
-        content "expand_more"
-        font-family 'Material Icons'
-        display inline-block
-        font-size 24px
-        cursor pointer
-        color $dark50
-        transform: translateY(-4px);
-      &:focus-within      
-        pointer-events none
-        > .header-nav__dropdown-content
-          display flex
-          pointer-events auto
-    &_bold
-      font-weight bold
+  
+  &__item_with-dropdown
+    padding 0 44px 0 0
+    position relative
+    outline none
+    background transparent
+    border none
+  
+    &::after
+      position absolute
+      content 'expand_more'
+      font-family 'Material Icons'
+      display inline-block
+      font-size 24px
+      cursor pointer
+      color $dark50
+      transform translateY(-4px)
+   
+    &:focus-within      
+      pointer-events none
+    
+      > .header-nav__dropdown-content
+        display flex
+        pointer-events auto
+  
+  &__item_bold
+    font-weight bold
+  
   &__dropdown-content
     border 1px solid $dark50
     position absolute
@@ -46,8 +57,10 @@
     z-index 1
     display none
     flex-direction column
+  
   &__dropdown-content-item
     padding 5px 20px
     margin 0
+   
     &:hover
       color $dark100

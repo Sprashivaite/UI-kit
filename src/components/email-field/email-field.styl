@@ -6,6 +6,7 @@
   border 1px solid $dark25
   box-sizing border-box
   border-radius 4px
+ 
   &__input
     width 84%
     padding 12px 0 0 14px
@@ -14,12 +15,15 @@
     color $dark75
     background-color transparent
     transition 0.3s
+  
     &:hover
     &:focus
       color $dark75
       outline none
+ 
     &::placeholder
       color $dark25
+ 
   &__button
     position absolute
     right 1px
@@ -30,6 +34,7 @@
     width 40px
     height 24px
     cursor pointer
+ 
     &::after
       content 'arrow_forward'
       position absolute
@@ -40,6 +45,7 @@
       right 8px
       opacity 1
       transition 0.3s
+  
     &:hover
     &:focus
       opacity 0.5

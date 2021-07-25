@@ -4,11 +4,14 @@
   margin-right 8px
   cursor pointer
   display inline-flex
+  
   &__label
     min-width 222px
     margin-left 10px
+   
     &:hover
       color $dark100
+  
   &__button
     background #fff
     border 1px solid $dark25
@@ -16,8 +19,10 @@
     border-radius 10px
     width 40px
     height 20px
+  
     &:hover
       border 1px solid $purple
+  
     &::before
       content ''
       position absolute
@@ -28,8 +33,10 @@
       background $dark25
       border-radius 10px
       transition-duration 0.3s
+ 
   &__input
     visually-hidden()
+ 
   &__input:checked ~ .toggle__button
     background #fff
     border 1px solid $purple
@@ -37,6 +44,7 @@
     border-radius 10px
     width 40px
     height 20px
+  
     &::before
       content ''
       position absolute
@@ -47,6 +55,7 @@
       background linear-gradient(180deg, $purple 0%, $blue 100%)
       border-radius 10px
       transition-duration 0.3s
+ 
   &__input:focus
     ~ .toggle__label
       color $dark100

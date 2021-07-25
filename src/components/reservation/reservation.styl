@@ -6,80 +6,100 @@
   box-sizing border-box
   box-shadow 0 0 25px rgba(0, 0, 0, 0.2)
   border-radius 4px
+ 
   &__container
     width 85%
     margin 39px auto 29px
+   
     @media (max-width 400px)
       width 91%
+ 
   &__description
     width 100%
-    &-num
-      display inline-block
-      color $dark100
-      padding-right 8px
-      &::before
-        content '№'
-        font-size 14px
-        font-weight bold
-        margin-right 5px
-    &-lux
-      color $purple
+   
+  &__description-num
+    display inline-block
+    color $dark100
+    padding-right 8px
+    
+    &::before
+      content '№'
+      font-size 14px
       font-weight bold
-      text-transform uppercase
-    &-cost
-      float right
-      margin-top 8px
-      color $dark50
-      font-weight bold
-    &-day
-      font-size 12px
-      font-weight normal
+      margin-right 5px
+  
+  &__description-lux
+    color $purple
+    font-weight bold
+    text-transform uppercase
+  
+  &__description-cost
+    float right
+    margin-top 8px
+    color $dark50
+    font-weight bold
+  
+  &__description-day
+    font-size 12px
+    font-weight normal
+ 
   &__com-data
     width 100%
     margin-top 10px
+
   &__guests
     width 100%
     margin-top 16px
+
   &__count
     margin-top 18px
     position relative
-    &-text
-    &-levy
-      width 100%
-      display inline-flex
-      &-cost
-        margin-bottom 11px
-    &-result
-      margin-bottom 10px
-      margin-left auto
-    &-inf
-      max-width 67%
-      &-i
-        font-weight bold
-        font-size 12px
-        color $dark25
-        border 1px solid $dark25
-        border-radius 25px
-        text-align center
-        line-height 20px
-        margin-left 7px
-        width 20px
-        height 20px
-        cursor pointer
-        &::after
-          content 'i'
+ 
+  &__count-text
+  &__count-levy
+    width 100%
+    display inline-flex
+
+  &__count-levy-cost
+    margin-bottom 11px
+
+  &__count-result
+    margin-bottom 13px
+    margin-left auto
+
+  &__count-inf
+    max-width 67%
+ 
+  &__count-inf-i
+    font-weight bold
+    font-size 12px
+    color $dark25
+    border 1px solid $dark25
+    border-radius 25px
+    text-align center
+    line-height 20px
+    margin-left 7px
+    width 20px
+    height 20px
+    cursor pointer
+  
+    &::after
+      content 'i'
+ 
   &__final
     display flex
     align-items baseline
     flex-wrap nowrap
     width 100%
-    margin-top 25px
-    &-line
-      flex-grow 1
-      height 1px
-      bottom 5px
-      border-bottom 1px dotted $dark25
-      margin 0 4px
+    margin-top 24px
+ 
+  &__final-line
+    flex-grow 1
+    height 1px
+    bottom 5px
+    border-bottom 1px dotted $dark25
+    margin 0 4px
+ 
   &__button-solid
     margin-top 21px
     width 100%

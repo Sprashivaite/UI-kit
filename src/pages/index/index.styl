@@ -4,8 +4,8 @@
   width 70%
   margin 0 auto
   flex-wrap wrap
-  &__block-ui-kit
-  &__block-pages
+  
+  &__pages
     margin-top 100px
     width 380px
     min-height 358px
@@ -14,32 +14,38 @@
     box-sizing border-box
     box-shadow 0 0 25px $dark25
     border-radius 4px
-    &-title
-      margin-top 30px
-      text-transform uppercase
-      text-align center
-    &-ul
-      display flex
-      justify-content center
-      flex-direction column
-      width 50%
-      margin 20px auto
-    &-li
-      margin 20px 0
-      position relative
-      &::before
-        content ''
-        position absolute
-        background linear-gradient(180deg, $purple 0%, $blue 100%)
-        width 10px
-        height 10px
-        border-radius 50%
-        left -18px
-        margin-top 6px
-    &-a
-      color $dark75
-      font-size 16px
-      font-weight bold
-      text-transform uppercase
-      &:hover
-        color $purple
+  
+  &__pages-title
+    margin-top 30px
+    text-transform uppercase
+    text-align center
+  
+  &__pages-ul
+    display flex
+    justify-content center
+    flex-direction column
+    width 50%
+    margin 20px auto
+  
+  &__pages-li
+    margin 20px 0
+    position relative
+  
+    &::before
+      content ''
+      position absolute
+      background linear-gradient(180deg, $purple 0%, $blue 100%)
+      width 10px
+      height 10px
+      border-radius 50%
+      left -18px
+      margin-top 6px
+  
+  &__pages-a
+    color $dark75
+    font-size 16px
+    font-weight bold
+    text-transform uppercase
+  
+    &:hover
+      color $purple
