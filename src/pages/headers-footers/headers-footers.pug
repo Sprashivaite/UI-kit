@@ -2,6 +2,7 @@ include ../../components/logo/logo
 include ../../components/header/header
 include ../../components/footer/footer
 include ../../components/footer-creative/footer-creative
+include ../../favicon/favicon
 -
     const data = require("./headers-footers.json")
 <!DOCTYPE html>
@@ -12,6 +13,7 @@ html(lang="ru")
         meta(http-equiv="X-UA-Compatible", content="ie=edge")
         meta(name="description", content="headers and footers")
         meta(name="keywords", content="headers, footers")
+        +favicon
         title headers-footers
     body 
         .headers-footers

@@ -1,5 +1,6 @@
 import './styl/main.styl';
 
+import './favicon/favicons';
 import './pages/form-elements/form-elements';
 import './pages/cards/cards';
 import './pages/registration-page/registration-page';

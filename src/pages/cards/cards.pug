@@ -7,6 +7,7 @@ include ../../components/reservation/reservation
 include ../../components/log-in/log-in 
 include ../../components/calendar/calendar
 include ../../components/date-range/date-range
+include ../../favicon/favicon
 -
     const data = require("./cards-data.json")
 <!DOCTYPE html>
@@ -17,6 +18,7 @@ html(lang="ru")
         meta(http-equiv="X-UA-Compatible", content="ie=edge")
         meta(name="description", content="cards")
         meta(name="keywords", content="cards")
+        +favicon
         title cards
     body 
         .cards.js-cards
