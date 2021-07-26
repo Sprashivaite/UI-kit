@@ -11,7 +11,9 @@ html(lang="ru")
         - let mainClass = ""
     body(class=mainClass)
         header
-            +header(data.header)
+            .layout__header
+                +header(data.header)
         block content
         footer
-            +footer(data.footer)
+            .layout__footer
+                +footer(data.footer)
