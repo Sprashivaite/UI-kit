@@ -1,4 +1,5 @@
 include ../footer-nav/footer-nav
+include ../footer-creative/footer-creative
 include ../social-networks/social-networks
 include ../email-field/email-field
 mixin footer(options = {})
@@ -31,3 +32,4 @@ mixin footer(options = {})
                 .footer__copyright!= copyright 
                 .footer__social-networks
                     +social-networks(socialNetworks)
+    +footer-creative({copyright, socialNetworks})

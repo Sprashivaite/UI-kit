@@ -12,14 +12,13 @@
     width 99%
     top 0
     left 0
- 
-  @media (max-width 1200px)
-    width 90%
+
+  @media (max-width 768px)
+    display none
  
   &__top
     min-width 280px
     min-height 246px
-    margin 105px auto 20px
     display grid
     grid-template-columns repeat(5, 1fr)
     grid-column-gap 40px
@@ -75,6 +74,7 @@
     background #fff
     box-shadow 0 10px 20px $dark5
     width 100%
+    margin-top 20px
  
   &__bot-content
     background #fff

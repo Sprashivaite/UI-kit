@@ -1,14 +1,18 @@
 .footer-creative
   min-height 130px
   width 380px
-  display flex
+  display none
   flex-direction column
   justify-content space-between
   align-items center
+
+  @media (max-width 768px)
+    display flex
  
   &__text
     width 100%
     text-align center
+    padding 20px 0
  
   &__social-networks
     min-width 112px
