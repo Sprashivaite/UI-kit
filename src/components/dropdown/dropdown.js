@@ -7,7 +7,7 @@ class Dropdown {
 
   static decrease(target) {
     const inputValue = target;
-    inputValue.value = Math.max(Number(target.valueAsNumber) - 1, 0);
+    inputValue.value = Math.max(Number(target.value) - 1, 0);
   }
 
   static increase(target) {
@@ -74,7 +74,7 @@ class Dropdown {
     const aboveZero = menuValues.reduce(
       (prevElement, current) => prevElement + Number(current.value), 0,
     );
-    if (this.names.length === 1 && aboveZero > 0) this._changeSingleTitle();
+    if (this.names.length === 1 && aboveZero > 0) this._changeTitle();
     if (this.names.length > 1 && aboveZero > 0) this._changeTitle();
   }
 
