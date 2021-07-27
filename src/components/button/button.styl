@@ -29,9 +29,6 @@
       color white
       position absolute
 
-    .button__text
-      padding 0 30px
-
   &_color_transparent
     &::after
       content ''
@@ -47,10 +44,7 @@
   &_is-header
     min-width 87px
     min-height 34px
-
-    .button__text
-      padding 0 14px
-
+  
   &__text
     font-weight bold
     font-size 12px
@@ -58,6 +52,12 @@
     color white
     padding 0 10px
     white-space nowrap
+  
+  &__text_with-arrow
+    padding 0 30px
+
+  &__text_is-header
+    padding 0 14px
 
   &__text_color_solid
     color $purple

@@ -26,7 +26,12 @@ block content
             .room-details__bottom-container
                 section.room-details__about-the-room
                     h2.room-details__about-the-room-title= pageData.comfortTitle 
-                    +comfort(pageData.comfort)
+                    .room-details__about-the-room-item
+                        +comfort(pageData.comfort[0])
+                    .room-details__about-the-room-item
+                        +comfort(pageData.comfort[1])
+                    .room-details__about-the-room-item
+                        +comfort(pageData.comfort[2])
                 section.room-details__diagram
                     h2.room-details__diagram-title= pageData.diagramTitle 
                     +diagram(pageData.diagram)

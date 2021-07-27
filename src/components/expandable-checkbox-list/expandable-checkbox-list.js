@@ -21,7 +21,8 @@ class ExpandableCheckboxList {
   }
 
   _handleToggle() {
-    this.block.classList.toggle('expandable-checkbox-list_isOpened');
+    this.block.classList.toggle('expandable-checkbox-list_is-opened');
+    this.list.classList.toggle('expandable-checkbox-list__checkboxes_is-opened');
   }
 
   _handleDocumentClick(event) {

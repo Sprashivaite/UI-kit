@@ -40,9 +40,9 @@ mixin registration(options = {})
                     +text-field({masked: true, placeholder: "ДД.ММ.ГГГГ", date: true})
                 .registration__log-in
                     legend= data
-                    .log-in__email
+                    .registration__log-in-email
                         +text-field(textEmail)
-                    .log-in__pass
+                    .registration__log-in-pass
                         +text-field(textPassword)
                 .registration__toggle
                     +toggle({text: toggleName})

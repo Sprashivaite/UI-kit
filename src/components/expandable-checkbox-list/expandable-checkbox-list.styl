@@ -30,6 +30,11 @@
     background-color #fff
     z-index 5
     padding-top 14px
+
+  &__checkboxes_is-opened
+    display block
+    animation-name opacity
+    animation-duration 0.6s
  
   &__li
     margin-bottom 10px
@@ -39,10 +44,7 @@
       transition 0.3s
       transform rotate(180deg)
    
-    .expandable-checkbox-list__checkboxes
-      display block
-      animation-name opacity
-      animation-duration 0.6s
+
  
 @keyframes opacity
   0%

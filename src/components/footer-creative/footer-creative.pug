@@ -1,6 +1,6 @@
 include ../social-networks/social-networks
-mixin footer-creative({copyright = "", socialNetworks = []} = {})
-    .footer-creative
+mixin footer-creative({copyright = "", socialNetworks = [], show = false} = {})
+    .footer-creative(class=`${show ? "footer-creative_show":""}`)
         .footer-creative__logo
             +logo-color
         .footer-creative__text!= copyright            

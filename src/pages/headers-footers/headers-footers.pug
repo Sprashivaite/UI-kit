@@ -5,6 +5,7 @@ include ../../components/footer-creative/footer-creative
 include ../../favicon/favicon
 -
     const data = require("./headers-footers.json")
+    const footerCreative = Object.assign({}, data.footer, { show: true })
 <!DOCTYPE html>
 html(lang="ru")
     head
@@ -31,4 +32,4 @@ html(lang="ru")
                 .headers-footers__footer-container
                     +footer(data.footer)
             section.headers-footers__footer-creative
-                +footer-creative(data.footer)
+                +footer-creative(footerCreative)
