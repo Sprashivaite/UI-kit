@@ -84,7 +84,12 @@
       "reviews": "65"
     },
     {
-      "images": ["./assets/img/room-980.jpg"],
+      "images": [
+        "./assets/img/room-980.jpg",
+        "./assets/img/room-980.jpg",
+        "./assets/img/room-980.jpg",
+        "./assets/img/room-980.jpg"
+      ],
       "num": "980",
       "luxText": "люкс",
       "isLux": true,
@@ -95,7 +100,12 @@
       "reviews": "35"
     },
     {
-      "images": ["./assets/img/room-856.jpg"],
+      "images": [
+        "./assets/img/room-856.jpg",
+        "./assets/img/room-856.jpg",
+        "./assets/img/room-856.jpg",
+        "./assets/img/room-856.jpg"
+      ],
       "num": "856",
       "luxText": "люкс",
       "isLux": false,
@@ -106,7 +116,12 @@
       "reviews": "19"
     },
     {
-      "images": ["./assets/img/room-740.jpg"],
+      "images": [
+        "./assets/img/room-740.jpg",
+        "./assets/img/room-740.jpg",
+        "./assets/img/room-740.jpg",
+        "./assets/img/room-740.jpg"
+      ],
       "num": "740",
       "luxText": "люкс",
       "isLux": false,
@@ -117,7 +132,12 @@
       "reviews": "44"
     },
     {
-      "images": ["./assets/img/room-982.jpg"],
+      "images": [
+        "./assets/img/room-982.jpg",
+        "./assets/img/room-982.jpg",
+        "./assets/img/room-982.jpg",
+        "./assets/img/room-982.jpg"
+      ],
       "num": "982",
       "luxText": "люкс",
       "isLux": false,
@@ -128,7 +148,12 @@
       "reviews": "56"
     },
     {
-      "images": ["./assets/img/room-678.jpg"],
+      "images": [
+        "./assets/img/room-678.jpg",
+        "./assets/img/room-678.jpg",
+        "./assets/img/room-678.jpg",
+        "./assets/img/room-678.jpg"
+      ],
       "num": "678",
       "luxText": "люкс",
       "isLux": false,
@@ -139,7 +164,12 @@
       "reviews": "45"
     },
     {
-      "images": ["./assets/img/room-450.jpg"],
+      "images": [
+        "./assets/img/room-450.jpg",
+        "./assets/img/room-450.jpg",
+        "./assets/img/room-450.jpg",
+        "./assets/img/room-450.jpg"
+      ],
       "num": "450",
       "luxText": "люкс",
       "isLux": false,
@@ -150,7 +180,12 @@
       "reviews": "39"
     },
     {
-      "images": ["./assets/img/room-350.jpg"],
+      "images": [
+        "./assets/img/room-350.jpg",
+        "./assets/img/room-350.jpg",
+        "./assets/img/room-350.jpg",
+        "./assets/img/room-350.jpg"
+      ],
       "num": "350",
       "luxText": "люкс",
       "isLux": false,
@@ -161,7 +196,12 @@
       "reviews": "77"
     },
     {
-      "images": ["./assets/img/room-666.jpg"],
+      "images": [
+        "./assets/img/room-666.jpg",
+        "./assets/img/room-666.jpg",
+        "./assets/img/room-666.jpg",
+        "./assets/img/room-666.jpg"
+      ],
       "num": "666",
       "luxText": "люкс",
       "isLux": false,
@@ -172,7 +212,12 @@
       "reviews": "25"
     },
     {
-      "images": ["./assets/img/room-444.jpg"],
+      "images": [
+        "./assets/img/room-444.jpg",
+        "./assets/img/room-444.jpg",
+        "./assets/img/room-444.jpg",
+        "./assets/img/room-444.jpg"
+      ],
       "num": "444",
       "luxText": "люкс",
       "isLux": false,
@@ -183,7 +228,12 @@
       "reviews": "15"
     },
     {
-      "images": ["./assets/img/room-352.jpg"],
+      "images": [
+        "./assets/img/room-352.jpg",
+        "./assets/img/room-352.jpg",
+        "./assets/img/room-352.jpg",
+        "./assets/img/room-352.jpg"
+      ],
       "num": "352",
       "luxText": "люкс",
       "isLux": false,
