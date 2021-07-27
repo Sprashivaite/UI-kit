@@ -59,8 +59,11 @@ class DateFilter {
 
   _addHandlers() {
     this._findButton();
-    const hideDatepicker = () => this.myDatepicker.hide();
-    this.$button.on('click', hideDatepicker);
+    this.$button.on('click', this._hideDatepicker.bind(this));
+  }
+
+  _hideDatepicker() {
+    this.myDatepicker.hide();
   }
 }
 export default DateFilter;

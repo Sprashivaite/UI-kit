@@ -64,10 +64,16 @@ class DateRange {
 
   _addHandlers() {
     this._findButton();
-    const hideDatepicker = () => this.myDatepicker.hide();
-    const showHandler = () => this.myDatepicker.show();
-    this.$button.on('click', hideDatepicker);
-    this.secondData.on('click', showHandler);
+    this.$button.on('click', this._hideDatepicker.bind(this));
+    this.secondData.on('click', this._showDatepicker.bind(this));
+  }
+
+  _hideDatepicker() {
+    this.myDatepicker.hide();
+  }
+
+  _showDatepicker() {
+    this.myDatepicker.show();
   }
 }
 export default DateRange;
