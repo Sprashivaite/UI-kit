@@ -17,10 +17,8 @@ mixin room-card(options = {})
             each img, index in images
                 .room-card__picture(class=("js-room-card__picture_" + (index + 1)) style=`background-image: url(${img})`)
         .room-card__buttons.js-room-card__buttons
-            .room-card__button-circle(data-target="true")
-            .room-card__button-circle(data-target="false")
-            .room-card__button-circle(data-target="false")
-            .room-card__button-circle(data-target="false")
+            each img, index in images
+                .room-card__button-circle(data-target=`${index === 0 ? "true": "false"}`)
         .room-card__button-left.js-room-card__button-left 
         .room-card__button-right.js-room-card__button-right
         .room-card__description
