@@ -2,39 +2,46 @@
   min-width 266px
   position relative
   height 60px
-  .range-slider__values
+  
+  &__values
     position absolute
     right 0
     top 2px
     font-size 12px
     color $dark50
-  .range-slider-input 
+  
+  &-input 
     position relative
     top 20px
     margin-top 20px
+  
   .irs--big .irs-line 
     height 6px
     background white
     box-sizing border-box
     cursor pointer
+  
   span.irs-handle.from
   span.irs-handle.to
     width 16px
     height 16px
-    background linear-gradient(180deg, $green 0%, #66D2EA 100%)
-    border 2px solid #FFFFFF 
+    background linear-gradient(180deg, $green 0%, #66d2ea 100%)
+    border 2px solid #fff
     box-shadow none
     top 29px
     cursor pointer
+ 
   span.irs-bar
     height 6px
-    background linear-gradient(180deg, $green 0%, #66D2EA 100%)
+    background linear-gradient(180deg, $green 0%, #66d2ea 100%)
     border 1px solid transparent
     box-shadow none
     box-sizing border-box
     cursor pointer
+ 
   span.irs.irs--big
     top 11px
+ 
   .irs-from 
   .irs-to
   .irs-single

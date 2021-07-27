@@ -2,63 +2,83 @@
 .datepicker-inline
   .datepicker
     width 100%
+  
   .datepicker--buttons
     flex-direction row
+
 .datepicker.-from-bottom-
   width 320px
-  @media(max-width 800px)
+  
+  @media (max-width 800px)
     width 290px
+
 .datepicker
   .datepicker--nav
     height 60px
     border-bottom 0
+  
   .datepicker--content
     padding 0
     width 280px
     margin 14px auto 4px
+ 
   .datepicker--nav-title
   .datepicker--nav-title i  
-    color #1F2041
+    color #1f2041
     font-size 19px
     font-weight bold
+   
     &:hover
       background none
+ 
   .datepicker--nav-action svg
     opacity 0 
+ 
   [data-action='next']
   [data-action='prev']
     width 40px
+   
     &:hover
       background none
-  [data-action='prev']:after
+ 
+  [data-action='prev']::after
     font-family 'Material Icons'
-    content 'arrow_back' 
+    content 'arrow_back'
     font-size 24px
     color $purple 
-  [data-action='next']:after
-    @extends [data-action='prev']:after 
-    content 'arrow_forward'  
+ 
+  [data-action='next']::after
+    font-family 'Material Icons'
+    font-size 24px
+    color $purple
+    content 'arrow_forward'
     margin-right 20px
+ 
   .datepicker--day-name
     color $purple
     font-weight bold
     font-size 12px
-    font-family Montserrat
+    font-family Montserrat, Arial, sans-serif
     text-transform none 
+ 
   .datepicker--cells-days
     padding 6px 0 0
+   
     .datepicker--cell-day
       font-size 12px
       color $dark50
-      font-family Montserrat
+      font-family Montserrat, Arial, sans-serif
       border-radius 50%
       width 40px
       height 40px
+  
     .-other-month-
       color $dark25
+  
     .-current-
-      background linear-gradient(180deg, $green 0%, #66D2EA 100%) 
+      background linear-gradient(180deg, $green 0%, #66d2ea 100%)
       color white
+   
     .-range-from-
     .-range-to-
     .-selected-.datepicker--cell-year.-other-decade-
@@ -67,7 +87,8 @@
       background linear-gradient(180deg, $purple 0%, $blue 100%)
       color white
       border none
-    .-range-from-:after
+  
+    .-range-from-::after
       content ''
       background linear-gradient(180deg, $purple 0%, $blue 100%)
       opacity 0.25
@@ -76,38 +97,48 @@
       position absolute
       margin-left 50%
       z-index -1
-    .-range-to-:after
-      @extends .-range-from-:after
+   
+    .-range-to-::after
+      @extend .-range-from-::after
+  
       margin-left 0
       margin-right 50%
       z-index -1
+    
     .-in-range-
       background linear-gradient(180deg, rgba(188, 156, 255, 0.25) 0%, rgba(139, 164, 249, 0.25) 100%)
       border-radius 0
+   
     .-in-range-.-current-
       background linear-gradient(180deg, rgba(188, 156, 255, 0.5) 0%, rgba(139, 164, 249, 0.5) 100%)
       color $dark50
+   
     .-focus-:hover
       background linear-gradient(180deg, rgb(188, 156, 255) 0%, rgb(139, 164, 249) 100%)
+ 
   .datepicker--buttons
     border-top 0
-    padding: 21px 0 5px 20px;
+    padding 21px 0 5px 20px
     display flex
-    flex-direction: row-reverse
+    flex-direction row-reverse
+ 
     [data-action='clear']
       display block
-      font-family Montserrat
+      font-family Montserrat, Arial, sans-serif
       color $purple
       font-size 12px
       font-weight bold
       text-transform uppercase
+  
       &:hover
         background none
+   
     [data-action='today']
-      @extends [data-action='clear'] 
-    [data-action='today']
-      font-size: 0
-      &:after
-        content "применить"
-        font-size: 12px
+      @extend [data-action='clear'] 
+  
+      font-size 0
+     
+      &::after
+        content 'применить'
+        font-size 12px
         margin-left 45px
