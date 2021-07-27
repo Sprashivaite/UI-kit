@@ -11,7 +11,7 @@ if (document.querySelector('.js-room-details')) {
   const diagram = document.querySelector('.js-diagram');
 
   likeButtons.forEach((button) => new LikeButton(button));
-  new Dropdown({ container: guestsDropdown, names: [['гостей', 'гость', 'гостя']] });
+  new Dropdown({ container: guestsDropdown, names: [['гостей', 'гость', 'гостя'], null, ['младенцев', 'младенец', 'младенца']] })
   new DateRange($('.js-room-details__reservation'));
   new Diagram({ element: diagram, data: jsonData.diagram.data });
 }

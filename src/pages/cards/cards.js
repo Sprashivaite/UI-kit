@@ -11,7 +11,7 @@ if (document.querySelector('.js-cards')) {
   const guestsDropdowns = document.querySelectorAll('.js-dropdown');
   rateButtons.forEach((button) => new RateButton(button));
   cards.forEach((card) => new RoomCard(card));
-  guestsDropdowns.forEach((element) => new Dropdown({ container: element, names: [['гостей', 'гость', 'гостя']] }));
+  guestsDropdowns.forEach((element) => new Dropdown({ container: element, names: [['гостей', 'гость', 'гостя'], null, ['младенцев', 'младенец', 'младенца']] }));
   new TextFieldMask($('.js-text-field__input_masked'));
   new DateRange($('.js-cards__search-rooms'));
   new DateRange($('.js-cards__reservation'));
