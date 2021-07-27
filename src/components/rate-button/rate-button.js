@@ -16,9 +16,7 @@ class RateButton {
 
   _addRate() {
     const value = this.container.dataset.rate;
-    for (let i = 0; i < value; i += 1) {
-      this.stars[i].classList.add('rate-button__item_checked');
-    }
+    this.stars.slice(0, value).forEach((el) => el.classList.add('rate-button__item_checked'));
   }
 
   _changeRate(element) {
