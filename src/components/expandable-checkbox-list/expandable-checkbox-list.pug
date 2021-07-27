@@ -1,6 +1,6 @@
 include ../checkbox/checkbox
 mixin expandable-checkbox-list({title = "", isOpened = false, list = []} = {})
-    - const opened = isOpened ? "expandable-checkbox-list_isOpened": "";
+    - const opened = isOpened ? "expandable-checkbox-list_is-opened": "";
     
     .expandable-checkbox-list(class=`${opened}`)
         h3.expandable-checkbox-list__title= title

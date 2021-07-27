@@ -28,7 +28,7 @@ class ExpandableCheckboxList {
     const { target } = event;
     const block = target === this.block || this.block.contains(target);
     const title = target === this.title;
-    const menuIsActive = this.block.classList.contains('expandable-checkbox-list_isOpened');
+    const menuIsActive = this.block.classList.contains('expandable-checkbox-list_is-opened');
     const isOutOfField = !block && !title && menuIsActive;
     if (isOutOfField) this._handleToggle(event);
   }
