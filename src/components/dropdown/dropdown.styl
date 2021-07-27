@@ -15,6 +15,8 @@
     cursor pointer
 
     &:hover
+    &:focus
+      outline none
       border 1px solid $dark50
 
     &::after
@@ -28,6 +30,9 @@
       outline-color $dark25
       background-color transparent
       cursor pointer
+
+  &__field_active
+    border 1px solid $dark50
 
   &__title
     height 80%

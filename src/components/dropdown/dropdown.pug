@@ -2,7 +2,7 @@ include ../link/link
 
 mixin dropdown({items = [], title = "", hasButtons = false} = {})
     .dropdown.js-dropdown
-        .dropdown__field.js-dropdown__field
+        .dropdown__field.js-dropdown__field(tabindex="0")
             .dropdown__title.js-dropdown__title= title
         .dropdown__menu.js-dropdown__menu
             each item in items

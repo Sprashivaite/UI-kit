@@ -7,3 +7,4 @@ mixin text-field({type = "text", placeholder= "", masked = false, mask = "99.99.
         }
     .text-field
         input.text-field__input(type=type, placeholder=placeholder)&attributes(masked ? maskOptions: {})
+        .text-field__border

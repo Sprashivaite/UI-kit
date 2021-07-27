@@ -96,6 +96,7 @@ class Dropdown {
   _toggleMenu(event) {
     event.stopPropagation();
     this.menu.classList.toggle('dropdown__menu_show');
+    this.field.classList.toggle('dropdown__field_active');
   }
 
   _showClear() {
