@@ -25,13 +25,18 @@ class ExpandableCheckboxList {
     this.list.classList.toggle('expandable-checkbox-list__checkboxes_is-opened');
   }
 
+  _handleClose() {
+    this.block.classList.remove('expandable-checkbox-list_is-opened');
+    this.list.classList.remove('expandable-checkbox-list__checkboxes_is-opened');
+  }
+
   _handleDocumentClick(event) {
     const { target } = event;
     const block = target === this.block || this.block.contains(target);
     const title = target === this.title;
     const menuIsActive = this.block.classList.contains('expandable-checkbox-list_is-opened');
     const isOutOfField = !block && !title && menuIsActive;
-    if (isOutOfField) this._handleToggle(event);
+    if (isOutOfField) this._handleClose(event);
   }
 }
 
