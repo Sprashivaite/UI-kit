@@ -2,12 +2,25 @@
   "searchRooms": {
     "title": "Найдём номера под ваши пожелания",
     "legendGuests": "Гости",
-    "dateRange": [{ "name": "прибытие" }, { "name": "выезд" }],
+    "dateRange": [
+      {
+        "name": "прибытие"
+      },
+      {
+        "name": "выезд"
+      }
+    ],
     "dropdown": {
       "items": [
-        { "name": "взрослые"},
-        { "name": "дети"},
-        { "name": "младенцы" }
+        {
+          "name": "взрослые"
+        },
+        {
+          "name": "дети"
+        },
+        {
+          "name": "младенцы"
+        }
       ],
       "title": "Сколько гостей",
       "hasButtons": true
@@ -51,7 +64,9 @@
     "accountText": "Уже есть аккаунт на Toxin",
     "buttonLogIn": {
       "background": "transparent",
-      "text": "войти"
+      "text": "войти",
+      "isLink": true,
+      "href": "sign-in.html"
     }
   },
   "logIn": {
@@ -67,15 +82,29 @@
     "isLux": true,
     "luxText": "люкс",
     "dateRange": [
-      { "name": "прибытие", "date": "2022-08-19" },
-      { "name": "выезд", "date": "2022-08-23" }
+      {
+        "name": "прибытие",
+        "date": "2022-08-19"
+      },
+      {
+        "name": "выезд",
+        "date": "2022-08-23"
+      }
     ],
     "legendGuests": "Гости",
     "dropdown": {
       "items": [
-        { "name": "взрослые", "value": 2 },
-        { "name": "дети", "value": 1 },
-        { "name": "младенцы" }
+        {
+          "name": "взрослые",
+          "value": 2
+        },
+        {
+          "name": "дети",
+          "value": 1
+        },
+        {
+          "name": "младенцы"
+        }
       ],
       "title": "Сколько гостей",
       "hasButtons": true

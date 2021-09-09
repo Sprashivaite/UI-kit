@@ -33,7 +33,9 @@
         "accountText": "Уже есть аккаунт на Toxin",
         "buttonLogIn": {
             "background": "transparent",
-            "text":"войти"
+            "text": "войти",
+            "isLink": true,
+            "href": "sign-in.html"
         }
     }
 }

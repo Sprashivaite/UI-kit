@@ -18,9 +18,8 @@ mixin registration(options = {})
             textPassword = {},
             toggleName = "", 
             buttonPay = {},
-            actionSignIn = "sign-in.html",
             accountText = "", 
-            buttonLogIn = ""
+            buttonLogIn = {}
         } = options
     .registration
         .registration__container
@@ -48,7 +47,7 @@ mixin registration(options = {})
                     +toggle({text: toggleName})
                 .registration__button-solid
                     +button(buttonPay)
-            form.registration__sign-in-form(action=actionSignIn)
+            .registration__sign-in
                 .registration__text= accountText
                 .registration__button-empty                
                     +button(buttonLogIn)

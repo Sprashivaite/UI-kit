@@ -21,9 +21,7 @@ mixin header(options = {})
                 .header__name= userName
             else 
                 .header__button-empty
-                    form(href=buttonTextSignIn.title)
-                        +button({text: buttonTextSignIn.title, background: "transparent", isHeader: true})
+                    +button({text: buttonTextSignIn.title, background: "transparent", isHeader: true, "isLink": true, href: buttonTextSignIn.href})
                 .header__button-register
-                    form(action=buttonTextLogIn.href)
-                        +button({text: buttonTextLogIn.title, isHeader: true})
+                    +button({text: buttonTextLogIn.title, isHeader: true, "isLink": true, href: buttonTextLogIn.href})
         +burger-menu([...navTitles, buttonTextSignIn, buttonTextLogIn])
